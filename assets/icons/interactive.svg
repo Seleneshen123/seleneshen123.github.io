@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Game cartridge</title>
+  <desc id="desc">A compact game cartridge representing interactive works.</desc>
+<g stroke="#1b1917" stroke-width="4" stroke-linejoin="round">
+    <path d="M58 31h124l15 16v93H43V47z" fill="#6f7973"/>
+    <path d="M58 31v16H43M182 31v16h15" fill="#a7aaa5"/>
+    <rect x="65" y="53" width="110" height="60" rx="4" fill="#f4f1eb"/>
+    <path d="M111 68l31 15-31 16z" fill="#7b3039"/>
+    <path d="M64 126h112" fill="none"/>
+    <path d="M69 127v18M84 127v18M99 127v18M114 127v18M129 127v18M144 127v18M159 127v18M174 127v18" stroke="#b99a78"/>
+    <circle cx="59" cy="45" r="3" fill="#1b1917"/>
+    <circle cx="181" cy="45" r="3" fill="#1b1917"/>
+  </g>
+</svg>

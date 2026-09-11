@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Folder</title>
+  <desc id="desc">An archival folder containing a curriculum vitae.</desc>
+<g stroke="#1b1917" stroke-width="4" stroke-linejoin="round">
+    <path d="M44 48h59l14 17h79v83H44z" fill="#a98a64"/>
+    <path d="M66 32h102v99H66z" fill="#f4f1eb" transform="rotate(3 117 81)"/>
+    <path d="M83 55h42M83 73h66M83 91h58M83 109h48" fill="none" stroke-linecap="round" stroke-width="3"/>
+    <rect x="136" y="49" width="21" height="22" rx="2" fill="#7b3039"/>
+    <path d="M44 75h152v73H44z" fill="#b09069"/>
+    <rect x="58" y="94" width="52" height="26" rx="2" fill="#eee7dd"/>
+    <text x="72" y="113" font-family="Georgia, serif" font-size="17" fill="#1b1917" stroke="none">CV</text>
+  </g>
+</svg>

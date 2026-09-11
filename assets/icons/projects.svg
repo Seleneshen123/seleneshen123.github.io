@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Stacked project cards</title>
+  <desc id="desc">Three archival project cards stacked together.</desc>
+<g stroke="#1b1917" stroke-width="3" stroke-linejoin="round">
+    <path d="M46 48h126l18 18v76H46z" fill="#7b3039" transform="translate(18 -2) rotate(5 118 93)"/>
+    <path d="M39 42h130l18 18v78H39z" fill="#aaa8a1" transform="translate(7 3) rotate(-3 113 90)"/>
+    <path d="M34 36h132l19 19v82H34z" fill="#f4f1eb"/>
+    <path d="M166 36v20h19" fill="none"/>
+    <circle cx="57" cy="58" r="6" fill="#7b3039"/>
+    <path d="M72 58h72M53 82h105M53 100h91M53 118h72" fill="none" stroke-linecap="round"/>
+    <rect x="139" y="110" width="26" height="13" rx="2" fill="#d2cbc1"/>
+  </g>
+</svg>

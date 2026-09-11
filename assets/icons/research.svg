@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Magnifying glass</title>
+  <desc id="desc">A specimen-style magnifying glass used for research.</desc>
+<g stroke="#1b1917" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="104" cy="78" r="49" fill="#e7e1d8"/>
+    <circle cx="104" cy="78" r="38" fill="#faf8f4"/>
+    <path d="M139 113l48 47 18-18-48-47" fill="#7b3039"/>
+    <path d="M78 85c17-18 34-17 54-4" fill="none" stroke="#6f746d" stroke-width="3"/>
+    <circle cx="80" cy="82" r="5" fill="#7b3039"/>
+    <circle cx="104" cy="68" r="5" fill="#6f746d"/>
+    <circle cx="130" cy="82" r="5" fill="#c8beb1"/>
+    <path d="M85 103h38" fill="none" stroke-width="3"/>
+  </g>
+</svg>

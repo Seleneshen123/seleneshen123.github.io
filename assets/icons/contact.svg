@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Envelope</title>
+  <desc id="desc">A sealed envelope representing contact.</desc>
+<g stroke="#1b1917" stroke-width="4" stroke-linejoin="round">
+    <path d="M40 51h160v94H40z" fill="#ddd6cc"/>
+    <path d="M40 51l80 57 80-57" fill="#f2eee8"/>
+    <path d="M40 145l60-57M200 145l-60-57" fill="none"/>
+    <circle cx="120" cy="108" r="16" fill="#7b3039"/>
+    <path d="M111 108h18M120 99v18" stroke="#f5f1eb" stroke-width="3" stroke-linecap="round"/>
+    <path d="M190 38c14 4 23 12 29 24M186 25c24 5 39 17 49 35" fill="none" stroke="#6f746d" stroke-width="3"/>
+  </g>
+</svg>
