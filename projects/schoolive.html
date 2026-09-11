@@ -3,41 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1eb">
-  <title>Schoolive Interactive — Caiyi Shen</title>
+  <meta name="description" content="Schoolive — a restaurant-management mystery where the management loop is the investigation. Game design by Caiyi Shen.">
+  <meta name="theme-color" content="#f3f0ea">
+  <title>Schoolive — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header detail-header" data-header>
-    <a class="brand" href="../index.html#top">Caiyi Shen <small>Portfolio</small></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#research">Research</a>
-      <a href="../index.html#interactive">Interactive Works</a>
-      <a href="../index.html#cv">CV</a>
-      <a href="../index.html#contact">Contact</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html" aria-current="page">Game Design</a>
+      <a href="../research.html">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </header>
-  <main class="detail-main page-shell" id="main">
-    <a class="back-link" href="../index.html#projects">← Back to Projects</a>
-    <div class="detail-hero" style="margin-top:2.5rem">
-      <div><p class="section-kicker">Case Study</p><h1>Schoolive Interactive</h1></div>
-      <dl class="detail-meta">
-        <div><dt>Role</dt><dd>Co-founder &amp; Creative Director</dd></div>
-        <div><dt>Period</dt><dd>August 2022–Present</dd></div>
-        <div><dt>Context</dt><dd>Online educational platform</dd></div>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#featured"><span class="arrow" aria-hidden="true">&larr;</span> Back to Game Design Projects</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Featured Work</p>
+      <h1>Schoolive</h1>
+      <p class="work-line">A restaurant-management mystery where ingredients, cooking choices, and customer memories are also the player&rsquo;s investigation tools.</p>
+      <ul class="chips">
+        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Role</dt><dd>Co-founder, Creative Director, Game Director</dd></div>
+        <div><dt>Context</dt><dd>Schoolive Interactive Ltd.</dd></div>
+        <div><dt>Period</dt><dd>2022&ndash;Present</dd></div>
+        <div><dt>My contribution</dt><dd>Overall planning, game design, character design, art direction, gameplay and level design</dd></div>
       </dl>
+    </header>
+
+    <figure class="work-hero">
+      <img src="../assets/projects/schoolive/game-cover.jpg" alt="The restaurant at night: two characters behind the counter, the day's menu on a chalkboard, and the management panel open on a phone." width="1600" height="900" loading="eager" decoding="async">
+      <aside class="notice">
+        <p class="notice-label">Note</p>
+        <p>Due to confidentiality and copyright restrictions, some visuals shown here are AI-generated concept mockups used to communicate the intended experience rather than final production assets.</p>
+      </aside>
+    </figure>
+
+    <div class="work-body">
+
+      <section id="overview">
+        <div class="prose">
+          <h2>Overview</h2>
+            <p>The player&rsquo;s family is killed as part of a conspiracy. What they inherit is the restaurant. So the player runs the place their family left behind while trying to find out what actually happened to them, and those two activities are the same activity.</p>
+            <p>It is a narrative game and a management sim at once. The reason that matters is in the next section.</p>
+        </div>
+      </section>
+
+      <section id="challenge">
+        <div class="split">
+          <div class="prose">
+            <h2>Design challenge</h2>
+            <p>The challenge was not simply to put management and story in the same game. If the restaurant systems only make money while the narrative only happens in dialogue scenes, the player is still switching between two separate games and the management half is just a paywall on the story.</p>
+            <p>I wanted the management loop itself to change what the player knows.</p>
+          </div>
+          <div class="aside">
+            <p class="pullquote">What you do in the restaurant changes what you can learn about the mystery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="loop">
+        <h2>Core loop</h2>
+        <div class="prose">
+          <p>Run the restaurant <span class="dot">&rarr;</span> acquire ingredients with tags <span class="dot">&rarr;</span> decide what to buy and how to cook it <span class="dot">&rarr;</span> trigger specific customers or reactions <span class="dot">&rarr;</span> uncover memories or clues <span class="dot">&rarr;</span> unlock character stories and new investigation directions <span class="dot">&rarr;</span> return to the restaurant with different priorities.</p>
+        </div>
+        <div class="media">
+          <figure class="media-frame">
+            <img src="../assets/projects/schoolive/cooking.jpg" alt="The cooking interface: choosing a tagged ingredient, then a cooking method, with the predicted result noting the dish is more likely to trigger a memory conversation." width="1600" height="900" loading="lazy" decoding="async">
+          </figure>
+          <aside class="notice notice--compact">
+            <p class="notice-label">Note</p>
+            <p>AI-generated concept mockup, not a final production asset.</p>
+          </aside>
+          <p class="figcap">The cooking screen carries the whole argument: pick a tagged ingredient, pick a method, and the preview tells you the dish is now more likely to trigger a memory conversation.</p>
+        </div>
+      </section>
+
+      <section id="decisions">
+        <h2>Key design decisions</h2>
+        <div class="prose">
+          <p><strong>A draw mechanic that is about people, not collectibles.</strong> I folded a draw / random-acquisition structure into ingredients. The player is not rolling for a collectible because gacha exists; they are deciding whether a specific ingredient is worth chasing under resource pressure, because it may unlock a person or a clue. The pull is narrative, and the cost is economic.</p>
+          <p><strong>Ingredients carry narrative tags.</strong> They are not only economy values. A tag can be the condition for a story event, which means the shopping decision and the investigation decision are one decision.</p>
+          <p><strong>Cooking method changes dialogue.</strong> The same resources produce different information depending on what the player does with them. Slow-simmering something is not just a different profit margin; it is a different conversation.</p>
+          <p><strong>Family-related food triggers memory.</strong> Put something connected to the player&rsquo;s family on the plate and an old friend or a regular may start talking about them. A routine restaurant action turns into evidence without the game ever switching into &ldquo;detective mode.&rdquo;</p>
+          <p>Character design, art direction, gameplay, and level design all serve the same rule.</p>
+        </div>
+        <div class="media">
+          <figure class="media-frame">
+            <img src="../assets/projects/schoolive/gameplay-02.jpg" alt="A second view of the restaurant during service, showing the day's menu and the state of waiting customers." width="1600" height="900" loading="lazy" decoding="async">
+          </figure>
+          <aside class="notice notice--compact">
+            <p class="notice-label">Note</p>
+            <p>AI-generated concept mockup, not a final production asset.</p>
+          </aside>
+          <p class="figcap">Service view. Who sits down, and what you are able to serve them, decides what you can learn that day.</p>
+        </div>
+      </section>
+
+      <section id="systems">
+        <h2>Working the loop on paper first</h2>
+        <div class="split">
+          <div class="prose">
+            <p>Before any of this was an interface, it was a sheet of paper. I mapped the restaurant as connected zones covering wholesale, storage, tables, the waiting area and the kitchen, then numbered the order in which the player moves between them during a service.</p>
+            <p>Laying it out this way is what exposed the real constraint: acquisition, cooking, and customers have to touch each other inside a single shift, or the narrative payload never reaches the player at the moment the decision is made.</p>
+          </div>
+          <div class="aside">
+            <figure class="media-frame">
+              <img src="../assets/projects/schoolive/systems-sketch.jpg" alt="Hand-drawn systems sketch mapping the restaurant loop: wholesale, storage, tables, waiting area and kitchen, with the day's dishes listed at the side." width="1300" height="908" loading="lazy" decoding="async">
+            </figure>
+            <p class="figcap">Paper pass on the restaurant loop.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="characters">
+        <h2>Character design</h2>
+        <div class="prose">
+          <p>The cast has to do double duty: each character is a customer inside the economy and a source inside the investigation. I design them so their visual language tells you which memories they might be carrying before they say anything.</p>
+        </div>
+        <div class="media duo">
+          <figure>
+            <span class="steplabel">Amelia</span>
+            <div class="media-frame"><img src="../assets/projects/schoolive/character-amelia.jpg" alt="Annotated character design sheet for Amelia: a figure in a black layered dress and cape with lace detailing, drawn with construction notes." width="754" height="1194" loading="lazy" decoding="async"></div>
+            <figcaption class="figcap">Amelia. The design leans on her mysterious background and a slightly melancholy tone: dark layering, a covered silhouette, and a face that withholds more than it offers.</figcaption>
+          </figure>
+          <figure>
+            <span class="steplabel">Kagami</span>
+            <div class="media-frame"><img src="../assets/projects/schoolive/character-kagami.jpg" alt="Annotated character design sheet for Kagami: a figure in a white and black hakama-style outfit with tassels, a handheld game console, and Japanese construction notes." width="754" height="1194" loading="lazy" decoding="async"></div>
+            <figcaption class="figcap">Kagami. A Japanese character in an alternate-world setting: cyberpunk elements folded into a hybrid Japanese and Western silhouette, with tassels, traditional knots, and a handheld console among the annotated details.</figcaption>
+          </figure>
+        </div>
+        <aside class="notice">
+          <p class="notice-label">Note</p>
+          <p>These two character design sheets are my own drawing and design work. They are not AI-generated concept mockups.</p>
+        </aside>
+      </section>
+
     </div>
-    <div class="detail-body">
-      <nav class="detail-toc" aria-label="Page sections"><a href="#overview">Overview</a><a href="#content">Content Design</a><a href="#game">Educational Game Direction</a><a href="#role">My Role</a><a href="#next">Next Steps</a></nav>
-      <div class="detail-content"><section id="overview"><h2>Overview</h2><p>Schoolive Interactive is a Moodle-based educational platform providing psychology, game design, and interactive media learning resources for Chinese-speaking students.</p></section><section id="content"><h2>Content Design</h2><p>I developed and organized course content with attention to instructional sequencing, learner accessibility, and clarity of psychological and design-related concepts.</p></section><section id="game"><h2>Educational Game Direction</h2><p>I directed development of an educational game project integrating character design, narrative design, and gameplay mechanics to support learner engagement and interactive knowledge acquisition.</p></section><section id="role"><h2>My Role</h2><ul><li>Co-founded the platform and helped define its content direction.</li><li>Organized course materials and learning sequences.</li><li>Led the creative direction of an educational game project.</li></ul></section><section id="next"><h2>Next Steps</h2><p>Future updates can include platform captures, course-flow examples, and selected game-development materials once they are prepared for public presentation.</p></section></div>
-    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#featured"><span class="arrow" aria-hidden="true">&larr;</span> Back to Game Design Projects</a>
+    </nav>
   </main>
-  <div class="back-top-band"><a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
-  <footer class="site-footer">© <span data-year>2026</span> Caiyi Shen</footer>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="axis-ai.html">
+        <span class="onward-label">Next project</span>
+        <span class="onward-title">Axis AI <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
 </body>
 </html>

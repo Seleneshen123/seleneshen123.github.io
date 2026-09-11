@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Adapting an adult neural-entrainment EEG paradigm for children without breaking the timing the experiment depends on. Research by Caiyi Shen at QLAB, Northeastern University.">
+  <meta name="theme-color" content="#f3f0ea">
+  <title>Neural Entrainment — Caiyi Shen</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html">Game Design</a>
+      <a href="../research.html" aria-current="page">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../research.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> Back to Research</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Research</p>
+      <h1>Neural Entrainment</h1>
+      <p class="work-line">Adapting an adult neural-entrainment paradigm for children, without letting &ldquo;child-friendly&rdquo; visual design break the timing the experiment depends on.</p>
+      <ul class="chips">
+        <li><span class="chip">EEG</span></li>
+        <li><span class="chip">Statistical Learning</span></li>
+        <li><span class="chip">Neural Entrainment</span></li>
+        <li><span class="chip">PsychoPy</span></li>
+        <li><span class="chip">Experimental Design</span></li>
+        <li><span class="chip">Visual Stimuli</span></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Lab</dt><dd>Language Acquisition and Brain Laboratory (QLAB)</dd></div>
+        <div><dt>Institution</dt><dd>Northeastern University</dd></div>
+        <div><dt>Period</dt><dd>2026&ndash;Present</dd></div>
+        <div><dt>Status</dt><dd>Ongoing adaptation, pilot preparation</dd></div>
+      </dl>
+    </header>
+
+    <figure class="work-hero work-hero--compact">
+      <img src="../assets/research/neural-entrainment/stimulus.jpg" alt="The child-facing visual stimulus: a softly glowing jellyfish with closed eyes, floating in a dark blue field of small particles." width="1600" height="900" loading="eager" decoding="async">
+      <figcaption class="figcap">The current stimulus direction. Calm enough to watch for several minutes, and built as a loop that does not add any rhythm of its own.</figcaption>
+    </figure>
+
+    <div class="work-body">
+
+      <section id="question">
+        <div class="split split--overview">
+          <div class="prose">
+            <h2>Research question</h2>
+            <p>The paradigm I am adapting comes from work by Batterink, Mulgrew and Gibbings. The adult study asks whether neural entrainment is only a signature that shows up <em>after</em> learning has happened, or whether rhythmic alignment can actively support statistical learning itself.</p>
+            <p>Adults listened to continuous speech streams containing repeating word structure while watching visual stimulation that was rhythmically congruent, incongruent, or static. The original work reported stronger entrainment at the relevant rhythm under congruent stimulation, and greater sensitivity to the hidden statistical structure on later implicit-learning measures.</p>
+            <p>My question is narrower and practical: what has to change before a child can sit through this, and what is not allowed to change at all?</p>
+          </div>
+          <div class="aside">
+            <p class="question"><span class="question-label">Design problem</span>The visual stimulus has to become calmer and easier to watch for several minutes. The temporal structure, refresh consistency and EEG synchronization all have to stay exactly as they were.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="constraint">
+        <h2>Engagement cannot break timing</h2>
+        <div class="prose">
+          <p>The tempting version of this brief is &ldquo;make the visuals cuter.&rdquo; That version would quietly destroy the experiment. Entrainment studies measure alignment to a specific rhythm, so any new visual element that repeats, pulses, or moves on its own schedule becomes a second rhythm competing with the one being measured.</p>
+          <p>So I treat child-friendliness as an experimental-design constraint rather than an art task. The first thing I did was break down the existing PsychoPy flow and separate it into two lists: what is free to change, and what is load-bearing.</p>
+        </div>
+        <dl class="deflist">
+          <div>
+            <dt>Free to change</dt>
+            <dd>Subject matter, palette, character design, level of detail, and the overall emotional register of the stimulus.</dd>
+          </div>
+          <div>
+            <dt>Fixed</dt>
+            <dd>Cycle structure and loop length, frame-accurate refresh consistency, and the LSL marker and EEG event synchronization the analysis depends on.</dd>
+          </div>
+          <div>
+            <dt>Disallowed</dt>
+            <dd>Sudden motion, reward beats, narrative events, or any secondary repetition that could introduce an unintended rhythmic cue or shift attention mid-block.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="directions">
+        <h2>Stimulus directions and tradeoffs</h2>
+        <div class="split split--overview">
+          <div class="prose">
+            <p>I explored several low-arousal directions: levitating capsules, small light-based creatures, a simplified robot, and a glowing jellyfish. The criteria were the same each time. It has to hold a child&rsquo;s gaze without becoming a story event, it has to loop cleanly, and it has to look the same on every cycle.</p>
+            <p>The jellyfish won for reasons that are mostly structural. Its silhouette reads instantly at low contrast, its motion is naturally continuous rather than eventful, and a soft ambient glow can carry the cycle without a hard visual accent that a child would start anticipating.</p>
+            <p>The animation is designed around fixed timing rather than fitted to it afterwards. For a 5.4-second loop at 60 fps and an approximately 1.11 Hz structure, the movement, the shadow, the reflection, and every other repeated visual change have to stay locked to that cycle so none of them introduces a competing beat.</p>
+          </div>
+          <div class="aside">
+            <figure class="media-frame">
+              <img src="../assets/research/neural-entrainment/psychopy-part1.jpg" alt="The PsychoPy instruction screen for Part 1, showing the jellyfish stimulus above the text: time to relax, sit still and look at the centre of the screen, there will be no sounds during this part." width="1500" height="988" loading="lazy" decoding="async">
+            </figure>
+            <p class="figcap">The Part 1 instruction screen. The same calm register has to carry through the instructions, not only the stimulus, or the child arrives at the block already activated.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="implementation">
+        <h2>Implementation and synchronization</h2>
+        <div class="prose">
+          <p>I am integrating and adjusting the stimulus presentation in PsychoPy while keeping LSL markers and EEG event synchronization in scope from the start, rather than treating them as something to reconnect afterwards.</p>
+          <p>The open question I am still working through is how to deliver the animation. Pre-rendered video gives tighter visual consistency between participants, but it still has to be checked for playback behaviour and dropped frames on the testing machine. Script-controlled animation is more flexible and easier to adjust late, but it makes frame-level timing harder to guarantee. Neither is free, and the decision depends on what the pilot shows about playback stability.</p>
+        </div>
+      </section>
+
+      <section id="status">
+        <h2>Current status</h2>
+        <div class="prose">
+          <p>Ongoing adaptation and pilot preparation. The stimulus direction is selected and the presentation is being integrated; child data collection has not happened yet.</p>
+          <p>Research basis: Batterink, Mulgrew &amp; Gibbings, <em>Journal of Cognitive Neuroscience</em>; QLAB research on language learning across development, statistical learning, and neurodevelopmental populations.</p>
+        </div>
+        <aside class="notice">
+          <p class="notice-label">Note</p>
+          <p>No child results are reported here, because none exist yet. Nothing on this page should be read as a finding.</p>
+        </aside>
+      </section>
+
+    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../research.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> Back to Research</a>
+    </nav>
+  </main>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="mind-match-cloud.html">
+        <span class="onward-label">Next project</span>
+        <span class="onward-title">Mind-Match-Cloud <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
+</body>
+</html>

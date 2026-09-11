@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lunch Hours — a paper-cut obstacle course about beating the cafeteria queue. Game art, design and gameplay by Caiyi Shen.">
+  <meta name="theme-color" content="#f3f0ea">
+  <title>Lunch Hours — Caiyi Shen</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html" aria-current="page">Game Design</a>
+      <a href="../research.html">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#selected-games"><span class="arrow" aria-hidden="true">&larr;</span> Back to Selected Games</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Selected Game</p>
+      <h1><a href="https://wingmancover.itch.io/lunch-hours" target="_blank" rel="noopener noreferrer">Lunch Hours</a></h1>
+      <p class="work-line">A lunchtime obstacle course built around the very specific panic of trying to beat the cafeteria line at a Chinese school.</p>
+      <ul class="chips">
+        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Role</dt><dd>Game Art, Game Design, Gameplay Design</dd></div>
+        <div><dt>Type</dt><dd>First-person runner</dd></div>
+        <div><dt>Team</dt><dd>Collaborative student project</dd></div>
+        <div><dt>Release</dt><dd>itch.io</dd></div>
+      </dl>
+      <p class="worklinks">
+        <a class="worklink is-primary" href="https://wingmancover.itch.io/lunch-hours" target="_blank" rel="noopener noreferrer">Play on itch.io <span aria-hidden="true">&#8599;</span></a>
+        <a class="worklink" href="https://www.youtube.com/watch?v=AWiWUBo8hog" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">&#8599;</span></a>
+      </p>
+    </header>
+
+    <a class="work-hero work-hero--compact" href="https://wingmancover.itch.io/lunch-hours" target="_blank" rel="noopener noreferrer" aria-label="Play Lunch Hours on itch.io">
+      <img src="../assets/games/lunch-hours/cover.jpg" alt="Lunch Hours title art: a school corridor collaged from cut paper, with a lunch tray, a pair of scissors, and paper-cut students." width="811" height="500" loading="eager" decoding="async">
+    </a>
+
+    <div class="work-body">
+
+      <section id="overview">
+        <div class="split split--overview">
+          <div class="prose">
+            <h2>Overview</h2>
+            <p>In a Chinese school everyone has to get to the canteen at lunch, and if you are slow you are standing in a very long queue while very hungry. So the moment the last class before lunch ends, people run.</p>
+            <p>The player is on that run. Students and teachers fill the corridor and have to be dodged. What turns it from a corridor sprint into a design problem is what I did with conversation.</p>
+            <p class="pullquote pullquote--inline">A social interruption is no longer text on the screen. It is speed and space pressure.</p>
+          </div>
+          <div class="aside">
+            <figure class="media-frame">
+              <img src="../assets/games/lunch-hours/cg-lunch.jpg" alt="A painted lunch tray on a metal counter: rice, stir-fried greens, tomato and egg, meatballs, and a pair of chopsticks." width="1400" height="978" loading="lazy" decoding="async">
+            </figure>
+            <p class="figcap">The tray is the only object in the game painted with real care. Everything obstructing the player, including classmates, teachers, and their conversations, is cut from scrap paper. The art direction tells you what the character wants before the game has to say it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mechanic">
+        <h2>Dialogue as a physical obstacle</h2>
+        <div class="prose">
+          <p>Some characters talk to you as you pass. In most games that is a dialogue box: it appears, you read it, you move on. Here I made the interruption a visible physical object in the world. The dialogue box occupies space in the corridor, so you have to <strong>jump over it or duck under it</strong>.</p>
+          <p>That single move does the work of the whole game. Avoiding the box <em>is</em> avoiding the conversation, and the cost of being polite is measured in the thing the player actually wants: time and a hot lunch. The social pressure and the movement pressure stop being two separate systems.</p>
+        </div>
+        <div class="media scraps">
+          <figure>
+            <img src="../assets/games/lunch-hours/note-02.png" alt="A torn scrap of lined paper with hand-lettered text reading &quot;Watch Out!!&quot;" width="560" height="298" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="../assets/games/lunch-hours/note-03.png" alt="A torn scrap of paper with hand-lettered text reading &quot;Who shoved me? My leg's about to break!&quot;" width="560" height="282" loading="lazy" decoding="async">
+          </figure>
+        </div>
+        <p class="figcap">In-game dialogue scraps. These are the objects the player is physically dodging, which is why they are drawn as paper rather than as UI.</p>
+      </section>
+
+      <section id="tutorial">
+        <h2>No tutorial level</h2>
+        <div class="split split--media-left">
+          <div class="aside">
+            <figure>
+              <img src="../assets/games/lunch-hours/note-01.png" alt="The opening instruction note: a stick figure drawn on lined paper beside a hand-drawn arrow and the words &quot;Press D to Dodge&quot;." width="560" height="476" loading="lazy" decoding="async">
+              <figcaption class="figcap">The opening instruction note, which is the entire tutorial.</figcaption>
+            </figure>
+          </div>
+          <div class="prose">
+            <p>Strictly speaking the game has no tutorial stage. It opens with a single instruction note; once the player understands the controls, the game goes straight into the main run.</p>
+            <p>That was a deliberate decision rather than a shortcut. A game about sprinting the second the bell rings should not begin by asking the player to stand still in a practice room. Teaching the control and starting the sprint in the same breath keeps the premise intact.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="art">
+        <h2>Why it is made of paper</h2>
+        <div class="split split--wide-media">
+          <div class="aside">
+            <div class="standees">
+              <figure>
+                <span class="standee-media"><img src="../assets/games/lunch-hours/character-01.png" alt="Paper-cut character standee: a student in a blue tracksuit with purple hair, torn paper edge around the figure." width="400" height="885" loading="lazy" decoding="async"></span>
+                <figcaption class="figcap">Student standee</figcaption>
+              </figure>
+              <figure>
+                <span class="standee-media"><img src="../assets/games/lunch-hours/character-02.png" alt="Paper-cut character standee: a student in a blue tracksuit holding a basketball, torn paper edge around the figure." width="400" height="856" loading="lazy" decoding="async"></span>
+                <figcaption class="figcap">Student standee</figcaption>
+              </figure>
+              <figure>
+                <span class="standee-media"><img src="../assets/games/lunch-hours/character-03.png" alt="Paper-cut character standee: a student in a blue tracksuit with green hair, torn paper edge around the figure." width="400" height="1076" loading="lazy" decoding="async"></span>
+                <figcaption class="figcap">Student standee</figcaption>
+              </figure>
+            </div>
+            <p class="figcap">The corridor crowd. Each character is drawn, cut out, and stood up in the scene, so the obstacle and the paper are literally the same object.</p>
+          </div>
+          <div class="prose">
+            <p>The whole art direction runs on a paper-cut and notebook-collage logic, something close to a paper wargame. Characters and dialogue boxes look cut out and pasted in, edges torn rather than trimmed, and all the lettering is handwritten.</p>
+            <p>That language is not only a style choice. It comes from growing up as a student in China, where entertainment was limited and a lot of play got invented on the spot: drawing on lined draft paper, cutting things out, making a game out of whatever was on the desk. Building the game out of the same material the original play was made of felt more honest than rendering the canteen realistically.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="video">
+        <h2>Gameplay</h2>
+        <div class="media">
+          <div class="videobox" data-video="AWiWUBo8hog" data-video-title="Lunch Hours gameplay demonstration">
+            <img src="../assets/games/lunch-hours/cover.jpg" alt="" width="811" height="500" loading="lazy" decoding="async">
+            <button class="videobtn" type="button">
+              <span aria-hidden="true">&#9654;</span>
+              Play gameplay video
+            </button>
+          </div>
+          <p class="figcap">Hosted on YouTube. Nothing loads from YouTube until you press play.</p>
+        </div>
+      </section>
+
+    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#selected-games"><span class="arrow" aria-hidden="true">&larr;</span> Back to Selected Games</a>
+    </nav>
+  </main>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="cena-floris.html">
+        <span class="onward-label">Next game</span>
+        <span class="onward-title">Cena Floris <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
+</body>
+</html>

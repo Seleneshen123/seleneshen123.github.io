@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="Elixir Nomad — a travelling alchemist prototype where a physical temperature sensor drives in-game chemistry. Design by Caiyi Shen.">
+  <meta name="theme-color" content="#f3f0ea">
   <title>Elixir Nomad — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
@@ -11,41 +12,108 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header detail-header" data-header>
-    <a class="brand" href="../index.html#top">Caiyi Shen <small>Portfolio</small></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#research">Research</a>
-      <a href="../index.html#interactive">Interactive Works</a>
-      <a href="../index.html#cv">CV</a>
-      <a href="../index.html#contact">Contact</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html" aria-current="page">Game Design</a>
+      <a href="../research.html">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </header>
-  <main class="detail-main page-shell" id="main">
-    <a class="back-link" href="../index.html#interactive">← Back to Interactive Works</a>
-    <div class="detail-hero" style="margin-top:2.5rem">
-      <div><p class="section-kicker">Independent Work</p><h1>Elixir Nomad</h1></div>
-      <dl class="detail-meta">
-        <div><dt>Role</dt><dd>Solo Developer</dd></div>
-        <div><dt>Type</dt><dd>Independent project</dd></div>
-        <div><dt>Archive</dt><dd>Personal game-design work</dd></div>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Case Study</p>
+      <h1>Elixir Nomad</h1>
+      <p class="work-line">A traveling alchemist prototype where potion crafting is driven by reagent combinations, temperature, and a physical sensor input.</p>
+      <ul class="chips">
+        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Engine</dt><dd>Unreal Engine 4 + Arduino</dd></div>
+        <div><dt>Year</dt><dd>2024</dd></div>
+        <div><dt>Type</dt><dd>Chemistry simulation / educational prototype</dd></div>
+        <div><dt>My work</dt><dd>Systems design, DataTable setup, sensor integration, part of the art</dd></div>
       </dl>
+    </header>
+
+    <figure class="work-hero">
+      <img src="../assets/projects/elixir-nomad/preview.jpg" alt="Elixir Nomad title art: a painted view through the wooden window of a travelling alchemist's van onto open sky." width="1400" height="788" loading="eager" decoding="async">
+    </figure>
+
+    <div class="work-body">
+
+      <section id="overview">
+        <div class="split">
+          <div class="prose">
+            <h2>Overview</h2>
+            <p>The player runs a mobile potion shop out of an RV: travel, explore, set up a stall, take customer requests, and combine two chemical materials into something worth selling.</p>
+            <p>The thing that makes it more than a crafting menu is temperature. Reactions behave differently at different temperatures, so the crafting loop connects to real chemistry principles instead of using ingredient names as flavour text.</p>
+          </div>
+          <div class="aside">
+            <p class="pullquote">The strongest angle here is systems and technical prototyping, not final visual polish.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="systems">
+        <h2>How the crafting system works</h2>
+        <div class="prose">
+          <p><strong>A DataTable, not a hand-written recipe list.</strong> An Unreal DataTable stores the reagent and synthesis formulas, and compounds are generated from material combinations rather than authored one at a time. That means the space of possible results is a property of the data, so adding a reagent extends the game instead of requiring new content for every pairing.</p>
+          <p><strong>Real sensors drive the reaction.</strong> Arduino temperature and humidity sensors feed environmental values into Unreal, and those values change synthesis outcomes. The prototype is a physical-computing piece as much as a game system: the thing that decides whether your potion works is the actual temperature in the room you are sitting in.</p>
+          <p>Around that core sit the ordinary running-a-business systems: resource management, customer needs, stall operation, and vehicle and space customization.</p>
+        </div>
+      </section>
+
+      <section id="art">
+        <h2>Art</h2>
+        <div class="prose">
+          <p>I created parts of the character, material, and background art in Procreate and OpenCanvas. The visual work here is deliberately secondary to the systems. It exists to make the prototype legible, not to present a finished look.</p>
+        </div>
+      </section>
+
+      <section id="materials">
+        <h2>Project deck</h2>
+        <div class="prose">
+          <p>The full deck: premise, gameplay, educational function, the underlying chemistry research, the Blueprint and DataTable implementation, the art pipeline, and the Arduino build.</p>
+        </div>
+        <div class="media deck">
+          <figure><img src="../assets/projects/elixir-nomad/deck-01.jpg" alt="Deck page: Elixir Nomad title page." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-02.jpg" alt="Deck page: basic info, covering engine, date, tags, and the background story of the travelling alchemist." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-03.jpg" alt="Deck page: game play, covering the alchemy crafting system, open exploration, stall management, and customization." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-04.jpg" alt="Deck page: function, covering educational value, engagement, and environmental responsibility." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-05.jpg" alt="Deck page: chemistry research notes behind the reagent and synthesis formulas." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-06.jpg" alt="Deck page: programming development process, showing Blueprint graphs and the reagent DataTable." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-07.jpg" alt="Deck page: game art development process, showing the NPC figure, materials, and background art." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/elixir-nomad/deck-08.jpg" alt="Deck page: Arduino development process, showing the sensor board and a wiring diagram feeding temperature and humidity into Unreal." width="1300" height="731" loading="lazy" decoding="async"></figure>
+        </div>
+      </section>
+
     </div>
-    <div class="detail-body">
-      <nav class="detail-toc" aria-label="Page sections">
-        <a href="#overview">Project Archive</a>
-        <a href="#role">Role</a>
-        <a href="#gallery">Selected Images</a>
-      </nav>
-      <div class="detail-content">
-        <section id="overview"><h2>Project Archive</h2><p>Elixir Nomad is an independently developed project. This page preserves selected visual material without linking visitors to the retired portfolio site.</p></section>
-        <section id="role"><h2>Role</h2><p>Concept, game design, visual direction, and implementation were completed independently by Caiyi Shen.</p></section>
-        <section id="gallery"><h2>Selected Images</h2><p>Images for this project are being migrated to locally hosted, optimized assets.</p></section>
-      </div>
-    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
   </main>
-  <div class="back-top-band"><a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
-  <footer class="site-footer">© <span data-year>2026</span> Caiyi Shen</footer>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="night-adios.html">
+        <span class="onward-label">Next case study</span>
+        <span class="onward-title">Night, Adios <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
 </body>
 </html>

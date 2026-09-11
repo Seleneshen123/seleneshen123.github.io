@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="Night, Adios — a neon subway roguelike, and the iteration that made it readable. Design and art by Caiyi Shen.">
+  <meta name="theme-color" content="#f3f0ea">
   <title>Night, Adios — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
@@ -11,41 +12,124 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header detail-header" data-header>
-    <a class="brand" href="../index.html#top">Caiyi Shen <small>Portfolio</small></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#research">Research</a>
-      <a href="../index.html#interactive">Interactive Works</a>
-      <a href="../index.html#cv">CV</a>
-      <a href="../index.html#contact">Contact</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html" aria-current="page">Game Design</a>
+      <a href="../research.html">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </header>
-  <main class="detail-main page-shell" id="main">
-    <a class="back-link" href="../index.html#interactive">← Back to Interactive Works</a>
-    <div class="detail-hero" style="margin-top:2.5rem">
-      <div><p class="section-kicker">Independent Work</p><h1>Night, Adios</h1></div>
-      <dl class="detail-meta">
-        <div><dt>Role</dt><dd>Solo Developer</dd></div>
-        <div><dt>Type</dt><dd>Independent project</dd></div>
-        <div><dt>Archive</dt><dd>Personal game-design work</dd></div>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Case Study</p>
+      <h1>Night, Adios</h1>
+      <p class="work-line">A neon subway shooter about a society that treats rest as weakness, and the design changes I made when the original 3D version stopped being readable.</p>
+      <ul class="chips">
+        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=3d" data-tag="3d">3D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Engine</dt><dd>Unreal Engine 4</dd></div>
+        <div><dt>Year</dt><dd>2024</dd></div>
+        <div><dt>Genre</dt><dd>Side-scrolling, roguelike, bullet hell</dd></div>
+        <div><dt>My work</dt><dd>Game design, character design, Unreal Blueprints</dd></div>
       </dl>
+      <p class="worklinks">
+        <a class="worklink is-primary" href="https://vimeo.com/1029931625" target="_blank" rel="noopener noreferrer">Watch it in play <span aria-hidden="true">&#8599;</span></a>
+      </p>
+    </header>
+
+    <figure class="work-hero">
+      <img src="../assets/projects/night-adios/preview.jpg" alt="Night, Adios title art: a pink pixel-art subway carriage with the title on the car's display panel and a character standing in the doorway." width="1400" height="788" loading="eager" decoding="async">
+    </figure>
+
+    <div class="work-body">
+
+      <section id="world">
+        <div class="split">
+          <div class="prose">
+            <h2>The world</h2>
+            <p>The setting imagines a city where sleep has nearly disappeared and the one remaining sleep-inducing substance is banned. Different groups fight over the right to rest.</p>
+            <p>I used the New York subway as the main space because it can be crowded, multicultural, beautiful, hostile, and unequal all at once. Tile mosaics and architecture sit next to arguments, fare evasion, and pop-up performances in the same carriage. That mixture is the tone the game wants.</p>
+          </div>
+          <div class="aside">
+            <p class="pullquote">The interesting part of this project is not the lore. It is what I changed when the first version stopped being readable.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="iteration">
+        <h2>Iteration</h2>
+        <div class="prose">
+          <p><strong>3D to 2D side-scrolling.</strong> The game was originally a 3D bullet hell. Projectile readability and navigation were chaotic: players could not tell what was coming at them or where they were going. Moving to a side view gave combat information a much clearer hierarchy, and the loss in spatial freedom bought a large gain in legibility.</p>
+          <p><strong>Open world to segmented carriages.</strong> An open subway diluted the combat. Breaking the space into individual carriages improved pacing, let me control encounters one at a time, and gave the player a sense of moving forward through the city rather than wandering it.</p>
+          <p><strong>Health and ammunition separated.</strong> I had first designed them as a combined system. In play, that meant the two resources blurred into one and neither decision was interesting. Separating them made each resource ask the player a clearer question.</p>
+          <p><strong>Boss and minion timing reworked.</strong> Bosses originally attacked at the same time as their assisting minions, which read as unfair rather than difficult. Restructuring the timing meant pressure the player can see coming, so the challenge comes from reading the fight instead of absorbing damage they had no way to avoid.</p>
+          <p>Supporting systems sit underneath these, including NPC relationships, faction reputation, random events, carriage maps, enemy notes, and boss recruitment. They are not what the project is about, but they are not what the project is about.</p>
+        </div>
+      </section>
+
+      <section id="materials">
+        <h2>Project deck</h2>
+        <div class="prose">
+          <p>The complete design deck, covering the premise, gameplay systems, iteration, character design, the Blueprint work, and the art pipeline.</p>
+        </div>
+        <div class="media deck">
+          <figure><img src="../assets/projects/night-adios/deck-01.jpg" alt="Deck page: Night, Adios title page with the game's tagline." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-02.jpg" alt="Deck page: basic info, covering engine, date, tags, and the background story of the game." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-03.jpg" alt="Deck page: the New York subway as inspiration, with reference photographs of station architecture and a carriage interior." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-04.jpg" alt="Deck page: why I made this game, covering the city as a microcosm, social inequality, and self-reflection." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-05.jpg" alt="Deck page: game play, covering NPC interactions, strategic management, and player progression." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-06.jpg" alt="Deck page: design iteration, covering the 3D to 2D transition, resource separation, segmented carriages, and boss balancing." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-07.jpg" alt="Deck page: character design for Hiroshi, with background story and abilities." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-08.jpg" alt="Deck page: character design for Mia, with background story and abilities." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-09.jpg" alt="Deck page: programming development process, showing Unreal Blueprint graphs for turret conversion and enemy behaviour." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-10.jpg" alt="Deck page: game art development process, showing 2D assets, player walking animation, and a 3D subway environment." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-11.jpg" alt="Deck page: the 2D and 3D application pipeline, listing Aseprite, Procreate, Photoshop, Unity, Maya, VRoid and Warudo." width="1300" height="731" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/night-adios/deck-12.jpg" alt="Deck page: final vision, covering narrative depth, social impact and planned game mechanics." width="1300" height="731" loading="lazy" decoding="async"></figure>
+        </div>
+        <aside class="notice">
+          <p class="notice-label">Note</p>
+          <p>Two reference photographs on the inspiration page showed identifiable people, so those two images have been removed from the published version. The written content and the remaining architectural reference photographs are unchanged.</p>
+        </aside>
+      </section>
+
+      <section id="credits">
+        <h2>Art and implementation</h2>
+        <div class="prose">
+          <p>I did the character design and the Unreal Blueprint implementation. Some VRoid, Warudo and Unity-community assets were modified, re-UV&rsquo;d, or retextured for use in the project rather than authored from scratch, and those third-party sources are credited as such.</p>
+        </div>
+      </section>
+
     </div>
-    <div class="detail-body">
-      <nav class="detail-toc" aria-label="Page sections">
-        <a href="#overview">Project Archive</a>
-        <a href="#role">Role</a>
-        <a href="#gallery">Selected Images</a>
-      </nav>
-      <div class="detail-content">
-        <section id="overview"><h2>Project Archive</h2><p>Night, Adios is an independently developed project. This page preserves selected visual material without linking visitors to the retired portfolio site.</p></section>
-        <section id="role"><h2>Role</h2><p>Concept, game design, visual direction, and implementation were completed independently by Caiyi Shen.</p></section>
-        <section id="gallery"><h2>Selected Images</h2><p>Images for this project are being migrated to locally hosted, optimized assets.</p></section>
-      </div>
-    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
   </main>
-  <div class="back-top-band"><a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
-  <footer class="site-footer">© <span data-year>2026</span> Caiyi Shen</footer>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="echoes-of-chinese-characters.html">
+        <span class="onward-label">Next case study</span>
+        <span class="onward-title">Echoes of Chinese Characters <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
 </body>
 </html>
