@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="Echoes of Chinese Characters — a tabletop game that turns Chinese characters into things children can build and tell stories with. Design by Caiyi Shen.">
+  <meta name="theme-color" content="#f3f0ea">
   <title>Echoes of Chinese Characters — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
@@ -11,41 +12,115 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header detail-header" data-header>
-    <a class="brand" href="../index.html#top">Caiyi Shen <small>Portfolio</small></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#research">Research</a>
-      <a href="../index.html#interactive">Interactive Works</a>
-      <a href="../index.html#cv">CV</a>
-      <a href="../index.html#contact">Contact</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="../index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../game-design.html" aria-current="page">Game Design</a>
+      <a href="../research.html">Research</a>
+      <a href="../art.html">2D &amp; 3D Art</a>
+      <a href="../community.html">Community &amp; Content</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
     </nav>
   </header>
-  <main class="detail-main page-shell" id="main">
-    <a class="back-link" href="../index.html#interactive">← Back to Interactive Works</a>
-    <div class="detail-hero" style="margin-top:2.5rem">
-      <div><p class="section-kicker">Independent Work</p><h1>Echoes of Chinese Characters</h1></div>
-      <dl class="detail-meta">
-        <div><dt>Role</dt><dd>Solo Developer</dd></div>
-        <div><dt>Type</dt><dd>Independent project</dd></div>
-        <div><dt>Archive</dt><dd>Personal game-design work</dd></div>
+
+  <main id="main">
+    <nav class="backnav" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
+
+    <header class="work-head">
+      <p class="eyebrow">Case Study</p>
+      <h1>Echoes of Chinese Characters</h1>
+      <p class="work-line">A tabletop language game that turns Chinese characters back into things children can build, move, and tell stories with.</p>
+      <ul class="chips">
+        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+        <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+        <li><a class="chip" href="../game-design.html#tag=tabletop" data-tag="tabletop">Tabletop</a></li>
+      </ul>
+      <dl class="factbar">
+        <div><dt>Type</dt><dd>Tabletop / Montessori-inspired learning tool</dd></div>
+        <div><dt>Year</dt><dd>2024</dd></div>
+        <div><dt>Audience</dt><dd>Ages 3&ndash;5</dd></div>
+        <div><dt>My work</dt><dd>Game design, illustration, iteration and testing</dd></div>
       </dl>
+    </header>
+
+    <figure class="work-hero">
+      <img src="../assets/projects/echoes/preview.jpg" alt="The pictogram tile set: painted sun, moon, mountain, water, fish and tree on the card fronts, with the matching Chinese characters and English meanings on the backs." width="1400" height="787" loading="eager" decoding="async">
+    </figure>
+
+    <div class="work-body">
+
+      <section id="why">
+        <div class="split">
+          <div class="prose">
+            <h2>Why I made it</h2>
+            <p>I made the project for young Chinese learners who were not responding to rote memorization. The design starts from two places: the pictographic origins of Chinese characters, and what I actually saw in Montessori settings, where children build with objects, rearrange them, and immediately turn those objects into stories.</p>
+            <p>So instead of asking a child to remember that a symbol means &ldquo;mountain,&rdquo; the game hands them a mountain they can pick up and put next to a river.</p>
+          </div>
+          <div class="aside">
+            <p class="pullquote">The character stops being a symbol to memorise and becomes a piece you can build with.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="loop">
+        <h2>Core loop</h2>
+        <div class="prose">
+          <p>Draw a prompt <span class="dot">&rarr;</span> build a scene or story with pictogram tiles <span class="dot">&rarr;</span> let the other players guess <span class="dot">&rarr;</span> flip the tile to reveal the Chinese character and the English meaning <span class="dot">&rarr;</span> score.</p>
+          <p>The reveal is the teaching moment, and it arrives only after the child has already used the image to mean something. Recognition comes after invention, not before it.</p>
+        </div>
+      </section>
+
+      <section id="iteration">
+        <h2>Iteration, the strongest part of the project</h2>
+        <div class="prose">
+          <p><strong>Matching was too flat.</strong> The first version was a straightforward matching game: pair the pictogram with the icon. It tested fine as a concept and died in play. Children lost interest quickly because there was nothing to make. I moved towards construction and puzzle-like pictogram building, where the shape of the character can be physically manipulated.</p>
+          <p><strong>Storytelling and roleplay added.</strong> Across age groups I kept seeing the same enthusiasm for pretend play. Adding a storytelling phase meant the child has to use the relationships between images rather than recognising one isolated symbol.</p>
+          <p><strong>Freehand drawing cut.</strong> I originally wanted children to draw their own characters. For three- to five-year-olds that asks too much motor and expressive control, and it produced frustration rather than invention. I replaced it with modular pre-made pictograms, which keeps room for invention without making the tool punishing.</p>
+          <p>Future concepts, not implemented: a broader age range, custom cards, accessibility options, a digital version, and AI visual recognition.</p>
+        </div>
+      </section>
+
+      <section id="materials">
+        <h2>Project materials</h2>
+        <div class="prose">
+          <p>The full design deck: premise, inspiration, game elements, rules, iteration, art process, and future direction.</p>
+        </div>
+        <div class="media deck">
+          <figure><img src="../assets/projects/echoes/slide-01-basics.jpg" alt="Deck page: basic info, covering game type, date, tags, and the background story." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-02-inspiration.jpg" alt="Deck page: inspiration, covering playing Dixit, observation at a Montessori school, and childhood calligraphy experience." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-03-why.jpg" alt="Deck page: why I made this game, on teaching Chinese characters to American-born Chinese children." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-04-elements.jpg" alt="Deck page: game elements, covering pictogram tiles, prompt cards, and the card front and back structure." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-05-gameplay.jpg" alt="Deck page: game play, covering setup, draw phase, build phase, guess phase, scoring and endgame." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-06-iteration.jpg" alt="Deck page: design iteration, with a photograph of early card versions for sun, water and mountain." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-07-art.jpg" alt="Deck page: game art development process, showing the six pictogram tiles front and back with meanings." width="1333" height="750" loading="lazy" decoding="async"></figure>
+          <figure><img src="../assets/projects/echoes/slide-08-vision.jpg" alt="Deck page: final vision, covering expanding age groups, customization, digital integration and an AI recognition system." width="1333" height="750" loading="lazy" decoding="async"></figure>
+        </div>
+        <aside class="notice">
+          <p class="notice-label">Note</p>
+          <p>Three deck pages originally included photographs taken during play sessions with children. Those photographs have been removed from the published versions; all of the written design content on those pages is intact.</p>
+        </aside>
+      </section>
+
     </div>
-    <div class="detail-body">
-      <nav class="detail-toc" aria-label="Page sections">
-        <a href="#overview">Project Archive</a>
-        <a href="#role">Role</a>
-        <a href="#gallery">Selected Images</a>
-      </nav>
-      <div class="detail-content">
-        <section id="overview"><h2>Project Archive</h2><p>Echoes of Chinese Characters is an independently developed project. This page preserves selected visual material without linking visitors to the retired portfolio site.</p></section>
-        <section id="role"><h2>Role</h2><p>Concept, game design, visual direction, and implementation were completed independently by Caiyi Shen.</p></section>
-        <section id="gallery"><h2>Selected Images</h2><p>Images for this project are being migrated to locally hosted, optimized assets.</p></section>
-      </div>
-    </div>
+    <nav class="backnav backnav--foot" aria-label="Breadcrumb">
+      <a class="back-link" href="../game-design.html#case-studies"><span class="arrow" aria-hidden="true">&larr;</span> Back to Case Studies</a>
+    </nav>
   </main>
-  <div class="back-top-band"><a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a></div>
-  <footer class="site-footer">© <span data-year>2026</span> Caiyi Shen</footer>
+
+  <footer class="page-foot">
+    <nav aria-label="Next project">
+      <a class="onward-link" href="elixir-nomad.html">
+        <span class="onward-label">Next case study</span>
+        <span class="onward-title">Elixir Nomad <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
 </body>
 </html>

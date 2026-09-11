@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Game design work by Caiyi Shen — interactive learning systems, a narrative management game, and independent prototypes.">
+  <meta name="theme-color" content="#f3f0ea">
+  <title>Game Design — Caiyi Shen</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <a class="masthead-mark" href="index.html">Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="game-design.html" aria-current="page">Game Design</a>
+      <a href="research.html">Research</a>
+      <a href="art.html">2D &amp; 3D Art</a>
+      <a href="community.html">Community &amp; Content</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <header class="page-head rise">
+      <p class="eyebrow">Tab 02</p>
+      <h1>Game Design</h1>
+      <p class="lede">The actual design ability lives inside the case studies: the problem, the mechanic, the tradeoff, and the iteration.</p>
+    </header>
+
+    <div class="tagbrowse">
+      <button class="tagbrowse-toggle" type="button" aria-expanded="false" aria-controls="tag-rail" data-tagtoggle>
+        Browse by tag <span class="tagbrowse-icon" aria-hidden="true"></span>
+      </button>
+      <div class="tagbrowse-panel" id="tag-rail" data-tagpanel hidden>
+        <ul class="chips">
+          <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+          <li><a class="chip" href="game-design.html#tag=3d" data-tag="3d">3D</a></li>
+          <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+          <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+          <li><a class="chip" href="game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+          <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+          <li><a class="chip" href="game-design.html#tag=animation" data-tag="animation">Animation</a></li>
+          <li><a class="chip" href="game-design.html#tag=tabletop" data-tag="tabletop">Tabletop</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ 1. SELECTED GAMES ============ -->
+    <section class="band" id="selected-games" aria-labelledby="games-label">
+      <h2 class="group-label" id="games-label">Selected Games</h2>
+
+      <div class="filterbar" data-filterbar aria-live="polite">
+        <p>Showing <span data-filter-count>0</span> projects tagged <span data-filter-name></span></p>
+        <button class="filter-clear" type="button" data-filter-clear>Clear filter</button>
+      </div>
+
+      <ul class="games">
+        <li class="game" data-project data-tags="2d game-design gameplay-design game-art">
+          <figure class="game-media">
+            <img src="assets/games/lunch-hours/cover.jpg" alt="Lunch Hours title art: a school corridor collaged from cut paper, with a lunch tray, scissors and paper-cut students." width="811" height="500" loading="lazy" decoding="async">
+          </figure>
+          <h3><a class="stretch" href="games/lunch-hours.html">Lunch Hours</a></h3>
+          <p class="role">Game Art <span class="dot">·</span> Game Design <span class="dot">·</span> Gameplay Design</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+          </ul>
+          <p class="line">A lunchtime obstacle course built around the very specific panic of beating the cafeteria queue at a Chinese school. Dialogue boxes block the path, so a social interruption becomes speed and space pressure.</p>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </li>
+
+        <li class="game" data-project data-tags="2d game-design gameplay-design narrative-design game-art">
+          <figure class="game-media">
+            <img src="assets/games/cena-floris/cover.jpg" alt="Cena Floris title art: the protagonist with long lilac hair against a field of painted flowers." width="1152" height="648" loading="lazy" decoding="async">
+          </figure>
+          <h3><a class="stretch" href="games/cena-floris.html">Cena Floris</a></h3>
+          <p class="role">Game Design <span class="dot">·</span> Narrative / Worldbuilding <span class="dot">·</span> Gameplay <span class="dot">·</span> Art</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+          </ul>
+          <p class="line">A cooking-magic game where the recipe only becomes visible when you ask for it, and every second you look burns more of it away. Information itself is the resource.</p>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </li>
+
+        <li class="game" data-project data-tags="2d game-design gameplay-design game-art">
+          <figure class="game-media">
+            <img src="assets/games/coworker.png" alt="COWorker cover art: a cow seen through a retro CRT monitor." width="630" height="500" loading="lazy" decoding="async">
+          </figure>
+          <h3><a class="stretch" href="games/coworker.html">COWorker</a></h3>
+          <p class="role">Game Design <span class="dot">·</span> Gameplay <span class="dot">·</span> Art</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+          </ul>
+          <p class="line">An experimental feminist game about productivity, bodily control, and the fact that the player is also trapped inside the system. Stop clicking and the interface tells you to go to work.</p>
+          <p class="note">18+ content gate on itch.io</p>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </li>
+
+        <li class="game" data-project data-tags="2d game-art animation">
+          <figure class="game-media">
+            <img src="assets/games/dueling-duet/victory-western.jpg" alt="Dueling Duet victory art: the Western-fantasy duellist standing in a gothic hall." width="1500" height="1048" loading="lazy" decoding="async">
+          </figure>
+          <h3><a class="stretch" href="games/dueling-duet.html">Dueling Duet</a></h3>
+          <p class="role">Art <span class="dot">·</span> Character Design <span class="dot">·</span> Animation</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+            <li><a class="chip" href="game-design.html#tag=animation" data-tag="animation">Animation</a></li>
+          </ul>
+          <p class="line">Two duellists drawn from opposite mythologies, and two instruments rebuilt as living monsters. I designed the characters, the instrument-monsters, the Gothic letterforms, and the hand-animated music-box opening.</p>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ 2. FEATURED WORK ============ -->
+    <section class="band" id="featured" aria-labelledby="featured-label">
+      <h2 class="group-label" id="featured-label">Featured Work</h2>
+
+
+      <!-- 01. Axis AI : inset left, hero right, text under hero -->
+      <article class="feature" data-project data-tags="2d 3d game-design gameplay-design">
+        <div class="feature-head">
+          <p class="idx">01</p>
+          <h3 class="feature-title">
+            <a class="stretch" href="projects/axis-ai.html">Axis AI <span class="sub">3D Interactive Learning Experiences</span></a>
+          </h3>
+          <p class="meta">Northeastern University / Axis AI <span class="dot">·</span> Co-Founder, Project Lead, 3D Artist, Venture Development Lead <span class="dot">·</span> 2026&ndash;Present</p>
+        </div>
+
+        <figure class="feature-inset">
+          <img src="assets/projects/axis-ai/course-03.jpg" alt="A 3D geometry lesson: a rotating beam of light on a protractor, teaching that vertically opposite angles stay equal." width="1400" height="1193" loading="lazy" decoding="async">
+          <figcaption>Making the concept the mechanic. The player turns the relationship instead of reading the formula.</figcaption>
+        </figure>
+
+        <figure class="feature-hero">
+          <img src="assets/projects/axis-ai/course-01.jpg" alt="A 3D lesson scene: a lever and fulcrum with weighted pans under a pink sky, used to teach balance by manipulation." width="1400" height="1015" loading="eager" decoding="async">
+        </figure>
+
+        <div class="feature-text">
+          <p class="line">I design playable learning systems that turn course content into decisions, actions, and feedback, not just 3D slides.</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=3d" data-tag="3d">3D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+          </ul>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </div>
+      </article>
+
+      <!-- 02. Schoolive : same composition -->
+      <article class="feature" data-project data-tags="2d game-design gameplay-design narrative-design game-art">
+        <div class="feature-head">
+          <p class="idx">02</p>
+          <h3 class="feature-title">
+            <a class="stretch" href="projects/schoolive.html">Schoolive <span class="sub">Narrative Management Game</span></a>
+          </h3>
+          <p class="meta">Schoolive Interactive Ltd. <span class="dot">·</span> Co-founder, Creative Director, Game Director <span class="dot">·</span> 2022&ndash;Present</p>
+        </div>
+
+        <figure class="feature-inset">
+          <img src="assets/projects/schoolive/gameplay-02.jpg" alt="A second view of the restaurant interface during service, showing the menu and customer state." width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>Service view. What the player learns depends on who sits down and what they are served.</figcaption>
+          <aside class="notice notice--compact">
+            <p class="notice-label">Note</p>
+            <p>AI-generated concept mockup, not a final production asset.</p>
+          </aside>
+        </figure>
+
+        <figure class="feature-hero">
+          <img src="assets/projects/schoolive/game-cover.jpg" alt="The restaurant at night: two characters behind the counter, the day's menu on a board, and the shop management panel open on a phone." width="1600" height="900" loading="lazy" decoding="async">
+          <aside class="notice">
+            <p class="notice-label">Note</p>
+            <p>Due to confidentiality and copyright restrictions, some visuals shown here are AI-generated concept mockups used to communicate the intended experience rather than final production assets.</p>
+          </aside>
+        </figure>
+
+        <div class="feature-text">
+          <p class="line">A restaurant-management mystery where ingredients, cooking choices, and customer memories are also the player&rsquo;s investigation tools.</p>
+          <ul class="chips">
+            <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+            <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+          </ul>
+          <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ 3. CASE STUDIES ============ -->
+    <section class="band" id="case-studies" aria-labelledby="cases-label">
+      <h2 class="group-label" id="cases-label">Case Studies</h2>
+
+      <ol class="cases">
+        <li class="case" data-project data-tags="2d 3d game-design gameplay-design narrative-design game-art">
+          <p class="idx">03</p>
+          <figure class="case-media">
+            <img src="assets/projects/night-adios/preview.jpg" alt="Night, Adios title art: a pink pixel-art subway carriage with the title on the car's display panel." width="1400" height="788" loading="lazy" decoding="async">
+          </figure>
+          <div class="case-text">
+            <h3><a class="stretch" href="works/night-adios.html">Night, Adios</a></h3>
+            <p class="meta">Unreal Engine 4 <span class="dot">·</span> 2024 <span class="dot">·</span> Side-scrolling <span class="dot">·</span> Roguelike <span class="dot">·</span> Bullet Hell</p>
+            <p class="line">A neon subway shooter about a society that treats rest as weakness, and the design changes I made when the original 3D version stopped being readable.</p>
+            <ul class="chips">
+              <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+              <li><a class="chip" href="game-design.html#tag=3d" data-tag="3d">3D</a></li>
+              <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+              <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+              <li><a class="chip" href="game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+              <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+            </ul>
+            <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+          </div>
+        </li>
+
+        <li class="case" data-project data-tags="2d game-design game-art tabletop">
+          <p class="idx">04</p>
+          <figure class="case-media">
+            <img src="assets/projects/echoes/preview.jpg" alt="Pictogram tiles: painted sun, moon, mountain, water, fish and tree on the front, with the matching Chinese characters on the back." width="1400" height="787" loading="lazy" decoding="async">
+          </figure>
+          <div class="case-text">
+            <h3><a class="stretch" href="works/echoes-of-chinese-characters.html">Echoes of Chinese Characters</a></h3>
+            <p class="meta">Tabletop / Montessori-inspired learning tool <span class="dot">·</span> 2024 <span class="dot">·</span> Ages 3&ndash;5</p>
+            <p class="line">A tabletop language game that turns Chinese characters back into things children can build, move, and tell stories with.</p>
+            <ul class="chips">
+              <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+              <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+              <li><a class="chip" href="game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+              <li><a class="chip" href="game-design.html#tag=tabletop" data-tag="tabletop">Tabletop</a></li>
+            </ul>
+            <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+          </div>
+        </li>
+
+        <li class="case" data-project data-tags="2d game-design gameplay-design">
+          <p class="idx">05</p>
+          <figure class="case-media">
+            <img src="assets/projects/elixir-nomad/preview.jpg" alt="Elixir Nomad title art: a painted view through the wooden window of a travelling alchemist's van onto open sky." width="1400" height="788" loading="lazy" decoding="async">
+          </figure>
+          <div class="case-text">
+            <h3><a class="stretch" href="works/elixir-nomad.html">Elixir Nomad</a></h3>
+            <p class="meta">Unreal Engine 4 <span class="dot">·</span> 2024 <span class="dot">·</span> Chemistry simulation / educational prototype</p>
+            <p class="line">A traveling alchemist prototype where potion crafting is driven by reagent combinations, temperature, and a physical sensor input.</p>
+            <ul class="chips">
+              <li><a class="chip" href="game-design.html#tag=2d" data-tag="2d">2D</a></li>
+              <li><a class="chip" href="game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+              <li><a class="chip" href="game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+            </ul>
+            <p class="cta" aria-hidden="true">View project <span class="arrow">&rarr;</span></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+
+    <!-- ============ 4. OTHER WORKS ============ -->
+    <section class="band band--last" id="other-works" aria-labelledby="other-label">
+      <h2 class="group-label" id="other-label">Other Works</h2>
+      <p class="group-note">Earlier itch.io releases, kept for the record.</p>
+
+      <ul class="earlier">
+        <li>
+          <a class="early" href="https://ca1y1.itch.io/a-dungeon-monster" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/dungeon-monster.webp" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">A Dungeon MONSTER</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://ca1y1.itch.io/zombie-lab" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/zombie-lab.webp" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">Zombie Lab</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://ca1y1.itch.io/one-year-old-catch" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/one-year-old-catch.webp" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">One-year-old catch</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://ca1y1.itch.io/pans-labyrinth" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/pans-labyrinth.png" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">Pan&rsquo;s Labyrinth</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+            <span class="early-note">Mature-content notice</span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://fedexodus.itch.io/sewer-struggle" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/sewer-struggle.png" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">Sewer Struggle</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://wingmancover.itch.io/we-happy-were" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/we-happy-were.png" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">We Happy, Were</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="early" href="https://wingmancover.itch.io/httpsyoutubeze-0f6euhm0" target="_blank" rel="noopener noreferrer">
+            <span class="early-media"><img src="assets/games/journalism.png" alt="" width="315" height="250" loading="lazy" decoding="async"></span>
+            <span class="early-title">JourNalism</span>
+            <span class="early-link">itch.io <span aria-hidden="true">&#8599;</span></span>
+            <span class="early-note">18+ content gate</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="page-foot">
+    <nav aria-label="Next section">
+      <a class="onward-link" href="research.html">
+        <span class="onward-label">Next</span>
+        <span class="onward-title">Research <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </nav>
+    <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
+  </footer>
+</body>
+</html>
