@@ -199,3 +199,71 @@ document.querySelectorAll('[data-video]').forEach((box) => {
     box.replaceChildren(frame);
   });
 });
+
+/* ---------------------------------------------------------------------------
+   Copy to clipboard
+   Used by the contact page for the email address. The confirmation is a live
+   region that is empty until something is actually copied, so a screen reader
+   announces the result instead of reading a stray "Copied" on page load.
+   --------------------------------------------------------------------------- */
+(() => {
+  const buttons = document.querySelectorAll('[data-copy]');
+  if (!buttons.length) return;
+
+  /* navigator.clipboard needs a secure context, which rules it out when the
+     page is opened straight off disk. execCommand is the fallback; if that
+     fails too, select the text so the visitor can copy it by hand. */
+  const legacyCopy = (text) => {
+    const field = document.createElement('textarea');
+    field.value = text;
+    field.setAttribute('readonly', '');
+    field.style.cssText = 'position:fixed;top:0;left:-9999px;opacity:0';
+    document.body.appendChild(field);
+    field.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+    field.remove();
+    return ok;
+  };
+
+  const selectFallback = (button) => {
+    const target = button.querySelector('[data-copy-text]');
+    if (!target || !window.getSelection) return;
+    const range = document.createRange();
+    range.selectNodeContents(target);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  };
+
+  buttons.forEach((button) => {
+    const flag = button.querySelector('[data-copy-flag]');
+    let timer;
+
+    const report = (message, ok) => {
+      if (!flag) return;
+      flag.textContent = message;
+      flag.classList.add('is-on');
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        flag.classList.remove('is-on');
+        /* Clear only after the fade, so it does not vanish mid-transition. */
+        setTimeout(() => { if (!flag.classList.contains('is-on')) flag.textContent = ''; }, 400);
+      }, ok ? 1900 : 3200);
+    };
+
+    button.addEventListener('click', async () => {
+      const text = button.dataset.copy;
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          report('Copied', true);
+          return;
+        } catch (_) { /* fall through to the legacy path */ }
+      }
+      if (legacyCopy(text)) { report('Copied', true); return; }
+      selectFallback(button);
+      report('Select and copy', false);
+    });
+  });
+})();
