@@ -465,7 +465,9 @@ p { color: var(--ink-muted); }
 .page-head .lede {
   grid-column: 8 / -1;
   align-self: end;
-  max-width: 40ch;
+  /* No character cap here: the lede already has its own five-column track,
+     and a 40ch limit left a third of that track empty. The mobile rule below
+     re-caps it for when it spans the full width. */
   margin: 0;
   color: var(--ink-soft);
   font-size: clamp(0.95rem, 1.05vw, 1.06rem);
@@ -826,9 +828,12 @@ p { color: var(--ink-muted); }
 .game:hover .cta .arrow { transform: translate(4px, -4px); }
 
 /* Earlier works — compact, deliberately quiet */
+/* Five across, not auto-fill: a fixed track count is what puts the two
+   content-gated releases together on a final row of their own instead of
+   letting them ride at the end of a single seven-wide line. */
 .earlier {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1.4rem, 2.6vw, 2.2rem) var(--col-gap);
   margin: 0;
   padding: 0;
@@ -883,6 +888,8 @@ p { color: var(--ink-muted); }
   .case .idx { grid-column: 1 / -1; padding-top: 0; }
   .case-media { grid-column: 1 / span 6; }
   .case-text { grid-column: 7 / -1; }
+
+  .earlier { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 767px) {
@@ -902,7 +909,7 @@ p { color: var(--ink-muted); }
   .games { grid-template-columns: 1fr; gap: 2.6rem; }
   .game-media { aspect-ratio: 16 / 10; }
 
-  .earlier { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 1.3rem 1rem; }
+  .earlier { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 1.1rem; }
   .early-title { font-size: 0.82rem; }
 }
 
@@ -910,6 +917,8 @@ p { color: var(--ink-muted); }
   .feature:hover .feature-hero img,
   .case:hover .case-media img,
   .game:hover .game-media img,
+  a.work-hero:hover img,
+  a.work-head-media:hover img,
   .early:hover .early-media img { transform: none; }
 }
 
@@ -1061,6 +1070,12 @@ a.chip[aria-current="true"] {
   border-left: 2px solid var(--accent);
   background: var(--paper-raised);
 }
+@media (min-width: 1024px) {
+  /* Match the eight-column lead measure. At 68ch a note sat two columns short
+     of the passage it annotates, which read as a ragged edge rather than as a
+     quieter aside; the accent rule and the raised panel already do that job. */
+  .notice { max-width: calc((100% - 11 * var(--col-gap)) / 12 * 8 + 7 * var(--col-gap)); }
+}
 .notice-label {
   grid-column: 1;
   margin: 0;
@@ -1201,6 +1216,36 @@ figure > .notice { margin-top: 0.8rem; }
 .work-hero--compact { --hero-max: 860px; }
 .work-hero img { width: 100%; height: auto; display: block; transition: transform var(--dur-slow) var(--ease); }
 a.work-hero:hover img { transform: scale(1.012); }
+
+/* ---- Selected Games hero -------------------------------------------------
+   One shared opening for the four game pages: the whole title block on the
+   left, the cover art beside it on the right. The old arrangement stacked a
+   wide cover under the title and pushed the first paragraph most of a screen
+   down. Nothing is cropped to a shared ratio here, so each cover keeps its
+   own proportions and the column simply ends where the image ends. */
+.work-head--split { align-items: start; }
+.work-head-main { grid-column: 1 / span 6; }
+.work-head-media {
+  grid-column: 8 / -1;
+  align-self: center;
+  display: block;
+  overflow: hidden;
+  background: var(--paper-raised);
+}
+.work-head-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--dur-slow) var(--ease);
+}
+a.work-head-media:hover img { transform: scale(1.012); }
+/* Two-by-two inside six columns instead of the four-across band it uses when
+   it spans the full width. */
+.work-head--split .factbar {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.7rem;
+}
+.work-head--split .chips { margin-bottom: 0; }
 .work-hero figcaption,
 .figcap {
   margin-top: 0.75rem;
@@ -1229,6 +1274,11 @@ a.work-hero:hover img { transform: scale(1.012); }
   font-size: clamp(1.1rem, 1.6vw, 1.3rem);
   letter-spacing: -0.02em;
 }
+/* A subheading directly after a block of copy or a figure needs air above it,
+   or it reads as the last line of what it follows. */
+.work-body .prose + h3,
+.work-body .media + h3,
+.work-body .split + h3 { margin-top: clamp(1.7rem, 3.5vh, 2.5rem); }
 .prose { max-width: 68ch; }
 .prose p { margin: 0 0 1rem; color: var(--ink-soft); font-size: clamp(0.95rem, 1.02vw, 1.04rem); line-height: 1.68; }
 .prose p:last-child { margin-bottom: 0; }
@@ -1236,6 +1286,46 @@ a.work-hero:hover img { transform: scale(1.012); }
 .prose li { margin-bottom: 0.55rem; color: var(--ink-soft); font-size: clamp(0.95rem, 1.02vw, 1.04rem); line-height: 1.62; }
 .prose li:last-child { margin-bottom: 0; }
 .prose strong { font-weight: 600; color: var(--ink); }
+
+/* Text-only sections.
+   68ch of body copy is roughly five of the twelve columns, so a section with
+   no figure beside it used to leave more than half the shell empty. These two
+   modifiers let the copy own that width instead.
+
+   --lead: a short introduction (one or two paragraphs). One wider column,
+   set a little larger, so it reads as an opening statement rather than as a
+   body paragraph that lost its picture.
+
+   --wide: a long text-only passage. The block spans the whole shell and the
+   copy flows into two columns, which is the only way to fill nine or ten
+   grid columns without pushing the measure past what is comfortable to read.
+   Text is allowed to break across the gap on purpose: forcing paragraphs to
+   stay whole leaves one column visibly short. */
+.prose--lead { max-width: none; }
+.prose--lead p { font-size: clamp(1rem, 1.15vw, 1.14rem); line-height: 1.62; }
+
+.prose--wide { max-width: none; }
+
+@media (min-width: 1024px) {
+  /* Eight and ten of the twelve columns, measured off the same track maths
+     the grid uses, so these line up with the split layouts on other sections
+     instead of landing on an arbitrary percentage. */
+  .prose--lead { width: calc((100% - 11 * var(--col-gap)) / 12 * 8 + 7 * var(--col-gap)); }
+  .prose--wide {
+    width: calc((100% - 11 * var(--col-gap)) / 12 * 10 + 9 * var(--col-gap));
+    columns: 2;
+    column-gap: var(--col-gap);
+    orphans: 2;
+    widows: 2;
+  }
+  /* A list or a heading split down the middle reads as a rendering fault,
+     while a split paragraph reads as a column. Only protect the former. */
+  .prose--wide ul,
+  .prose--wide li,
+  .prose--wide h3,
+  .prose--wide .pullquote { break-inside: avoid-column; }
+  .prose--wide > :first-child { margin-top: 0; }
+}
 
 .pullquote {
   max-width: 34ch;
@@ -1264,9 +1354,11 @@ a.work-hero:hover img { transform: scale(1.012); }
 .split--media-left > .aside { grid-column: 1 / span 5; }
 .split--media-left > .prose { grid-column: 7 / -1; }
 
-/* A wider media column for landscape art that needs room to read. */
-.split--wide-media > .aside { grid-column: 1 / span 7; }
-.split--wide-media > .prose { grid-column: 9 / -1; align-self: center; }
+/* A wider media column for landscape art that needs room to read. Six and
+   five rather than seven and four: at four columns the explanation was down
+   to a 47-character measure while the figure had room to spare. */
+.split--wide-media > .aside { grid-column: 1 / span 6; }
+.split--wide-media > .prose { grid-column: 8 / -1; align-self: center; }
 
 /* Standard overview: explanation left, one supporting image right.
    Prose comes first in the source, so mobile stacks text then image. */
@@ -1276,6 +1368,12 @@ a.work-hero:hover img { transform: scale(1.012); }
 /* Explanation left, a pair of artworks right. */
 .split--art > .prose { grid-column: 1 / span 5; }
 .split--art > .aside { grid-column: 7 / -1; align-self: start; }
+
+/* A long argument with one piece of supporting evidence beside it. The figure
+   stays at the top of its column rather than centring against a column of
+   text several times its height. */
+.split--evidence > .prose { grid-column: 1 / span 7; }
+.split--evidence > .aside { grid-column: 9 / -1; align-self: start; }
 
 /* Two artworks sharing a media column, bottom-aligned so a landscape and a
    portrait piece read as a pair rather than as two unrelated blocks. */
@@ -1288,10 +1386,22 @@ a.work-hero:hover img { transform: scale(1.012); }
 .stack .plate { padding: clamp(0.8rem, 1.6vw, 1.2rem); }
 .stack .plate img { max-height: 330px; }
 
+/* A thesis line set directly under a section heading, ahead of the body copy.
+   Pitched below the h2 and above the paragraphs so it joins the hierarchy
+   instead of floating as an isolated block further down the column. */
+.pullquote--lede {
+  max-width: 42ch;
+  margin: -0.3rem 0 1.5rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.14rem, 1.7vw, 1.46rem);
+  line-height: 1.34;
+}
+
 /* Text-column pull quote. Sits with the body copy instead of competing with
    the project title from a full-height side column. */
 .pullquote--inline {
-  max-width: 44ch;
+  max-width: 56ch;
   margin: 1.6rem 0 0;
   padding-left: 1.1rem;
   border-left: 2px solid var(--accent);
@@ -1440,6 +1550,11 @@ figure { margin: 0; }
   .work-head h1,
   .work-line,
   .work-head .chips { grid-column: 1 / -1; }
+  /* Text first, cover second: that is already the source order, so the two
+     only need to give up their columns. */
+  .work-head-main,
+  .work-head-media { grid-column: 1 / -1; }
+  .work-head-media { margin-top: clamp(1.8rem, 4vh, 2.6rem); }
   .split > .prose,
   .split > .aside,
   .split--media-left > .prose,
@@ -1448,6 +1563,8 @@ figure { margin: 0; }
   .split--wide-media > .aside,
   .split--art > .prose,
   .split--art > .aside,
+  .split--evidence > .prose,
+  .split--evidence > .aside,
   .split--overview > .prose,
   .split--overview > .aside { grid-column: 1 / -1; }
   /* Media-left splits keep the figure first, which is already the source
@@ -1465,7 +1582,21 @@ figure { margin: 0; }
   .scraps figure { transform: none !important; }
   .plate img { max-height: 320px; }
   .worklinks { gap: 0.5rem; }
-  .worklink { font-size: 0.64rem; padding: 0.5rem 0.8rem; }
+  /* Keep the primary actions at a full touch target; the shrunken type was
+     leaving these at 33px. */
+  .worklink { font-size: 0.64rem; padding: 0.5rem 0.9rem; min-height: 44px; }
+
+  /* Standalone controls, as opposed to links inside a sentence, were 17-26px
+     tall on a phone. Grow the elements themselves rather than overlaying a
+     hit area, so a wrapped row of chips cannot steal a neighbour's tap. */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding-block: 0.5rem;
+  }
+  .tagbrowse-toggle { min-height: 40px; padding-block: 0.55rem; }
+  .back-link { padding-block: 0.7rem; }
 }
 
 /* 11. Research --------------------------------------------------------------
@@ -1496,8 +1627,21 @@ figure { margin: 0; }
 
 /* No publishable imagery for this project, so the text takes the full
    measure rather than sitting beside an invented graphic. */
-.rentry--textonly .rentry-text { grid-column: 2 / span 8; }
-.rentry--textonly .question { max-width: 52ch; }
+/* Community entries carry no figure. The text ran to eight of twelve columns
+   with nothing beside it, so it now runs to the edge and the body copy flows
+   in two columns, matching the text-only sections on the project pages. */
+.rentry--textonly .rentry-text { grid-column: 2 / -1; }
+.rentry--textonly .question { max-width: 68ch; }
+@media (min-width: 1024px) {
+  .rentry--textonly .prose {
+    max-width: none;
+    columns: 2;
+    column-gap: var(--col-gap);
+    orphans: 2;
+    widows: 2;
+  }
+  .rentry--textonly .deflist { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem var(--col-gap); }
+}
 .rentry-text h3 { margin: 0; font-size: clamp(1.35rem, 2.1vw, 1.85rem); letter-spacing: -0.026em; }
 .rentry-text h3 a { color: inherit; }
 
@@ -1553,6 +1697,20 @@ figure { margin: 0; }
   align-items: start;
 }
 .gallery--wide { grid-template-columns: minmax(0, 1fr); }
+
+/* Paired rows. The row declares one ratio and both pieces are cover-cropped
+   into it, so a pair shares a height without either image being stretched:
+   cover scales uniformly and trims the overflow. --focus moves the crop when
+   centre is the wrong part of the picture. The lightbox always opens the
+   uncropped file, so nothing is actually lost. */
+.gallery--pair + .gallery--pair { margin-top: clamp(1.2rem, 3vw, 2.6rem); }
+.gallery--pair .artshot { aspect-ratio: var(--pair-ratio, 3 / 2); }
+.gallery--pair .artshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, center);
+}
 
 .artwork { margin: 0; }
 .artshot {
@@ -1690,7 +1848,7 @@ figure { margin: 0; }
 }
 .contact-lede { grid-column: 1 / span 6; }
 .contact-lede h1 { margin: 0 0 1.2rem; font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: 0.98; letter-spacing: -0.04em; }
-.contact-lede p { margin: 0; max-width: 34ch; color: var(--ink-soft); font-size: clamp(0.98rem, 1.15vw, 1.1rem); line-height: 1.6; }
+.contact-lede p { margin: 0; max-width: 52ch; color: var(--ink-soft); font-size: clamp(0.98rem, 1.15vw, 1.1rem); line-height: 1.6; }
 
 .contact-list { grid-column: 8 / -1; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .contact-list li { border-bottom: 1px solid var(--line); }
@@ -1724,6 +1882,53 @@ figure { margin: 0; }
 .contact-list a:hover .contact-kind,
 .contact-list a:focus-visible .contact-kind { color: var(--accent); }
 
+/* Email is a copy control, not a mailto link: copying the address is what
+   people actually want from a contact page, and a mailto opens whatever the
+   machine happens to have registered. Same row geometry as the links so the
+   list still reads as one set. */
+.contact-copy {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.95rem 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: copy;
+}
+.contact-copy .contact-val {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.6rem;
+}
+.contact-copyicon {
+  display: inline-grid;
+  place-items: center;
+  color: var(--ink-faint);
+  transition: color var(--dur) var(--ease);
+}
+.contact-copy:hover .contact-copyicon,
+.contact-copy:focus-visible .contact-copyicon,
+.contact-copy:hover .contact-kind,
+.contact-copy:focus-visible .contact-kind { color: var(--accent); }
+.contact-copied {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.contact-copied.is-on { opacity: 1; }
+
 /* Research / art / cv / contact — responsive -------------------------------- */
 
 @media (max-width: 1023px) {
@@ -1736,16 +1941,23 @@ figure { margin: 0; }
 @media (max-width: 767px) {
   .rentry-media, .rentry-text { grid-column: 1 / -1; }
   .gallery { grid-template-columns: 1fr; }
+  /* One per row: there is no neighbour to match a height with, so show the
+     whole picture rather than a crop. */
+  .gallery--pair .artshot { aspect-ratio: auto; }
+  .gallery--pair .artshot img { height: auto; object-fit: contain; }
   .deflist > div,
   .cv-skills > div { grid-template-columns: 1fr; }
   .cv-entry { grid-template-columns: 1fr; }
   .cv-when { grid-row: auto; grid-column: 1; text-align: left; }
-  .contact-list a { grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.7rem; }
+  .contact-list a,
+  .contact-copy { grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.7rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rentry:hover .rentry-media img,
   .artshot:hover img,
+  a.work-hero:hover img,
+  a.work-head-media:hover img,
   .contact-list a:hover .contact-val { transform: none; }
 }
 

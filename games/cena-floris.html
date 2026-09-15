@@ -31,32 +31,33 @@
       <a class="back-link" href="../game-design.html#selected-games"><span class="arrow" aria-hidden="true">&larr;</span> Back to Selected Games</a>
     </nav>
 
-    <header class="work-head">
-      <p class="eyebrow">Selected Game</p>
-      <h1><a href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer">Cena Floris</a></h1>
-      <p class="work-line">A cooking-magic game where the recipe only becomes visible when you ask for it, and every second you look makes it burn away.</p>
-      <ul class="chips">
-        <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
-        <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
-        <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
-        <li><a class="chip" href="../game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
-        <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
-      </ul>
-      <dl class="factbar">
-        <div><dt>Role</dt><dd>Game Design, Narrative / Worldbuilding, Gameplay, Art</dd></div>
-        <div><dt>Type</dt><dd>Cooking simulation</dd></div>
-        <div><dt>Team</dt><dd>Collaborative student project</dd></div>
-        <div><dt>Release</dt><dd>itch.io</dd></div>
-      </dl>
-      <p class="worklinks">
-        <a class="worklink is-primary" href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer">Play on itch.io <span aria-hidden="true">&#8599;</span></a>
-        <a class="worklink" href="https://www.youtube.com/watch?v=tDfBk5uxo4U" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">&#8599;</span></a>
-      </p>
+    <header class="work-head work-head--split">
+      <div class="work-head-main">
+        <p class="eyebrow">Selected Game</p>
+        <h1><a href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer">Cena Floris</a></h1>
+        <p class="work-line">A cooking-magic game where the recipe only becomes visible when you ask for it, and every second you look makes it burn away.</p>
+        <ul class="chips">
+          <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
+          <li><a class="chip" href="../game-design.html#tag=game-design" data-tag="game-design">Game Design</a></li>
+          <li><a class="chip" href="../game-design.html#tag=gameplay-design" data-tag="gameplay-design">Gameplay Design</a></li>
+          <li><a class="chip" href="../game-design.html#tag=narrative-design" data-tag="narrative-design">Narrative Design</a></li>
+          <li><a class="chip" href="../game-design.html#tag=game-art" data-tag="game-art">Game Art</a></li>
+        </ul>
+        <dl class="factbar">
+          <div><dt>Role</dt><dd>Game Design, Narrative / Worldbuilding, Gameplay, Art</dd></div>
+          <div><dt>Type</dt><dd>Cooking simulation</dd></div>
+          <div><dt>Team</dt><dd>Collaborative student project</dd></div>
+          <div><dt>Release</dt><dd>itch.io</dd></div>
+        </dl>
+        <p class="worklinks">
+          <a class="worklink is-primary" href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer">Play on itch.io <span aria-hidden="true">&#8599;</span></a>
+          <a class="worklink" href="https://www.youtube.com/watch?v=tDfBk5uxo4U" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">&#8599;</span></a>
+        </p>
+      </div>
+      <a class="work-head-media" href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer" aria-label="Play Cena Floris on itch.io">
+        <img src="../assets/games/cena-floris/cover.jpg" alt="Cena Floris title art: the protagonist with long lilac hair, hands raised, against a painted field of flowers and bottles." width="1152" height="648" loading="eager" decoding="async">
+      </a>
     </header>
-
-    <a class="work-hero work-hero--compact" href="https://pepeko.itch.io/cena-floris" target="_blank" rel="noopener noreferrer" aria-label="Play Cena Floris on itch.io">
-      <img src="../assets/games/cena-floris/cover.jpg" alt="Cena Floris title art: the protagonist with long lilac hair, hands raised, against a painted field of flowers and bottles." width="1152" height="648" loading="eager" decoding="async">
-    </a>
 
     <div class="work-body">
 
@@ -64,10 +65,10 @@
         <div class="split split--overview">
           <div class="prose">
             <h2>Overview</h2>
+            <p class="pullquote pullquote--lede">More certainty makes the next action easier, but it destroys part of what you may still need.</p>
             <p>Cooking is a kind of magic, and only a few people can still do it. Most of the population lives on flowers. Some of them treat anyone who still eats food as an outsider.</p>
             <p>A good meal in this world can do a great deal. It can even heal illness. The protagonist&rsquo;s grandmother is one of the few who knows the cooking magic, but she is too ill to get out of bed, so the granddaughter takes the recipe and cooks in her place.</p>
             <p>On the way back she runs into the people who despise eaters: a hostile witch, who curses the recipe.</p>
-            <p class="pullquote pullquote--inline">More certainty makes the next action easier, but it destroys part of what you may still need.</p>
           </div>
           <div class="aside">
             <figure class="media-frame">
@@ -80,7 +81,7 @@
 
       <section id="mechanic">
         <h2>The core mechanic: information as a resource</h2>
-        <div class="prose">
+        <div class="prose prose--wide">
           <p>Because the recipe is cursed, it is not simply readable. The player has to <strong>hold three random keyboard keys to reveal the hidden recipe</strong>, and while it is revealed the page burns away from the top down.</p>
           <p>This is the design idea the whole game exists for. I wanted information itself to behave like a consumable resource rather than a free lookup. Reading is not a pause in the action; it is a spend. You can buy certainty about the next step, and the price is a permanent piece of the instructions you have not read yet.</p>
           <p>It also puts the pressure in the right place emotionally. The player is not fighting the witch. They are rationing their own attention while something they need disappears.</p>
@@ -89,7 +90,7 @@
 
       <section id="endings">
         <h2>Four endings</h2>
-        <div class="prose">
+        <div class="prose prose--lead">
           <p>What the player manages to read, and what they therefore manage to cook, decides how the meal lands. The endings are framed as a single repeated composition. The same table, the same girl, and a different outcome sitting across from her, so the difference reads immediately as a consequence of the cooking rather than as a separate scene.</p>
         </div>
         <div class="media duo">
@@ -132,7 +133,7 @@
   <footer class="page-foot">
     <nav aria-label="Next project">
       <a class="onward-link" href="coworker.html">
-        <span class="onward-label">Next game</span>
+        <span class="onward-label">Next project</span>
         <span class="onward-title">COWorker <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
     </nav>
