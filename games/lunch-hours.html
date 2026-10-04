@@ -77,7 +77,7 @@
         </div>
       </section>
 
-      <section id="mechanic">
+      <section class="section--railed" id="mechanic">
         <h2>Dialogue as a physical obstacle</h2>
         <div class="prose prose--wide">
           <p>Some characters talk to you as you pass. In most games that is a dialogue box: it appears, you read it, you move on. Here I made the interruption a visible physical object in the world. The dialogue box occupies space in the corridor, so you have to <strong>jump over it or duck under it</strong>.</p>
@@ -135,6 +135,46 @@
       </section>
 
 
+      <section id="festival">
+        <div class="sechead">
+          <div class="sechead-title">
+            <h2>Festival Playtest &amp; Next Iteration</h2>
+            <p class="showing">Shown at BIG <span class="dot">&middot;</span>&nbsp;Boston Indie Game Festival <span class="dot">&middot;</span>&nbsp;2026</p>
+          </div>
+          <div class="prose sechead-intro">
+            <p>I presented Lunch Hours at BIG, the Boston Indie Game Festival. A festival table is an informal public playtest rather than a controlled study: a queue of people who have never seen the game, and a direct read on what the build communicates and what it does not. Three things came out of that day, and each one is a decision for the next iteration.</p>
+          </div>
+        </div>
+
+        <ol class="nextsteps">
+          <li>
+            <p class="nextstep-idx">01</p>
+            <h3>A Narrower Corridor</h3>
+            <div class="prose">
+              <p>My original intention was closer to the compressed forward movement of Subway Surfers: a narrow school corridor where the player has limited room to avoid students, conversations, desks, books, and everything else in the way.</p>
+              <p>The game was built in a one-week sprint, so a playable prototype took priority over complete visual consistency. My teammates found existing 3D assets online so we could assemble the school environment quickly, which is why the current build mixes paper-cut characters and dialogue with conventional 3D environment art.</p>
+              <p>The next iteration unifies that visual language. The hallway, the desks, the books, and the environmental obstacles should all read as hand-drawn, cut from notebook or draft paper, the way the characters already do. The ideal final presentation would feel like an entire school corridor reconstructed from sketches on paper.</p>
+            </div>
+          </li>
+          <li>
+            <p class="nextstep-idx">02</p>
+            <h3>Controls and Ergonomics</h3>
+            <div class="prose">
+              <p>The current control scheme uses A, S, D and Space. Crouching with S while the same hand is working the adjacent movement keys can feel awkward during fast reactions, which is most of this game.</p>
+              <p>I would move the vertical actions onto the arrow keys: <strong>Up Arrow to jump, Down Arrow to crouch</strong>. That separates the two axes, reduces hand repositioning, and makes the control logic easier to read.</p>
+            </div>
+          </li>
+          <li>
+            <p class="nextstep-idx">03</p>
+            <h3>Collision and Spatial Control</h3>
+            <div class="prose">
+              <p>The current collision volumes are slightly too large. During the festival playtest that showed up as players struggling to judge how much clearance they actually had around an obstacle.</p>
+              <p>In a future iteration I would reduce the volumes so the visual boundary and the gameplay boundary correspond more closely. The goal is to give the player better control over distance, timing and movement precision, which is the whole substance of a corridor runner.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
       <section id="video">
         <h2>Gameplay</h2>
         <div class="media">
@@ -146,33 +186,6 @@
             </button>
           </div>
           <p class="figcap">Hosted on YouTube. Nothing loads from YouTube until you press play.</p>
-        </div>
-      </section>
-
-      <section id="festival">
-        <h2>Festival Playtest &amp; Next Iteration</h2>
-        <p class="showing">Shown at BIG <span class="dot">&middot;</span>&nbsp;Boston Indie Game Festival <span class="dot">&middot;</span>&nbsp;2026</p>
-        <div class="prose prose--lead">
-          <p>I presented Lunch Hours at BIG, the Boston Indie Game Festival. A festival table is an informal public playtest rather than a controlled study: a queue of people who have never seen the game, and a direct read on what the build communicates and what it does not. Three things came out of that day, and each one is a decision for the next iteration.</p>
-        </div>
-
-        <h3>A narrower corridor</h3>
-        <div class="prose prose--lead">
-          <p>My original intention was closer to the compressed forward movement of Subway Surfers: a narrow school corridor where the player has limited room to avoid students, conversations, desks, books, and everything else in the way.</p>
-          <p>The game was built in a one-week sprint, so a playable prototype took priority over complete visual consistency. My teammates found existing 3D assets online so we could assemble the school environment quickly, which is why the current build mixes paper-cut characters and dialogue with conventional 3D environment art.</p>
-          <p>The next iteration unifies that visual language. The hallway, the desks, the books, and the environmental obstacles should all read as hand-drawn, cut from notebook or draft paper, the way the characters already do. The ideal final presentation would feel like an entire school corridor reconstructed from sketches on paper.</p>
-        </div>
-
-        <h3>Controls and ergonomics</h3>
-        <div class="prose prose--lead">
-          <p>The current control scheme uses A, S, D and Space. Crouching with S while the same hand is working the adjacent movement keys can feel awkward during fast reactions, which is most of this game.</p>
-          <p>I would move the vertical actions onto the arrow keys: <strong>Up Arrow to jump, Down Arrow to crouch</strong>. That separates the two axes, reduces hand repositioning, and makes the control logic easier to read.</p>
-        </div>
-
-        <h3>Collision and spatial control</h3>
-        <div class="prose prose--lead">
-          <p>The current collision volumes are slightly too large. During the festival playtest that showed up as players struggling to judge how much clearance they actually had around an obstacle.</p>
-          <p>In a future iteration I would reduce the volumes so the visual boundary and the gameplay boundary correspond more closely. The goal is to give the player better control over distance, timing and movement precision, which is the whole substance of a corridor runner.</p>
         </div>
       </section>
 
