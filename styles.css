@@ -1274,6 +1274,19 @@ a.work-head-media:hover img { transform: scale(1.012); }
   font-size: clamp(1.1rem, 1.6vw, 1.3rem);
   letter-spacing: -0.02em;
 }
+/* Where a piece was shown publicly. Sits under the section heading as a
+   credit line; the negative top margin pulls it up against the h2 so the two
+   read as one unit rather than as a heading and a stray first paragraph. */
+.showing {
+  margin: -0.7rem 0 1.5rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
 /* A subheading directly after a block of copy or a figure needs air above it,
    or it reads as the last line of what it follows. */
 .work-body .prose + h3,
