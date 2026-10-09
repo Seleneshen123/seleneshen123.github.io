@@ -1255,6 +1255,26 @@ a.work-head-media:hover img { transform: scale(1.012); }
   font-size: 0.8rem;
   line-height: 1.55;
 }
+/* Source citation inside a caption. Underlined rather than coloured, so it
+   stays as quiet as the caption it sits in while still reading as a link. */
+.cite-link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--line-strong);
+  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease);
+}
+.cite-link:hover,
+.cite-link:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* Credit line for third-party material shown in a listing card. Sits inside
+   the media panel: the card is covered by a stretched link, so this stays
+   plain text and the full linked citation lives on the detail page. */
+.rentry-credit {
+  padding: 0.6rem clamp(0.7rem, 1.4vw, 1rem) 0.7rem;
+  color: var(--ink-faint);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
 
 /* Body */
 .work-body {
@@ -1782,20 +1802,66 @@ figure { margin: 0; }
 
 /* No publishable imagery for this project, so the text takes the full
    measure rather than sitting beside an invented graphic. */
-/* Community entries carry no figure. The text ran to eight of twelve columns
-   with nothing beside it, so it now runs to the edge and the body copy flows
-   in two columns, matching the text-only sections on the project pages. */
-.rentry--textonly .rentry-text { grid-column: 2 / -1; }
-.rentry--textonly .question { max-width: 68ch; }
+/* Community entries.
+   These carry no figure, so they are built as a composition rather than as a
+   single text column: identity block on the left, a positioning sentence
+   beside it, then the full explanation running the whole width beneath both.
+   The previous version jammed a mono label against the first sentence, which
+   read as one interrupted line, and left the body stopping halfway across. */
+.centry {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+  row-gap: clamp(1.4rem, 3vh, 2rem);
+  align-items: start;
+  padding-block: clamp(2.2rem, 5.5vh, 3.4rem);
+  border-top: 1px solid var(--line);
+}
+.centry:last-child { border-bottom: 1px solid var(--line); }
+
+.centry-head { display: flex; flex-direction: column; gap: 0.6rem; }
+.centry-head .idx { padding-top: 0.2rem; }
+.centry-head h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  letter-spacing: -0.026em;
+}
+.centry-head .meta { margin: 0; }
+
+/* The positioning sentence. Set above body size so it reads as a statement
+   about the work rather than as the first paragraph of it. */
+.centry-summary {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.5vw, 1.34rem);
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+}
+
+.centry-body { max-width: none; }
+.centry-facts { margin: 0; }
+
 @media (min-width: 1024px) {
-  .rentry--textonly .prose {
-    max-width: none;
+  .centry-head { grid-column: 1 / span 4; }
+  .centry-summary { grid-column: 6 / -1; }
+  /* The explanation spans the whole shell and flows into columns, so it
+     reaches both edges at a measure that is still comfortable to read. */
+  .centry-body,
+  .centry-facts { grid-column: 1 / -1; }
+  .centry-body {
     columns: 2;
     column-gap: var(--col-gap);
     orphans: 2;
     widows: 2;
   }
-  .rentry--textonly .deflist { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem var(--col-gap); }
+  .centry-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem var(--col-gap); }
+}
+@media (min-width: 1280px) {
+  .centry-body { columns: 3; }
+}
+@media (max-width: 1023px) {
+  /* Title and metadata first, then the summary, then the body. */
+  .centry > * { grid-column: 1 / -1; }
 }
 .rentry-text h3 { margin: 0; font-size: clamp(1.35rem, 2.1vw, 1.85rem); letter-spacing: -0.026em; }
 .rentry-text h3 a { color: inherit; }
