@@ -1803,65 +1803,83 @@ figure { margin: 0; }
 /* No publishable imagery for this project, so the text takes the full
    measure rather than sitting beside an invented graphic. */
 /* Community entries.
-   These carry no figure, so they are built as a composition rather than as a
-   single text column: identity block on the left, a positioning sentence
-   beside it, then the full explanation running the whole width beneath both.
-   The previous version jammed a mono label against the first sentence, which
-   read as one interrupted line, and left the body stopping halfway across. */
+   One horizontal composition per entry: identity and metadata in a narrow
+   left column, the argument in a wider right one. The previous version flowed
+   the body into three newspaper columns, which cut paragraphs apart and made
+   the reading order jump; the copy now runs as a single vertical column with
+   its measure capped so the lines stay readable inside a wide track. */
 .centry {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--col-gap);
-  row-gap: clamp(1.4rem, 3vh, 2rem);
+  row-gap: clamp(1.6rem, 3.5vh, 2.2rem);
   align-items: start;
-  padding-block: clamp(2.2rem, 5.5vh, 3.4rem);
+  padding-block: clamp(2.6rem, 6.5vh, 4rem);
   border-top: 1px solid var(--line);
 }
 .centry:last-child { border-bottom: 1px solid var(--line); }
 
-.centry-head { display: flex; flex-direction: column; gap: 0.6rem; }
-.centry-head .idx { padding-top: 0.2rem; }
-.centry-head h3 {
+/* Left: who, what, when. */
+.centry-id { display: flex; flex-direction: column; gap: 0.55rem; }
+.centry-id .idx { padding-top: 0.2rem; }
+.centry-id h3 {
   margin: 0;
-  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-size: clamp(1.3rem, 1.9vw, 1.72rem);
   letter-spacing: -0.026em;
 }
-.centry-head .meta { margin: 0; }
+.centry-id .meta { margin: 0; }
 
-/* The positioning sentence. Set above body size so it reads as a statement
-   about the work rather than as the first paragraph of it. */
+/* Supporting facts sit under the role line, stacked and subordinate, rather
+   than as a full-width band across the bottom of the entry. */
+.centry-facts {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0.9rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+.centry-facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.centry-facts dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* Right: the statement, then the explanation under it. */
+.centry-main { display: flex; flex-direction: column; gap: clamp(1.1rem, 2.4vh, 1.6rem); }
 .centry-summary {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.08rem, 1.5vw, 1.34rem);
-  line-height: 1.45;
-  letter-spacing: -0.012em;
+  font-size: clamp(1.1rem, 1.55vw, 1.4rem);
+  line-height: 1.42;
+  letter-spacing: -0.014em;
 }
-
-.centry-body { max-width: none; }
-.centry-facts { margin: 0; }
+/* One column, capped near 78 characters. The cap sits on the paragraphs, not
+   the wrapper: ch resolves against the element's own font, and the wrapper
+   inherits a larger size than the body copy, which would let the real measure
+   drift to ~89 characters. The track is wider than the cap on a large screen,
+   and the summary above does reach the edge, so the inset reads as a measure
+   rather than as an unfinished column. */
+.centry-body p { max-width: 78ch; }
 
 @media (min-width: 1024px) {
-  .centry-head { grid-column: 1 / span 4; }
-  .centry-summary { grid-column: 6 / -1; }
-  /* The explanation spans the whole shell and flows into columns, so it
-     reaches both edges at a measure that is still comfortable to read. */
-  .centry-body,
-  .centry-facts { grid-column: 1 / -1; }
-  .centry-body {
-    columns: 2;
-    column-gap: var(--col-gap);
-    orphans: 2;
-    widows: 2;
-  }
-  .centry-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem var(--col-gap); }
+  .centry-id { grid-column: 1 / span 4; }
+  .centry-main { grid-column: 5 / -1; }
 }
-@media (min-width: 1280px) {
-  .centry-body { columns: 3; }
-}
+
 @media (max-width: 1023px) {
-  /* Title and metadata first, then the summary, then the body. */
+  /* Index, title, role, facts, then summary, then body: one column. */
   .centry > * { grid-column: 1 / -1; }
+  .centry-body p { max-width: none; }
 }
 .rentry-text h3 { margin: 0; font-size: clamp(1.35rem, 2.1vw, 1.85rem); letter-spacing: -0.026em; }
 .rentry-text h3 a { color: inherit; }
