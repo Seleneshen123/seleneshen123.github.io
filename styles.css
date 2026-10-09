@@ -1526,6 +1526,61 @@ a.work-head-media:hover img { transform: scale(1.012); }
   line-height: 1.34;
 }
 
+/* Media coverage.
+   External press sits beside the research list, not inside it, so this is a
+   plain two-column text block rather than another numbered project card:
+   outlet and date in a narrow rail, what the coverage actually said to its
+   right. The measure is capped on the paragraphs so the copy stays readable
+   across the wider track. */
+.mediacov {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+  row-gap: 1.3rem;
+  align-items: start;
+}
+.mediacov-meta { display: flex; flex-direction: column; gap: 0.35rem; }
+.mediacov-outlet {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.25vw, 1.14rem);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+.mediacov-date {
+  margin: 0;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.mediacov-body > p {
+  margin: 0 0 1rem;
+  max-width: 78ch;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
+  line-height: 1.68;
+}
+/* Scoped past `.mediacov-body > p` rather than forced with !important. */
+.mediacov-body > .mediacov-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.8rem;
+  max-width: none;
+  margin: 1.4rem 0 0;
+}
+
+@media (min-width: 1024px) {
+  .mediacov-meta { grid-column: 1 / span 3; }
+  .mediacov-body { grid-column: 5 / -1; }
+}
+@media (max-width: 1023px) {
+  .mediacov > * { grid-column: 1 / -1; }
+  .mediacov-body > p { max-width: none; }
+}
+
 /* A small outbound reference inside body copy. Deliberately quieter than the
    bordered action links in the page header, which would read as a call to
    action on what is really a citation. */
