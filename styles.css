@@ -1663,6 +1663,300 @@ a.work-head-media:hover img { transform: scale(1.012); }
   color: var(--ink-soft);
 }
 
+/* ---- Product modules ------------------------------------------------------
+   A long case study split into numbered modules (Axis AI). Each module keeps
+   the rail used by the text-led sections: number, title, subtitle and status
+   in columns one to three, the explanation from column five. Hairlines rather
+   than panels separate the parts, so seven modules read as one essay instead
+   of a grid of product cards. */
+
+/* In-page index directly under the overview. */
+.work-body > .modnav {
+  padding-block: clamp(1.8rem, 4vh, 2.6rem);
+  border-top: 1px solid var(--line);
+}
+.modnav-label {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.modnav-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.modnav-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  min-height: 44px;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.modnav-num {
+  flex: none;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.modnav-title {
+  font-size: 0.98rem;
+  line-height: 1.4;
+  transition: transform var(--dur) var(--ease);
+}
+.modnav-list a:hover,
+.modnav-list a:focus-visible { color: var(--accent); }
+.modnav-list a:hover .modnav-title { transform: translateX(4px); }
+
+@media (min-width: 768px) {
+  /* Two columns read down, 01–04 then 05–07. */
+  .modnav-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    column-gap: var(--col-gap);
+    border-top: 0;
+  }
+  .modnav-list li:nth-child(1) a,
+  .modnav-list li:nth-child(5) a { border-top: 1px solid var(--line); }
+}
+@media (min-width: 1024px) {
+  .modnav {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+  .modnav-label { grid-column: 1 / span 3; margin: 0; padding-top: 0.85rem; }
+  .modnav-list { grid-column: 5 / -1; }
+}
+
+/* A jump lands with a little air above the module rule. */
+.module { scroll-margin-top: 1.5rem; }
+
+.work-body > .module {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: clamp(1.6rem, 3.5vh, 2.2rem);
+  padding-block: clamp(2.6rem, 6vh, 4rem);
+}
+
+.module-num {
+  margin: 0 0 0.8rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.work-body .module-head h2 {
+  max-width: 16ch;
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  line-height: 1.08;
+}
+.module-sub {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.45;
+}
+.module-sub-zh {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--ink-faint);
+  font-size: 0.9em;
+}
+
+.module-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem var(--col-gap);
+  margin: 1.4rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.module-meta dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.module-meta dd { margin: 0; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.5; }
+
+.module-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin: 1.4rem 0 0;
+}
+.module-linknote {
+  flex-basis: 100%;
+  color: var(--ink-faint);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+/* Body: a lead, then the parts of the design, then role and status. */
+.module-body,
+.module-text { display: flex; flex-direction: column; gap: clamp(1.4rem, 3vh, 1.9rem); min-width: 0; }
+.module-body > *,
+.module-text > * { margin: 0; }
+
+.module-lead {
+  max-width: 70ch;
+  color: var(--ink);
+  font-size: clamp(1.04rem, 1.28vw, 1.22rem);
+  line-height: 1.56;
+}
+.module-para {
+  max-width: 68ch;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
+  line-height: 1.68;
+}
+/* "Existing" and "My proposal" labels: the line between built and proposed. */
+.module-text > .module-group {
+  margin-bottom: -0.9rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.module-points {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.2rem var(--col-gap);
+  padding: 0;
+  list-style: none;
+}
+.module-points > li {
+  max-width: 68ch;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  font-size: clamp(0.93rem, 1vw, 1.01rem);
+  line-height: 1.62;
+}
+.module-points strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+/* A sequence (A, B, C) rather than a set: the letter sits in its own gutter. */
+.module-points--flow { counter-reset: flow; }
+.module-points--flow > li {
+  counter-increment: flow;
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+}
+.module-points--flow > li::before {
+  content: counter(flow, upper-alpha);
+  grid-row: 1 / span 2;
+  padding-top: 0.2rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.module-role {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line-strong);
+}
+.module-role-label {
+  margin: 0;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.module-role p:not(.module-role-label) {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.93rem, 1vw, 1.01rem);
+  line-height: 1.66;
+}
+
+.module-figure img { width: 100%; height: auto; display: block; }
+.module-figure .figcap { max-width: 68ch; }
+.module-figure--aside { max-width: 420px; }
+
+/* Three figures of different proportions in one row at a shared height.
+   Each grows in proportion to its aspect ratio (--ar), so the heights come
+   out equal with nothing cropped or stretched. */
+.jrow { display: flex; gap: clamp(0.8rem, 1.6vw, 1.4rem); }
+.jrow > figure { flex: var(--ar, 1) 1 0; min-width: 0; }
+.jrow img { width: 100%; height: auto; display: block; }
+.module-wide .figcap { max-width: 68ch; }
+
+@media (max-width: 767px) {
+  .jrow { flex-direction: column; }
+  .jrow > figure { flex: none; }
+}
+
+@media (min-width: 1024px) {
+  .work-body > .module {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+  .module-head { grid-column: 1 / span 3; }
+  .module-body { grid-column: 5 / -1; }
+  .module-wide { grid-column: 1 / -1; }
+
+  .module-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-points > li { max-width: none; }
+  .module-points--flow { grid-template-columns: minmax(0, 1fr); }
+  .module-points--flow > li { max-width: 70ch; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .module-points--three { grid-template-columns: minmax(0, 1fr); }
+  .module-points--three > li { max-width: 70ch; }
+}
+@media (min-width: 1280px) {
+  .module-points--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Text and a portrait screenshot side by side inside the body track. Below
+     this width the screenshot column fell under 220px, so it stacks instead. */
+  .module-body--aside {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    column-gap: var(--col-gap);
+    row-gap: clamp(1.4rem, 3vh, 1.9rem);
+    align-items: start;
+  }
+  .module-body--aside > .module-figure--aside { max-width: none; }
+  .module-body--aside > .notice,
+  .module-body--aside > .module-span { grid-column: 1 / -1; }
+}
+
 /* ---- Media patterns ---- */
 
 figure { margin: 0; }

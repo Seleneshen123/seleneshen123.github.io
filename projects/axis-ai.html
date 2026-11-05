@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Axis AI — turning course material into playable 3D learning systems. Design work by Caiyi Shen.">
+  <meta name="description" content="Axis AI — seven learning-product directions, from interactive 3D mathematics to an embodied learning companion. Design work by Caiyi Shen.">
   <meta name="theme-color" content="#f3f0ea">
   <title>Axis AI — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
@@ -62,8 +62,8 @@
         <div class="split">
           <div class="prose">
             <h2>Overview</h2>
-            <p>Axis is a platform that turns instructor materials into interactive 3D lessons for desktop and mobile. A teacher uploads the deck they were going to present; the platform rebuilds it as a lesson the student plays through.</p>
-            <p>The platform carries games for several different age groups, so &ldquo;a lesson&rdquo; is not one format. My work sits at the point where content becomes gameplay: I contribute to product planning, design learning flows and mechanics, work on UI and 3D presentation, test courseware, and push back on the product when a lesson still feels like a slideshow with a game skin.</p>
+            <p>Axis AI (<span lang="zh-CN">众妙之轴</span>) is a learning platform that turns course material into something the learner acts on: 3D lessons for middle-school mathematics, case-based university courses, a character companion that is moving onto a robot, and tools for practising everyday conversations.</p>
+            <p>This case study is organised around the seven product directions I work across. They sit at very different stages, from live courseware to early prototypes and design proposals, and each section states which one it is, what I designed, and what the wider team built.</p>
           </div>
           <div class="aside">
             <p class="pullquote">A 3D lesson is not automatically a game. If the interaction is just walk to a question and click an answer, the 3D space is decoration.</p>
@@ -71,115 +71,273 @@
         </div>
       </section>
 
-      <section class="section--railed" id="what-i-do">
-        <h2>What I do</h2>
+      <nav class="modnav" aria-labelledby="modnav-label">
+        <p class="modnav-label" id="modnav-label">Seven Product Modules</p>
+        <ol class="modnav-list">
+          <li><a href="#middle-school-mathematics"><span class="modnav-num">01</span><span class="modnav-title">Middle School Mathematics</span></a></li>
+          <li><a href="#xiaomiao-learning-companion"><span class="modnav-num">02</span><span class="modnav-title">XiaoMiao Learning Companion</span></a></li>
+          <li><a href="#gemini-wellness-reflection"><span class="modnav-num">03</span><span class="modnav-title">Gemini &mdash; Wellness &amp; Reflection</span></a></li>
+          <li><a href="#psychological-assessment"><span class="modnav-num">04</span><span class="modnav-title">Psychological Assessment</span></a></li>
+          <li><a href="#zhongmiao-academy"><span class="modnav-num">05</span><span class="modnav-title">Zhongmiao Academy</span></a></li>
+          <li><a href="#ielts-preparation"><span class="modnav-num">06</span><span class="modnav-title">IELTS Preparation</span></a></li>
+          <li><a href="#xiaomiao-gen-z"><span class="modnav-num">07</span><span class="modnav-title">XiaoMiao Gen Z</span></a></li>
+        </ol>
+      </nav>
+
+      <section class="section--railed" id="my-contributions">
+        <h2>My Contributions</h2>
         <div class="prose prose--wide">
           <ul>
-            <li><strong>Product and course planning.</strong> Shaping learning flows, interaction structure, and how an individual lesson should behave.</li>
-            <li><strong>Game and interaction design.</strong> Designing mechanics, feedback, and player flow around specific learning goals.</li>
-            <li><strong>UI and website design.</strong> Proposing and refining how the platform presents information and entry points.</li>
-            <li><strong>Courseware and QA.</strong> Testing English-course flows, finding high-impact bugs, and validating fixes across navigation, localization, reports, and interaction logic.</li>
-            <li><strong>3D art and environments.</strong> Building lesson scenes and visual assets.</li>
-            <li><strong>Content and promotion.</strong> Running the Xiaohongshu account, and recording, editing, and publishing the platform demos myself.</li>
-            <li><strong>Team and production.</strong> Coordinating tasks and communicating across design, art, and engineering when a feature crosses disciplines.</li>
+            <li><strong>Product and course planning.</strong> Learning flows, interaction structure, and how an individual lesson should behave.</li>
+            <li><strong>Game and interaction design.</strong> Mechanics, feedback, and player flow built around a specific learning goal.</li>
+            <li><strong>3D art and UI.</strong> Lesson scenes and visual assets, and proposals for how the platform presents information and entry points.</li>
+            <li><strong>Courseware QA.</strong> Testing English-course flows, finding high-impact bugs, and validating fixes across navigation, localization, reports, and interaction logic.</li>
+            <li><strong>Production and promotion.</strong> Coordinating work across design, art, and engineering; running the Xiaohongshu account and producing the platform demos.</li>
+          </ul>
+          <p>The AI models, memory backend, robot software, and platform engineering are built by the wider team. Each module below separates what I designed or tested from what the team built.</p>
+        </div>
+      </section>
+
+      <!-- 01 ------------------------------------------------------------ -->
+      <section class="module" id="middle-school-mathematics" aria-labelledby="m01-title">
+        <header class="module-head">
+          <p class="module-num">01</p>
+          <h2 id="m01-title">Middle School Mathematics</h2>
+          <p class="module-sub">Interactive 3D Learning</p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Existing courseware</dd></div>
+            <div><dt>My role</dt><dd>Lesson interaction design, 3D presentation</dd></div>
+          </dl>
+        </header>
+        <div class="module-body">
+          <p class="module-lead">Middle-school mathematics becomes easier to reason about when its relationships can be tested directly. I work on interactive 3D lessons where learners manipulate balance scales, levers, and geometric demonstrations to see mathematical rules in action. The interaction is part of the explanation, rather than a decorative layer around a quiz.</p>
+          <ul class="module-points module-points--three">
+            <li><strong>Balance and equations.</strong> Two scales have to agree before the answer resolves, so the learner solves a pair of equations instead of picking an option.</li>
+            <li><strong>Levers.</strong> The same physical metaphor carries across topics, so a learner reuses an interaction they already understand rather than meeting a new interface in every lesson.</li>
+            <li><strong>Vertically opposite angles.</strong> A beam of light rotates against a protractor and the opposite angles stay equal as it turns. The rule becomes something you watch hold rather than something you memorise.</li>
           </ul>
         </div>
-      </section>
-
-      <section class="section--railed" id="case-mechanic">
-        <h2>Make the concept itself the mechanic</h2>
-        <div class="prose prose--wide">
-          <p>My rule for a 3D lesson is that the mechanic has to carry the explanation. If you can strip the 3D away and lose nothing, the 3D was decoration.</p>
-          <p>A lesson on squares or quadratic relationships can map the number onto area. Instead of only reading the formula, the player changes the side length, watches the area grow, and compares the result across shapes. The point is not that the concept looks nicer in 3D. It is that the player understands it by manipulating the relationship.</p>
-          <p>The same logic drives the scenes below. In the balance lesson the two pans have to agree before the answer resolves, so the learner is solving a system rather than picking an option. In the geometry lesson the beam of light rotates against a protractor, and the pair of vertically opposite angles stays equal while you turn it, so the invariant becomes something you watch hold rather than something you memorise.</p>
-        </div>
-        <div class="media duo">
-          <figure class="media-frame">
-            <img src="../assets/projects/axis-ai/course-02.jpg" alt="A 3D lesson scene with two balance scales weighing labelled sacks against numbered weights, teaching simultaneous equations." width="1400" height="851" loading="lazy" decoding="async">
-          </figure>
-          <figure class="media-frame">
-            <img src="../assets/projects/axis-ai/course-03.jpg" alt="A 3D geometry lesson: a rotating beam of light on a protractor showing that vertically opposite angles remain equal." width="1400" height="1193" loading="lazy" decoding="async">
-          </figure>
-        </div>
-        <p class="figcap">Left: two scales must balance together, so the learner solves a pair of equations rather than one. Right: the rotating light beam makes the vertically opposite angle an invariant you can see hold.</p>
-        <div class="media">
-          <figure class="media-frame">
-            <img src="../assets/projects/axis-ai/course-01.jpg" alt="A 3D lever-and-fulcrum scene under a pink sky, with weighted pans and gear shapes floating overhead." width="1400" height="1015" loading="lazy" decoding="async">
-          </figure>
-          <p class="figcap">A lever scene from the same family of lessons. Keeping one physical metaphor across topics means the learner re-uses an interaction they already understand.</p>
+        <div class="module-wide">
+          <div class="jrow">
+            <figure class="media-frame" style="--ar: 1.645">
+              <img src="../assets/projects/axis-ai/course-02.jpg" alt="A 3D lesson scene with two balance scales weighing labelled sacks against numbered weights, teaching simultaneous equations." width="1400" height="851" loading="lazy" decoding="async">
+            </figure>
+            <figure class="media-frame" style="--ar: 1.379">
+              <img src="../assets/projects/axis-ai/course-01.jpg" alt="A 3D lever-and-fulcrum scene under a pink sky, with weighted pans and gear shapes floating overhead." width="1400" height="1015" loading="lazy" decoding="async">
+            </figure>
+            <figure class="media-frame" style="--ar: 1.174">
+              <img src="../assets/projects/axis-ai/course-03.jpg" alt="A 3D geometry lesson: a rotating beam of light on a protractor showing that vertically opposite angles remain equal." width="1400" height="1193" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <p class="figcap">In order: the paired balance scales, a lever scene from the same family of lessons, and the rotating light beam on a protractor.</p>
         </div>
       </section>
 
-      <section id="case-ielts">
-        <h2>IELTS: from four skill buckets to a learning loop</h2>
-        <div class="split split--evidence">
-        <div class="prose">
-          <p>The original IELTS direction separated practice into listening, speaking, reading, and writing. I thought that still treated the product like a content library: it knew which category a user picked, but not what that person already knew, what they were missing, when they were taking the exam, or how much time they could realistically study.</p>
-          <p>I looked at the language-learning apps people actually use and kept hitting the same wall. Even when you can choose a starting difficulty, the path is still generic. I might already know part of the language and still be dropped into a course built for someone else.</p>
-          <p>So my proposal starts with diagnosis and then builds the plan around the learner:</p>
-          <ul>
-            <li><strong>Initial diagnostic.</strong> Start from what the learner actually knows instead of forcing everyone down the same path.</li>
-            <li><strong>Deadline-aware planning.</strong> If the exam is in three months, turn that deadline into a three-month study cycle with concrete daily work.</li>
-            <li><strong>Adjustable schedule.</strong> Let the learner tell the system when real life changes: rest at weekends, or add extra practice. The plan is not fixed.</li>
-            <li><strong>AI study buddy.</strong> An optional companion layer for reminders and continuity. Progress earns points that buy lightweight cosmetic customization such as outfits or hairstyles.</li>
-            <li><strong>Optional social competition.</strong> A leaderboard can make progress visible. Any system-generated participants in an early-stage product should never be presented as real users.</li>
-            <li><strong>Speaking practice.</strong> A digital human or other approachable avatar to shorten the jump between studying alone and speaking under exam pressure. Some learners are strong until an examiner is in front of them; letting them choose a less intimidating practice partner is the point.</li>
+      <!-- 02 ------------------------------------------------------------ -->
+      <section class="module" id="xiaomiao-learning-companion" aria-labelledby="m02-title">
+        <header class="module-head">
+          <p class="module-num">02</p>
+          <h2 id="m02-title">XiaoMiao Learning Companion</h2>
+          <p class="module-sub">Embodied AI and Character-Based Learning</p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Prototype / In Development</dd></div>
+            <div><dt>My role</dt><dd>Embodied companion concept, form and character direction</dd></div>
+          </dl>
+          <p class="module-links">
+            <a class="worklink" href="https://www.zhongmiao-ai.com/companion" target="_blank" rel="noopener noreferrer">Companion platform <span aria-hidden="true">&#8599;</span></a>
+          </p>
+        </header>
+        <div class="module-body">
+          <p class="module-lead">XiaoMiao explores how an AI learning companion can move between a web-based character experience and an embodied robot interface. The current prototype demonstrates character selection, conversation, memory-related interactions, and the developing connection between the two environments. My design work focuses on approachable character and physical forms, screen integration, and interactions that make learning support feel natural in everyday settings.</p>
+          <figure class="module-figure">
+            <div class="media-frame">
+              <img src="../assets/projects/axis-ai/companion-demo-poster.jpg" alt="The companion platform's character plaza, in Chinese: the headline 'Find a friend who understands you', filters by school stage and character type, a 'make a friend' tile, and official cartoon animal characters." width="960" height="608" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="figcap">The character plaza. Official characters are prepared for each school stage, and characters made by students appear here only after review.</figcaption>
+          </figure>
+          <ul class="module-points">
+            <li><strong>A moderated character plaza.</strong> Student-oriented characters can be filtered by school stage, from primary school to university, and by type: friend, study partner, story character, hobby buddy, or mentor.</li>
+            <li><strong>Making a character.</strong> A student builds a friend by tapping through a few choices, and the model drafts a character card from them. It goes through review before it can appear publicly or on a robot.</li>
+            <li><strong>Memory, off by default.</strong> Families decide whether it is on. The companion keeps a few short notes drawn from the student&rsquo;s own words rather than the conversation itself, leaves out details such as addresses, phone numbers, and health information, and can be asked to forget.</li>
+            <li><strong>Rules above the persona.</strong> Safety rules sit on the server where no character can override them: no romantic role-play, dangerous topics refused, and homework guided rather than written for the student.</li>
+            <li><strong>From screen to robot.</strong> Families add reviewed, stage-appropriate characters to the robot from their family learning account, and parents set limits such as daily time. In the prototype this robot-facing interface is demonstrated on a computer.</li>
+            <li><strong>Continuity.</strong> The team has designed a compatible structured-memory approach so a character can carry context between web conversations and robot interactions. That continuity is still being built.</li>
           </ul>
+          <div class="module-role">
+            <p class="module-role-label">My design work</p>
+            <p>I designed the embodied companion around how a child might actually live with the object: small enough to carry, rounded and soft to the touch, stable on a desk, and comfortable to keep nearby at bedtime. It is deliberately not a mini industrial robot, with no sharp structures and no copy of a real animal or an existing character. Alongside the form, I work on character direction, where the screen sits in the body, and the learning and everyday-companionship situations it has to support. The character platform, AI models, memory backend, and robot software are built by the wider team.</p>
+          </div>
+          <aside class="notice">
+            <p class="notice-label">Status</p>
+            <p>Software prototype. The physical robot is still in development, and nothing here should be read as commercial hardware deployment or as clinical or educational validation.</p>
+          </aside>
         </div>
-        <div class="aside">
-          <figure class="media-frame">
-            <img src="../assets/projects/axis-ai/ielts-prototype-crop.jpg" alt="The Simulation Arena screen of the existing prototype, listing practice modules including assessment practice, counseling training, interview practice, IELTS and negotiation." width="819" height="1154" loading="lazy" decoding="async">
-          </figure>
-          <p class="figcap">The existing IELTS module prototype, shown inside the platform&rsquo;s practice arena.</p>
-        </div>
-        </div>
-        <aside class="notice">
-          <p class="notice-label">Status</p>
-          <p>The full personalisation direction above is my concept proposal, not a shipped feature. An IELTS module prototype does already exist, and it is the one pictured here. The team is currently iterating on that prototype against my proposal. Treat the diagnostic, deadline-aware plan, study buddy, leaderboard, and digital-human speaking partner as concept direction rather than implemented behaviour.</p>
-        </aside>
       </section>
 
-      <section class="section--railed" id="case-psych">
-        <h2>Psychological assessment as detective work</h2>
-        <div class="prose prose--wide">
-          <p>For a pilot in a Northeastern doctoral course on psychological assessment, I reframed the assessment process as detective work. The mapping was deliberate rather than decorative: assessment already asks the learner to gather evidence, ignore noise, understand a person in context, and connect information across sources. I designed the interactions around that reasoning process instead of adding a generic game layer on top.</p>
-          <ul>
-            <li><strong>Runner mini-game.</strong> The player steers a folder, collects evidence, and dodges distractors, turning information filtering into an immediate physical action.</li>
-            <li><strong>Visual-novel sections.</strong> The learner builds an understanding of the digital client, Jordan, through context and dialogue instead of reading the whole case at once.</li>
-            <li><strong>Evidence board.</strong> Clues are connected on a corkboard with red string, so the learner actively builds the relationships rather than being handed them.</li>
+      <!-- 03 ------------------------------------------------------------ -->
+      <section class="module" id="gemini-wellness-reflection" aria-labelledby="m03-title">
+        <header class="module-head">
+          <p class="module-num">03</p>
+          <h2 id="m03-title">Gemini &mdash; Wellness &amp; Reflection</h2>
+          <p class="module-sub"><span lang="zh-CN">双子星疗愈舱</span></p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Prototype; sign-in required</dd></div>
+          </dl>
+          <p class="module-links">
+            <a class="worklink" href="https://zhongmiao-ai.com/gemini" target="_blank" rel="noopener noreferrer">Open Gemini <span aria-hidden="true">&#8599;</span></a>
+          </p>
+        </header>
+        <div class="module-body">
+          <p class="module-lead">Gemini is a quiet space for pausing and reflecting, built around an AI companion conversation. Rather than opening on a chat box, it opens on a place: the user settles into an ambient environment first, and the conversation happens inside it.</p>
+          <ul class="module-points">
+            <li><strong>Environment first.</strong> The user picks an ambient scene, such as a mountain-forest setting, and can switch background sound on or off.</li>
+            <li><strong>An optional check-in.</strong> A five-question, roughly thirty-second questionnaire asks how the user tends to respond to difficulty, for example whether they analyse, talk to someone, act first, or wait. The answers adjust the companion&rsquo;s conversation style, and the check-in can be skipped.</li>
           </ul>
-          <p>The design goal throughout: the play structure should match the logic of assessment, not simply make the lesson louder.</p>
+          <aside class="notice">
+            <p class="notice-label">Status</p>
+            <p>Prototype. The entry screen is public, but using the companion requires an account, so this section describes only what is visible before signing in. Gemini is a wellbeing and reflection space. It is not a clinical or therapeutic product, and it makes no claims about diagnosis, treatment, or outcomes.</p>
+          </aside>
         </div>
-        <div class="media">
-          <figure class="media-frame">
-            <img src="../assets/projects/axis-ai/psych-assessment.jpg" alt="A course screen from the psychological assessment pilot, showing a staged lesson flow from pre-class prediction through context introduction to core debrief." width="1400" height="896" loading="lazy" decoding="async">
+      </section>
+
+      <!-- 04 ------------------------------------------------------------ -->
+      <section class="module" id="psychological-assessment" aria-labelledby="m04-title">
+        <header class="module-head">
+          <p class="module-num">04</p>
+          <h2 id="m04-title">Psychological Assessment</h2>
+          <p class="module-sub">Case-Based Learning Through Investigation</p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Pilot course</dd></div>
+            <div><dt>My role</dt><dd>Game and interaction design</dd></div>
+          </dl>
+          <p class="module-links">
+            <a class="worklink" href="https://zhongmiao-ai.com/" target="_blank" rel="noopener noreferrer">Axis platform <span aria-hidden="true">&#8599;</span></a>
+            <span class="module-linknote">The course itself requires a class account.</span>
+          </p>
+        </header>
+        <div class="module-body">
+          <p class="module-lead">Developed with Dr. Chieh Li for a Northeastern doctoral course, this pilot reframes psychological assessment as detective work. The mapping is deliberate: assessment already asks the learner to gather evidence, set noise aside, understand a person in context, and connect information across sources. So the learner does that work instead of reading a finished case.</p>
+          <ul class="module-points">
+            <li><strong>Evidence runner.</strong> The player steers a folder, collecting evidence and dodging distractors, which turns information filtering into an immediate physical action.</li>
+            <li><strong>Jordan, a visual novel.</strong> Learners build an understanding of the digital client, Jordan, through context and dialogue rather than receiving the whole case at once.</li>
+            <li><strong>Ranking and the evidence board.</strong> Learners rank and analyse what they have found, then connect clues on a corkboard with red string, so they build the relationships rather than being handed them.</li>
+            <li><strong>Report and reflect.</strong> The course runs from a pre-class prediction to a core debrief, where learners report a conclusion and look back at how they reached it.</li>
+          </ul>
+          <figure class="module-figure">
+            <div class="media-frame">
+              <img src="../assets/projects/axis-ai/psych-assessment.jpg" alt="A course screen from the psychological assessment pilot, showing a staged lesson flow from pre-class prediction through context introduction to core debrief." width="1400" height="896" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="figcap">The pilot&rsquo;s staged course flow, from pre-class prediction through context introduction to the core debrief.</figcaption>
           </figure>
-          <p class="figcap">The pilot course flow. Status: pilot produced; interface and interaction flow can be shown.</p>
+          <aside class="notice">
+            <p class="notice-label">Status</p>
+            <p>Pilot produced and run with students, who have given feedback on it. That feedback is not presented here as evidence of improved learning outcomes.</p>
+          </aside>
         </div>
       </section>
 
-      <section class="section--railed" id="case-embodied">
-        <h2>Embodied AI learning companion</h2>
-        <div class="prose prose--wide">
-          <p>I have also been exploring what happens when the assistant leaves the screen. For an embodied learning-companion concept, I designed the form around how a child might actually live with the object: small enough to carry, rounded, soft, touchable, stable on a desk, and comfortable enough to keep nearby at bedtime.</p>
-          <p>I did not want a mini industrial robot. The form language is deliberately non-threatening, with no sharp structures and no direct copy of a real animal or an existing character IP. The longer-term use case is everyday learning support and simple routines, with future exploration of interaction patterns that may also suit autistic children.</p>
+      <!-- 05 ------------------------------------------------------------ -->
+      <section class="module" id="zhongmiao-academy" aria-labelledby="m05-title">
+        <header class="module-head">
+          <p class="module-num">05</p>
+          <h2 id="m05-title">Zhongmiao Academy</h2>
+          <p class="module-sub">Game-Based University Learning <span class="module-sub-zh" lang="zh-CN">众妙大学堂</span></p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Live platform, ongoing development</dd></div>
+            <div><dt>My role</dt><dd>Course planning, interaction design, UI feedback, courseware QA</dd></div>
+          </dl>
+          <p class="module-links">
+            <a class="worklink" href="https://zhongmiao-ai.com/" target="_blank" rel="noopener noreferrer">Zhongmiao Academy <span aria-hidden="true">&#8599;</span></a>
+          </p>
+        </header>
+        <div class="module-body">
+          <p class="module-lead">Zhongmiao Academy is the university side of the platform, and a different problem from the middle-school lessons. An instructor brings the material they already teach from, and the platform rebuilds it as interactive 3D courseware. Students then practise inside situations instead of reviewing slides.</p>
+          <ul class="module-points module-points--three">
+            <li><strong>Courseware from existing material.</strong> The instructor side generates and structures 3D interactive courseware from course content, so a lesson starts from what the teacher already has.</li>
+            <li><strong>Scenario-based practice.</strong> A practice arena holds simulation modules such as assessment practice, counselling training, interview practice, and negotiation. The psychological assessment pilot in module 04 is one course built this way.</li>
+            <li><strong>Iteration and QA.</strong> I test course flows before they reach students. On the English course that meant finding high-impact bugs and validating fixes across navigation, localization, reports, and interaction logic.</li>
+          </ul>
+          <div class="module-role">
+            <p class="module-role-label">My part</p>
+            <p>Course planning, interaction design for individual activities, UI feedback, courseware testing, and production coordination between design, art, and engineering. The platform and its generation pipeline are built by the wider team.</p>
+          </div>
         </div>
-        <aside class="notice">
-          <p class="notice-label">Status</p>
-          <p>Concept design and demo fabrication. This work does not imply clinical or educational validation.</p>
-        </aside>
       </section>
 
-      <section class="section--railed" id="case-montessori">
-        <h2>Montessori observation assistant</h2>
-        <div class="prose prose--wide">
-          <p>I do not think the right product pitch is &ldquo;AI replaces the Montessori teacher.&rdquo; Observation is already how Montessori teachers read readiness, attention, material choice, and persistence, and how they decide when to introduce the next lesson. A better role for AI is to stay out of the child&rsquo;s way and make that observation easier to keep over time.</p>
-          <p>The concept is an AI-assisted observation and documentation tool: record patterns during uninterrupted work, organise observation notes, and cut the repetitive documentation. The teacher stays responsible for interpretation and for the next instructional decision.</p>
+      <!-- 06 ------------------------------------------------------------ -->
+      <section class="module" id="ielts-preparation" aria-labelledby="m06-title">
+        <header class="module-head">
+          <p class="module-num">06</p>
+          <h2 id="m06-title">IELTS Preparation</h2>
+          <p class="module-sub">Adaptive Learning Concept and Prototype</p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Prototype exists; personalisation proposed</dd></div>
+            <div><dt>My role</dt><dd>Concept proposal</dd></div>
+          </dl>
+        </header>
+        <div class="module-body module-body--aside">
+          <div class="module-text">
+            <p class="module-lead">The original IELTS direction separated practice into listening, speaking, reading, and writing. That still treats the product like a content library: it knows which category a learner picked, but not what they already know, when their exam is, or how much time they can realistically study. The language apps I tested hit the same wall. Even with a chosen starting level, the path stays generic.</p>
+            <p class="module-group">Existing</p>
+            <p class="module-para">An IELTS module prototype inside the platform&rsquo;s practice arena, pictured here. The team is iterating on it against the proposal below.</p>
+          </div>
+          <figure class="module-figure module-figure--aside">
+            <div class="media-frame">
+              <img src="../assets/projects/axis-ai/ielts-prototype-crop.jpg" alt="The Simulation Arena screen of the existing prototype, listing practice modules including assessment practice, counseling training, interview practice, IELTS and negotiation." width="819" height="1154" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="figcap">The existing IELTS module prototype, inside the platform&rsquo;s practice arena.</figcaption>
+          </figure>
+          <div class="module-text module-span">
+            <p class="module-group">My proposal</p>
+            <ul class="module-points">
+              <li><strong>Initial diagnostic.</strong> Start from what the learner already knows instead of sending everyone down the same path.</li>
+              <li><strong>Deadline-aware plan.</strong> An exam in three months becomes a three-month cycle of concrete daily work.</li>
+              <li><strong>Flexible daily tasks.</strong> Learners can rest at weekends or add practice when life changes, and the plan adjusts.</li>
+              <li><strong>AI study companion.</strong> Optional reminders and continuity. Progress earns points for light cosmetic customisation.</li>
+              <li><strong>Optional social features.</strong> A leaderboard can make progress visible. System-generated participants should never be presented as real users.</li>
+              <li><strong>Low-pressure speaking rehearsal.</strong> An approachable avatar as a practice partner, for learners who are strong until an examiner is in front of them.</li>
+            </ul>
+          </div>
+          <aside class="notice">
+            <p class="notice-label">Status</p>
+            <p>The personalised system above is my concept proposal, not a shipped feature. Only the IELTS module prototype pictured here exists today.</p>
+          </aside>
         </div>
-        <aside class="notice">
-          <p class="notice-label">Status</p>
-          <p>Future concept. Teacher-in-the-loop, privacy, and non-intrusive observation are explicit constraints. No automated diagnosis is claimed.</p>
-        </aside>
+      </section>
+
+      <!-- 07 ------------------------------------------------------------ -->
+      <section class="module" id="xiaomiao-gen-z" aria-labelledby="m07-title">
+        <header class="module-head">
+          <p class="module-num">07</p>
+          <h2 id="m07-title">XiaoMiao Gen Z</h2>
+          <p class="module-sub">Conversation Reflection and Rehearsal</p>
+          <dl class="module-meta">
+            <div><dt>Status</dt><dd>Public trial; rehearsal in preparation</dd></div>
+          </dl>
+          <p class="module-links">
+            <a class="worklink is-primary" href="https://zhongmiao-ai.com/genz/" target="_blank" rel="noopener noreferrer">Try XiaoMiao Gen Z <span aria-hidden="true">&#8599;</span></a>
+          </p>
+        </header>
+        <div class="module-body module-body--aside">
+          <div class="module-text">
+          <p class="module-lead">XiaoMiao Gen Z helps young people revisit everyday conversations, understand what may have happened, and rehearse how to respond next time. The experience connects conversation review, explainable practice recommendations, and goal-based role-play into a repeatable learning loop.</p>
+          <ol class="module-points module-points--flow">
+            <li><strong>Conversation review.</strong> Upload audio or video, or type the conversation in. The user checks the recognised transcript, marks which speaker they are, and reads observations and possible interpretations grounded in what was actually said. The analysis can be saved to a personal record.</li>
+            <li><strong>Daily recommendations.</strong> Saved record titles and tags drive suggested practice, and &ldquo;Why this?&rdquo; shows which earlier record a suggestion came from.</li>
+            <li><strong>Conversation rehearsal.</strong> The user picks a saved record and a goal, such as setting a boundary, expressing a feeling, or negotiating an arrangement, then practises a text conversation with a simulated counterpart. The review measures the practice against that goal and the user&rsquo;s own replies, quotes one sentence, and suggests another way to say it.</li>
+          </ol>
+          </div>
+          <figure class="module-figure module-figure--aside">
+            <div class="media-frame">
+              <img src="../assets/projects/axis-ai/genz-home.jpg" alt="The public XiaoMiao Gen Z entry screen in Chinese, signed out: the headline 'What happened, let's sort it out together', a button to record an interaction by uploading audio or entering text, an empty My Records panel, and tabs for Records, Practice, and People." width="1000" height="1248" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="figcap">The public entry screen, signed out. The note under the empty records panel reads &ldquo;only what you choose to keep is saved.&rdquo;</figcaption>
+          </figure>
+          <aside class="notice">
+            <p class="notice-label">Status</p>
+            <p>On the public trial, a conversation can be entered without an account, and analysing and saving it requires signing in. The rehearsal flow is designed but marked as in preparation there. People in records are only the names a user saves; nothing infers identity automatically. XiaoMiao Gen Z is a reflection and practice tool, not psychiatric treatment or a diagnostic tool.</p>
+          </aside>
+        </div>
       </section>
 
       <section class="section--railed" id="media-coverage">
@@ -194,7 +352,7 @@
       </section>
 
       <section class="section--railed" id="support">
-        <h2>Project support</h2>
+        <h2>Project Support</h2>
         <div class="prose prose--lead">
           <p>I used this project as the basis of my application for Northeastern University&rsquo;s PEAK Fellowship, and I am currently using it in an ongoing NEA Grants for Arts Projects application.</p>
         </div>
