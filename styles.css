@@ -1670,6 +1670,13 @@ a.work-head-media:hover img { transform: scale(1.012); }
    than panels separate the parts, so seven modules read as one essay instead
    of a grid of product cards. */
 
+/* A two-column prose block whose content is mostly one list: let the list
+   itself flow across both columns (items still stay whole), so a short
+   closing paragraph does not sit alone beside it. */
+@media (min-width: 1024px) {
+  .prose--wide.prose--balanced > ul { break-inside: auto; }
+}
+
 /* In-page index directly under the overview. */
 .work-body > .modnav {
   padding-block: clamp(1.8rem, 4vh, 2.6rem);
