@@ -2082,11 +2082,47 @@ a.work-head-media:hover img { transform: scale(1.012); }
 /* Transparent UI art sits on a plate chosen for it: the health bar fades to
    white at its right end, so it needs a dark ground; the card's drop shadow
    reads on the page's own raised paper. */
-.media > a.media-frame.art-plate { display: grid; place-items: center; padding: clamp(1.4rem, 5vw, 4rem); }
 .media-frame.art-plate--dark { background: var(--ink); }
-.media .art-plate--dark img { width: 100%; max-width: 1200px; }
 .media-frame.art-plate--card { border: 1px solid var(--line); }
-.media .art-plate--card img { width: auto; max-width: 100%; max-height: 820px; }
+
+/* The two smaller pieces (health bar, tarot card) share one row on desktop:
+   shown near the size they would be seen at, not blown up to poster scale.
+   The health bar takes the wider column, the card the narrower one. */
+.work-body > .art-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.8rem, 7vh, 4rem) var(--col-gap);
+  padding-block: clamp(2rem, 5vh, 3.2rem);
+  border-top: 1px solid var(--line);
+}
+.art-duo-item { display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.work-body .art-duo-item h2 { margin: 0 0 0.2rem; }
+.art-duo .art-piece { margin: 0; }
+.art-duo a.art-plate { display: grid; place-items: center; }
+.art-duo .art-plate--dark { padding: clamp(1.2rem, 3vw, 2rem) clamp(1rem, 3vw, 2.4rem); }
+.art-duo .art-plate--dark img { width: 100%; max-width: 680px; height: auto; }
+.art-duo .art-plate--card { padding: clamp(1rem, 2.4vw, 1.5rem); }
+.art-duo .art-plate--card img { width: auto; max-width: 100%; max-height: 480px; height: auto; }
+.art-duo-text {
+  max-width: 52ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
+  line-height: 1.66;
+}
+@media (min-width: 1024px) {
+  .work-body > .art-duo { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; }
+}
+
+/* Generate page header: the logo panel takes the full content width, with
+   the mark shown large; height follows the logo rather than a 16:9 box. */
+.work-hero.logo-plate--hero { aspect-ratio: auto; padding: clamp(1.8rem, 4.5vw, 4rem) clamp(1rem, 3vw, 3rem); }
+.work-hero.logo-plate--hero img { width: 100%; max-width: 1000px; height: auto; }
+/* Below the desktop grid, consecutive prose blocks on this page had no space
+   between them (the grid row-gap only exists from 1024px). */
+@media (max-width: 1023px) {
+  .page--generate .section--railed > .prose + .prose { margin-top: 1em; }
+}
 @media (min-width: 1024px) {
   .section--railed > .art-stack { grid-column: 1 / -1; }
 }
