@@ -150,6 +150,10 @@ p { color: var(--ink-muted); }
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+/* Focus inside an embedded player lands in another document, which draws its
+   own ring or none at all; mark the frame on this page so keyboard users can
+   see where they are. */
+.videobox:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* 5. Motion --------------------------------------------------------------- */
 
@@ -411,6 +415,9 @@ p { color: var(--ink-muted); }
   white-space: nowrap;
   transition: color var(--dur) var(--ease);
 }
+/* Short labels such as "CV" are under 24px wide; widen the tap area invisibly
+   (kept inside the gaps, so neighbouring targets never overlap). */
+.masthead-nav a::before { content: ""; position: absolute; inset: -2px -6px; }
 .masthead-nav a::after {
   content: "";
   position: absolute;
@@ -1058,6 +1065,7 @@ a.chip[aria-current="true"] {
 .tagbrowse-toggle {
   display: inline-flex;
   align-items: center;
+  min-height: 24px;
   gap: 0.55rem;
   padding: 0.2rem 0;
   border: 0;
@@ -1198,6 +1206,7 @@ figure > .notice { margin-top: 0.8rem; }
 .back-link {
   display: inline-flex;
   align-items: center;
+  min-height: 24px;
   gap: 0.5rem;
   color: var(--accent);
   font-family: var(--font-mono);
@@ -1624,6 +1633,10 @@ a.work-head-media:hover img { transform: scale(1.012); }
 }
 .extlink:hover,
 .extlink:focus-visible { color: var(--accent); border-color: var(--accent); }
+/* A standalone action in a caption ("Full size", "Watch on Google Drive"):
+   extend the tap area to 24px+ without moving the caption's line box. */
+.extlink { position: relative; }
+.extlink::before { content: ""; position: absolute; inset: -4px -2px; }
 
 /* Text-column pull quote. Sits with the body copy instead of competing with
    the project title from a full-height side column. */
@@ -2258,7 +2271,18 @@ figure { margin: 0; }
   }
   .tagbrowse-toggle { min-height: 40px; padding-block: 0.55rem; }
   .back-link { padding-block: 0.7rem; }
-  .extlink { min-height: 40px; padding-bottom: 0.5rem; }
+  /* The 40px box keeps the target size; the rule moves from the box edge to
+     the text, so it no longer floats 20px under the label. */
+  .extlink {
+    min-height: 40px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 0.3em;
+  }
+  .extlink:hover,
+  .extlink:focus-visible { text-decoration-color: var(--accent); }
 }
 
 /* 11. Research --------------------------------------------------------------
