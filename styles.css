@@ -2581,11 +2581,29 @@ figure { margin: 0; }
 @media (min-width: 768px) {
   .gallery.gallery--trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-.gallery.gallery--trio .artshot--contain img { object-fit: contain; padding: 3% 4%; }
+/* The card's paper panel shrink-wraps the artwork (10px all round) instead of
+   filling the column; the rest of the cell is page background. The figure is
+   a size container, so the card's height can follow the row: the column
+   width divided by the row ratio, minus the panel padding. */
+.gallery--trio > .artwork--card { container-type: inline-size; }
+.gallery.gallery--trio .artshot--contain {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 10px;
+  aspect-ratio: auto;
+}
+.gallery.gallery--trio .artshot--contain img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: calc(100cqw / (var(--pair-ratio, 12 / 11)) - 20px);
+  object-fit: fill;
+}
+.gallery--trio > .artwork--card figcaption { justify-content: center; }
 @media (max-width: 767px) {
-  /* Stacked on a phone: the card keeps a modest size instead of a full-width
-     poster, still uncropped. */
-  .gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; max-height: 420px; margin-inline: auto; padding: 0.8rem 0; }
+  /* Stacked on a phone: a modest card, not a full-width poster. */
+  .gallery.gallery--trio .artshot--contain img { height: auto; max-height: 400px; }
 }
 
 .lightbox {
