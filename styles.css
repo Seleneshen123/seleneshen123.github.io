@@ -2610,6 +2610,27 @@ figure { margin: 0; }
   .gallery.gallery--trio .artshot--contain img { height: auto; max-height: 400px; }
 }
 
+/* Later 2D rows: the same idea as the first row, generalised. Each piece
+   declares its own width:height (--ar) and the row its total (--ar-sum), so
+   one shared height fills the shell exactly without cropping anything:
+   (100cqw - gaps) / --ar-sum, capped at the first row's 366.67px. Narrower
+   than the cap, the group is centred with the same 22px gaps. On a phone the
+   rows stack through the .gallery--pair rules. */
+@media (min-width: 768px) {
+  .gallery.gallery--row {
+    container-type: inline-size;
+    display: flex;
+    justify-content: center;
+    column-gap: 22px;
+  }
+  .gallery--row > .artwork {
+    --row-h: min(366.67px, calc((100cqw - 44px) / var(--ar-sum)));
+    flex: none;
+    width: calc(var(--row-h) * (var(--ar)));
+  }
+  .gallery.gallery--row .artshot { height: var(--row-h); aspect-ratio: auto; }
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
