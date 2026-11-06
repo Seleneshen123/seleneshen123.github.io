@@ -682,7 +682,7 @@ p { color: var(--ink-muted); }
 .feature-title a { color: inherit; }
 .feature-title .sub {
   display: block;
-  margin-top: 0.25em;
+  margin-top: 0.4em;
   color: var(--ink-muted);
   font-family: var(--font-sans);
   font-size: 0.33em;
@@ -782,6 +782,35 @@ p { color: var(--ink-muted); }
 @media (min-width: 1024px) {
   .feature--pair .feature-pair { grid-row: 2; grid-column: 1 / span 7; }
   .feature--pair .feature-text { grid-row: 2; grid-column: 9 / -1; align-self: start; }
+}
+
+/* A feature with no approved project image yet. Rather than filling the
+   space with a stand-in picture, it uses the rail layout of the detail pages:
+   key facts in the left columns, the statement from column five. */
+.feature-facts {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem var(--col-gap);
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+.feature-facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.feature-facts dd { margin: 0; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.55; }
+.feature--text .feature-text .line { max-width: 60ch; }
+
+@media (min-width: 1024px) {
+  .feature--text .feature-facts { grid-row: 2; grid-column: 1 / span 3; grid-template-columns: minmax(0, 1fr); align-self: start; }
+  .feature--text .feature-text { grid-row: 2; grid-column: 5 / span 7; padding-top: 1.1rem; border-top: 1px solid var(--line); }
 }
 
 .feature:hover .feature-hero img { transform: scale(1.015); }
@@ -1575,61 +1604,6 @@ a.work-head-media:hover img { transform: scale(1.012); }
   line-height: 1.34;
 }
 
-/* Media coverage.
-   External press sits beside the research list, not inside it, so this is a
-   plain two-column text block rather than another numbered project card:
-   outlet and date in a narrow rail, what the coverage actually said to its
-   right. The measure is capped on the paragraphs so the copy stays readable
-   across the wider track. */
-.mediacov {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--col-gap);
-  row-gap: 1.3rem;
-  align-items: start;
-}
-.mediacov-meta { display: flex; flex-direction: column; gap: 0.35rem; }
-.mediacov-outlet {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(1rem, 1.25vw, 1.14rem);
-  font-weight: 600;
-  letter-spacing: -0.012em;
-}
-.mediacov-date {
-  margin: 0;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-.mediacov-body > p {
-  margin: 0 0 1rem;
-  max-width: 78ch;
-  color: var(--ink-soft);
-  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
-  line-height: 1.68;
-}
-/* Scoped past `.mediacov-body > p` rather than forced with !important. */
-.mediacov-body > .mediacov-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem 1.8rem;
-  max-width: none;
-  margin: 1.4rem 0 0;
-}
-
-@media (min-width: 1024px) {
-  .mediacov-meta { grid-column: 1 / span 3; }
-  .mediacov-body { grid-column: 5 / -1; }
-}
-@media (max-width: 1023px) {
-  .mediacov > * { grid-column: 1 / -1; }
-  .mediacov-body > p { max-width: none; }
-}
-
 /* A small outbound reference inside body copy. Deliberately quieter than the
    bordered action links in the page header, which would read as a call to
    action on what is really a citation. */
@@ -1664,7 +1638,8 @@ a.work-head-media:hover img { transform: scale(1.012); }
 }
 
 /* ---- Product modules ------------------------------------------------------
-   A long case study split into numbered modules (Axis AI). Each module keeps
+   A long case study split into numbered modules (Boston Bilingual Pioneer
+   Media). Each module keeps
    the rail used by the text-led sections: number, title, subtitle and status
    in columns one to three, the explanation from column five. Hairlines rather
    than panels separate the parts, so seven modules read as one essay instead
@@ -1675,7 +1650,16 @@ a.work-head-media:hover img { transform: scale(1.012); }
    closing paragraph does not sit alone beside it. */
 @media (min-width: 1024px) {
   .prose--wide.prose--balanced > ul { break-inside: auto; }
+  /* Short sections on the newer detail pages: one column at a reading
+     measure, so two short paragraphs are not split mid-sentence across
+     newspaper columns. */
+  .section--railed > .prose.prose--measure { max-width: 70ch; }
+  /* A figure that belongs to the text track rather than the full width. */
+  .section--railed > .media.media--track { grid-column: 5 / -1; }
 }
+
+/* Embedded player sized to the source video (4:3), so it is not letterboxed. */
+.videobox.videobox--embed { aspect-ratio: 4 / 3; }
 
 /* In-page index directly under the overview. */
 .work-body > .modnav {
@@ -1911,9 +1895,26 @@ a.work-head-media:hover img { transform: scale(1.012); }
   line-height: 1.66;
 }
 
-.module-figure img { width: 100%; height: auto; display: block; }
-.module-figure .figcap { max-width: 68ch; }
-.module-figure--aside { max-width: 420px; }
+/* Each module opens on one representative visual at the top of the body
+   track: beside the title rail on desktop, directly under it on mobile. */
+.module-visual img { width: 100%; height: auto; display: block; }
+.module-visual .figcap,
+.module-body > .figcap { max-width: 68ch; }
+/* A portrait screen keeps its exact ratio, centred at a capped height inside
+   the same full-width frame, so it does not run to twice the length of the
+   text beside it and still lines up with the landscape visuals. */
+.module-visual--portrait .media-frame {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 2.4vw, 2rem);
+}
+.module-visual--portrait img { width: auto; max-width: 100%; max-height: 560px; }
+/* A single interface card: shown near its real size so its text reads at
+   the same scale as the page rather than at poster size. */
+.module-visual--card .media-frame { display: grid; place-items: center; padding: clamp(1rem, 2.4vw, 2rem); }
+.module-visual--card img { width: 100%; max-width: 460px; }
+/* The figure caption stays tight to the row of figures it describes. */
+.module-body > .jrow + .figcap { margin-top: calc(-1 * clamp(0.6rem, 1.6vh, 1rem)); }
 
 /* Three figures of different proportions in one row at a shared height.
    Each grows in proportion to its aspect ratio (--ar), so the heights come
@@ -1921,7 +1922,6 @@ a.work-head-media:hover img { transform: scale(1.012); }
 .jrow { display: flex; gap: clamp(0.8rem, 1.6vw, 1.4rem); }
 .jrow > figure { flex: var(--ar, 1) 1 0; min-width: 0; }
 .jrow img { width: 100%; height: auto; display: block; }
-.module-wide .figcap { max-width: 68ch; }
 
 @media (max-width: 767px) {
   .jrow { flex-direction: column; }
@@ -1936,7 +1936,6 @@ a.work-head-media:hover img { transform: scale(1.012); }
   }
   .module-head { grid-column: 1 / span 3; }
   .module-body { grid-column: 5 / -1; }
-  .module-wide { grid-column: 1 / -1; }
 
   .module-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .module-points > li { max-width: none; }
@@ -1949,19 +1948,6 @@ a.work-head-media:hover img { transform: scale(1.012); }
 }
 @media (min-width: 1280px) {
   .module-points--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-  /* Text and a portrait screenshot side by side inside the body track. Below
-     this width the screenshot column fell under 220px, so it stacks instead. */
-  .module-body--aside {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    column-gap: var(--col-gap);
-    row-gap: clamp(1.4rem, 3vh, 1.9rem);
-    align-items: start;
-  }
-  .module-body--aside > .module-figure--aside { max-width: none; }
-  .module-body--aside > .notice,
-  .module-body--aside > .module-span { grid-column: 1 / -1; }
 }
 
 /* ---- Media patterns ---- */
