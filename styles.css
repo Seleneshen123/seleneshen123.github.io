@@ -2581,11 +2581,11 @@ figure { margin: 0; }
 @media (min-width: 768px) {
   .gallery.gallery--trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-.gallery.gallery--trio .artshot--contain img { object-fit: contain; padding: 6% 14%; }
+.gallery.gallery--trio .artshot--contain img { object-fit: contain; padding: 3% 4%; }
 @media (max-width: 767px) {
   /* Stacked on a phone: the card keeps a modest size instead of a full-width
      poster, still uncropped. */
-  .gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; max-height: 420px; margin-inline: auto; padding: 1.4rem 0; }
+  .gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; max-height: 420px; margin-inline: auto; padding: 0.8rem 0; }
 }
 
 .lightbox {
