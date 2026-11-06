@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Boston Bilingual Pioneer Media — seven learning-product directions developed by the Axis AI team, from interactive 3D mathematics to an embodied learning companion. Design work by Caiyi Shen.">
+  <meta name="description" content="Boston Bilingual Pioneer Media — an applied learning-product project with seven product directions, including the Axis AI university platform, interactive 3D mathematics, and an embodied learning companion. Design work by Caiyi Shen.">
   <meta name="theme-color" content="#f3f0ea">
   <title>Boston Bilingual Pioneer Media — Caiyi Shen</title>
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
@@ -32,9 +32,9 @@
     </nav>
 
     <header class="work-head">
-      <p class="eyebrow">Case Study</p>
+      <p class="eyebrow">Applied Learning Products</p>
       <h1>Boston Bilingual Pioneer Media</h1>
-      <p class="work-line">Seven learning-product directions, from interactive 3D mathematics and a university courseware platform to a character companion and conversation-practice tools. Each section states what I designed and what the wider team built.</p>
+      <p class="work-line">One project, seven learning-product directions: from interactive 3D mathematics and the Axis AI university platform to a character companion and conversation-practice tools. Each section states what I designed and what the wider team built.</p>
       <ul class="chips">
         <li><a class="chip" href="../game-design.html#tag=2d" data-tag="2d">2D</a></li>
         <li><a class="chip" href="../game-design.html#tag=3d" data-tag="3d">3D</a></li>
@@ -43,10 +43,14 @@
       </ul>
       <dl class="factbar">
         <div><dt>Role</dt><dd>Project Lead / Game Designer / 3D Artist on Axis AI; role per product below</dd></div>
-        <div><dt>Context</dt><dd>Northeastern University / Axis AI team</dd></div>
+        <div><dt>Project</dt><dd>Boston Bilingual Pioneer Media</dd></div>
         <div><dt>Period</dt><dd>2026&ndash;Present</dd></div>
         <div><dt>Status</dt><dd>From live courseware to design proposals</dd></div>
       </dl>
+      <p class="worklinks">
+        <a class="worklink is-primary" href="axis-ai.html">Axis AI platform <span aria-hidden="true">&rarr;</span></a>
+        <a class="worklink" href="https://www.idealist.org/en/nonprofit/d25bca7c37c84d3ab808de3879cde134-boston-bilingual-pioneer-media-medford" target="_blank" rel="noopener noreferrer">Organisation profile <span aria-hidden="true">&#8599;</span></a>
+      </p>
     </header>
 
     <div class="work-body">
@@ -55,9 +59,8 @@
         <div class="split">
           <div class="prose">
             <h2>Overview</h2>
-            <p>This case study brings together seven product directions developed by the Axis AI team (<span lang="zh-CN">众妙之轴</span>). All of them turn learning material into something the learner acts on: 3D lessons for middle-school mathematics, case-based university courses, a character companion that is moving onto a robot, and tools for practising everyday conversations.</p>
-            <p>It highlights my contributions to game design, interactive learning, visual development, and product iteration. The directions sit at very different stages, from live courseware to early prototypes and design proposals, and each section states which one it is, what I designed, and what the wider team built.</p>
-            <p>Boston Bilingual Pioneer Media featured two of these directions in September 2026; that coverage is summarised at the end of the page.</p>
+            <p>Boston Bilingual Pioneer Media brings seven learning-product directions together under one project. All of them turn learning material into something the learner acts on: 3D lessons for middle-school mathematics, case-based university courses on the Axis AI platform, a character companion that is moving onto a robot, and tools for practising everyday conversations.</p>
+            <p>This page highlights my contributions to game design, interactive learning, visual development, and product iteration. The directions sit at very different stages, from live courseware to early prototypes and design proposals, and each section states which one it is, what I designed, and what the wider team built.</p>
           </div>
           <div class="aside">
             <p class="pullquote">A 3D lesson is not automatically a game. If the interaction is just walk to a question and click an answer, the 3D space is decoration.</p>
@@ -212,22 +215,63 @@
           </p>
         </header>
         <div class="module-body">
-          <figure class="module-visual">
-            <div class="media-frame">
-              <img src="../assets/projects/axis-ai/psych-assessment.jpg" alt="A course screen from the psychological assessment pilot, showing a staged lesson flow from pre-class prediction through context introduction to core debrief." width="1400" height="896" loading="lazy" decoding="async">
+          <p class="module-lead">Psychological assessment means collecting information, understanding a client in context, weighing evidence, spotting patterns, and drawing conclusions the evidence can support. I designed this pilot course, developed with Dr. Chieh Li for a Northeastern doctoral course, around an investigation metaphor, so that students practise that reasoning through interactive activities instead of only reading about it.</p>
+          <p class="module-para">The course moves in stages, from a pre-class prediction through context, interactive challenges, and practice to a case conference. Along the way are smaller activities such as an evidence runner and an evidence-ranking task. The three experiences below form the core of the sequence: meet the client, connect the evidence, then write it up.</p>
+        </div>
+        <ol class="module-steps" aria-label="The learning sequence">
+          <li class="module-step">
+            <div class="module-step-head">
+              <p class="module-step-num">01</p>
+              <h3>Jordan visual novel</h3>
             </div>
-            <figcaption class="figcap">The pilot&rsquo;s staged course flow, from pre-class prediction through context introduction to the core debrief.</figcaption>
-          </figure>
-          <p class="module-lead">Developed with Dr. Chieh Li for a Northeastern doctoral course, this pilot reframes psychological assessment as detective work. The mapping is deliberate: assessment already asks the learner to gather evidence, set noise aside, understand a person in context, and connect information across sources. So the learner does that work instead of reading a finished case.</p>
-          <ul class="module-points">
-            <li><strong>Evidence runner.</strong> The player steers a folder, collecting evidence and dodging distractors, which turns information filtering into an immediate physical action.</li>
-            <li><strong>Jordan, a visual novel.</strong> Learners build an understanding of the digital client, Jordan, through context and dialogue rather than receiving the whole case at once.</li>
-            <li><strong>Ranking and the evidence board.</strong> Learners rank and analyse what they have found, then connect clues on a corkboard with red string, so they build the relationships rather than being handed them.</li>
-            <li><strong>Report and reflect.</strong> The course runs from a pre-class prediction to a core debrief, where learners report a conclusion and look back at how they reached it.</li>
-          </ul>
+            <figure class="module-step-shot">
+              <a class="media-frame" href="../assets/projects/axis-ai/psych-assessment-vn.png" target="_blank" rel="noopener">
+                <img src="../assets/projects/axis-ai/psych-assessment-vn.png" alt="The Context Introduction stage of the course 'Crafting Insightful Reports'. Above, the stage tabs: Pre-Class Prediction and Context Introduction ticked, then Interactive Challenge, Reinforcement Practice, Case Conference, and Core Concept Review. Below, a visual-novel scene in a school psychologist's office, where Dr. Reyes, supervising school psychologist, says: 'Keep that in mind as we go. Next, we will look closely at what each source actually says.' A case note reads: 'A report starts with its purpose and its audience.'" width="1770" height="1798" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="figcap">Context Introduction. Dr. Reyes takes the student through Jordan&rsquo;s case one note at a time; all four case notes have been read here. <a class="extlink" href="../assets/projects/axis-ai/psych-assessment-vn.png" target="_blank" rel="noopener">Full size <span aria-hidden="true">&#8599;</span></a></figcaption>
+            </figure>
+            <div class="module-step-text">
+              <p>The visual novel introduces Jordan&rsquo;s case through the supervising school psychologist, Dr. Reyes. Students learn about Jordan&rsquo;s background, the referral concern, and the context around it step by step.</p>
+              <p class="module-step-goal"><span class="module-step-label">Design goal</span>Give students the case through a guided narrative rather than as one block of static text.</p>
+            </div>
+          </li>
+          <li class="module-step">
+            <div class="module-step-head">
+              <p class="module-step-num">02</p>
+              <h3>Evidence board</h3>
+            </div>
+            <figure class="module-step-shot">
+              <a class="media-frame" href="../assets/projects/axis-ai/psych-assessment-board.png" target="_blank" rel="noopener">
+                <img src="../assets/projects/axis-ai/psych-assessment-board.png" alt="The 'Connect the evidence' board. Six clue cards from the referral, Jordan, Jordan's teacher, and Jordan's parent are pinned to a board and joined in pairs with red string. All three patterns are found: reading takes longer than expected, understanding may be a relative strength, and difficulties show up around timed tasks. The feedback notes that the sources point to the same situation but do not show that anxiety causes the slowdown." width="1588" height="1374" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="figcap">All three patterns found. Each one joins two clues from different sources, and the feedback separates agreement from cause. <a class="extlink" href="../assets/projects/axis-ai/psych-assessment-board.png" target="_blank" rel="noopener">Full size <span aria-hidden="true">&#8599;</span></a></figcaption>
+            </figure>
+            <div class="module-step-text">
+              <p>Students connect clues from different sources to find meaningful patterns. The red-string investigation board turns evidence integration into a visual, hands-on task, and it can also be played from the keyboard.</p>
+              <p class="module-step-goal"><span class="module-step-label">Design goal</span>Help learners tell a consistent pattern apart from an unsupported causal story. Several sources agree that Jordan struggles with timed reading tasks, but that does not make anxiety the cause.</p>
+            </div>
+          </li>
+          <li class="module-step">
+            <div class="module-step-head">
+              <p class="module-step-num">03</p>
+              <h3>Report &amp; reflection</h3>
+            </div>
+            <figure class="module-step-shot">
+              <a class="media-frame" href="../assets/projects/axis-ai/psych-assessment-report.png" target="_blank" rel="noopener">
+                <img src="../assets/projects/axis-ai/psych-assessment-report.png" alt="The 'Improve Jordan's report' activity, in three parts: check the draft against the report checklist, revise the weak sentences, then build a recommendation. On the left, the numbered sentences of Dr. Reyes's draft assessment report, each highlighted in a colour. On the right, the report checklist, with demographic information matched to sentence 1, cultural, linguistic and socioeconomic background marked missing, and the referral concern matched to sentence 2. 15 of 15 checklist items are resolved." width="1705" height="1813" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="figcap">The checklist stage, completed. Each draft sentence is matched to the checklist item it covers, and items the draft leaves out are marked as missing, not yet available, or not applicable. <a class="extlink" href="../assets/projects/axis-ai/psych-assessment-report.png" target="_blank" rel="noopener">Full size <span aria-hidden="true">&#8599;</span></a></figcaption>
+            </figure>
+            <div class="module-step-text">
+              <p>Students review Jordan&rsquo;s draft assessment report against a structured checklist. They find what is missing, connect each statement to the criterion it covers, revise weak sentences, and work towards a recommendation the evidence supports.</p>
+              <p class="module-step-goal"><span class="module-step-label">Design goal</span>Move from collecting evidence to communicating an accurate, defensible assessment conclusion.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="module-body module-body--after">
           <aside class="notice">
             <p class="notice-label">Status</p>
-            <p>Pilot produced and run with students, who have given feedback on it. That feedback is not presented here as evidence of improved learning outcomes.</p>
+            <p>Pilot produced and run with students, who have given feedback on it. That feedback is not presented here as evidence of improved learning outcomes. Jordan is a digital client written for the course; no student records are shown.</p>
           </aside>
         </div>
       </section>
@@ -254,7 +298,7 @@
             </div>
             <figcaption class="figcap">The public Axis University entry, signed out. Instructors enter as architects who build courseware; students enter to explore it.</figcaption>
           </figure>
-          <p class="module-lead">Axis AI, previously called Zhongmiao Academy (<span lang="zh-CN">众妙大学堂</span>), is the university side of the platform, and a different problem from the middle-school lessons. An instructor brings the material they already teach from, and the platform rebuilds it as interactive 3D courseware. Students then practise inside situations instead of reviewing slides.</p>
+          <p class="module-lead">Axis AI (<span lang="zh-CN">众妙大学堂</span>) is the university learning platform within Boston Bilingual Pioneer Media, and a different problem from the middle-school lessons. An instructor brings the material they already teach from, and the platform rebuilds it as interactive 3D courseware. Students then practise inside situations instead of reviewing slides.</p>
           <ul class="module-points module-points--three">
             <li><strong>Courseware from existing material.</strong> The instructor side generates and structures 3D interactive courseware from course content, so a lesson starts from what the teacher already has.</li>
             <li><strong>Scenario-based practice.</strong> A practice arena holds simulation modules such as assessment practice, counselling training, interview practice, and negotiation. The psychological assessment pilot in section 04 is one course built this way.</li>
@@ -338,17 +382,6 @@
             <p class="notice-label">Status</p>
             <p>On the public trial, a conversation can be entered without an account, and analysing and saving it requires signing in. The rehearsal flow is designed but marked as in preparation there. People in records are only the names a user saves; nothing infers identity automatically. XiaoMiao Gen Z is a reflection and practice tool, not psychiatric treatment or a diagnostic tool.</p>
           </aside>
-        </div>
-      </section>
-
-      <section class="section--railed" id="media-coverage">
-        <h2>Media Coverage</h2>
-        <p class="showing">Boston Bilingual Pioneer Media <span class="dot">&middot;</span>&nbsp;September 2026</p>
-        <div class="prose prose--wide">
-          <p>Boston Bilingual Pioneer Media covered two directions of this work: the Axis interactive learning platform, and the ongoing development of embodied learning companions.</p>
-          <p>The platform turns learning content into interactive experiences built around action, feedback, and exploration rather than passive presentation. The coverage also highlighted the embodied-learning direction, where the team is exploring companion robots that can extend learning beyond a conventional screen-based experience.</p>
-          <p>The companion robots are still in development. My work in that direction focuses on how physical form, screen placement, interaction, and everyday companionship can support a learning experience that feels approachable rather than industrial.</p>
-          <p><a class="extlink" href="https://www.idealist.org/en/nonprofit/d25bca7c37c84d3ab808de3879cde134-boston-bilingual-pioneer-media-medford" target="_blank" rel="noopener noreferrer">About the outlet <span aria-hidden="true">&#8599;</span></a></p>
         </div>
       </section>
 
