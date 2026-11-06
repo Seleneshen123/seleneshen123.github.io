@@ -150,6 +150,10 @@ p { color: var(--ink-muted); }
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+/* Focus inside an embedded player lands in another document, which draws its
+   own ring or none at all; mark the frame on this page so keyboard users can
+   see where they are. */
+.videobox:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* 5. Motion --------------------------------------------------------------- */
 
@@ -411,6 +415,9 @@ p { color: var(--ink-muted); }
   white-space: nowrap;
   transition: color var(--dur) var(--ease);
 }
+/* Short labels such as "CV" are under 24px wide; widen the tap area invisibly
+   (kept inside the gaps, so neighbouring targets never overlap). */
+.masthead-nav a::before { content: ""; position: absolute; inset: -2px -6px; }
 .masthead-nav a::after {
   content: "";
   position: absolute;
@@ -682,7 +689,7 @@ p { color: var(--ink-muted); }
 .feature-title a { color: inherit; }
 .feature-title .sub {
   display: block;
-  margin-top: 0.25em;
+  margin-top: 0.4em;
   color: var(--ink-muted);
   font-family: var(--font-sans);
   font-size: 0.33em;
@@ -733,6 +740,84 @@ p { color: var(--ink-muted); }
   .feature-inset { grid-row: 2; grid-column: 1 / span 4; align-self: end; }
   .feature-hero  { grid-row: 2; grid-column: 5 / -1; }
   .feature-text  { grid-row: 3; grid-column: 5 / span 6; }
+}
+
+/* A feature whose media is two portrait sheets rather than one landscape
+   still. The inset/hero composition above is asymmetric on purpose, which is
+   wrong for a matched pair: these two want equal width, equal height and a
+   shared top edge. The copy moves up beside them so the row does not leave a
+   tall empty block to the right of the images. */
+.feature-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.7rem);
+  align-items: start;
+}
+.feature-pair > figure { margin: 0; }
+/* Tighter than a standalone plate, and height-capped so a 754x1194 sheet
+   cannot run away with the page. width:auto keeps the ratio exact. */
+.feature-pair .plate { padding: clamp(0.7rem, 1.4vw, 1.1rem); }
+.feature-pair .plate img { max-height: var(--sheet-h, 460px); }
+.feature-pair figcaption {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.pair-name {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.pair-role {
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  /* Stacked, at natural size, so the construction notes stay legible. */
+  .feature-pair { grid-template-columns: 1fr; gap: 1.8rem; }
+  .feature-pair .plate img { max-height: none; }
+}
+
+@media (min-width: 1024px) {
+  .feature--pair .feature-pair { grid-row: 2; grid-column: 1 / span 7; }
+  .feature--pair .feature-text { grid-row: 2; grid-column: 9 / -1; align-self: start; }
+}
+
+/* A feature with no approved project image yet. Rather than filling the
+   space with a stand-in picture, it uses the rail layout of the detail pages:
+   key facts in the left columns, the statement from column five. */
+.feature-facts {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem var(--col-gap);
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+.feature-facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.feature-facts dd { margin: 0; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.55; }
+.feature--text .feature-text .line { max-width: 60ch; }
+
+@media (min-width: 1024px) {
+  .feature--text .feature-facts { grid-row: 2; grid-column: 1 / span 3; grid-template-columns: minmax(0, 1fr); align-self: start; }
+  .feature--text .feature-text { grid-row: 2; grid-column: 5 / span 7; padding-top: 1.1rem; border-top: 1px solid var(--line); }
 }
 
 .feature:hover .feature-hero img { transform: scale(1.015); }
@@ -980,6 +1065,7 @@ a.chip[aria-current="true"] {
 .tagbrowse-toggle {
   display: inline-flex;
   align-items: center;
+  min-height: 24px;
   gap: 0.55rem;
   padding: 0.2rem 0;
   border: 0;
@@ -1120,6 +1206,7 @@ figure > .notice { margin-top: 0.8rem; }
 .back-link {
   display: inline-flex;
   align-items: center;
+  min-height: 24px;
   gap: 0.5rem;
   color: var(--accent);
   font-family: var(--font-mono);
@@ -1526,61 +1613,6 @@ a.work-head-media:hover img { transform: scale(1.012); }
   line-height: 1.34;
 }
 
-/* Media coverage.
-   External press sits beside the research list, not inside it, so this is a
-   plain two-column text block rather than another numbered project card:
-   outlet and date in a narrow rail, what the coverage actually said to its
-   right. The measure is capped on the paragraphs so the copy stays readable
-   across the wider track. */
-.mediacov {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--col-gap);
-  row-gap: 1.3rem;
-  align-items: start;
-}
-.mediacov-meta { display: flex; flex-direction: column; gap: 0.35rem; }
-.mediacov-outlet {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(1rem, 1.25vw, 1.14rem);
-  font-weight: 600;
-  letter-spacing: -0.012em;
-}
-.mediacov-date {
-  margin: 0;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-.mediacov-body > p {
-  margin: 0 0 1rem;
-  max-width: 78ch;
-  color: var(--ink-soft);
-  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
-  line-height: 1.68;
-}
-/* Scoped past `.mediacov-body > p` rather than forced with !important. */
-.mediacov-body > .mediacov-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem 1.8rem;
-  max-width: none;
-  margin: 1.4rem 0 0;
-}
-
-@media (min-width: 1024px) {
-  .mediacov-meta { grid-column: 1 / span 3; }
-  .mediacov-body { grid-column: 5 / -1; }
-}
-@media (max-width: 1023px) {
-  .mediacov > * { grid-column: 1 / -1; }
-  .mediacov-body > p { max-width: none; }
-}
-
 /* A small outbound reference inside body copy. Deliberately quieter than the
    bordered action links in the page header, which would read as a call to
    action on what is really a citation. */
@@ -1601,6 +1633,10 @@ a.work-head-media:hover img { transform: scale(1.012); }
 }
 .extlink:hover,
 .extlink:focus-visible { color: var(--accent); border-color: var(--accent); }
+/* A standalone action in a caption ("Full size", "Watch on Google Drive"):
+   extend the tap area to 24px+ without moving the caption's line box. */
+.extlink { position: relative; }
+.extlink::before { content: ""; position: absolute; inset: -4px -2px; }
 
 /* Text-column pull quote. Sits with the body copy instead of competing with
    the project title from a full-height side column. */
@@ -1612,6 +1648,494 @@ a.work-head-media:hover img { transform: scale(1.012); }
   font-size: clamp(1.05rem, 1.5vw, 1.28rem);
   line-height: 1.42;
   color: var(--ink-soft);
+}
+
+/* ---- Product modules ------------------------------------------------------
+   A long case study split into numbered modules (Boston Bilingual Pioneer
+   Media). Each module keeps
+   the rail used by the text-led sections: number, title, subtitle and status
+   in columns one to three, the explanation from column five. Hairlines rather
+   than panels separate the parts, so seven modules read as one essay instead
+   of a grid of product cards. */
+
+/* A two-column prose block whose content is mostly one list: let the list
+   itself flow across both columns (items still stay whole), so a short
+   closing paragraph does not sit alone beside it. */
+@media (min-width: 1024px) {
+  .prose--wide.prose--balanced > ul { break-inside: auto; }
+  /* Short sections on the newer detail pages: one column at a reading
+     measure, so two short paragraphs are not split mid-sentence across
+     newspaper columns. */
+  .section--railed > .prose.prose--measure { max-width: 70ch; }
+  /* A figure that belongs to the text track rather than the full width. */
+  .section--railed > .media.media--track { grid-column: 5 / -1; }
+}
+
+/* Embedded player sized to the source video (4:3), so it is not letterboxed. */
+.videobox.videobox--embed { aspect-ratio: 4 / 3; }
+
+/* In-page index directly under the overview. */
+.work-body > .modnav {
+  padding-block: clamp(1.8rem, 4vh, 2.6rem);
+  border-top: 1px solid var(--line);
+}
+.modnav-label {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.modnav-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.modnav-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  min-height: 44px;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.modnav-num {
+  flex: none;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.modnav-title {
+  font-size: 0.98rem;
+  line-height: 1.4;
+  transition: transform var(--dur) var(--ease);
+}
+.modnav-list a:hover,
+.modnav-list a:focus-visible { color: var(--accent); }
+.modnav-list a:hover .modnav-title { transform: translateX(4px); }
+
+@media (min-width: 768px) {
+  /* Two columns read down, 01–04 then 05–07. */
+  .modnav-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    column-gap: var(--col-gap);
+    border-top: 0;
+  }
+  .modnav-list li:nth-child(1) a,
+  .modnav-list li:nth-child(5) a { border-top: 1px solid var(--line); }
+}
+@media (min-width: 1024px) {
+  .modnav {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+  .modnav-label { grid-column: 1 / span 3; margin: 0; padding-top: 0.85rem; }
+  .modnav-list { grid-column: 5 / -1; }
+}
+
+/* A jump lands with a little air above the module rule. */
+.module { scroll-margin-top: 1.5rem; }
+
+.work-body > .module {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: clamp(1.6rem, 3.5vh, 2.2rem);
+  padding-block: clamp(2.6rem, 6vh, 4rem);
+}
+
+.module-num {
+  margin: 0 0 0.8rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.work-body .module-head h2 {
+  max-width: 16ch;
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  line-height: 1.08;
+}
+.module-sub {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.45;
+}
+.module-sub-zh {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--ink-faint);
+  font-size: 0.9em;
+}
+
+.module-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem var(--col-gap);
+  margin: 1.4rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.module-meta dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.module-meta dd { margin: 0; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.5; }
+
+.module-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin: 1.4rem 0 0;
+}
+.module-linknote {
+  flex-basis: 100%;
+  color: var(--ink-faint);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+/* Body: a lead, then the parts of the design, then role and status. */
+.module-body,
+.module-text { display: flex; flex-direction: column; gap: clamp(1.4rem, 3vh, 1.9rem); min-width: 0; }
+.module-body > *,
+.module-text > * { margin: 0; }
+
+.module-lead {
+  max-width: 70ch;
+  color: var(--ink);
+  font-size: clamp(1.04rem, 1.28vw, 1.22rem);
+  line-height: 1.56;
+}
+.module-para {
+  max-width: 68ch;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
+  line-height: 1.68;
+}
+/* "Existing" and "My proposal" labels: the line between built and proposed. */
+.module-text > .module-group {
+  margin-bottom: -0.9rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.module-points {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.2rem var(--col-gap);
+  padding: 0;
+  list-style: none;
+}
+.module-points > li {
+  max-width: 68ch;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  font-size: clamp(0.93rem, 1vw, 1.01rem);
+  line-height: 1.62;
+}
+.module-points strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+/* A sequence (A, B, C) rather than a set: the letter sits in its own gutter. */
+.module-points--flow { counter-reset: flow; }
+.module-points--flow > li {
+  counter-increment: flow;
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+}
+.module-points--flow > li::before {
+  content: counter(flow, upper-alpha);
+  grid-row: 1 / span 2;
+  padding-top: 0.2rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.module-role {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line-strong);
+}
+.module-role-label {
+  margin: 0;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.module-role p:not(.module-role-label) {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.93rem, 1vw, 1.01rem);
+  line-height: 1.66;
+}
+
+/* Each module opens on one representative visual at the top of the body
+   track: beside the title rail on desktop, directly under it on mobile. */
+.module-visual img { width: 100%; height: auto; display: block; }
+.module-visual .figcap,
+.module-body > .figcap { max-width: 68ch; }
+/* A portrait screen keeps its exact ratio, centred at a capped height inside
+   the same full-width frame, so it does not run to twice the length of the
+   text beside it and still lines up with the landscape visuals. */
+.module-visual--portrait .media-frame {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 2.4vw, 2rem);
+}
+.module-visual--portrait img { width: auto; max-width: 100%; max-height: 560px; }
+/* A single interface card: shown near its real size so its text reads at
+   the same scale as the page rather than at poster size. */
+.module-visual--card .media-frame { display: grid; place-items: center; padding: clamp(1rem, 2.4vw, 2rem); }
+.module-visual--card img { width: 100%; max-width: 460px; }
+/* The figure caption stays tight to the row of figures it describes. */
+.module-body > .jrow + .figcap { margin-top: calc(-1 * clamp(0.6rem, 1.6vh, 1rem)); }
+
+/* Three figures of different proportions in one row at a shared height.
+   Each grows in proportion to its aspect ratio (--ar), so the heights come
+   out equal with nothing cropped or stretched. */
+.jrow { display: flex; gap: clamp(0.8rem, 1.6vw, 1.4rem); }
+.jrow > figure { flex: var(--ar, 1) 1 0; min-width: 0; }
+.jrow img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 767px) {
+  .jrow { flex-direction: column; }
+  .jrow > figure { flex: none; }
+}
+
+@media (min-width: 1024px) {
+  .work-body > .module {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+  .module-head { grid-column: 1 / span 3; }
+  .module-body { grid-column: 5 / -1; }
+
+  .module-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-points > li { max-width: none; }
+  .module-points--flow { grid-template-columns: minmax(0, 1fr); }
+  .module-points--flow > li { max-width: 70ch; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .module-points--three { grid-template-columns: minmax(0, 1fr); }
+  .module-points--three > li { max-width: 70ch; }
+}
+@media (min-width: 1280px) {
+  .module-points--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* A learning sequence of interface screenshots (Psychological Assessment).
+   Each step keeps one screenshot at the full body track, or from 1280px the
+   step text moves into the rail and the screenshot takes columns five to
+   twelve, so the interface text stays legible rather than shrinking into
+   three equal cards. Each screenshot links to its full-size file. */
+.module-steps {
+  display: grid;
+  gap: clamp(2.4rem, 6vh, 3.6rem);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.module-step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+  min-width: 0;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--line);
+}
+.module-step-num {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.work-body .module-step h3 { margin: 0; font-size: clamp(1.25rem, 1.9vw, 1.6rem); }
+.module-step-shot > a.media-frame { display: block; border: 1px solid var(--line); }
+.module-step-shot img { width: 100%; height: auto; display: block; }
+.module-step-shot .figcap { max-width: 68ch; }
+.module-step-text { display: grid; gap: 0.9rem; }
+.module-step-text p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
+  line-height: 1.66;
+}
+.module-step-text .module-step-goal { padding-left: 1rem; border-left: 1px solid var(--accent); }
+.module-step-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .work-body > .module > .module-steps,
+  .work-body > .module > .module-body--after { grid-column: 5 / -1; }
+}
+@media (min-width: 1280px) {
+  .work-body > .module > .module-steps { grid-column: 1 / -1; }
+  .module-step {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    column-gap: var(--col-gap);
+    row-gap: 1.2rem;
+    align-items: start;
+  }
+  .module-step-head { grid-column: 1 / span 3; grid-row: 1; }
+  .module-step-text { grid-column: 1 / span 3; grid-row: 2; }
+  .module-step-shot { grid-column: 5 / -1; grid-row: 1 / span 2; }
+}
+
+/* A logo used as a project image. The file has an opaque white ground, so
+   the plate is white too, with a hairline frame and generous margins; the
+   logo is centred at a modest size and its ratio is never touched. */
+.logo-plate {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.logo-plate img,
+.feature-hero.logo-plate img { width: 100%; max-width: 520px; height: auto; display: block; }
+
+/* A featured project with one image and key facts: facts in the rail, the
+   image from column five, the statement under it. */
+@media (min-width: 1024px) {
+  .feature--media .feature-facts { grid-row: 2; grid-column: 1 / span 3; grid-template-columns: minmax(0, 1fr); align-self: start; }
+}
+
+/* A portrait image or near-square sheet inside a full-width frame: centred at
+   a capped height, exact ratio, nothing cropped. */
+.media.media--portrait .media-frame { display: grid; place-items: center; padding: clamp(0.8rem, 2vw, 1.6rem); }
+.media.media--portrait img { width: auto; max-width: 100%; max-height: var(--portrait-h, 720px); }
+.media-frame--line { border: 1px solid var(--line); }
+.media > a.media-frame { display: block; }
+/* A subhead that opens the next step after a figure needs air above it, or it
+   reads as part of the caption it follows. */
+.section--railed > .media + .prose,
+.section--railed > .prose + .prose:has(> h3:first-child) { margin-top: clamp(1.4rem, 4vh, 2.4rem); }
+
+/* Artwork gallery (Generate). Concept sheets are the point of the page, so
+   they take the full shell width, one per row, with generous space between
+   them; nothing is cropped and each opens at full size. */
+.art-stack { display: grid; gap: clamp(2.6rem, 7vh, 4.5rem); margin-top: clamp(1.6rem, 4vh, 2.4rem); min-width: 0; }
+.art-stack > .media { margin-top: 0; }
+.art-piece img { width: 100%; height: auto; display: block; }
+.art-label {
+  margin-right: 0.6em;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Transparent UI art sits on a plate chosen for it: the health bar fades to
+   white at its right end, so it needs a dark ground; the card's drop shadow
+   reads on the page's own raised paper. */
+.media-frame.art-plate--dark { background: var(--ink); }
+.media-frame.art-plate--card { border: 1px solid var(--line); }
+
+/* The two smaller pieces (health bar, tarot card) share one compact row on
+   desktop, centred and capped at about 820px combined, each shown near the
+   size it would be seen at in a game. Panels hug the artwork (fit-content)
+   instead of stretching to the column. */
+.work-body > .art-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.4rem, 6vh, 3.2rem) clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 5vh, 3.2rem);
+  border-top: 1px solid var(--line);
+}
+.art-duo-item { display: grid; gap: 0.9rem; align-content: start; justify-items: start; min-width: 0; }
+.work-body .art-duo-item h2 { margin: 0 0 0.2rem; }
+.art-duo .art-piece { margin: 0; max-width: 100%; }
+.art-duo a.art-plate { display: grid; place-items: center; width: fit-content; max-width: 100%; }
+.art-duo .art-plate--dark { padding: 0.9rem 1.1rem; }
+.art-duo .art-plate--dark img { width: 380px; max-width: 100%; height: auto; }
+.art-duo .art-plate--card { padding: 0.9rem 1.4rem; }
+.art-duo .art-plate--card img { width: 150px; max-width: 100%; height: auto; }
+.art-duo .figcap { max-width: 44ch; }
+.art-duo-text {
+  max-width: 46ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.93rem, 1vw, 1rem);
+  line-height: 1.62;
+}
+@media (min-width: 900px) {
+  .work-body > .art-duo {
+    grid-template-columns: minmax(0, 440px) minmax(0, 320px);
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+/* Concept sheets on the Generate page: centred at a reading size (750px)
+   rather than the full shell; the Full size links carry the detail. */
+.page--generate .art-stack { gap: clamp(2rem, 5vh, 3rem); width: 100%; max-width: 750px; margin-inline: auto; }
+
+/* Generate page header: the logo panel takes the full content width, with
+   the mark shown large; height follows the logo rather than a 16:9 box. */
+.work-hero.logo-plate--hero { aspect-ratio: auto; padding: clamp(1.8rem, 4.5vw, 4rem) clamp(1rem, 3vw, 3rem); }
+.work-hero.logo-plate--hero img { width: 100%; max-width: 1000px; height: auto; }
+/* Below the desktop grid, consecutive prose blocks on this page had no space
+   between them (the grid row-gap only exists from 1024px). */
+@media (max-width: 1023px) {
+  .page--generate .section--railed > .prose + .prose,
+  .page--cocoa .section--railed > .prose + .prose { margin-top: 1em; }
+}
+@media (min-width: 1024px) {
+  .section--railed > .art-stack { grid-column: 1 / -1; }
 }
 
 /* ---- Media patterns ---- */
@@ -1821,7 +2345,18 @@ figure { margin: 0; }
   }
   .tagbrowse-toggle { min-height: 40px; padding-block: 0.55rem; }
   .back-link { padding-block: 0.7rem; }
-  .extlink { min-height: 40px; padding-bottom: 0.5rem; }
+  /* The 40px box keeps the target size; the rule moves from the box edge to
+     the text, so it no longer floats 20px under the label. */
+  .extlink {
+    min-height: 40px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 0.3em;
+  }
+  .extlink:hover,
+  .extlink:focus-visible { text-decoration-color: var(--accent); }
 }
 
 /* 11. Research --------------------------------------------------------------
@@ -2031,6 +2566,54 @@ figure { margin: 0; }
   text-transform: uppercase;
 }
 .artwork figcaption .t { color: var(--ink); }
+.artwork figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.2em;
+}
+.artwork figcaption a:hover,
+.artwork figcaption a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* First 2D row: Asset sheet / Tarot card / Comic as one compact, centred
+   group. Equal-width columns left ~100px of empty column either side of the
+   narrow card, so from tablet up the row instead shares one height
+   (--row-h, at most 366.67px so the side pieces are 400px wide at the row's
+   12:11 ratio), every column is sized to its own artwork, and the group is
+   centred with 22px gaps. --row-h shrinks with the gallery's width (cqw) so
+   the group always fits the shell. On a phone the row stacks as before. */
+.gallery.gallery--trio .artshot--contain {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 10px;
+  aspect-ratio: auto;
+}
+.gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; object-fit: fill; }
+.gallery--trio > .artwork--card figcaption { justify-content: center; }
+@media (min-width: 768px) {
+  .gallery.gallery--trio {
+    container-type: inline-size;
+    --row-h: min(366.67px, calc((100cqw - 56px) / 2.75));
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 22px;
+  }
+  .gallery--trio > .artwork { width: min-content; }
+  .gallery.gallery--trio .artshot:not(.artshot--contain) {
+    width: calc(var(--row-h) * (var(--pair-ratio, 12 / 11)));
+    height: var(--row-h);
+    aspect-ratio: auto;
+  }
+  /* The column sizes to the card, so a percentage cap would be circular and
+     collapse it; size the card from the row height alone. */
+  .gallery.gallery--trio .artshot--contain { max-width: none; }
+  .gallery.gallery--trio .artshot--contain img { height: calc(var(--row-h) - 20px); max-width: none; }
+}
+@media (max-width: 767px) {
+  /* Stacked on a phone: a modest card, not a full-width poster. */
+  .gallery.gallery--trio .artshot--contain img { height: auto; max-height: 400px; }
+}
 
 .lightbox {
   position: fixed;
