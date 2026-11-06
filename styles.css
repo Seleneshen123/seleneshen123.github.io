@@ -2085,34 +2085,44 @@ a.work-head-media:hover img { transform: scale(1.012); }
 .media-frame.art-plate--dark { background: var(--ink); }
 .media-frame.art-plate--card { border: 1px solid var(--line); }
 
-/* The two smaller pieces (health bar, tarot card) share one row on desktop:
-   shown near the size they would be seen at, not blown up to poster scale.
-   The health bar takes the wider column, the card the narrower one. */
+/* The two smaller pieces (health bar, tarot card) share one compact row on
+   desktop, centred and capped at about 820px combined, each shown near the
+   size it would be seen at in a game. Panels hug the artwork (fit-content)
+   instead of stretching to the column. */
 .work-body > .art-duo {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(2.8rem, 7vh, 4rem) var(--col-gap);
+  gap: clamp(2.4rem, 6vh, 3.2rem) clamp(2.5rem, 5vw, 4rem);
   padding-block: clamp(2rem, 5vh, 3.2rem);
   border-top: 1px solid var(--line);
 }
-.art-duo-item { display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.art-duo-item { display: grid; gap: 0.9rem; align-content: start; justify-items: start; min-width: 0; }
 .work-body .art-duo-item h2 { margin: 0 0 0.2rem; }
-.art-duo .art-piece { margin: 0; }
-.art-duo a.art-plate { display: grid; place-items: center; }
-.art-duo .art-plate--dark { padding: clamp(1.2rem, 3vw, 2rem) clamp(1rem, 3vw, 2.4rem); }
-.art-duo .art-plate--dark img { width: 100%; max-width: 680px; height: auto; }
-.art-duo .art-plate--card { padding: clamp(1rem, 2.4vw, 1.5rem); }
-.art-duo .art-plate--card img { width: auto; max-width: 100%; max-height: 480px; height: auto; }
+.art-duo .art-piece { margin: 0; max-width: 100%; }
+.art-duo a.art-plate { display: grid; place-items: center; width: fit-content; max-width: 100%; }
+.art-duo .art-plate--dark { padding: 0.9rem 1.1rem; }
+.art-duo .art-plate--dark img { width: 380px; max-width: 100%; height: auto; }
+.art-duo .art-plate--card { padding: 0.9rem 1.4rem; }
+.art-duo .art-plate--card img { width: 150px; max-width: 100%; height: auto; }
+.art-duo .figcap { max-width: 44ch; }
 .art-duo-text {
-  max-width: 52ch;
+  max-width: 46ch;
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(0.95rem, 1.02vw, 1.04rem);
-  line-height: 1.66;
+  font-size: clamp(0.93rem, 1vw, 1rem);
+  line-height: 1.62;
 }
-@media (min-width: 1024px) {
-  .work-body > .art-duo { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; }
+@media (min-width: 900px) {
+  .work-body > .art-duo {
+    grid-template-columns: minmax(0, 440px) minmax(0, 320px);
+    justify-content: center;
+    align-items: start;
+  }
 }
+
+/* Concept sheets on the Generate page: centred at a reading size (750px)
+   rather than the full shell; the Full size links carry the detail. */
+.page--generate .art-stack { gap: clamp(2rem, 5vh, 3rem); width: 100%; max-width: 750px; margin-inline: auto; }
 
 /* Generate page header: the logo panel takes the full content width, with
    the mark shown large; height follows the logo rather than a 16:9 box. */
@@ -2121,7 +2131,8 @@ a.work-head-media:hover img { transform: scale(1.012); }
 /* Below the desktop grid, consecutive prose blocks on this page had no space
    between them (the grid row-gap only exists from 1024px). */
 @media (max-width: 1023px) {
-  .page--generate .section--railed > .prose + .prose { margin-top: 1em; }
+  .page--generate .section--railed > .prose + .prose,
+  .page--cocoa .section--railed > .prose + .prose { margin-top: 1em; }
 }
 @media (min-width: 1024px) {
   .section--railed > .art-stack { grid-column: 1 / -1; }
@@ -2555,6 +2566,27 @@ figure { margin: 0; }
   text-transform: uppercase;
 }
 .artwork figcaption .t { color: var(--ink); }
+.artwork figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.2em;
+}
+.artwork figcaption a:hover,
+.artwork figcaption a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* First 2D row: three pieces in one row from tablet up, sharing the row's
+   ratio. The portrait tarot card is contained (never cropped) and sits
+   centred on the same paper ground as its neighbours. */
+@media (min-width: 768px) {
+  .gallery.gallery--trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.gallery.gallery--trio .artshot--contain img { object-fit: contain; padding: 6% 14%; }
+@media (max-width: 767px) {
+  /* Stacked on a phone: the card keeps a modest size instead of a full-width
+     poster, still uncropped. */
+  .gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; max-height: 420px; margin-inline: auto; padding: 1.4rem 0; }
+}
 
 .lightbox {
   position: fixed;
