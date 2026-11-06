@@ -2064,6 +2064,33 @@ a.work-head-media:hover img { transform: scale(1.012); }
 .section--railed > .media + .prose,
 .section--railed > .prose + .prose:has(> h3:first-child) { margin-top: clamp(1.4rem, 4vh, 2.4rem); }
 
+/* Artwork gallery (Generate). Concept sheets are the point of the page, so
+   they take the full shell width, one per row, with generous space between
+   them; nothing is cropped and each opens at full size. */
+.art-stack { display: grid; gap: clamp(2.6rem, 7vh, 4.5rem); margin-top: clamp(1.6rem, 4vh, 2.4rem); min-width: 0; }
+.art-stack > .media { margin-top: 0; }
+.art-piece img { width: 100%; height: auto; display: block; }
+.art-label {
+  margin-right: 0.6em;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Transparent UI art sits on a plate chosen for it: the health bar fades to
+   white at its right end, so it needs a dark ground; the card's drop shadow
+   reads on the page's own raised paper. */
+.media > a.media-frame.art-plate { display: grid; place-items: center; padding: clamp(1.4rem, 5vw, 4rem); }
+.media-frame.art-plate--dark { background: var(--ink); }
+.media .art-plate--dark img { width: 100%; max-width: 1200px; }
+.media-frame.art-plate--card { border: 1px solid var(--line); }
+.media .art-plate--card img { width: auto; max-width: 100%; max-height: 820px; }
+@media (min-width: 1024px) {
+  .section--railed > .art-stack { grid-column: 1 / -1; }
+}
+
 /* ---- Media patterns ---- */
 
 figure { margin: 0; }
