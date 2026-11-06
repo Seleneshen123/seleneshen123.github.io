@@ -2575,17 +2575,13 @@ figure { margin: 0; }
 .artwork figcaption a:hover,
 .artwork figcaption a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
 
-/* First 2D row: three pieces in one row from tablet up, sharing the row's
-   ratio. The portrait tarot card is contained (never cropped) and sits
-   centred on the same paper ground as its neighbours. */
-@media (min-width: 768px) {
-  .gallery.gallery--trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-/* The card's paper panel shrink-wraps the artwork (10px all round) instead of
-   filling the column; the rest of the cell is page background. The figure is
-   a size container, so the card's height can follow the row: the column
-   width divided by the row ratio, minus the panel padding. */
-.gallery--trio > .artwork--card { container-type: inline-size; }
+/* First 2D row: Asset sheet / Tarot card / Comic as one compact, centred
+   group. Equal-width columns left ~100px of empty column either side of the
+   narrow card, so from tablet up the row instead shares one height
+   (--row-h, at most 366.67px so the side pieces are 400px wide at the row's
+   12:11 ratio), every column is sized to its own artwork, and the group is
+   centred with 22px gaps. --row-h shrinks with the gallery's width (cqw) so
+   the group always fits the shell. On a phone the row stacks as before. */
 .gallery.gallery--trio .artshot--contain {
   width: fit-content;
   max-width: 100%;
@@ -2593,14 +2589,27 @@ figure { margin: 0; }
   padding: 10px;
   aspect-ratio: auto;
 }
-.gallery.gallery--trio .artshot--contain img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: calc(100cqw / (var(--pair-ratio, 12 / 11)) - 20px);
-  object-fit: fill;
-}
+.gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; object-fit: fill; }
 .gallery--trio > .artwork--card figcaption { justify-content: center; }
+@media (min-width: 768px) {
+  .gallery.gallery--trio {
+    container-type: inline-size;
+    --row-h: min(366.67px, calc((100cqw - 56px) / 2.75));
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 22px;
+  }
+  .gallery--trio > .artwork { width: min-content; }
+  .gallery.gallery--trio .artshot:not(.artshot--contain) {
+    width: calc(var(--row-h) * (var(--pair-ratio, 12 / 11)));
+    height: var(--row-h);
+    aspect-ratio: auto;
+  }
+  /* The column sizes to the card, so a percentage cap would be circular and
+     collapse it; size the card from the row height alone. */
+  .gallery.gallery--trio .artshot--contain { max-width: none; }
+  .gallery.gallery--trio .artshot--contain img { height: calc(var(--row-h) - 20px); max-width: none; }
+}
 @media (max-width: 767px) {
   /* Stacked on a phone: a modest card, not a full-width poster. */
   .gallery.gallery--trio .artshot--contain img { height: auto; max-height: 400px; }
