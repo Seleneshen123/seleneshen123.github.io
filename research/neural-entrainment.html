@@ -114,20 +114,20 @@
       <section class="section--railed" id="implementation">
         <h2>Implementation and synchronization</h2>
         <div class="prose prose--wide">
-          <p>I am integrating and adjusting the stimulus presentation in PsychoPy while keeping LSL markers and EEG event synchronization in scope from the start, rather than treating them as something to reconnect afterwards.</p>
-          <p>The open question I am still working through is how to deliver the animation. Pre-rendered video gives tighter visual consistency between participants, but it still has to be checked for playback behaviour and dropped frames on the testing machine. Script-controlled animation is more flexible and easier to adjust late, but it makes frame-level timing harder to guarantee. Neither is free, and the decision depends on what the pilot shows about playback stability.</p>
+          <p>I develop and validate the PsychoPy stimulus presentation, synchronizing artificial-language speech with child-friendly visual cycles and integrating EEG event markers through Lab Streaming Layer (LSL). The workflow includes controlled pauses, scheduled breaks, and timing validation.</p>
+          <p>Pre-rendered and script-controlled animation approaches have different tradeoffs in playback consistency and frame-level timing. I use repeatable simulation tests and troubleshooting documentation to check stimulus stability and experimental reproducibility.</p>
         </div>
       </section>
 
       <section class="section--railed" id="status">
         <h2>Current status</h2>
         <div class="prose prose--lead">
-          <p>Ongoing adaptation and pilot preparation. The stimulus direction is selected and the presentation is being integrated; child data collection has not happened yet.</p>
+          <p>Ongoing experiment development, timing validation, and EEG session support. My responsibilities include equipment setup, electrode impedance checks, task administration, real-time signal monitoring using mBrainTrain Streamer, recording and storage, and preliminary MATLAB inspection. This describes research methods and operational work, not study outcomes.</p>
           <p>Research basis: Batterink, Mulgrew &amp; Gibbings, <em>Journal of Cognitive Neuroscience</em>; QLAB research on language learning across development, statistical learning, and neurodevelopmental populations.</p>
         </div>
         <aside class="notice">
           <p class="notice-label">Note</p>
-          <p>No child results are reported here, because none exist yet. Nothing on this page should be read as a finding.</p>
+          <p>No participant-level records or research findings are published here. The project remains ongoing.</p>
         </aside>
       </section>
 
@@ -139,9 +139,9 @@
 
   <footer class="page-foot">
     <nav aria-label="Next project">
-      <a class="onward-link" href="mind-match-cloud.html">
+      <a class="onward-link" href="beforehello.html">
         <span class="onward-label">Next project</span>
-        <span class="onward-title">Mind-Match-Cloud <span class="arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="onward-title">BeforeHello <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
     </nav>
     <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
