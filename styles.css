@@ -2570,13 +2570,17 @@ figure { margin: 0; }
 .artwork figcaption a:hover,
 .artwork figcaption a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
 
-/* First 2D row: Asset sheet / Tarot card / Comic as one compact, centred
-   group. Equal-width columns left ~100px of empty column either side of the
-   narrow card, so from tablet up the row instead shares one height
-   (--row-h, at most 366.67px so the side pieces are 400px wide at the row's
-   12:11 ratio), every column is sized to its own artwork, and the group is
-   centred with 22px gaps. --row-h shrinks with the gallery's width (cqw) so
-   the group always fits the shell. On a phone the row stacks as before. */
+/* 2D justified rows: use one shared horizontal measure instead of three
+   separately centered, capped-width strips. The first and third rows used
+   to stop short of the shell while the second filled it; their outer edges
+   therefore wandered from row to row. On tablet and desktop every row fills
+   the same width (up to 1320px), with 22px gaps. Each artwork retains its
+   intended proportions; height is allowed to vary between rows rather than
+   distorting or cropping the portrait pieces. The phone layout stays stacked.
+
+   Row 1: two 12:11 side panels + the tarot card (400:779) in 10px padding.
+   2.6953 is the sum of the three height coefficients; 54px accounts for
+   44px in gaps and ~9.7px of card padding beyond its aspect-scaled width. */
 .gallery.gallery--trio .artshot--contain {
   width: fit-content;
   max-width: 100%;
@@ -2584,15 +2588,27 @@ figure { margin: 0; }
   padding: 10px;
   aspect-ratio: auto;
 }
-.gallery.gallery--trio .artshot--contain img { display: block; width: auto; max-width: 100%; object-fit: fill; }
+.gallery.gallery--trio .artshot--contain img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: fill;
+}
 .gallery--trio > .artwork--card figcaption { justify-content: center; }
+
 @media (min-width: 768px) {
-  .gallery.gallery--trio {
+  .gallery.gallery--trio,
+  .gallery.gallery--row {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    column-gap: 22px;
     container-type: inline-size;
-    --row-h: min(366.67px, calc((100cqw - 56px) / 2.75));
+  }
+  .gallery.gallery--trio {
+    --row-h: calc((100cqw - 54px) / 2.6953);
     grid-template-columns: repeat(3, max-content);
     justify-content: center;
-    column-gap: 22px;
   }
   .gallery--trio > .artwork { width: min-content; }
   .gallery.gallery--trio .artshot:not(.artshot--contain) {
@@ -2600,35 +2616,35 @@ figure { margin: 0; }
     height: var(--row-h);
     aspect-ratio: auto;
   }
-  /* The column sizes to the card, so a percentage cap would be circular and
-     collapse it; size the card from the row height alone. */
   .gallery.gallery--trio .artshot--contain { max-width: none; }
-  .gallery.gallery--trio .artshot--contain img { height: calc(var(--row-h) - 20px); max-width: none; }
-}
-@media (max-width: 767px) {
-  /* Stacked on a phone: a modest card, not a full-width poster. */
-  .gallery.gallery--trio .artshot--contain img { height: auto; max-height: 400px; }
-}
+  .gallery.gallery--trio .artshot--contain img {
+    height: calc(var(--row-h) - 20px);
+    max-width: none;
+  }
 
-/* Later 2D rows: the same idea as the first row, generalised. Each piece
-   declares its own width:height (--ar) and the row its total (--ar-sum), so
-   one shared height fills the shell exactly without cropping anything:
-   (100cqw - gaps) / --ar-sum, capped at the first row's 366.67px. Narrower
-   than the cap, the group is centred with the same 22px gaps. On a phone the
-   rows stack through the .gallery--pair rules. */
-@media (min-width: 768px) {
+  /* Rows 2 and 3: distribute each full-width strip by the sum of its three
+     artwork aspect ratios. The outer edges align with row 1 without
+     stretching, artificial panel backgrounds, or arbitrary 366px caps. */
   .gallery.gallery--row {
-    container-type: inline-size;
     display: flex;
     justify-content: center;
-    column-gap: 22px;
   }
   .gallery--row > .artwork {
-    --row-h: min(366.67px, calc((100cqw - 44px) / var(--ar-sum)));
+    --row-h: calc((100cqw - 44px) / var(--ar-sum));
     flex: none;
-    width: calc(var(--row-h) * (var(--ar)));
+    width: calc(var(--row-h) * var(--ar));
   }
-  .gallery.gallery--row .artshot { height: var(--row-h); aspect-ratio: auto; }
+  .gallery.gallery--row .artshot {
+    height: var(--row-h);
+    aspect-ratio: auto;
+  }
+}
+@media (max-width: 767px) {
+  /* Stacked on a phone: a modest tarot card, not a full-width poster. */
+  .gallery.gallery--trio .artshot--contain img {
+    height: auto;
+    max-height: 400px;
+  }
 }
 
 .lightbox {
