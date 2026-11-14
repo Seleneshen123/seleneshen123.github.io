@@ -2574,7 +2574,8 @@ figure { margin: 0; }
    separately centered, capped-width strips. The first and third rows used
    to stop short of the shell while the second filled it; their outer edges
    therefore wandered from row to row. On tablet and desktop every row fills
-   the same width (up to 1320px), with 22px gaps. Each artwork retains its
+   the full shell, the same measure as the 2D label, the section rules and
+   the 3D gallery below, with 22px gaps. Each artwork retains its
    intended proportions; height is allowed to vary between rows rather than
    distorting or cropping the portrait pieces. The phone layout stays stacked.
 
@@ -2600,8 +2601,6 @@ figure { margin: 0; }
   .gallery.gallery--trio,
   .gallery.gallery--row {
     width: 100%;
-    max-width: 1320px;
-    margin-inline: auto;
     column-gap: 22px;
     container-type: inline-size;
   }
@@ -2611,6 +2610,10 @@ figure { margin: 0; }
     justify-content: center;
   }
   .gallery--trio > .artwork { width: min-content; }
+  /* In the justified grid every other project link sits at its image's
+     left edge; the card's follows suit (it stays centred on a phone, where
+     the card itself is centred). */
+  .gallery--trio > .artwork--card figcaption { justify-content: flex-start; }
   .gallery.gallery--trio .artshot:not(.artshot--contain) {
     width: calc(var(--row-h) * (var(--pair-ratio, 12 / 11)));
     height: var(--row-h);
