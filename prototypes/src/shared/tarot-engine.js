@@ -156,7 +156,7 @@ void main(){
   if (uMode == 2) {            // brighter inside the beam cone
     float rad = mix(uBeam.x, uBeam.y, clamp(0.5 - p.y / max(uExtent.y, 0.001), 0.0, 1.0));
     float d = length(p.xz - uOffset.xz);
-    a *= 0.18 + 0.82 * smoothstep(rad, rad * 0.35, d);
+    a *= 0.03 + 0.97 * smoothstep(rad, rad * 0.3, d);
   }
   vAlpha = a * smoothstep(0.08, 0.6, dist);
   gl_Position = projectionMatrix * mv;
