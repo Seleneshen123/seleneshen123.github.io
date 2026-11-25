@@ -8,14 +8,15 @@
   <title>Caiyi Shen — Portfolio</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="celestial.css">
+  <link rel="stylesheet" href="arcana.css">
   <script src="celestial-scene.js" defer></script>
 </head>
 <body class="celestial-home">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-nav">
-    <a href="index.html" class="signature" aria-current="page">Caiyi Shen<span>.</span></a>
+    <a href="index.html" class="signature" aria-current="page"><span class="folio-mark" aria-hidden="true"></span><span>Caiyi Shen</span></a>
     <nav aria-label="Main navigation">
-      <a href="game-design.html">Game Design</a><a href="research.html">Research</a><a href="art.html">Art</a><a href="community.html">Community</a><a href="cv.html">CV</a><a href="contact.html">Contact</a>
+      <a href="game-design.html">Game Design</a><a href="research.html">Research</a><a href="art.html">2D &amp; 3D Art</a><a href="community.html">Community</a><a href="cv.html">CV</a><a href="contact.html">Contact</a>
     </nav>
   </header>
   <main id="main">
@@ -29,27 +30,34 @@
         <canvas id="tarot-canvas" aria-hidden="true"></canvas>
         <a class="inspect-card" href="projects/generate-deeplight-games.html#tarot-card" aria-label="Inspect the tarot card design"></a>
         <div class="scene-caption">
-          <a href="projects/generate-deeplight-games.html#tarot-card">Tarot card design <span aria-hidden="true">↗</span></a>
+          <a href="projects/generate-deeplight-games.html#tarot-card">Tarot card · Original game artwork <span aria-hidden="true">↗</span></a>
           <button type="button" id="motion-control" hidden aria-pressed="false">Pause motion</button>
         </div>
       </div>
       <div class="opening-copy">
-        <p class="overline"><span></span> PORTFOLIO</p>
+        <p class="overline"><span></span> DESIGN / RESEARCH / ART</p>
         <h1 id="name"><span>Caiyi</span> <span>Shen<span class="name-accent">.</span></span></h1>
-        <p class="identity">Game Designer<br>Researcher &amp; Artist</p>
-        <p class="statement">I design interactive experiences through the lens of psychology, exploring how people play, learn and connect.</p>
+        <p class="identity">Game Designer &amp;<br>Player Experience Researcher</p>
+        <p class="statement">I bring psychology, game design and visual art together to create interactive experiences.</p>
         <div class="opening-links"><a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a href="cv.html" class="secondary-link">View CV <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="opening-foot"><span>Games / Human experience / Visual art</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+      <div class="opening-foot"><span>Portfolio · Caiyi Shen</span><a href="#work">Explore the collection <span aria-hidden="true">↓</span></a></div>
     </section>
     <section class="collection" id="work" aria-labelledby="work-heading">
-      <header class="collection-heading"><p>THE PORTFOLIO</p><h2 id="work-heading">Explore my work.</h2></header>
-      <nav class="work-index" aria-label="Portfolio disciplines">
-        <a href="game-design.html"><span class="ordinal">01</span><h3>Game Design</h3><span class="descriptor">Mechanics, systems &amp; interactive worlds</span><span class="direction" aria-hidden="true">↗</span></a>
-        <a href="research.html"><span class="ordinal">02</span><h3>Research</h3><span class="descriptor">Psychology, HCI &amp; player experience</span><span class="direction" aria-hidden="true">↗</span></a>
-        <a href="art.html"><span class="ordinal">03</span><h3>2D &amp; 3D Art</h3><span class="descriptor">Characters, concepts &amp; environments</span><span class="direction" aria-hidden="true">↗</span></a>
-        <a href="community.html"><span class="ordinal">04</span><h3>Community</h3><span class="descriptor">Gaming content &amp; shared knowledge</span><span class="direction" aria-hidden="true">↗</span></a>
-      </nav>
+      <header class="collection-heading"><div><p>THE COLLECTION</p><h2 id="work-heading">A practice in<br>four parts.</h2></div><p class="collection-summary">Explore my design work, research, visual art and contributions to gaming communities.</p></header>
+      <div class="chapter-grid">
+        <article class="chapter chapter-games"><a class="chapter-link" href="game-design.html"><div class="chapter-media"><img src="assets/projects/generate-deeplight-games/character-map-design-01-800.webp" alt="Original character and level concept sheet for a 3D action roguelike" width="800" height="525" loading="lazy" decoding="async"><span class="chapter-index">01</span></div><div class="chapter-text"><p class="chapter-credit">Concept &amp; map design · Deeplight Games</p><h3>Game Design<span aria-hidden="true" class="chapter-arrow">↗</span></h3><p class="chapter-desc">Mechanics, systems, narrative and the process of building interactive worlds.</p></div></a></article>
+        <article class="chapter chapter-research"><a class="chapter-link" href="research.html"><div class="chapter-media"><div class="research-pair"><img src="assets/research/neural-entrainment/stimulus.jpg" alt="Audiovisual neural entrainment experiment stimulus" loading="lazy" decoding="async"><img src="assets/research/mind-match-cloud/app-home.jpg" alt="BeforeHello communication support prototype" loading="lazy" decoding="async"></div><span class="chapter-index">02</span></div><div class="chapter-text"><p class="chapter-credit">QLab · Neural Entrainment &amp; BeforeHello</p><h3>Research<span aria-hidden="true" class="chapter-arrow">↗</span></h3><p class="chapter-desc">Psychology, HCI and experimental approaches to how people play, learn and interact.</p></div></a></article>
+        <article class="chapter chapter-art"><a class="chapter-link" href="art.html"><div class="chapter-media"><div class="art-pair"><img src="assets/art/2d-01-dueling-duet-duel-800.webp" alt="Original fantasy duel scene and game interface" loading="lazy" decoding="async"><img src="assets/art/2d-07-character-design-550.webp" alt="Western fantasy duellist character artwork" loading="lazy" decoding="async"></div><span class="chapter-index">03</span></div><div class="chapter-text"><p class="chapter-credit">Game art &amp; character design · Dueling Duet</p><h3>2D &amp; 3D Art<span aria-hidden="true" class="chapter-arrow">↗</span></h3><p class="chapter-desc">Characters, environments and visual systems, from original illustrations to three-dimensional assets.</p></div></a></article>
+        <article class="chapter chapter-community"><a class="chapter-link" href="community.html"><div class="chapter-media"><div class="chapter-figures"><div><strong>20K<span>+</span></strong><small>Douyin followers</small></div><div><strong>10M</strong><small>Views on one video</small></div></div><span class="chapter-index">04</span></div><div class="chapter-text"><p class="chapter-credit">Creator partnerships &amp; community work</p><h3>Community &amp; Content<span aria-hidden="true" class="chapter-arrow">↗</span></h3><p class="chapter-desc">Game communities, localization, digital media and the exchange of design knowledge.</p></div></a></article>
+      </div>
+    </section>
+    <section class="practice" aria-labelledby="practice-title">
+      <div class="practice-lead"><p class="overline"><span></span> BACKGROUND</p><h2 id="practice-title">Psychology.<br>Games. Art.</h2></div>
+      <div class="practice-body"><p>My background in psychology informs the way I approach game systems, interaction design and player experience research.</p>
+        <dl><div><dt>Current study</dt><dd>M.S. Game Science and Design<br>Northeastern University</dd></div><div><dt>Previous study</dt><dd>B.A. Psychology · Certificate in Game Design<br>University of Wisconsin–Madison</dd></div></dl>
+        <div class="practice-links"><a href="cv.html">Curriculum vitae <span aria-hidden="true">↗</span></a><a href="contact.html">Contact <span aria-hidden="true">↗</span></a></div>
+      </div>
     </section>
   </main>
   <footer class="site-footer"><span>© <span id="year">2026</span> Caiyi Shen</span><a href="contact.html">Contact ↗</a><a href="#main">Back to top ↑</a></footer>
