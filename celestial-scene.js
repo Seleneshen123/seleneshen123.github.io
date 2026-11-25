@@ -64,21 +64,7 @@
     gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
     return t;
   }
-  // New ornamental reverse, not represented as the artist's original work.
-  function reverse(){
-    const c=document.createElement('canvas');c.width=512;c.height=1000;const x=c.getContext('2d');
-    const g=x.createRadialGradient(256,470,50,256,500,580);g.addColorStop(0,'#303d61');g.addColorStop(.57,'#152038');g.addColorStop(1,'#0b1222');x.fillStyle=g;x.fillRect(0,0,512,1000);
-    x.strokeStyle='#a7b8d4';x.lineWidth=2;x.strokeRect(22,22,468,956);x.strokeStyle='#6b7f9d';x.lineWidth=1;x.strokeRect(35,35,442,930);
-    x.translate(256,500);
-    const circle=(r)=>{x.beginPath();x.arc(0,0,r,0,Math.PI*2);x.stroke();};
-    x.strokeStyle='#c0cee2';circle(173);circle(153);x.setLineDash([2,8]);circle(188);x.setLineDash([]);
-    for(let i=0;i<24;i++){const a=i*Math.PI/12;x.beginPath();x.moveTo(Math.cos(a)*143,Math.sin(a)*143);x.lineTo(Math.cos(a)*173,Math.sin(a)*173);x.stroke();}
-    x.beginPath();x.moveTo(0,-205);x.lineTo(29,-33);x.lineTo(157,0);x.lineTo(29,33);x.lineTo(0,205);x.lineTo(-29,33);x.lineTo(-157,0);x.lineTo(-29,-33);x.closePath();x.stroke();
-    x.beginPath();x.moveTo(0,-112);x.lineTo(112,0);x.lineTo(0,112);x.lineTo(-112,0);x.closePath();x.stroke();circle(32);circle(11);
-    x.beginPath();x.moveTo(0,-420);x.lineTo(0,-240);x.moveTo(0,240);x.lineTo(0,420);x.stroke();
-    x.fillStyle='#c9d3e8';for(const y of [-420,-240,240,420]){x.beginPath();x.arc(0,y,3,0,Math.PI*2);x.fill();}
-    return c;
-  }
+  // No original reverse artwork is available. Retain the artist's real face and keep the motion front-facing.
   // Rounded front/back and chamfered metal edge: a physical mesh, not CSS planes.
   function makeCard(){
     const w=1.62,h=w*1476/758,depth=.065,bevel=.018;
@@ -107,10 +93,10 @@
   function makeParticles(){
     let seed=7341;const rand=()=>((seed=(1664525*seed+1013904223)>>>0)/4294967296);
     const data=[],mobile=matchMedia('(max-width:760px)').matches;
-    const count=mobile?650:1450;
+    const count=mobile?480:980;
     for(let i=0;i<count;i++){const k=rand(),z=rand()*16-12;data.push((rand()-.5)*16,(rand()-.5)*11,z,k,0.6+Math.pow(rand(),3)*2.5,0);}
     // Two loosely braided 3D dust streams, visible as the camera traverses depth.
-    for(let j=0;j<2;j++){const count=mobile?210:430;for(let i=0;i<count;i++){
+    for(let j=0;j<2;j++){const count=mobile?155:310;for(let i=0;i<count;i++){
       const t=i/count*Math.PI*2,rad=2.65+(rand()-.5)*.23,tilt=j?-.67:.67;
       const x=Math.cos(t)*rad,y=Math.sin(t)*rad;
       data.push(x,y*Math.cos(tilt)+(rand()-.5)*.11,y*Math.sin(tilt)+(rand()-.5)*.28,rand(),.65+rand()*1.55,1);
@@ -131,12 +117,12 @@
     const mobile=matchMedia('(max-width:760px)').matches;
     const camera=[(mobile?0:-.26)+px*.24,py*.13,11.8-4.3*ease-scroll*.85];
     const focal=mobile?2.26:2.48;
-    const orbitAngle=motion?-.17:(1-ease)*1.35-.17+Math.max(0,time-3.8)*(Math.PI*2/26);
-    const angle=orbitAngle-Math.atan2(Math.sin(orbitAngle+.10),Math.cos(orbitAngle+.10))*inspection;
+    const orbitAngle=motion?-.17:(1-ease)*.79-.15+Math.sin(Math.max(0,time-3.8)*Math.PI*2/16)*.49;
+    const angle=orbitAngle*(1-inspection)-.08*inspection;
     const lift=motion?0:Math.sin(time*.63)*.095;
     gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
     gl.enable(gl.DEPTH_TEST);gl.depthMask(true);gl.disable(gl.BLEND);
-    gl.useProgram(mp);view(mp,camera,focal);gl.uniform3f(uniform(mp,'uRotation'),-.08+py*.10,angle+px*.13*(1-inspection),-.105*(1-inspection));gl.uniform1f(uniform(mp,'uLift'),lift);gl.bindBuffer(gl.ARRAY_BUFFER,mesh.buffer);
+    gl.useProgram(mp);view(mp,camera,focal);gl.uniform3f(uniform(mp,'uRotation'),-.08+py*.10,angle+px*.13*(1-inspection),(-.075+.035*Math.sin(time*.32))*(1-inspection));gl.uniform1f(uniform(mp,'uLift'),lift);gl.bindBuffer(gl.ARRAY_BUFFER,mesh.buffer);
     bind(mp,'aPos',3,32,0);bind(mp,'aNormal',3,32,12);bind(mp,'aUV',2,32,24);
     gl.activeTexture(gl.TEXTURE0);gl.uniform1i(uniform(mp,'uTexture'),0);gl.uniform1f(uniform(mp,'uMetal'),0);
     gl.bindTexture(gl.TEXTURE_2D,frontTex);gl.drawArrays(gl.TRIANGLES,0,mesh.frontCount);
@@ -164,7 +150,7 @@
     try{
       if(!art.complete||!art.naturalWidth)return;
       mp=program(meshVS,meshFS);pp=program(particleVS,particleFS);mesh=makeCard();particles=makeParticles();
-      frontTex=texture(art);backTex=texture(reverse());
+      frontTex=texture(art);backTex=frontTex;
       initialized=true;resize();updateScroll();render();scene.classList.add('is-live');
       control.hidden=reduced.matches;wake();
     }catch(error){initialized=false;scene.classList.remove('is-live');control.hidden=true;console.warn('Static artwork fallback:',error);}
