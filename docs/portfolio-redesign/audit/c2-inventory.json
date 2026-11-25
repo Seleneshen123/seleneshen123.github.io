@@ -1,0 +1,5978 @@
+[
+ {
+  "page": "art.html",
+  "title": "2D & 3D Art — Caiyi Shen",
+  "headings": [
+   "h1: 2D & 3D Art",
+   "h2: 2D",
+   "h2: 3D"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/art/2d-04-asset-sheet.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1261,
+    "h": 1159,
+    "alt": "A 2D asset sheet: an NPC portrait icon, paper environment assets, a player character, and a row of walking animation frames.",
+    "loading": "eager",
+    "poster": "",
+    "link": "assets/art/2d-04-asset-sheet.jpg",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--trio > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "1261x1159",
+    "ratio": 1.088,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-400.webp",
+      "400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp",
+      "758w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 254px, (min-width: 768px) 16vw, 220px",
+    "w": 400,
+    "h": 779,
+    "alt": "A tall tarot card: an ornate gold frame with crescent moons and four-pointed stars in the upper corners, an arched panel shading from olive green to slate blue and mauve with a fine compass-star line drawing, a cyan gem in a gold star setting where it meets the cream text panel, and a round blue gem set in the bottom edge.",
+    "loading": "eager",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--trio > figure.artwork.artwork--card > button.artshot.artshot--contain",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "400x779",
+    "ratio": 0.513,
+    "caption": "Generate / Deeplight Games"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-05-comic-800.webp",
+    "srcset": [
+     [
+      "assets/art/2d-05-comic-800.webp",
+      "800w"
+     ],
+     [
+      "assets/art/2d-05-comic.jpg",
+      "1400w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 561px, (min-width: 768px) 35vw, 100vw",
+    "w": 1400,
+    "h": 1351,
+    "alt": "A black-and-white ink comic page: a long-haired figure casts a spell with a jagged balloon reading Fireball, beside a narrow panel of a skeleton in a stone archway engulfed in flames, with the top of a further panel below.",
+    "loading": "eager",
+    "poster": "",
+    "link": "assets/art/2d-05-comic.jpg",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--trio > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "800x772",
+    "ratio": 1.036,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-01-dueling-duet-duel-1400.webp",
+    "srcset": [
+     [
+      "assets/art/2d-01-dueling-duet-duel-800.webp",
+      "800w"
+     ],
+     [
+      "assets/art/2d-01-dueling-duet-duel-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/art/2d-01-dueling-duet-duel-2000.webp",
+      "2000w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 561px, (min-width: 768px) 35vw, 100vw",
+    "w": 2388,
+    "h": 1668,
+    "alt": "Dueling Duet duel scene in a vaulted gothic hall: the pale-haired Western-fantasy duellist and the Eastern-mythology duellist in gold-ribboned robes face each other, each beside an instrument-monster, a skull-faced pipe organ on spider-like legs and an eye-stalked shamisen with a toothed plectrum, under ornate red and blue health bars, with seven coloured rune letterforms below.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-01-dueling-duet-duel-2000.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "1400x978",
+    "ratio": 1.431,
+    "caption": "Dueling Duet"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-07-character-design-550.webp",
+    "srcset": [
+     [
+      "assets/art/2d-07-character-design-550.webp",
+      "550w"
+     ],
+     [
+      "assets/art/2d-07-character-design-1102.webp",
+      "1102w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 283px, (min-width: 768px) 18vw, 100vw",
+    "w": 1102,
+    "h": 1524,
+    "alt": "Character art of the Western-fantasy duellist on a dark ground: short pale hair, black horns and spider-like limbs, a red gown hung with silver chains and a long torn train, one arm pointing ahead.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-07-character-design-1102.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "550x761",
+    "ratio": 0.723,
+    "caption": "Dueling Duet"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-02-music-box.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 794,
+    "h": 563,
+    "alt": "An open ornamented music box with the Dueling Duet title card inside and the two duellists as small figures, a golden winding key in its side and a paper tag reading Game Start.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-02-music-box.jpg",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "794x563",
+    "ratio": 1.41,
+    "caption": "Dueling Duet"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-03-coworker-cow-700.webp",
+    "srcset": [
+     [
+      "assets/art/2d-03-coworker-cow-700.webp",
+      "700w"
+     ],
+     [
+      "assets/art/2d-03-coworker-cow-1537.webp",
+      "1537w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 431px, (min-width: 768px) 27vw, 100vw",
+    "w": 1537,
+    "h": 1668,
+    "alt": "Character art of a Holstein cow running on a treadmill, styled with a pink pacifier, bows, ear piercings and a bib reading Hug Me, attached to a milking machine and an IV drip stand.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-03-coworker-cow-1537.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "700x760",
+    "ratio": 0.921,
+    "caption": "COWorker"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-06-character-design-500.webp",
+    "srcset": [
+     [
+      "assets/art/2d-06-character-design-500.webp",
+      "500w"
+     ],
+     [
+      "assets/art/2d-06-character-design-1037.webp",
+      "1037w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 296px, (min-width: 768px) 19vw, 100vw",
+    "w": 1037,
+    "h": 1636,
+    "alt": "Character art of a woman kneeling with her arms behind her back, wearing cow horns, ears and cow-print sleeves, a pink pacifier and a Hug Me bib, attached to the same milking machine and IV drip stand as the cow.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-06-character-design-1037.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "500x789",
+    "ratio": 0.634,
+    "caption": "COWorker"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-08-illustration-1400.webp",
+    "srcset": [
+     [
+      "assets/art/2d-08-illustration-800.webp",
+      "800w"
+     ],
+     [
+      "assets/art/2d-08-illustration-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/art/2d-08-illustration-2000.webp",
+      "2000w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 669px, (min-width: 768px) 42vw, 100vw",
+    "w": 2388,
+    "h": 1668,
+    "alt": "A painted stainless-steel lunch tray: braised meat with green pepper and carrot, stir-fried greens with a red chilli, tomato and egg, a large portion of white rice, an empty soup well and a pair of wooden chopsticks.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/2d-08-illustration-2000.webp",
+    "linkKind": "lightbox",
+    "context": "section#two-d.band > div.gallery.gallery--pair.gallery--row > figure.artwork > button.artshot",
+    "section": "two-d",
+    "heading": "2D",
+    "title": "",
+    "file": "1400x978",
+    "ratio": 1.431,
+    "caption": "Lunch Hours"
+   },
+   {
+    "type": "img",
+    "src": "assets/art/3d-01-mechanical-bee.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1600,
+    "h": 945,
+    "alt": "A rendered mechanical bee: a worn yellow and steel body with a mesh face plate, blue antennae, translucent wings and pointed metal legs.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/3d-01-mechanical-bee.jpg",
+    "linkKind": "lightbox",
+    "context": "section#three-d.band.band--last > div.gallery.gallery--pair > figure.artwork > button.artshot",
+    "section": "three-d",
+    "heading": "3D",
+    "title": "",
+    "file": "1600x945",
+    "ratio": 1.693,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/art/3d-03-weapon-model.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1063,
+    "h": 771,
+    "alt": "A revolver in the modelling viewport: the shaded reference above and the blue wireframe model built from it below.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/3d-03-weapon-model.jpg",
+    "linkKind": "lightbox",
+    "context": "section#three-d.band.band--last > div.gallery.gallery--pair > figure.artwork > button.artshot",
+    "section": "three-d",
+    "heading": "3D",
+    "title": "",
+    "file": "1063x771",
+    "ratio": 1.379,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/art/3d-02-environment.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1800,
+    "h": 845,
+    "alt": "A 3D environment at low sun: red rock terrain and scrub, a large autumn tree, a distant figure walking, and water on the horizon.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/art/3d-02-environment.jpg",
+    "linkKind": "lightbox",
+    "context": "section#three-d.band.band--last > div.gallery.gallery--wide > figure.artwork > button.artshot",
+    "section": "three-d",
+    "heading": "3D",
+    "title": "",
+    "file": "1800x845",
+    "ratio": 2.13,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/projects/generate-deeplight-games.html#tarot-card",
+    "text": "Generate / Deeplight Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/dueling-duet.html",
+    "text": "Dueling Duet",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/dueling-duet.html",
+    "text": "Dueling Duet",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/dueling-duet.html",
+    "text": "Dueling Duet",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/coworker.html",
+    "text": "COWorker",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/coworker.html",
+    "text": "COWorker",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/lunch-hours.html",
+    "text": "Lunch Hours",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "artshot",
+   "artshot--contain",
+   "artwork",
+   "artwork--card",
+   "band",
+   "band--last",
+   "eyebrow",
+   "gallery",
+   "gallery--pair",
+   "gallery--row",
+   "gallery--trio",
+   "gallery--wide",
+   "group-label",
+   "page-head",
+   "rise"
+  ]
+ },
+ {
+  "page": "community.html",
+  "title": "Community & Content — Caiyi Shen",
+  "headings": [
+   "h1: Community & Content",
+   "h2: Selected Work",
+   "h3: NetEase Blizzard China Gaming Content Creator",
+   "h3: Schoolive Education Community & Learning Platform",
+   "h3: HEYBOX Rainbow Six Wiki & Player Community",
+   "h3: The Jam @ GDC 2027 Global Game Jam GDC"
+  ],
+  "media": [],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/projects/schoolive.html",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://globalgamejam.org/news/join-ggj-gdc-2027-game-jam-world-record-attempt",
+    "text": "Official event information ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "band",
+   "band--last",
+   "centry",
+   "centry-body",
+   "centry-facts",
+   "centry-id",
+   "centry-main",
+   "centry-summary",
+   "dot",
+   "extlink",
+   "eyebrow",
+   "group-label",
+   "idx",
+   "meta",
+   "page-head",
+   "prose",
+   "rise",
+   "rlist",
+   "sub"
+  ]
+ },
+ {
+  "page": "contact.html",
+  "title": "Contact — Caiyi Shen",
+  "headings": [
+   "h1: Contact"
+  ],
+  "media": [],
+  "embeds": [],
+  "links": [
+   {
+    "href": "https://ca1y1.itch.io/",
+    "text": "itch.io ca1y1.itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "contact-copied",
+   "contact-copy",
+   "contact-copyicon",
+   "contact-kind",
+   "contact-lede",
+   "contact-list",
+   "contact-main",
+   "contact-shell",
+   "contact-val",
+   "eyebrow",
+   "rise"
+  ]
+ },
+ {
+  "page": "cv.html",
+  "title": "CV — Caiyi Shen",
+  "headings": [
+   "h1: CV",
+   "h2: Preview",
+   "h2: Education",
+   "h2: Research",
+   "h2: Projects",
+   "h2: Experience",
+   "h2: Skills",
+   "h2: Awards & Accomplishments"
+  ],
+  "media": [
+   {
+    "type": "object",
+    "src": "assets/cv/caiyi-shen-cv.pdf",
+    "srcset": [],
+    "sizes": "",
+    "w": null,
+    "h": null,
+    "alt": null,
+    "loading": "",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > section.c2-pdf",
+    "section": null,
+    "heading": "Preview",
+    "title": "",
+    "file": "MISSING",
+    "ratio": null
+   }
+  ],
+  "embeds": [
+   {
+    "type": "object",
+    "src": "assets/cv/caiyi-shen-cv.pdf",
+    "title": "CV PDF preview"
+   }
+  ],
+  "links": [
+   {
+    "href": "assets/cv/caiyi-shen-cv.pdf",
+    "text": "Download CV (PDF)",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "assets/cv/caiyi-shen-cv.pdf",
+    "text": "Open in browser ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/cv/caiyi-shen-cv.pdf",
+    "text": "Open the PDF",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/cv/caiyi-shen-cv.pdf",
+    "text": "download it",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research/beforehello.html",
+    "text": "BeforeHello",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research/neural-entrainment.html",
+    "text": "Audiovisual Neural Entrainment.",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research/astronomy-learning.html",
+    "text": "Research Assistant",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html",
+    "text": "Boston Bilingual Pioneer Media",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/cocoa-quest.html",
+    "text": "Cocoa Quest",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/generate-deeplight-games.html",
+    "text": "Concept Artist & 2D Designer",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/community.html#projects",
+    "text": "Digital Media Content Creator",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/schoolive.html",
+    "text": "Co-founder & Creative Director",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/community.html#projects",
+    "text": "The Jam @ GDC 2027",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "c2-pdf",
+   "c2-pdf-bar",
+   "c2-pdf-fallback",
+   "c2-pdf-frame",
+   "cv-body",
+   "cv-entry",
+   "cv-notes",
+   "cv-org",
+   "cv-role",
+   "cv-section",
+   "cv-skills",
+   "cv-when",
+   "dot",
+   "eyebrow",
+   "is-primary",
+   "page-head",
+   "rise",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "game-design.html",
+  "title": "Game Design — Caiyi Shen",
+  "headings": [
+   "h1: Game Design",
+   "h2: Featured Work",
+   "h3: Boston Bilingual Pioneer Media Interactive Learning & Game-Based Education",
+   "h3: Generate / Deeplight Games 3D Action Roguelike — Concept Art & UI Design",
+   "h3: Cocoa Quest Biomaterial Design & Educational Tabletop Game",
+   "h2: Selected Games",
+   "h3: Lunch Hours",
+   "h3: Cena Floris",
+   "h3: COWorker",
+   "h3: Dueling Duet",
+   "h2: More Featured Work",
+   "h3: Schoolive Narrative Management Game",
+   "h2: Case Studies",
+   "h3: Night, Adios",
+   "h3: Echoes of Chinese Characters",
+   "h3: Elixir Nomad",
+   "h2: Other Works"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/course-02.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 851,
+    "alt": "A 3D mathematics lesson with two balance scales weighing labelled sacks against numbered weights, teaching simultaneous equations.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-main",
+    "section": "featured",
+    "heading": "Boston Bilingual Pioneer Media Interactive Learning & Game-Based Education",
+    "title": "",
+    "file": "1400x851",
+    "ratio": 1.645,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/psych-assessment-vn-800.webp",
+    "srcset": [
+     [
+      "assets/projects/axis-ai/psych-assessment-vn-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-vn-1200.webp",
+      "1200w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 260px, (min-width: 1280px) 17vw, (min-width: 800px) 240px, 30vw",
+    "w": 800,
+    "h": 813,
+    "alt": "The Jordan visual novel from the psychological assessment course: the supervising school psychologist, Dr. Reyes, in her office, with a line of dialogue and a case note below.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-side",
+    "section": "featured",
+    "heading": "Boston Bilingual Pioneer Media Interactive Learning & Game-Based Education",
+    "title": "",
+    "file": "800x813",
+    "ratio": 0.984,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/character-map-design-01-800.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-1400.webp",
+      "1400w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 540px, (min-width: 1280px) 34vw, (min-width: 800px) 500px, 62vw",
+    "w": 800,
+    "h": 525,
+    "alt": "Concept sheet: a character in a pale green outfit with paper-cut swallow headphones and a large pair of scissors, titled 'Paper-cutting Witch', beside a swallow-shaped map layout with arenas, a boss area and two exits.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-main",
+    "section": "featured",
+    "heading": "Generate / Deeplight Games 3D Action Roguelike — Concept Art & UI Design",
+    "title": "",
+    "file": "800x525",
+    "ratio": 1.524,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-400.webp",
+      "400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp",
+      "758w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 200px, (min-width: 1280px) 13vw, (min-width: 800px) 200px, 22vw",
+    "w": 400,
+    "h": 779,
+    "alt": "A tarot card design: an ornate gold frame with crescent moons and stars around an arched compass-star panel shading from green to blue and mauve, above a cream text panel.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-side",
+    "section": "featured",
+    "heading": "Generate / Deeplight Games 3D Action Roguelike — Concept Art & UI Design",
+    "title": "",
+    "file": "400x779",
+    "ratio": 0.513,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/cover-960.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/cover-640.webp",
+      "640w"
+     ],
+     [
+      "assets/projects/cocoa-quest/cover-960.webp",
+      "960w"
+     ],
+     [
+      "assets/projects/cocoa-quest/cover-1280.webp",
+      "1280w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 540px, (min-width: 1280px) 34vw, (min-width: 800px) 500px, 62vw",
+    "w": 1823,
+    "h": 1361,
+    "alt": "Cocoa Quest title card: the title in golden-brown rounded letters, the tagline 'From Chocolate Waste to a Playful Biomaterial Experience', and the team names Binghe Yi, Caiyi Shen and Rinka Zhong.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-main",
+    "section": "featured",
+    "heading": "Cocoa Quest Biomaterial Design & Educational Tabletop Game",
+    "title": "",
+    "file": "960x717",
+    "ratio": 1.339,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-photo-480.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-photo-480.webp",
+      "480w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-photo-960.webp",
+      "960w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 260px, (min-width: 1280px) 17vw, (min-width: 800px) 240px, 30vw",
+    "w": 480,
+    "h": 640,
+    "alt": "The opened Prototype 1 package: a dark biomaterial sheet with visible fibres and cacao nibs, holding a paper baking cup, a wooden spoon and stirrer, and an ingredient pouch.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured.band > article.feature.feature--editorial > div.fe-media > figure.fe-side",
+    "section": "featured",
+    "heading": "Cocoa Quest Biomaterial Design & Educational Tabletop Game",
+    "title": "",
+    "file": "480x640",
+    "ratio": 0.75,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/cover.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 811,
+    "h": 500,
+    "alt": "Lunch Hours title art: a school corridor collaged from cut paper, with a lunch tray, scissors and paper-cut students.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#selected-games.band > ul.games > li.game > figure.game-media",
+    "section": "selected-games",
+    "heading": "Selected Games",
+    "title": "",
+    "file": "811x500",
+    "ratio": 1.622,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/cover-700.webp",
+    "srcset": [
+     [
+      "assets/games/cena-floris/cover-700.webp",
+      "700w"
+     ],
+     [
+      "assets/games/cena-floris/cover-1152.webp",
+      "1152w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 700px, (min-width: 768px) 45vw, 90vw",
+    "w": 1152,
+    "h": 648,
+    "alt": "Cena Floris title art: the protagonist with long lilac hair against a field of painted flowers.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#selected-games.band > ul.games > li.game > figure.game-media",
+    "section": "selected-games",
+    "heading": "Lunch Hours",
+    "title": "",
+    "file": "700x394",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/coworker.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 630,
+    "h": 500,
+    "alt": "COWorker cover art: a cow seen through a retro CRT monitor.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#selected-games.band > ul.games > li.game > figure.game-media",
+    "section": "selected-games",
+    "heading": "Cena Floris",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/victory-western-700.webp",
+    "srcset": [
+     [
+      "assets/games/dueling-duet/victory-western-700.webp",
+      "700w"
+     ],
+     [
+      "assets/games/dueling-duet/victory-western-1300.webp",
+      "1300w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 700px, (min-width: 768px) 45vw, 90vw",
+    "w": 1500,
+    "h": 1048,
+    "alt": "Dueling Duet victory art: the Western-fantasy duellist standing in a gothic hall.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#selected-games.band > ul.games > li.game > figure.game-media",
+    "section": "selected-games",
+    "heading": "COWorker",
+    "title": "",
+    "file": "700x489",
+    "ratio": 1.431,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/character-amelia.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 754,
+    "h": 1194,
+    "alt": "Annotated character design sheet for Amelia: a figure in a black layered dress and cape with lace detailing, drawn with construction notes.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured-more.band > article.feature.feature--pair > div.feature-pair > div.plate",
+    "section": "featured-more",
+    "heading": "Schoolive Narrative Management Game",
+    "title": "",
+    "file": "754x1194",
+    "ratio": 0.631,
+    "caption": "AmeliaOriginal Character Design"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/character-kagami.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 754,
+    "h": 1194,
+    "alt": "Annotated character design sheet for Kagami: a figure in a white and black hakama-style outfit with tassels, a handheld game console, and Japanese construction notes.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#featured-more.band > article.feature.feature--pair > div.feature-pair > div.plate",
+    "section": "featured-more",
+    "heading": "Schoolive Narrative Management Game",
+    "title": "",
+    "file": "754x1194",
+    "ratio": 0.631,
+    "caption": "KagamiOriginal Character Design"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 788,
+    "alt": "Night, Adios title art: a pink pixel-art subway carriage with the title on the car's display panel.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#case-studies.band > ol.cases > li.case > figure.case-media",
+    "section": "case-studies",
+    "heading": "Case Studies",
+    "title": "",
+    "file": "1400x788",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 787,
+    "alt": "Pictogram tiles: painted sun, moon, mountain, water, fish and tree on the front, with the matching Chinese characters on the back.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#case-studies.band > ol.cases > li.case > figure.case-media",
+    "section": "case-studies",
+    "heading": "Night, Adios",
+    "title": "",
+    "file": "1400x787",
+    "ratio": 1.779,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 788,
+    "alt": "Elixir Nomad title art: a painted view through the wooden window of a travelling alchemist's van onto open sky.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#case-studies.band > ol.cases > li.case > figure.case-media",
+    "section": "case-studies",
+    "heading": "Echoes of Chinese Characters",
+    "title": "",
+    "file": "1400x788",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dungeon-monster.webp",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://ca1y1.itch.io/a-dungeon-monster",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "347x220",
+    "ratio": 1.577
+   },
+   {
+    "type": "img",
+    "src": "assets/games/zombie-lab.webp",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://ca1y1.itch.io/zombie-lab",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "347x192",
+    "ratio": 1.807
+   },
+   {
+    "type": "img",
+    "src": "assets/games/one-year-old-catch.webp",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://ca1y1.itch.io/one-year-old-catch",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "347x324",
+    "ratio": 1.071
+   },
+   {
+    "type": "img",
+    "src": "assets/games/sewer-struggle.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://fedexodus.itch.io/sewer-struggle",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   },
+   {
+    "type": "img",
+    "src": "assets/games/we-happy-were.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://wingmancover.itch.io/we-happy-were",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   },
+   {
+    "type": "img",
+    "src": "assets/games/pans-labyrinth.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://ca1y1.itch.io/pans-labyrinth",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   },
+   {
+    "type": "img",
+    "src": "assets/games/journalism.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 315,
+    "h": 250,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "https://wingmancover.itch.io/httpsyoutubeze-0f6euhm0",
+    "linkKind": "new-tab",
+    "context": "section#other-works.band.band--last > ul.earlier > a.early > span.early-media",
+    "section": "other-works",
+    "heading": "Other Works",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=animation",
+    "text": "Animation",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=tabletop",
+    "text": "Tabletop",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html",
+    "text": "Boston Bilingual Pioneer Media Interactive Learning & Game-Based Education",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/generate-deeplight-games.html",
+    "text": "Generate / Deeplight Games 3D Action Roguelike — Concept Art & UI Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/cocoa-quest.html",
+    "text": "Cocoa Quest Biomaterial Design & Educational Tabletop Game",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=tabletop",
+    "text": "Tabletop",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/lunch-hours.html",
+    "text": "Lunch Hours",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/cena-floris.html",
+    "text": "Cena Floris",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/coworker.html",
+    "text": "COWorker",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/games/dueling-duet.html",
+    "text": "Dueling Duet",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=animation",
+    "text": "Animation",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/schoolive.html",
+    "text": "Schoolive Narrative Management Game",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/works/night-adios.html",
+    "text": "Night, Adios",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/works/echoes-of-chinese-characters.html",
+    "text": "Echoes of Chinese Characters",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=tabletop",
+    "text": "Tabletop",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/works/elixir-nomad.html",
+    "text": "Elixir Nomad",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://ca1y1.itch.io/a-dungeon-monster",
+    "text": "A Dungeon MONSTER itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://ca1y1.itch.io/zombie-lab",
+    "text": "Zombie Lab itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://ca1y1.itch.io/one-year-old-catch",
+    "text": "One-year-old catch itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://fedexodus.itch.io/sewer-struggle",
+    "text": "Sewer Struggle itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://wingmancover.itch.io/we-happy-were",
+    "text": "We Happy, Were itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://ca1y1.itch.io/pans-labyrinth",
+    "text": "Pan's Labyrinth itch.io ↗ Mature-content notice",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://wingmancover.itch.io/httpsyoutubeze-0f6euhm0",
+    "text": "JourNalism itch.io ↗ 18+ content gate",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   }
+  ],
+  "warnings": [
+   "18+ content gate on itch.io",
+   "COWorker Game Design · Gameplay · Art 2D Game Design Gameplay Design Game Art An experimental feminist game about productivity, bodily control, and the fact tha",
+   "Mature-content notice",
+   "Pan's Labyrinth itch.io ↗ Mature-content notice",
+   "18+ content gate",
+   "JourNalism itch.io ↗ 18+ content gate"
+  ],
+  "classes": [
+   "arrow",
+   "band",
+   "band--last",
+   "case",
+   "case-media",
+   "case-text",
+   "cases",
+   "chip",
+   "chips",
+   "cta",
+   "dot",
+   "earlier",
+   "early",
+   "early-link",
+   "early-media",
+   "early-note",
+   "early-title",
+   "eyebrow",
+   "fe-main",
+   "fe-media",
+   "fe-side",
+   "feature",
+   "feature--editorial",
+   "feature--pair",
+   "feature-head",
+   "feature-pair",
+   "feature-text",
+   "feature-title",
+   "filter-clear",
+   "filterbar",
+   "game",
+   "game-media",
+   "games",
+   "group-label",
+   "group-note",
+   "idx",
+   "line",
+   "meta",
+   "note",
+   "page-head",
+   "pair-name",
+   "pair-role",
+   "plate",
+   "rise",
+   "role",
+   "stretch",
+   "sub",
+   "tagbrowse",
+   "tagbrowse-icon",
+   "tagbrowse-panel",
+   "tagbrowse-toggle"
+  ]
+ },
+ {
+  "page": "games/cena-floris.html",
+  "title": "Cena Floris — Caiyi Shen",
+  "headings": [
+   "h1: Cena Floris",
+   "h2: Overview",
+   "h2: The core mechanic: information as a resource",
+   "h2: Four endings",
+   "h2: Gameplay"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/cover.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1152,
+    "h": 648,
+    "alt": "Cena Floris title art: the protagonist with long lilac hair, hands raised, against a painted field of flowers and bottles.",
+    "loading": "eager",
+    "poster": "",
+    "link": "https://pepeko.itch.io/cena-floris",
+    "linkKind": "new-tab",
+    "context": "main#main > header.work-head.work-head--split > a.work-head-media",
+    "section": null,
+    "heading": "Cena Floris",
+    "title": "",
+    "file": "1152x648",
+    "ratio": 1.778
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/story-comic.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1152,
+    "h": 648,
+    "alt": "A six-panel comic: the grandmother in bed with the recipe, the girl setting out, a dark encounter, the recipe catching fire in a red ring, and the girl walking on alone.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#world > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "world",
+    "heading": "Overview",
+    "title": "",
+    "file": "1152x648",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/ending-01.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 620,
+    "h": 386,
+    "alt": "Ending illustration: the girl watches as the witch eats a plate of noodles at the table.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#endings.section--railed > div.media.duo > figure.plate",
+    "section": "endings",
+    "heading": "Four endings",
+    "title": "",
+    "file": "620x386",
+    "ratio": 1.606,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/ending-02.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 620,
+    "h": 328,
+    "alt": "Ending illustration: the girl sits with folded arms and a tangled thought bubble while the witch gestures over a burnt dish.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#endings.section--railed > div.media.duo > figure.plate",
+    "section": "endings",
+    "heading": "Four endings",
+    "title": "",
+    "file": "620x328",
+    "ratio": 1.89,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/ending-03.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 620,
+    "h": 323,
+    "alt": "Ending illustration: the girl looks alarmed as small coloured spirits rise from the plate in front of her.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#endings.section--railed > div.media.duo > figure.plate",
+    "section": "endings",
+    "heading": "Four endings",
+    "title": "",
+    "file": "620x323",
+    "ratio": 1.92,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/ending-04.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 620,
+    "h": 414,
+    "alt": "Ending illustration: the girl sits in a glow of violet light beside a large dark silhouette.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#endings.section--railed > div.media.duo > figure.plate",
+    "section": "endings",
+    "heading": "Four endings",
+    "title": "",
+    "file": "620x414",
+    "ratio": 1.498,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/cena-floris/cover.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1152,
+    "h": 648,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#video > div.media > div.videobox",
+    "section": "video",
+    "heading": "Gameplay",
+    "title": "",
+    "file": "1152x648",
+    "ratio": 1.778
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://pepeko.itch.io/cena-floris",
+    "text": "Cena Floris",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://pepeko.itch.io/cena-floris",
+    "text": "Play on itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://www.youtube.com/watch?v=tDfBk5uxo4U",
+    "text": "Watch on YouTube ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://pepeko.itch.io/cena-floris",
+    "text": "",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "duo",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "media",
+   "media-frame",
+   "plate",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "pullquote--lede",
+   "section--railed",
+   "split",
+   "split--overview",
+   "videobox",
+   "videobtn",
+   "work-body",
+   "work-head",
+   "work-head--split",
+   "work-head-main",
+   "work-head-media",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "games/coworker.html",
+  "title": "COWorker — Caiyi Shen",
+  "headings": [
+   "h1: COWorker",
+   "h2: Overview",
+   "h2: Drawing the body as equipment",
+   "h2: The player is inside the system",
+   "h2: Gameplay"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/games/coworker.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 630,
+    "h": 500,
+    "alt": "COWorker cover art: a cow viewed through the curved glass of a retro CRT monitor.",
+    "loading": "eager",
+    "poster": "",
+    "link": "https://billyyi.itch.io/coworker",
+    "linkKind": "new-tab",
+    "context": "main#main > header.work-head.work-head--split > a.work-head-media",
+    "section": null,
+    "heading": "COWorker",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   },
+   {
+    "type": "img",
+    "src": "assets/games/coworker/character-cow.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 760,
+    "h": 698,
+    "alt": "Character art: a cow running on a treadmill, wearing a pink bow, attached to a milking apparatus and an intravenous drip stand.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#premise > div.split.split--overview > div.aside > figure.plate",
+    "section": "premise",
+    "heading": "Overview",
+    "title": "",
+    "file": "760x698",
+    "ratio": 1.089,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/coworker/character-cow.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 760,
+    "h": 698,
+    "alt": "Character art: a cow running on a treadmill, wearing a pink bow, attached to a milking apparatus and an intravenous drip stand.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.split.split--art > div.aside > div.stack > figure.plate",
+    "section": "art",
+    "heading": "Drawing the body as equipment",
+    "title": "",
+    "file": "760x698",
+    "ratio": 1.089,
+    "caption": "The cow: treadmill, milking machine, IV stand, and decorative bows."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/coworker/character-human.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 560,
+    "h": 917,
+    "alt": "Character art: a woman kneeling, wearing cow-patterned clothing and horns, attached to the same milking apparatus and drip stand as the cow.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.split.split--art > div.aside > div.stack > figure.plate",
+    "section": "art",
+    "heading": "Drawing the body as equipment",
+    "title": "",
+    "file": "560x917",
+    "ratio": 0.611,
+    "caption": "The woman: the same apparatus, with the cow motifs carried over onto her."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/coworker.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 630,
+    "h": 500,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#video > div.media > div.videobox",
+    "section": "video",
+    "heading": "Gameplay",
+    "title": "",
+    "file": "315x250",
+    "ratio": 1.26
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://billyyi.itch.io/coworker",
+    "text": "COWorker",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://billyyi.itch.io/coworker",
+    "text": "Play on itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://www.youtube.com/watch?v=hluB7LA2LEA",
+    "text": "Watch on YouTube ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://billyyi.itch.io/coworker",
+    "text": "",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [
+   "18+ content gate on itch.io"
+  ],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "media",
+   "plate",
+   "prose",
+   "prose--wide",
+   "pullquote",
+   "pullquote--inline",
+   "section--railed",
+   "split",
+   "split--art",
+   "split--overview",
+   "stack",
+   "videobox",
+   "videobtn",
+   "work-body",
+   "work-head",
+   "work-head--split",
+   "work-head-main",
+   "work-head-media",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "games/dueling-duet.html",
+  "title": "Dueling Duet — Caiyi Shen",
+  "headings": [
+   "h1: Dueling Duet",
+   "h2: Overview",
+   "h2: The music-box opening",
+   "h2: Two characters, two mythologies",
+   "h3: Western fantasy",
+   "h3: Eastern mythology",
+   "h2: Gothic letterforms",
+   "h2: The instruments are monsters",
+   "h2: Teaser"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/victory-western.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1500,
+    "h": 1048,
+    "alt": "Victory illustration: the Western-fantasy duellist with dark wings and red armour, standing in a vaulted gothic hall.",
+    "loading": "eager",
+    "poster": "",
+    "link": "https://santi5578.itch.io/dueling-duet",
+    "linkKind": "new-tab",
+    "context": "main#main > header.work-head.work-head--split > a.work-head-media",
+    "section": null,
+    "heading": "Dueling Duet",
+    "title": "",
+    "file": "1500x1048",
+    "ratio": 1.431
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/victory-eastern.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1500,
+    "h": 1048,
+    "alt": "Victory illustration for the Eastern-mythology duellist, hands on hips in the gothic duelling hall.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#scope > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "scope",
+    "heading": "Overview",
+    "title": "",
+    "file": "1500x1048",
+    "ratio": 1.431,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/art/2d-02-music-box.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 794,
+    "h": 563,
+    "alt": "An open ornamented music box containing two small figures, with a golden winding key and a paper tag reading Game Start.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#opening > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "opening",
+    "heading": "The music-box opening",
+    "title": "",
+    "file": "794x563",
+    "ratio": 1.41,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/sketch-western.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 460,
+    "h": 674,
+    "alt": "Process sketch of the Western-fantasy character: loose red and black lines working out the winged, armoured silhouette.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.compare > div.plate",
+    "section": "characters",
+    "heading": "Western fantasy",
+    "title": "",
+    "file": "460x674",
+    "ratio": 0.682,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/final-western.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 460,
+    "h": 656,
+    "alt": "Final character art of the Western-fantasy duellist: dark wings, red and black armour, pale hair.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.compare > div.plate",
+    "section": "characters",
+    "heading": "Western fantasy",
+    "title": "",
+    "file": "460x656",
+    "ratio": 0.701,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/sketch-eastern.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 460,
+    "h": 737,
+    "alt": "Process sketch of the Eastern-mythology character: loose blue lines working out the layered robe and trailing ribbons.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.compare > div.plate",
+    "section": "characters",
+    "heading": "Eastern mythology",
+    "title": "",
+    "file": "460x737",
+    "ratio": 0.624,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/final-eastern.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 678,
+    "h": 1094,
+    "alt": "Final character art of the Eastern-mythology duellist: a gold and cream layered robe with long trailing ribbons.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.compare > div.plate.plate--tall",
+    "section": "characters",
+    "heading": "Eastern mythology",
+    "title": "",
+    "file": "678x1094",
+    "ratio": 0.62,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/gothic-ui.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1500,
+    "h": 1048,
+    "alt": "In-game interface: an ornamented duel bar across the top of a gothic hall, with a row of seven coloured angular rune letterforms along the bottom.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#typography > div.split.split--wide-media > div.aside > figure.media-frame",
+    "section": "typography",
+    "heading": "Gothic letterforms",
+    "title": "",
+    "file": "1500x1048",
+    "ratio": 1.431,
+    "caption": "The letterform set in place, along the bottom of the duel screen."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/monster-organ.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 540,
+    "h": 654,
+    "alt": "Instrument-monster design: a pipe organ whose case has become a ribcage around a skull, with pipes above, a keyboard below, and tentacle-like limbs.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#monsters.section--railed > div.media.duo.duo--portrait > figure.plate",
+    "section": "monsters",
+    "heading": "The instruments are monsters",
+    "title": "",
+    "file": "540x654",
+    "ratio": 0.826,
+    "caption": "Pipe organ. The case becomes a ribcage; the base becomes limbs."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/monster-shamisen.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 540,
+    "h": 782,
+    "alt": "Instrument-monster design: a shamisen whose tuning peg has become a large eye and whose body has opened into a ribcage, with a separate toothed plectrum.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#monsters.section--railed > div.media.duo.duo--portrait > figure.plate",
+    "section": "monsters",
+    "heading": "The instruments are monsters",
+    "title": "",
+    "file": "540x782",
+    "ratio": 0.691,
+    "caption": "Shamisen. The tuning peg becomes an eye; the plectrum becomes a mouth."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/dueling-duet/victory-eastern.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1500,
+    "h": 1048,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#video > div.media > div.videobox",
+    "section": "video",
+    "heading": "Teaser",
+    "title": "",
+    "file": "1500x1048",
+    "ratio": 1.431
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://santi5578.itch.io/dueling-duet",
+    "text": "Dueling Duet",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=animation",
+    "text": "Animation",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://santi5578.itch.io/dueling-duet",
+    "text": "Play on itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://www.youtube.com/watch?v=XcNji5XGJ7g",
+    "text": "Watch the teaser ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://santi5578.itch.io/dueling-duet",
+    "text": "",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "compare",
+   "duo",
+   "duo--portrait",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "media",
+   "media-frame",
+   "plate",
+   "plate--tall",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "pullquote--lede",
+   "section--railed",
+   "split",
+   "split--overview",
+   "split--wide-media",
+   "steplabel",
+   "videobox",
+   "videobtn",
+   "work-body",
+   "work-head",
+   "work-head--split",
+   "work-head-main",
+   "work-head-media",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "games/lunch-hours.html",
+  "title": "Lunch Hours — Caiyi Shen",
+  "headings": [
+   "h1: Lunch Hours",
+   "h2: Overview",
+   "h2: Dialogue as a physical obstacle",
+   "h2: No tutorial level",
+   "h2: Why it is made of paper",
+   "h2: Festival Playtest & Next Iteration",
+   "h3: A Narrower Corridor",
+   "h3: Controls and Ergonomics",
+   "h3: Collision and Spatial Control",
+   "h2: Gameplay"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/cover.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 811,
+    "h": 500,
+    "alt": "Lunch Hours title art: a school corridor collaged from cut paper, with a lunch tray, a pair of scissors, and paper-cut students.",
+    "loading": "eager",
+    "poster": "",
+    "link": "https://wingmancover.itch.io/lunch-hours",
+    "linkKind": "new-tab",
+    "context": "main#main > header.work-head.work-head--split > a.work-head-media",
+    "section": null,
+    "heading": "Lunch Hours",
+    "title": "",
+    "file": "811x500",
+    "ratio": 1.622
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/cg-lunch.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 978,
+    "alt": "A painted lunch tray on a metal counter: rice, stir-fried greens, tomato and egg, meatballs, and a pair of chopsticks.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#overview > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "overview",
+    "heading": "Overview",
+    "title": "",
+    "file": "1400x978",
+    "ratio": 1.431,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/note-02.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 560,
+    "h": 298,
+    "alt": "A torn scrap of lined paper with hand-lettered text reading &quot;Watch Out!!&quot;",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#mechanic.section--railed > div.media.scraps",
+    "section": "mechanic",
+    "heading": "Dialogue as a physical obstacle",
+    "title": "",
+    "file": "560x298",
+    "ratio": 1.879,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/note-03.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 560,
+    "h": 282,
+    "alt": "A torn scrap of paper with hand-lettered text reading &quot;Who shoved me? My leg's about to break!&quot;",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#mechanic.section--railed > div.media.scraps",
+    "section": "mechanic",
+    "heading": "Dialogue as a physical obstacle",
+    "title": "",
+    "file": "560x282",
+    "ratio": 1.986,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/note-01.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 560,
+    "h": 476,
+    "alt": "The opening instruction note: a stick figure drawn on lined paper beside a hand-drawn arrow and the words &quot;Press D to Dodge&quot;.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#tutorial > div.split.split--media-left > div.aside",
+    "section": "tutorial",
+    "heading": "No tutorial level",
+    "title": "",
+    "file": "560x476",
+    "ratio": 1.176,
+    "caption": "The opening instruction note, which is the entire tutorial."
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/character-01.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 400,
+    "h": 885,
+    "alt": "Paper-cut character standee: a student in a blue tracksuit with purple hair, torn paper edge around the figure.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.split.split--wide-media > div.aside > div.standees > span.standee-media",
+    "section": "art",
+    "heading": "Why it is made of paper",
+    "title": "",
+    "file": "400x885",
+    "ratio": 0.452,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/character-02.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 400,
+    "h": 856,
+    "alt": "Paper-cut character standee: a student in a blue tracksuit holding a basketball, torn paper edge around the figure.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.split.split--wide-media > div.aside > div.standees > span.standee-media",
+    "section": "art",
+    "heading": "Why it is made of paper",
+    "title": "",
+    "file": "400x856",
+    "ratio": 0.467,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/character-03.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 400,
+    "h": 1076,
+    "alt": "Paper-cut character standee: a student in a blue tracksuit with green hair, torn paper edge around the figure.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.split.split--wide-media > div.aside > div.standees > span.standee-media",
+    "section": "art",
+    "heading": "Why it is made of paper",
+    "title": "",
+    "file": "400x1076",
+    "ratio": 0.372,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/games/lunch-hours/cover.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 811,
+    "h": 500,
+    "alt": "",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#video > div.media > div.videobox",
+    "section": "video",
+    "heading": "Gameplay",
+    "title": "",
+    "file": "811x500",
+    "ratio": 1.622
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://wingmancover.itch.io/lunch-hours",
+    "text": "Lunch Hours",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://wingmancover.itch.io/lunch-hours",
+    "text": "Play on itch.io ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://www.youtube.com/watch?v=AWiWUBo8hog",
+    "text": "Watch on YouTube ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://wingmancover.itch.io/lunch-hours",
+    "text": "",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#selected-games",
+    "text": "← Back to Selected Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "dot",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "media",
+   "media-frame",
+   "nextstep-idx",
+   "nextsteps",
+   "prose",
+   "prose--wide",
+   "pullquote",
+   "pullquote--inline",
+   "scraps",
+   "sechead",
+   "sechead-intro",
+   "sechead-title",
+   "section--railed",
+   "showing",
+   "split",
+   "split--media-left",
+   "split--overview",
+   "split--wide-media",
+   "standee-media",
+   "standees",
+   "videobox",
+   "videobtn",
+   "work-body",
+   "work-head",
+   "work-head--split",
+   "work-head-main",
+   "work-head-media",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "index.html",
+  "title": "Caiyi Shen — Game Designer · Researcher · Artist",
+  "headings": [
+   "h1: Caiyi Shen"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp",
+    "srcset": [],
+    "sizes": "",
+    "w": 758,
+    "h": 1476,
+    "alt": "The tarot card designed by Caiyi Shen for Generate / Deeplight Games: an ornate gold frame with crescent moons and four-pointed stars around an arched compass-star panel above a cream text panel.",
+    "loading": "",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main.cover > div.stage.scene",
+    "section": null,
+    "heading": null,
+    "title": "",
+    "file": "758x1476",
+    "ratio": 0.514
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/projects/generate-deeplight-games.html#tarot-card",
+    "text": "Tarot cardoriginal artwork · Deeplight Games",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research.html",
+    "text": "Scroll to continue02Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "c2-next",
+   "cover",
+   "cover-credit",
+   "cover-intro",
+   "cover-meta",
+   "cover-name",
+   "cover-role",
+   "nl",
+   "np",
+   "nt",
+   "scene",
+   "scene-poster",
+   "stage",
+   "w",
+   "w1",
+   "w2"
+  ]
+ },
+ {
+  "page": "projects/astronomy-playtesting.html",
+  "title": "Moved — 3D Astronomy Game-Based Learning Study",
+  "headings": [
+   "h1: 3D Astronomy Study"
+  ],
+  "media": [],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research/astronomy-learning.html",
+    "text": "Go to the project →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research.html",
+    "text": "All research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "contact-lede",
+   "contact-main",
+   "contact-shell",
+   "eyebrow",
+   "is-primary",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "projects/axis-ai.html",
+  "title": "Axis AI — Caiyi Shen",
+  "headings": [
+   "h1: Axis AI",
+   "h2: Overview",
+   "h2: Courseware from existing material",
+   "h2: Interactive scenarios",
+   "h2: Learning and feedback flows",
+   "h2: Production and iteration",
+   "h2: My Contribution"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/axis-university.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 958,
+    "alt": "The public Axis University entry screen in Chinese, signed out: the headline 'Knowing and doing as one', and two roles to choose from, Architect (teacher), who generates 3D interactive learning systems, and Student, who enters an immersive learning simulation.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero.work-hero--compact",
+    "section": null,
+    "heading": "Axis AI",
+    "title": "",
+    "file": "1400x958",
+    "ratio": 1.461,
+    "caption": "The public Axis University entry, signed out. Instructors enter as architects who build courseware; students enter to explore it."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/simulation-arena.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 858,
+    "alt": "The public Simulation Arena page in English, signed out: the heading 'Practice high-stakes professional skills against AI', and the first two module cards, Assessment Practice with a volunteer client and Counseling Training in a two-part loop, each with an Enter button.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#scenarios.section--railed > figure.media.media--track > div.media-frame",
+    "section": "scenarios",
+    "heading": "Interactive scenarios",
+    "title": "",
+    "file": "1400x858",
+    "ratio": 1.632,
+    "caption": "The public Simulation Arena, signed out, in its English view. The first two of its practice modules."
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://zhongmiao-ai.com/college",
+    "text": "Visit Axis University ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html",
+    "text": "Boston Bilingual Pioneer Media →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html",
+    "text": "Boston Bilingual Pioneer Media",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html#psychological-assessment",
+    "text": "Boston Bilingual Pioneer Media page",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "media",
+   "media--track",
+   "media-frame",
+   "prose",
+   "prose--balanced",
+   "prose--measure",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-hero--compact",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "projects/boston-bilingual-pioneer-media.html",
+  "title": "Boston Bilingual Pioneer Media — Caiyi Shen",
+  "headings": [
+   "h1: Boston Bilingual Pioneer Media",
+   "h2: Overview",
+   "h2: My Contributions",
+   "h2: Middle School Mathematics",
+   "h2: XiaoMiao Learning Companion",
+   "h2: Wellness & Reflection",
+   "h2: Psychological Assessment",
+   "h3: Jordan visual novel",
+   "h3: Evidence board",
+   "h3: Report & reflection",
+   "h2: Axis AI",
+   "h2: IELTS Preparation",
+   "h2: XiaoMiao Gen Z",
+   "h2: Project Support"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/course-02.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 851,
+    "alt": "A 3D lesson scene with two balance scales weighing labelled sacks against numbered weights, teaching simultaneous equations.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#middle-school-mathematics.module > div.module-body > figure.module-visual > div.media-frame",
+    "section": "middle-school-mathematics",
+    "heading": "Middle School Mathematics",
+    "title": "",
+    "file": "1400x851",
+    "ratio": 1.645,
+    "caption": "Paired balance scales. Both have to agree before the answer resolves."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/course-01.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 1015,
+    "alt": "A 3D lever-and-fulcrum scene under a pink sky, with weighted pans and gear shapes floating overhead.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#middle-school-mathematics.module > div.module-body > div.jrow > figure.media-frame",
+    "section": "middle-school-mathematics",
+    "heading": "Middle School Mathematics",
+    "title": "",
+    "file": "1400x1015",
+    "ratio": 1.379,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/course-03.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 1193,
+    "alt": "A 3D geometry lesson: a rotating beam of light on a protractor showing that vertically opposite angles remain equal.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#middle-school-mathematics.module > div.module-body > div.jrow > figure.media-frame",
+    "section": "middle-school-mathematics",
+    "heading": "Middle School Mathematics",
+    "title": "",
+    "file": "1400x1193",
+    "ratio": 1.174,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/companion-plaza.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 906,
+    "alt": "The companion platform's public character plaza in Chinese, signed out: the headline 'Find a friend who understands you', filters by school stage and character type, a 'make a friend' tile, and three official characters, a bear, a robot, and a rabbit, each tagged as able to go on the robot.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#xiaomiao-learning-companion.module > div.module-body > figure.module-visual > div.media-frame",
+    "section": "xiaomiao-learning-companion",
+    "heading": "XiaoMiao Learning Companion",
+    "title": "",
+    "file": "1400x906",
+    "ratio": 1.545,
+    "caption": "The public character plaza, signed out. Official characters are prepared for each school stage, and characters made by students appear here only after review."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/psych-assessment-vn-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/axis-ai/psych-assessment-vn-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-vn-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-vn-1770.webp",
+      "1770w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 960px, (min-width: 1024px) 60vw, 90vw",
+    "w": 1770,
+    "h": 1798,
+    "alt": "The Context Introduction stage of the course 'Crafting Insightful Reports'. Above, the stage tabs: Pre-Class Prediction and Context Introduction ticked, then Interactive Challenge, Reinforcement Practice, Case Conference, and Core Concept Review. Below, a visual-novel scene in a school psychologist's office, where Dr. Reyes, supervising school psychologist, says: 'Keep that in mind as we go. Next, we will look closely at what each source actually says.' A case note reads: 'A report starts with its purpose and its audience.'",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/axis-ai/psych-assessment-vn.png",
+    "linkKind": "new-tab",
+    "context": "ol.module-steps > li.module-step > figure.module-step-shot > a.media-frame",
+    "section": "psychological-assessment",
+    "heading": "Jordan visual novel",
+    "title": "",
+    "file": "1200x1219",
+    "ratio": 0.984,
+    "caption": "Context Introduction. Dr. Reyes takes the student through Jordan's case one note at a time; all four case notes have been read here. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/psych-assessment-board-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/axis-ai/psych-assessment-board-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-board-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-board-1588.webp",
+      "1588w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 960px, (min-width: 1024px) 60vw, 90vw",
+    "w": 1588,
+    "h": 1374,
+    "alt": "The 'Connect the evidence' board. Six clue cards from the referral, Jordan, Jordan's teacher, and Jordan's parent are pinned to a board and joined in pairs with red string. All three patterns are found: reading takes longer than expected, understanding may be a relative strength, and difficulties show up around timed tasks. The feedback notes that the sources point to the same situation but do not show that anxiety causes the slowdown.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/axis-ai/psych-assessment-board.png",
+    "linkKind": "new-tab",
+    "context": "ol.module-steps > li.module-step > figure.module-step-shot > a.media-frame",
+    "section": "psychological-assessment",
+    "heading": "Evidence board",
+    "title": "",
+    "file": "1200x1038",
+    "ratio": 1.156,
+    "caption": "All three patterns found. Each one joins two clues from different sources, and the feedback separates agreement from cause. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/psych-assessment-report-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/axis-ai/psych-assessment-report-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-report-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/axis-ai/psych-assessment-report-1705.webp",
+      "1705w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 960px, (min-width: 1024px) 60vw, 90vw",
+    "w": 1705,
+    "h": 1813,
+    "alt": "The 'Improve Jordan's report' activity, in three parts: check the draft against the report checklist, revise the weak sentences, then build a recommendation. On the left, the numbered sentences of Dr. Reyes's draft assessment report, each highlighted in a colour. On the right, the report checklist, with demographic information matched to sentence 1, cultural, linguistic and socioeconomic background marked missing, and the referral concern matched to sentence 2. 15 of 15 checklist items are resolved.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/axis-ai/psych-assessment-report.png",
+    "linkKind": "new-tab",
+    "context": "ol.module-steps > li.module-step > figure.module-step-shot > a.media-frame",
+    "section": "psychological-assessment",
+    "heading": "Report & reflection",
+    "title": "",
+    "file": "1200x1276",
+    "ratio": 0.94,
+    "caption": "The checklist stage, completed. Each draft sentence is matched to the checklist item it covers, and items the draft leaves out are marked as missing, not yet available, or not applicable. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/axis-university.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 958,
+    "alt": "The public Axis University entry screen in Chinese, signed out: the headline 'Knowing and doing as one', and two roles to choose from, Architect (teacher), who generates 3D interactive learning systems, and Student, who enters an immersive learning simulation.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#axis-ai.module > div.module-body > figure.module-visual > div.media-frame",
+    "section": "axis-ai",
+    "heading": "Axis AI",
+    "title": "",
+    "file": "1400x958",
+    "ratio": 1.461,
+    "caption": "The public Axis University entry, signed out. Instructors enter as architects who build courseware; students enter to explore it."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/ielts-module.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1215,
+    "h": 936,
+    "alt": "The IELTS card in the public Simulation Arena, in English: Listening, Speaking, Reading, Writing. Choose numbered practice tests in all four skills, and save answers and feedback with an Axis account. An Enter button below.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#ielts-preparation.module > div.module-body > figure.module-visual.module-visual--card > div.media-frame",
+    "section": "ielts-preparation",
+    "heading": "IELTS Preparation",
+    "title": "",
+    "file": "1215x936",
+    "ratio": 1.298,
+    "caption": "The existing IELTS module as it appears in the platform's public practice arena, signed out."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/genz-home.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1000,
+    "h": 1248,
+    "alt": "The public XiaoMiao Gen Z entry screen in Chinese, signed out: the headline 'What happened, let's sort it out together', a button to record an interaction by uploading audio or entering text, an empty My Records panel, and tabs for Records, Practice, and People.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#xiaomiao-gen-z.module > div.module-body > figure.module-visual.module-visual--portrait > div.media-frame",
+    "section": "xiaomiao-gen-z",
+    "heading": "XiaoMiao Gen Z",
+    "title": "",
+    "file": "1000x1248",
+    "ratio": 0.801,
+    "caption": "The public entry screen, signed out, with a button to record an interaction above an empty records panel."
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research.html#boston-bilingual-pioneer-media",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/axis-ai.html",
+    "text": "Axis AI platform →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://www.idealist.org/en/nonprofit/d25bca7c37c84d3ab808de3879cde134-boston-bilingual-pioneer-media-medford",
+    "text": "Organisation profile ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "#middle-school-mathematics#middle-school-mathematics",
+    "text": "01Middle School Mathematics",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#xiaomiao-learning-companion#xiaomiao-learning-companion",
+    "text": "02XiaoMiao Learning Companion",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#wellness-reflection#wellness-reflection",
+    "text": "03Wellness & Reflection",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#psychological-assessment#psychological-assessment",
+    "text": "04Psychological Assessment",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#axis-ai#axis-ai",
+    "text": "05Axis AI",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#ielts-preparation#ielts-preparation",
+    "text": "06IELTS Preparation",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "#xiaomiao-gen-z#xiaomiao-gen-z",
+    "text": "07XiaoMiao Gen Z",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://www.zhongmiao-ai.com/companion",
+    "text": "Companion platform ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "https://zhongmiao-ai.com/gemini",
+    "text": "Open Wellness & Reflection ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/projects/axis-ai.html",
+    "text": "Built on Axis AI →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-vn.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-vn.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-board.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-board.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-report.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/axis-ai/psych-assessment-report.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "preview/c2/projects/axis-ai.html",
+    "text": "Axis AI project →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://zhongmiao-ai.com/college",
+    "text": "Axis University ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/projects/axis-ai.html",
+    "text": "Axis AI project page",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://zhongmiao-ai.com/genz/",
+    "text": "Try XiaoMiao Gen Z ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/research.html#boston-bilingual-pioneer-media",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "extlink",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "is-primary",
+   "jrow",
+   "media-frame",
+   "modnav",
+   "modnav-label",
+   "modnav-list",
+   "modnav-num",
+   "modnav-title",
+   "module",
+   "module-body",
+   "module-body--after",
+   "module-group",
+   "module-head",
+   "module-lead",
+   "module-linknote",
+   "module-links",
+   "module-meta",
+   "module-num",
+   "module-para",
+   "module-points",
+   "module-points--flow",
+   "module-points--three",
+   "module-role",
+   "module-role-label",
+   "module-step",
+   "module-step-goal",
+   "module-step-head",
+   "module-step-label",
+   "module-step-num",
+   "module-step-shot",
+   "module-step-text",
+   "module-steps",
+   "module-sub",
+   "module-sub-zh",
+   "module-text",
+   "module-visual",
+   "module-visual--card",
+   "module-visual--portrait",
+   "notice",
+   "notice-label",
+   "prose",
+   "prose--balanced",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "work-body",
+   "work-head",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "projects/chinese-character-learning.html",
+  "title": "Moved — Play-based Chinese Character Learning",
+  "headings": [
+   "h1: Chinese Character Learning"
+  ],
+  "media": [],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/works/echoes-of-chinese-characters.html",
+    "text": "Go to the case study →",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html",
+    "text": "All game design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "contact-lede",
+   "contact-main",
+   "contact-shell",
+   "eyebrow",
+   "is-primary",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "projects/cocoa-quest.html",
+  "title": "Cocoa Quest — Caiyi Shen",
+  "headings": [
+   "h1: Cocoa Quest",
+   "h2: Overview",
+   "h2: My Contribution",
+   "h2: Prototype 1 — Biomaterial Packaging",
+   "h3: Design",
+   "h3: Physical prototype",
+   "h3: Instructions",
+   "h3: Prototype 1 — Initial Prototype",
+   "h2: Design Iteration",
+   "h2: Prototype 2 — Educational Tabletop Game",
+   "h2: Biodesign Challenge"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/cover-960.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/cover-640.webp",
+      "640w"
+     ],
+     [
+      "assets/projects/cocoa-quest/cover-960.webp",
+      "960w"
+     ],
+     [
+      "assets/projects/cocoa-quest/cover-1280.webp",
+      "1280w"
+     ],
+     [
+      "assets/projects/cocoa-quest/cover-1823.webp",
+      "1823w"
+     ]
+    ],
+    "sizes": "(min-width: 960px) 860px, 90vw",
+    "w": 1823,
+    "h": 1361,
+    "alt": "Cocoa Quest title card: the title in golden-brown rounded letters, the tagline 'From Chocolate Waste to a Playful Biomaterial Experience', and the team names Binghe Yi, Caiyi Shen and Rinka Zhong, on a white and pale-blue background with hand-drawn shells, starfish and bubbles.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main.page--cocoa > figure.work-hero.work-hero--compact",
+    "section": null,
+    "heading": "Cocoa Quest",
+    "title": "",
+    "file": "960x717",
+    "ratio": 1.339,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-design-01-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-01-640.webp",
+      "640w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-01-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-01-1800.webp",
+      "1800w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 640px, (min-width: 1024px) 40vw, (min-width: 768px) 60vw, 90vw",
+    "w": 2388,
+    "h": 1668,
+    "alt": "An annotated sketch of the kit as an open, cocoa-shell-shaped case. The lid holds the instructions; the base holds a wax-coated, bio-friendly package of cacao nibs, chocolate pieces and protein powder, paper molds, a spoon, and a bowl. The two halves are joined with cotton threads.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#prototype-1.section--railed > figure.media.media--track > div.jrow > figure.media-frame",
+    "section": "prototype-1",
+    "heading": "Design",
+    "title": "",
+    "file": "1200x838",
+    "ratio": 1.432,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-design-02-800.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-02-400.webp",
+      "400w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-02-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-design-02-1200.webp",
+      "1200w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 320px, (min-width: 1024px) 20vw, (min-width: 768px) 30vw, 90vw",
+    "w": 1668,
+    "h": 2388,
+    "alt": "A sketch of the box structure: a cross-shaped board net folds into a cube, six biomaterial panels attach to it, and the finished box is tied with a ribbon, with a lid that opens onto a wax-coated interior.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#prototype-1.section--railed > figure.media.media--track > div.jrow > figure.media-frame",
+    "section": "prototype-1",
+    "heading": "Design",
+    "title": "",
+    "file": "800x1145",
+    "ratio": 0.699,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-photo-960.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-photo-480.webp",
+      "480w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-photo-960.webp",
+      "960w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-photo-1440.webp",
+      "1440w"
+     ]
+    ],
+    "sizes": "(min-width: 768px) 480px, 82vw",
+    "w": 2160,
+    "h": 2880,
+    "alt": "Gloved hands holding the opened Prototype 1 package: a dark brown, glossy biomaterial sheet with visible fibres and cacao nibs, folded into a box. Inside are a paper baking cup, a wooden spoon, a wooden stirrer, and a clear pouch of ingredients.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#prototype-1.section--railed > figure.media.media--track.media--portrait > div.media-frame",
+    "section": "prototype-1",
+    "heading": "Physical prototype",
+    "title": "",
+    "file": "960x1280",
+    "ratio": 0.75,
+    "caption": "Prototype 1, opened, with the kit's paper mold, wooden spoon, stirrer, and ingredient pouch inside."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-instructions-01-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-01-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-01-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-01-2000.webp",
+      "2000w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-01-2600.webp",
+      "2600w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 1440px, 90vw",
+    "w": 3371,
+    "h": 2160,
+    "alt": "An illustrated instruction sheet. Safety warnings: adult supervision required, adults handle hot water and melting, the shell, paper molds, packaging and wooden spoon are not edible, the shell must not touch food, check allergens, and wash hands. Kit contents: a small paper bowl, chocolate paper molds, chocolate pieces, cacao nibs, protein powder, and a small wooden spoon, plus what you also need. Below, a six-step quest map: Prepare, Melt, Mix, Shape, Cool, and Enjoy, each marked as an adult step, a child step, or both.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/cocoa-quest/prototype-01-instructions-01.jpg",
+    "linkKind": "new-tab",
+    "context": "div.work-body > section#prototype-1.section--railed > figure.media > a.media-frame.media-frame--line",
+    "section": "prototype-1",
+    "heading": "Instructions",
+    "title": "",
+    "file": "1400x897",
+    "ratio": 1.561,
+    "caption": "Prototype instruction sheet 1: safety, kit contents, and the six-step chocolate quest. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/prototype-01-instructions-02-1300.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-02-700.webp",
+      "700w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-02-1300.webp",
+      "1300w"
+     ],
+     [
+      "assets/projects/cocoa-quest/prototype-01-instructions-02-1900.webp",
+      "1900w"
+     ]
+    ],
+    "sizes": "(min-width: 1100px) 920px, 85vw",
+    "w": 2201,
+    "h": 2160,
+    "alt": "The second instruction sheet. A sample nutrition facts panel with ingredients and allergens; three chocolate facts: cocoa pods hold cocoa beans, cocoa beans are used to make chocolate, and the cocoa pod husk is a big by-product once the pod is opened; and a bonus quest, 'Reuse the Shell', suggesting the shell as a seed starter or a treasure holder.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/cocoa-quest/prototype-01-instructions-02.jpg",
+    "linkKind": "new-tab",
+    "context": "div.work-body > section#prototype-1.section--railed > figure.media.media--portrait > a.media-frame.media-frame--line",
+    "section": "prototype-1",
+    "heading": "Instructions",
+    "title": "",
+    "file": "1300x1276",
+    "ratio": 1.019,
+    "caption": "Prototype instruction sheet 2: product information, cocoa facts, and the bonus quest to give the shell a second life. The nutrition panel is a layout sample, and the best-before and storage fields are placeholders, not product data. Full size ↗"
+   },
+   {
+    "type": "iframe",
+    "src": "https://drive.google.com/file/d/1WhAIUnlOQIHVuqQGKLFQDgB-CMQ8lAii/preview",
+    "srcset": [],
+    "sizes": "",
+    "w": null,
+    "h": null,
+    "alt": null,
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#prototype-1.section--railed > figure.media.media--track > div.videobox.videobox--embed",
+    "section": "prototype-1",
+    "heading": "Prototype 1 — Initial Prototype",
+    "title": "Cocoa Quest, Prototype 1: initial prototype video",
+    "caption": "Prototype 1 — Initial Prototype. The first stage of the project, not its final form. Watch on Google Drive ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/cocoa-quest/child-labor-story-comic-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/cocoa-quest/child-labor-story-comic-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/cocoa-quest/child-labor-story-comic-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/cocoa-quest/child-labor-story-comic-2000.webp",
+      "2000w"
+     ],
+     [
+      "assets/projects/cocoa-quest/child-labor-story-comic-2878.webp",
+      "2878w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 1440px, 90vw",
+    "w": 2878,
+    "h": 1121,
+    "alt": "A four-panel comic. A child is led away from their family by a man. The child carries a heavy sack of cocoa pods past a factory, close to tears. A supervisor hands the child a single coin, with a speech bubble reading '$1/day'. Finally the child stands in a shop looking up at a shelf of chocolate bars priced from 4.29 to 6.99.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#iteration.section--railed > figure.media > div.media-frame",
+    "section": "iteration",
+    "heading": "Design Iteration",
+    "title": "",
+    "file": "1400x545",
+    "ratio": 2.569,
+    "caption": "A story about child labor in cocoa production, used as design material for the next prototype. Story comic illustrated by a team member."
+   }
+  ],
+  "embeds": [
+   {
+    "type": "iframe",
+    "src": "https://drive.google.com/file/d/1WhAIUnlOQIHVuqQGKLFQDgB-CMQ8lAii/preview",
+    "title": "Cocoa Quest, Prototype 1: initial prototype video"
+   }
+  ],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=tabletop",
+    "text": "Tabletop",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "assets/projects/cocoa-quest/prototype-01-instructions-01.jpg",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/cocoa-quest/prototype-01-instructions-01.jpg",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/cocoa-quest/prototype-01-instructions-02.jpg",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/cocoa-quest/prototype-01-instructions-02.jpg",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "https://drive.google.com/file/d/1WhAIUnlOQIHVuqQGKLFQDgB-CMQ8lAii/view?usp=sharing",
+    "text": "Watch on Google Drive ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "extlink",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "jrow",
+   "media",
+   "media--portrait",
+   "media--track",
+   "media-frame",
+   "media-frame--line",
+   "notice",
+   "notice-label",
+   "page--cocoa",
+   "prose",
+   "prose--balanced",
+   "prose--lead",
+   "prose--measure",
+   "prose--wide",
+   "section--railed",
+   "videobox",
+   "videobox--embed",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-hero--compact",
+   "work-line"
+  ]
+ },
+ {
+  "page": "projects/generate-deeplight-games.html",
+  "title": "Generate / Deeplight Games — Caiyi Shen",
+  "headings": [
+   "h1: Generate / Deeplight Games",
+   "h2: Overview",
+   "h2: Combat UI Design",
+   "h2: Tarot Card Design",
+   "h2: Character & Environment Concept Design",
+   "h2: My Contribution",
+   "h2: Status"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/generate-logo.png",
+    "srcset": [],
+    "sizes": "",
+    "w": 1348,
+    "h": 444,
+    "alt": "The Generate logo: a blue and black segmented circular mark beside the word GENERATE in blue capitals.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main.page--generate > figure.work-hero.logo-plate.logo-plate--hero",
+    "section": null,
+    "heading": "Generate / Deeplight Games",
+    "title": "",
+    "file": "1348x444",
+    "ratio": 3.036,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/health-bar-ui-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/health-bar-ui-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/health-bar-ui-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/health-bar-ui-2109.webp",
+      "2109w"
+     ]
+    ],
+    "sizes": "380px",
+    "w": 2109,
+    "h": 607,
+    "alt": "A horizontal health bar: a thin gold frame around a bar that fades from dark slate on the left through teal to bright cyan and white on the right, anchored at its left end by a faceted cyan gem set in a gold compass-star emblem.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/health-bar-ui.png",
+    "linkKind": "new-tab",
+    "context": "div.art-duo > section#combat-ui.art-duo-item.art-duo-item--ui > figure.art-piece > a.media-frame.art-plate.art-plate--dark",
+    "section": "combat-ui",
+    "heading": "Combat UI Design",
+    "title": "",
+    "file": "1400x403",
+    "ratio": 3.474,
+    "caption": "Health Bar UI Shown on a dark ground so its light end stays visible. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-420.webp",
+      "420w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+      "838w"
+     ]
+    ],
+    "sizes": "150px",
+    "w": 838,
+    "h": 1556,
+    "alt": "A tall tarot card: an ornate gold frame with crescent moons and four-pointed stars in the upper corners, an arched panel shading from olive green to slate blue and mauve with a fine compass-star line drawing, a cyan gem in a gold star setting where it meets the cream text panel with faint ornament, and a round blue gem set in the bottom edge.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+    "linkKind": "new-tab",
+    "context": "div.art-duo > section#tarot-card.art-duo-item.art-duo-item--card > figure.art-piece > a.media-frame.art-plate.art-plate--card",
+    "section": "tarot-card",
+    "heading": "Tarot Card Design",
+    "title": "",
+    "file": "838x1556",
+    "ratio": 0.539,
+    "caption": "Tarot Card Card frame and face design. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/character-map-design-01-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-2000.webp",
+      "2000w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-01-2263.webp",
+      "2263w"
+     ]
+    ],
+    "sizes": "(min-width: 860px) 750px, 90vw",
+    "w": 2263,
+    "h": 1486,
+    "alt": "Concept sheet. Left: a character in a pale green outfit annotated 'Qing Han + street style', with paper-cut swallow headphones and a large pair of scissors as a weapon, titled 'Paper-cutting Witch', plus a close-up of her face. Right: a map shaped like a paper-cut swallow, first as line art, then as a colour-coded layout with an entrance, a central arena, left and right wing arenas, a boss area and two exits with rewards, alongside handwritten notes on possible level designs such as obstacle dodging and hollow terrain.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/character-map-design-01.png",
+    "linkKind": "new-tab",
+    "context": "section#concept-design.section--railed > div.art-stack > figure.media.art-piece > a.media-frame.media-frame--line",
+    "section": "concept-design",
+    "heading": "Character & Environment Concept Design",
+    "title": "",
+    "file": "1400x919",
+    "ratio": 1.523,
+    "caption": "Concept Design 01 Character and corresponding map. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/character-map-design-02-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-02-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-02-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-02-2107.webp",
+      "2107w"
+     ]
+    ],
+    "sizes": "(min-width: 860px) 750px, 90vw",
+    "w": 2107,
+    "h": 1425,
+    "alt": "Concept sheet. Left: a blonde character in a green outfit annotated 'yukata + JK + puffed skirt', with a chef hat, creams in her hair and a mixer as a weapon, titled 'Baking Witch', plus a close-up of her face. Right: two plans of a kitchen map. The first traces a route from the entrance through preparation, decoration, oven and storage zones to the exit; the second blocks out areas for enemies and elites, a relaxing zone, a boss fight and a rewarding zone, with handwritten notes.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/character-map-design-02.png",
+    "linkKind": "new-tab",
+    "context": "section#concept-design.section--railed > div.art-stack > figure.media.art-piece > a.media-frame.media-frame--line",
+    "section": "concept-design",
+    "heading": "Character & Environment Concept Design",
+    "title": "",
+    "file": "1400x947",
+    "ratio": 1.478,
+    "caption": "Concept Design 02 Character and corresponding map. Full size ↗"
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/generate-deeplight-games/character-map-design-03-1400.webp",
+    "srcset": [
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-03-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-03-1400.webp",
+      "1400w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-03-2000.webp",
+      "2000w"
+     ],
+     [
+      "assets/projects/generate-deeplight-games/character-map-design-03-2478.webp",
+      "2478w"
+     ]
+    ],
+    "sizes": "(min-width: 860px) 750px, 90vw",
+    "w": 2478,
+    "h": 1470,
+    "alt": "Concept sheet. Left: a character with lilac ringlets, black ribbons and a pale blue military-style jacket with diamond decorations, with a perfume bottle as a weapon, titled 'Perfume Witch', plus a close-up. Right: an octagonal map in coloured segments ringed with diamond-shaped perfume bottles, and its line-art structure, with handwritten notes that the whole map can be scrolled to change the terrain.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "assets/projects/generate-deeplight-games/character-map-design-03.png",
+    "linkKind": "new-tab",
+    "context": "section#concept-design.section--railed > div.art-stack > figure.media.art-piece > a.media-frame.media-frame--line",
+    "section": "concept-design",
+    "heading": "Character & Environment Concept Design",
+    "title": "",
+    "file": "1400x831",
+    "ratio": 1.685,
+    "caption": "Concept Design 03 Character and corresponding map. Full size ↗"
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://generatenu.com/",
+    "text": "Generate website ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/health-bar-ui.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/health-bar-ui.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/tarot-card-design-v2-838.webp",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-01.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-01.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-02.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-02.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-03.png",
+    "text": "",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "assets/projects/generate-deeplight-games/character-map-design-03.png",
+    "text": "Full size ↗",
+    "external": false,
+    "newTab": true,
+    "rel": "noopener"
+   },
+   {
+    "href": "preview/c2/game-design.html#featured",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "art-duo",
+   "art-duo-item",
+   "art-duo-item--card",
+   "art-duo-item--ui",
+   "art-duo-text",
+   "art-label",
+   "art-piece",
+   "art-plate",
+   "art-plate--card",
+   "art-plate--dark",
+   "art-stack",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "extlink",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "logo-plate",
+   "logo-plate--hero",
+   "media",
+   "media-frame",
+   "media-frame--line",
+   "notice",
+   "notice-label",
+   "page--generate",
+   "prose",
+   "prose--balanced",
+   "prose--lead",
+   "prose--measure",
+   "prose--wide",
+   "section--railed",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ },
+ {
+  "page": "projects/schoolive.html",
+  "title": "Schoolive — Caiyi Shen",
+  "headings": [
+   "h1: Schoolive",
+   "h2: Overview",
+   "h2: Design challenge",
+   "h2: Core loop",
+   "h2: Key design decisions",
+   "h2: Working the loop on paper first",
+   "h2: Character design"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/game-cover-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/schoolive/game-cover-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/schoolive/game-cover-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/schoolive/game-cover-1600.webp",
+      "1600w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 1440px, 90vw",
+    "w": 1600,
+    "h": 900,
+    "alt": "The restaurant at night: two characters behind the counter, the day's menu on a chalkboard, and the management panel open on a phone.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero",
+    "section": null,
+    "heading": "Schoolive",
+    "title": "",
+    "file": "1200x675",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/cooking-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/schoolive/cooking-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/schoolive/cooking-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/schoolive/cooking-1600.webp",
+      "1600w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 1440px, 90vw",
+    "w": 1600,
+    "h": 900,
+    "alt": "The cooking interface: choosing a tagged ingredient, then a cooking method, with the predicted result noting the dish is more likely to trigger a memory conversation.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#loop.section--railed > div.media > figure.media-frame",
+    "section": "loop",
+    "heading": "Core loop",
+    "title": "",
+    "file": "1200x675",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/gameplay-02-1200.webp",
+    "srcset": [
+     [
+      "assets/projects/schoolive/gameplay-02-800.webp",
+      "800w"
+     ],
+     [
+      "assets/projects/schoolive/gameplay-02-1200.webp",
+      "1200w"
+     ],
+     [
+      "assets/projects/schoolive/gameplay-02-1600.webp",
+      "1600w"
+     ]
+    ],
+    "sizes": "(min-width: 1600px) 1440px, 90vw",
+    "w": 1600,
+    "h": 900,
+    "alt": "A second view of the restaurant during service, showing the day's menu and the state of waiting customers.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#decisions.section--railed > div.media > figure.media-frame",
+    "section": "decisions",
+    "heading": "Key design decisions",
+    "title": "",
+    "file": "1200x675",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/systems-sketch.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 908,
+    "alt": "Hand-drawn systems sketch mapping the restaurant loop: wholesale, storage, tables, waiting area and kitchen, with the day's dishes listed at the side.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#systems > div.split > div.aside > figure.media-frame",
+    "section": "systems",
+    "heading": "Working the loop on paper first",
+    "title": "",
+    "file": "1300x908",
+    "ratio": 1.432,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/character-amelia.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 754,
+    "h": 1194,
+    "alt": "Annotated character design sheet for Amelia: a figure in a black layered dress and cape with lace detailing, drawn with construction notes.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.duo > div.media-frame",
+    "section": "characters",
+    "heading": "Character design",
+    "title": "",
+    "file": "754x1194",
+    "ratio": 0.631,
+    "caption": "Amelia. The design leans on her mysterious background and a slightly melancholy tone: dark layering, a covered silhouette, and a face that withholds more than it offers."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/schoolive/character-kagami.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 754,
+    "h": 1194,
+    "alt": "Annotated character design sheet for Kagami: a figure in a white and black hakama-style outfit with tassels, a handheld game console, and Japanese construction notes.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "div.work-body > section#characters.section--railed > div.media.duo > div.media-frame",
+    "section": "characters",
+    "heading": "Character design",
+    "title": "",
+    "file": "754x1194",
+    "ratio": 0.631,
+    "caption": "Kagami. A Japanese character in an alternate-world setting: cyberpunk elements folded into a hybrid Japanese and Western silhouette, with tassels, traditional knots, and a handheld console among the annotated details."
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#featured-more",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#featured-more",
+    "text": "← Back to Game Design Projects",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "dot",
+   "duo",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "media",
+   "media-frame",
+   "notice",
+   "notice--compact",
+   "notice-label",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "steplabel",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-line"
+  ]
+ },
+ {
+  "page": "research.html",
+  "title": "Research — Caiyi Shen",
+  "headings": [
+   "h1: Research",
+   "h2: Selected Research",
+   "h3: Neural Entrainment Child-Friendly EEG Adaptation",
+   "h3: BeforeHello Communication Support for Autistic Adults",
+   "h3: 3D Astronomy Game-Based Learning Study",
+   "h3: Boston Bilingual Pioneer Media Applied Learning-Product Project"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/research/neural-entrainment/stimulus.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1600,
+    "h": 900,
+    "alt": "The child-facing visual stimulus: a softly glowing jellyfish with closed eyes, floating in a dark blue field of small particles.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#projects.band.band--last > ol.rlist > li.rentry > figure.rentry-media",
+    "section": "projects",
+    "heading": "Selected Research",
+    "title": "",
+    "file": "1600x900",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/research/mind-match-cloud/app-home.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 760,
+    "h": 1645,
+    "alt": "The prototype's home screen on a phone, offering two ways to share: record a video with automatic captions, or write a message with an optional photo.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#projects.band.band--last > ol.rlist > li.rentry > figure.rentry-media.media--phone",
+    "section": "projects",
+    "heading": "Neural Entrainment Child-Friendly EEG Adaptation",
+    "title": "",
+    "file": "760x1645",
+    "ratio": 0.462,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/research/astronomy/at-play-in-the-cosmos-star-chart.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1535,
+    "h": 858,
+    "alt": "The in-game Interactive Star Chart: a view of the Milky Way with the galactic bulge and named spiral arms marked as selectable destinations, above a row of star chart, missions, data and engineering controls.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#projects.band.band--last > ol.rlist > li.rentry > figure.rentry-media",
+    "section": "projects",
+    "heading": "BeforeHello Communication Support for Autistic Adults",
+    "title": "",
+    "file": "1535x858",
+    "ratio": 1.789,
+    "caption": "At Play in the Cosmos — Interactive Star Chart. Herder & Rau (2022), Frontiers in Education, CC BY."
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/axis-ai/course-02.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 851,
+    "alt": "A 3D mathematics lesson with two balance scales weighing labelled sacks against numbered weights, teaching simultaneous equations.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#projects.band.band--last > ol.rlist > li#boston-bilingual-pioneer-media.rentry > figure.rentry-media",
+    "section": "projects",
+    "heading": "3D Astronomy Game-Based Learning Study",
+    "title": "",
+    "file": "1400x851",
+    "ratio": 1.645,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research/neural-entrainment.html",
+    "text": "Neural Entrainment Child-Friendly EEG Adaptation",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research/beforehello.html",
+    "text": "BeforeHello Communication Support for Autistic Adults",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research/astronomy-learning.html",
+    "text": "3D Astronomy Game-Based Learning Study",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/projects/boston-bilingual-pioneer-media.html",
+    "text": "Boston Bilingual Pioneer Media Applied Learning-Product Project",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "band",
+   "band--last",
+   "chip",
+   "chips",
+   "cta",
+   "dot",
+   "eyebrow",
+   "group-label",
+   "idx",
+   "media--phone",
+   "meta",
+   "page-head",
+   "question",
+   "question-label",
+   "rentry",
+   "rentry-credit",
+   "rentry-media",
+   "rentry-text",
+   "rise",
+   "rlist",
+   "stretch",
+   "sub"
+  ]
+ },
+ {
+  "page": "research/astronomy-learning.html",
+  "title": "3D Astronomy Game-Based Learning Study — Caiyi Shen",
+  "headings": [
+   "h1: 3D Astronomy Game-Based Learning Study",
+   "h2: Research question",
+   "h2: Method and my role",
+   "h2: From observation notes to something the team could act on",
+   "h2: Output"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/research/astronomy/at-play-in-the-cosmos-star-chart.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1535,
+    "h": 858,
+    "alt": "The in-game Interactive Star Chart: a view of the Milky Way with the galactic bulge and named spiral arms marked as selectable destinations, above a row of star chart, missions, data and engineering controls.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#question > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "question",
+    "heading": "Research question",
+    "title": "",
+    "file": "1535x858",
+    "ratio": 1.789,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2022.919645/full",
+    "text": "Herder & Rau (2022), Frontiers in Education",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "cite-link",
+   "deflist",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "media-frame",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "question",
+   "question-label",
+   "section--railed",
+   "split",
+   "split--overview",
+   "work-body",
+   "work-head",
+   "work-line"
+  ]
+ },
+ {
+  "page": "research/beforehello.html",
+  "title": "BeforeHello — Caiyi Shen",
+  "headings": [
+   "h1: BeforeHello",
+   "h2: How the project is framed",
+   "h2: Participants in the loop",
+   "h2: My involvement",
+   "h2: Current status"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/research/mind-match-cloud/app-home.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 760,
+    "h": 1645,
+    "alt": "The prototype's home screen on a phone: a greeting, a card to record a video with captions added automatically, a card to write a message with an optional photo, and a read-this-screen-aloud control.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#framing > div.split.split--overview > div.aside > figure.media-frame.media--phone",
+    "section": "framing",
+    "heading": "How the project is framed",
+    "title": "",
+    "file": "760x1645",
+    "ratio": 0.462,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "media--phone",
+   "media-frame",
+   "prose",
+   "prose--lead",
+   "section--railed",
+   "split",
+   "split--overview",
+   "work-body",
+   "work-head",
+   "work-line"
+  ]
+ },
+ {
+  "page": "research/mind-match-cloud.html",
+  "title": "BeforeHello — Caiyi Shen",
+  "headings": [],
+  "media": [],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research/beforehello.html",
+    "text": "BeforeHello",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": []
+ },
+ {
+  "page": "research/neural-entrainment.html",
+  "title": "Neural Entrainment — Caiyi Shen",
+  "headings": [
+   "h1: Neural Entrainment",
+   "h2: Research question",
+   "h2: Engagement cannot break timing",
+   "h2: Stimulus directions and tradeoffs",
+   "h2: Implementation and synchronization",
+   "h2: Current status"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/research/neural-entrainment/stimulus.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1600,
+    "h": 900,
+    "alt": "The child-facing visual stimulus: a softly glowing jellyfish with closed eyes, floating in a dark blue field of small particles.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero.work-hero--compact",
+    "section": null,
+    "heading": "Neural Entrainment",
+    "title": "",
+    "file": "1600x900",
+    "ratio": 1.778,
+    "caption": "The current stimulus direction. Calm enough to watch for several minutes, and built as a loop that does not add any rhythm of its own."
+   },
+   {
+    "type": "img",
+    "src": "assets/research/neural-entrainment/psychopy-part1.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1500,
+    "h": 988,
+    "alt": "The PsychoPy instruction screen for Part 1, showing the jellyfish stimulus above the text: time to relax, sit still and look at the centre of the screen, there will be no sounds during this part.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "section#directions > div.split.split--overview > div.aside > figure.media-frame",
+    "section": "directions",
+    "heading": "Stimulus directions and tradeoffs",
+    "title": "",
+    "file": "1500x988",
+    "ratio": 1.518,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/research.html#projects",
+    "text": "← Back to Research",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "deflist",
+   "eyebrow",
+   "factbar",
+   "figcap",
+   "media-frame",
+   "notice",
+   "notice-label",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "question",
+   "question-label",
+   "section--railed",
+   "split",
+   "split--overview",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-hero--compact",
+   "work-line"
+  ]
+ },
+ {
+  "page": "works/echoes-of-chinese-characters.html",
+  "title": "Echoes of Chinese Characters — Caiyi Shen",
+  "headings": [
+   "h1: Echoes of Chinese Characters",
+   "h2: Why I made it",
+   "h2: Core loop",
+   "h2: Iteration, the strongest part of the project",
+   "h2: Project materials"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 787,
+    "alt": "The pictogram tile set: painted sun, moon, mountain, water, fish and tree on the card fronts, with the matching Chinese characters and English meanings on the backs.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero",
+    "section": null,
+    "heading": "Echoes of Chinese Characters",
+    "title": "",
+    "file": "1400x787",
+    "ratio": 1.779,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-01-basics.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: basic info, covering game type, date, tags, and the background story.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-02-inspiration.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: inspiration, covering playing Dixit, observation at a Montessori school, and childhood calligraphy experience.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-03-why.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: why I made this game, on teaching Chinese characters to American-born Chinese children.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-04-elements.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: game elements, covering pictogram tiles, prompt cards, and the card front and back structure.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-05-gameplay.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: game play, covering setup, draw phase, build phase, guess phase, scoring and endgame.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-06-iteration.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: design iteration, with a photograph of early card versions for sun, water and mountain.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-07-art.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: game art development process, showing the six pictogram tiles front and back with meanings.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/echoes/slide-08-vision.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1333,
+    "h": 750,
+    "alt": "Deck page: final vision, covering expanding age groups, customization, digital integration and an AI recognition system.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project materials",
+    "title": "",
+    "file": "1333x750",
+    "ratio": 1.777,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=tabletop",
+    "text": "Tabletop",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "deck",
+   "dot",
+   "eyebrow",
+   "factbar",
+   "media",
+   "notice",
+   "notice-label",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-line"
+  ]
+ },
+ {
+  "page": "works/elixir-nomad.html",
+  "title": "Elixir Nomad — Caiyi Shen",
+  "headings": [
+   "h1: Elixir Nomad",
+   "h2: Overview",
+   "h2: How the crafting system works",
+   "h2: Art",
+   "h2: Project deck"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 788,
+    "alt": "Elixir Nomad title art: a painted view through the wooden window of a travelling alchemist's van onto open sky.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero",
+    "section": null,
+    "heading": "Elixir Nomad",
+    "title": "",
+    "file": "1400x788",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-01.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: Elixir Nomad title page.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-02.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: basic info, covering engine, date, tags, and the background story of the travelling alchemist.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-03.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: game play, covering the alchemy crafting system, open exploration, stall management, and customization.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-04.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: function, covering educational value, engagement, and environmental responsibility.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-05.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: chemistry research notes behind the reagent and synthesis formulas.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-06.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: programming development process, showing Blueprint graphs and the reagent DataTable.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-07.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: game art development process, showing the NPC figure, materials, and background art.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/elixir-nomad/deck-08.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: Arduino development process, showing the sensor board and a wiring diagram feeding temperature and humidity into Unreal.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "deck",
+   "eyebrow",
+   "factbar",
+   "media",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-line"
+  ]
+ },
+ {
+  "page": "works/night-adios.html",
+  "title": "Night, Adios — Caiyi Shen",
+  "headings": [
+   "h1: Night, Adios",
+   "h2: The world",
+   "h2: Iteration",
+   "h2: Project deck",
+   "h2: Art and implementation"
+  ],
+  "media": [
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/preview.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1400,
+    "h": 788,
+    "alt": "Night, Adios title art: a pink pixel-art subway carriage with the title on the car's display panel and a character standing in the doorway.",
+    "loading": "eager",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > figure.work-hero",
+    "section": null,
+    "heading": "Night, Adios",
+    "title": "",
+    "file": "1400x788",
+    "ratio": 1.777,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-01.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: Night, Adios title page with the game's tagline.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-02.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: basic info, covering engine, date, tags, and the background story of the game.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-03.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: the New York subway as inspiration, with reference photographs of station architecture and a carriage interior.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-04.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: why I made this game, covering the city as a microcosm, social inequality, and self-reflection.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-05.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: game play, covering NPC interactions, strategic management, and player progression.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-06.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: design iteration, covering the 3D to 2D transition, resource separation, segmented carriages, and boss balancing.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-07.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: character design for Hiroshi, with background story and abilities.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-08.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: character design for Mia, with background story and abilities.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-09.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: programming development process, showing Unreal Blueprint graphs for turret conversion and enemy behaviour.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-10.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: game art development process, showing 2D assets, player walking animation, and a 3D subway environment.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-11.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: the 2D and 3D application pipeline, listing Aseprite, Procreate, Photoshop, Unity, Maya, VRoid and Warudo.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   },
+   {
+    "type": "img",
+    "src": "assets/projects/night-adios/deck-12.jpg",
+    "srcset": [],
+    "sizes": "",
+    "w": 1300,
+    "h": 731,
+    "alt": "Deck page: final vision, covering narrative depth, social impact and planned game mechanics.",
+    "loading": "lazy",
+    "poster": "",
+    "link": "",
+    "linkKind": "",
+    "context": "main#main > div.work-body > section#materials.section--railed > div.media.deck",
+    "section": "materials",
+    "heading": "Project deck",
+    "title": "",
+    "file": "1300x731",
+    "ratio": 1.778,
+    "caption": ""
+   }
+  ],
+  "embeds": [],
+  "links": [
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=2d",
+    "text": "2D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=3d",
+    "text": "3D",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-design",
+    "text": "Game Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=gameplay-design",
+    "text": "Gameplay Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=narrative-design",
+    "text": "Narrative Design",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "preview/c2/game-design.html#tag=game-art",
+    "text": "Game Art",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   },
+   {
+    "href": "https://vimeo.com/1029931625",
+    "text": "Watch it in play ↗",
+    "external": true,
+    "newTab": true,
+    "rel": "noopener noreferrer"
+   },
+   {
+    "href": "preview/c2/game-design.html#case-studies",
+    "text": "← Back to Case Studies",
+    "external": false,
+    "newTab": false,
+    "rel": ""
+   }
+  ],
+  "warnings": [],
+  "classes": [
+   "arrow",
+   "aside",
+   "back-link",
+   "backnav",
+   "backnav--foot",
+   "chip",
+   "chips",
+   "deck",
+   "eyebrow",
+   "factbar",
+   "is-primary",
+   "media",
+   "notice",
+   "notice-label",
+   "prose",
+   "prose--lead",
+   "prose--wide",
+   "pullquote",
+   "section--railed",
+   "split",
+   "work-body",
+   "work-head",
+   "work-hero",
+   "work-line",
+   "worklink",
+   "worklinks"
+  ]
+ }
+]

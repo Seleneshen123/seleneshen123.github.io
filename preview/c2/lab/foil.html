@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foil material inspection — tarot card</title><meta name="robots" content="noindex">
+<link rel="icon" href="../../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/fonts.css">
+<style>
+  :root { color-scheme: dark; --ink:#e9ecea; --muted:#9aa1a4; --line:#262a2e; --accent:#cdb67f; }
+  * { box-sizing: border-box; } body { margin: 0; background: #0b0c0e; color: var(--ink); font: 400 14.5px/1.55 Geist, system-ui, sans-serif; }
+  header { padding: 2.2rem 2rem 1.2rem; display: grid; gap: .6rem; max-width: 74rem; }
+  .k { font: 500 11px/1 'Geist Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  h1 { margin: 0; font: 400 clamp(1.8rem, 3.4vw, 2.8rem)/1.05 'Tenor Sans', sans-serif; letter-spacing: .06em; }
+  header p { margin: 0; color: var(--muted); max-width: 64rem; }
+  .row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; padding: 0 2rem; }
+  figure { margin: 0; display: grid; gap: .6rem; align-content: start; }
+  figure img { width: 100%; height: auto; display: block; background: #2a2d30; }
+  figcaption { font-size: 12.5px; color: var(--muted); } figcaption b { display: block; color: var(--ink); font: 500 11px 'Geist Mono', monospace; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2rem; }
+  .viewer { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 1.4rem; padding: 2rem; }
+  .stage { position: relative; height: min(76vh, 800px); background: #050607; border: 1px solid var(--line); cursor: grab; touch-action: none; }
+  .stage canvas { width: 100%; height: 100%; display: block; }
+  .controls { display: grid; gap: 1rem; align-content: start; }
+  .controls label { display: grid; gap: .35rem; font: 500 11px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .controls output { color: var(--ink); float: right; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .seg { display: flex; border: 1px solid var(--line); } .seg button { flex: 1; padding: .55rem .4rem; background: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); font: 500 11px 'Geist Mono', monospace; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; } .seg button:last-child { border-right: 0; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: #0b0c0e; }
+  .strip { padding: 0 2rem 3rem; } .strip h2 { font: 400 1.4rem/1 'Tenor Sans', sans-serif; letter-spacing: .06em; margin: 0 0 1rem; }
+  .shots { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; } .shots figure img { background: #050607; }
+  .note { padding: 0 2rem 3rem; color: var(--muted); max-width: 70rem; }
+  @media (max-width: 1000px) { .row { grid-template-columns: repeat(2, 1fr); } .viewer { grid-template-columns: 1fr; } .shots { grid-template-columns: repeat(3, 1fr); } }
+</style>
+<script type="importmap">{"imports":{"three":"../vendor/three/three.module.js","three/addons/":"../vendor/three/addons/"}}</script>
+<script type="module" src="foil-lab.js"></script>
+</head><body>
+<header>
+  <p class="k">Material inspection · tarot card front · for approval</p>
+  <h1>Holographic foil</h1>
+  <p>The colourful gradient in the V2 artwork's central panel was a baked simulation of foil. Here the panel is restored to its neutral grey base (a derived texture — the original artwork is untouched), and the foil is rendered as a surface treatment: physically based thin-film iridescence plus a diffraction-style spectrum that appears only where the card actually reflects light, and moves with viewing angle.</p>
+</header>
+<section class="row" aria-label="Textures">
+  <figure><img src="../../../assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp" width="758" height="1476" alt="Original V2 tarot artwork"><figcaption><b>1 · Original V2</b>The approved artwork, unmodified.</figcaption></figure>
+  <figure><img src="../textures/tarot-base-neutral.png" width="758" height="1476" alt="Derived neutral base texture"><figcaption><b>2 · Derived neutral base</b>Rainbow removed from the arched panel only; luminance, shading and linework kept. Tint sampled from the earlier tight-755 artwork.</figcaption></figure>
+  <figure><img src="../textures/tarot-panel-mask.png" width="758" height="1476" alt="Detected panel mask"><figcaption><b>Panel mask</b>Flood-filled inside the gold frame; gems, gold and the text panel excluded.</figcaption></figure>
+  <figure><img src="../textures/tarot-foil.png" width="758" height="1476" alt="Foil strength and thickness map"><figcaption><b>Foil map</b>Red: foil strength (panel 100%, frame 55%, gold 42%, gems 22%, text panel 16%). Green: thin-film thickness variation.</figcaption></figure>
+</section>
+<section class="viewer" aria-label="Interactive material view">
+  <div class="stage"><canvas aria-label="Interactive tarot card. Drag to turn within ±40 degrees." role="img"></canvas></div>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Foil"><button type="button" data-mode="off" aria-pressed="false">Foil off</button><button type="button" data-mode="film" aria-pressed="false">Thin film</button><button type="button" data-mode="full" aria-pressed="true">Film + spectrum</button></div>
+    <div class="seg" role="group" aria-label="Lighting"><button type="button" data-light="spot" aria-pressed="true">Home spotlight</button><button type="button" data-light="studio" aria-pressed="false">Studio</button><button type="button" data-light="raking" aria-pressed="false">Raking</button></div>
+    <label>Yaw <output id="yo">0°</output><input id="yaw" type="range" min="-40" max="40" step="0.5" value="0"></label>
+    <label>Pitch <output id="po">0°</output><input id="pitch" type="range" min="-25" max="25" step="0.5" value="0"></label>
+    <label>Light angle <output id="lo">0°</output><input id="light" type="range" min="-80" max="80" step="1" value="0"></label>
+    <label>Foil strength <output id="so">1.00</output><input id="strength" type="range" min="0" max="2" step="0.05" value="1"></label>
+    <div class="seg" role="group" aria-label="Base"><button type="button" data-base="neutral" aria-pressed="true">Neutral base</button><button type="button" data-base="v2" aria-pressed="false">Original V2 (baked)</button></div>
+    <p class="k" style="line-height:1.7">Drag the card or use the sliders. Rotation is limited to the front, as on the site — no card back is shown.</p>
+  </div>
+</section>
+<section class="strip" aria-label="Angle comparison"><h2>3 · Dynamic foil at different angles</h2><div class="shots" id="shots"></div></section>
+<p class="note">Renders use the same engine, lights and camera as the homepage ("Home spotlight"). Thin film: MeshPhysicalMaterial iridescence driven by the foil map (IOR 1.55, 180–620 nm). Spectrum: a custom diffraction term that disperses the card's own specular light along a diagonal grating fixed to the card. Gold keeps its metallic response; the cream text panel stays almost matte.</p>
+</body></html>

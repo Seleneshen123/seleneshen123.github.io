@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Type lab — Direction C revision</title>
+<style>
+@font-face{font-family:'Bodoni Moda';src:url(../node_modules/@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-standard-normal.woff2) format('woff2');font-weight:400 900;}
+@font-face{font-family:'Fraunces';src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format('woff2');font-weight:100 900;}
+@font-face{font-family:'Geist';src:url(../node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2) format('woff2');font-weight:100 900;}
+@font-face{font-family:'Geist Mono';src:url(../node_modules/@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2) format('woff2');font-weight:100 900;}
+@font-face{font-family:'Syne';src:url(../node_modules/@fontsource-variable/syne/files/syne-latin-wght-normal.woff2) format('woff2');font-weight:400 800;}
+@font-face{font-family:'Tenor Sans';src:url(../node_modules/@fontsource/tenor-sans/files/tenor-sans-latin-400-normal.woff2) format('woff2');}
+*{box-sizing:border-box;margin:0}
+body{background:#050607;color:#eceeed;font:400 15px/1.6 Geist,sans-serif}
+.comp{position:relative;width:1440px;height:900px;background:url(../src/typelab-scene.png) center/cover;overflow:hidden}
+.nav{position:absolute;top:30px;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font:500 11px/1 'Geist Mono';letter-spacing:.14em;text-transform:uppercase;color:#a9b0b3}
+.nav .links{display:flex;gap:26px}.nav b{color:#eceeed;font-weight:500}
+.name{position:absolute;top:50%;transform:translateY(-50%);color:#eef0ef}
+.l{left:56px}.r{right:56px;text-align:right}
+.id{position:absolute;left:0;right:0;bottom:110px;text-align:center;font:400 11px/1.6 'Geist Mono';letter-spacing:.3em;text-transform:uppercase;color:#aeb4b7}
+.intro{position:absolute;left:50%;bottom:62px;transform:translateX(-50%);width:520px;text-align:center;color:#9aa2a6;font-size:14px}
+.tag{position:absolute;left:56px;bottom:30px;font:500 10px 'Geist Mono';letter-spacing:.2em;color:#7b8387}
+.sub{position:absolute;right:56px;bottom:180px;width:330px;padding-left:20px;border-left:1px solid rgba(255,255,255,.16)}
+.sub h2{margin-bottom:8px}.sub p{color:#9aa2a6;font-size:13.5px}
+/* T1 Didone */
+.t1 .name{font:400 118px/.9 'Bodoni Moda';letter-spacing:.06em;font-variation-settings:'opsz' 96}
+.t1 .sub h2{font:400 34px/1.05 'Bodoni Moda';font-variation-settings:'opsz' 48}
+/* T2 Syne */
+.t2 .name{font:600 104px/.9 Syne;letter-spacing:-.01em;text-transform:uppercase}
+.t2 .sub h2{font:600 26px/1.1 Syne;text-transform:uppercase}
+/* T3 Geist hairline */
+.t3 .name{font:200 92px/1 Geist;letter-spacing:.38em;text-transform:uppercase}
+.t3 .sub h2{font:300 28px/1.15 Geist;letter-spacing:.02em}
+/* T4 Fraunces */
+.t4 .name{font:300 124px/.9 Fraunces;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-.02em}
+.t4 .sub h2{font:300 34px/1.05 Fraunces;font-variation-settings:'opsz' 72,'SOFT' 50}
+/* T5 Tenor */
+.t5 .name{font:400 92px/1 'Tenor Sans';letter-spacing:.24em;text-transform:uppercase}
+.t5 .sub h2{font:400 26px/1.2 'Tenor Sans';letter-spacing:.04em}
+.label{position:absolute;top:70px;left:56px;font:500 10px 'Geist Mono';letter-spacing:.2em;color:#d7b56d}
+</style></head><body>
+<script>
+const comps=[['t1','T1 · Bodoni Moda (didone) + Geist + Geist Mono','Caiyi','Shen'],['t2','T2 · Syne (contemporary grotesk) + Geist + Geist Mono','Caiyi','Shen'],['t3','T3 · Geist hairline caps + Geist Mono','Caiyi','Shen'],['t4','T4 · Fraunces (soft optical serif) + Geist + Geist Mono','Caiyi','Shen'],['t5','T5 · Tenor Sans caps + Geist + Geist Mono','Caiyi','Shen']];
+for(const [c,label,a,b] of comps){document.write(`<section class="comp ${c}" id="${c}"><p class="label">${label}</p><div class="nav"><b>Caiyi Shen</b><span class="links"><span>01 Home</span><span>02 Research</span><span>03 Game Design</span><span>04 Art</span><span>05 Community</span><span>06 CV</span><span>07 Contact</span></span></div><h1 class="name l">${a}</h1><h1 class="name r">${b}</h1><p class="id">Game Designer · Player Experience Researcher · Artist</p><p class="intro">Game design, player-experience research and original 2D/3D art — shaped by a background in psychology.</p><div class="sub"><h2>Neural Entrainment</h2><p>How can child-friendly visual cycles, artificial-language speech and EEG event markers remain synchronized during audiovisual learning experiments?</p></div><p class="tag">02 — RESEARCH ↓</p></section>`)}
+</script>
+</body></html>

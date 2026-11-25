@@ -1,0 +1,122 @@
+[
+ {
+  "page": "art.html",
+  "chapter": "2D & 3D Art",
+  "isChapter": true
+ },
+ {
+  "page": "community.html",
+  "chapter": "Community & Content",
+  "isChapter": true
+ },
+ {
+  "page": "contact.html",
+  "chapter": "Contact",
+  "isChapter": true
+ },
+ {
+  "page": "cv.html",
+  "chapter": "CV",
+  "isChapter": true
+ },
+ {
+  "page": "game-design.html",
+  "chapter": "Game Design",
+  "isChapter": true
+ },
+ {
+  "page": "games/cena-floris.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "games/coworker.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "games/dueling-duet.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "games/lunch-hours.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "projects/astronomy-playtesting.html",
+  "chapter": "",
+  "isChapter": false
+ },
+ {
+  "page": "projects/axis-ai.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "projects/boston-bilingual-pioneer-media.html",
+  "chapter": "Research",
+  "isChapter": false
+ },
+ {
+  "page": "projects/chinese-character-learning.html",
+  "chapter": "",
+  "isChapter": false
+ },
+ {
+  "page": "projects/cocoa-quest.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "projects/generate-deeplight-games.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "projects/schoolive.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "research/astronomy-learning.html",
+  "chapter": "Research",
+  "isChapter": false
+ },
+ {
+  "page": "research/beforehello.html",
+  "chapter": "Research",
+  "isChapter": false
+ },
+ {
+  "page": "research/mind-match-cloud.html",
+  "chapter": "",
+  "isChapter": false
+ },
+ {
+  "page": "research/neural-entrainment.html",
+  "chapter": "Research",
+  "isChapter": false
+ },
+ {
+  "page": "research.html",
+  "chapter": "Research",
+  "isChapter": true
+ },
+ {
+  "page": "works/echoes-of-chinese-characters.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "works/elixir-nomad.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
+  "page": "works/night-adios.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ }
+]

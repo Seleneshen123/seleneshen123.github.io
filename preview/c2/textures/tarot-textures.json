@@ -1,0 +1,28 @@
+{
+ "source": "assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp",
+ "tintReference": "assets/projects/generate-deeplight-games/tarot-card-design-tight-755.webp",
+ "size": [
+  758,
+  1476
+ ],
+ "creamTop": 1103,
+ "panelPixels": 616041,
+ "tint": [
+  1.0325,
+  0.9989,
+  0.965
+ ],
+ "panelMeanRGB": {
+  "before": [
+   93,
+   104,
+   90
+  ],
+  "after": [
+   104,
+   100,
+   97
+  ]
+ },
+ "generated": "2026-11-25T07:15:16.821Z"
+}
