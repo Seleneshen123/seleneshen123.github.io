@@ -115,7 +115,7 @@
     }}
     return {buffer:buffer(data),count:data.length/6};
   }
-  let initialized=false,lost=false,paused=false,visible=true,raf=0,last=0,time=0,scroll=0,dpr=1,px=0,py=0,targetX=0,targetY=0,mesh,particles,mp,pp,frontTex,backTex;
+  let initialized=false,lost=false,paused=false,visible=true,raf=0,last=0,time=0,scroll=0,dpr=1,px=0,py=0,targetX=0,targetY=0,inspect=false,inspection=0,mesh,particles,mp,pp,frontTex,backTex;
   function resize(){
     const rect=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,matchMedia('(max-width:760px)').matches?1.5:2);
     const w=Math.max(1,Math.round(rect.width*dpr)),h=Math.max(1,Math.round(rect.height*dpr));
@@ -129,11 +129,12 @@
     const mobile=matchMedia('(max-width:760px)').matches;
     const camera=[(mobile?0:-.26)+px*.24,py*.13,11.8-4.3*ease-scroll*.85];
     const focal=mobile?2.26:2.48;
-    const angle=motion?-.17:(1-ease)*1.35-.17+Math.max(0,time-3.8)*(Math.PI*2/26);
+    const orbitAngle=motion?-.17:(1-ease)*1.35-.17+Math.max(0,time-3.8)*(Math.PI*2/26);
+    const angle=orbitAngle-Math.atan2(Math.sin(orbitAngle+.10),Math.cos(orbitAngle+.10))*inspection;
     const lift=motion?0:Math.sin(time*.63)*.095;
     gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
     gl.enable(gl.DEPTH_TEST);gl.depthMask(true);gl.disable(gl.BLEND);
-    gl.useProgram(mp);view(mp,camera,focal);gl.uniform3f(uniform(mp,'uRotation'),-.08+py*.10,angle+px*.13,-.105);gl.uniform1f(uniform(mp,'uLift'),lift);gl.bindBuffer(gl.ARRAY_BUFFER,mesh.buffer);
+    gl.useProgram(mp);view(mp,camera,focal);gl.uniform3f(uniform(mp,'uRotation'),-.08+py*.10,angle+px*.13*(1-inspection),-.105*(1-inspection));gl.uniform1f(uniform(mp,'uLift'),lift);gl.bindBuffer(gl.ARRAY_BUFFER,mesh.buffer);
     bind(mp,'aPos',3,32,0);bind(mp,'aNormal',3,32,12);bind(mp,'aUV',2,32,24);
     gl.activeTexture(gl.TEXTURE0);gl.uniform1i(uniform(mp,'uTexture'),0);gl.uniform1f(uniform(mp,'uMetal'),0);
     gl.bindTexture(gl.TEXTURE_2D,frontTex);gl.drawArrays(gl.TRIANGLES,0,mesh.frontCount);
@@ -150,7 +151,7 @@
   function tick(now){
     raf=0;if(!initialized||lost||document.hidden||!visible)return;
     const dt=last?Math.min((now-last)/1000,.05):0;last=now;
-    if(!paused&&!reduced.matches){time+=dt;px+=(targetX-px)*.045;py+=(targetY-py)*.045;}
+    if(!paused&&!reduced.matches){time+=dt;px+=(targetX-px)*.045;py+=(targetY-py)*.045;inspection+=((inspect?1:0)-inspection)*.09;}
     render();if(!paused&&!reduced.matches)raf=requestAnimationFrame(tick);
   }
   function wake(){if(!initialized||lost||raf||document.hidden||!visible)return;last=0;raf=requestAnimationFrame(tick);}
@@ -169,6 +170,8 @@
   control.addEventListener('click',()=>{paused=!paused;control.setAttribute('aria-pressed',String(paused));control.textContent=paused?'Resume motion':'Pause motion';if(paused)stop();else wake();});
   scene.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=scene.getBoundingClientRect();targetX=(e.clientX-r.left)/r.width-.5;targetY=.5-(e.clientY-r.top)/r.height;});
   scene.addEventListener('pointerleave',()=>{targetX=targetY=0;});
+  const hotspot=scene.querySelector('.inspect-card');
+  if(hotspot){hotspot.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')inspect=true;});hotspot.addEventListener('pointerleave',()=>{inspect=false;});hotspot.addEventListener('focus',()=>{inspect=true;});hotspot.addEventListener('blur',()=>{inspect=false;});}
   window.addEventListener('scroll',updateScroll,{passive:true});
   window.addEventListener('resize',onResize,{passive:true});
   if('ResizeObserver'in window)new ResizeObserver(onResize).observe(scene);
