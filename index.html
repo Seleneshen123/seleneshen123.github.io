@@ -3,39 +3,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Caiyi Shen — game designer working across learning, research, and interactive systems.">
+  <meta name="description" content="Caiyi Shen — game designer, researcher and artist working across play, psychology, and interactive systems.">
   <meta name="theme-color" content="#f3f0ea">
   <title>Caiyi Shen — Game Designer · Researcher · Artist</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atlas.css">
   <script src="script.js" defer></script>
 </head>
-<body class="home">
+<body class="portfolio-atlas">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <main class="home-main" id="main">
-    <div class="home-shell">
-      <div class="home-identity">
-        <h1 class="home-name rise">Caiyi Shen</h1>
-        <p class="home-role rise">Game Designer <span class="home-sep" aria-hidden="true">·</span> Researcher <span class="home-sep" aria-hidden="true">·</span> Artist</p>
+  <header class="masthead atlas-masthead">
+    <a class="masthead-mark atlas-mark" href="index.html" aria-label="Caiyi Shen, home"><span class="atlas-mark-glyph" aria-hidden="true">✳</span> Caiyi Shen</a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="game-design.html">Game Design</a>
+      <a href="art.html">2D &amp; 3D Art</a>
+      <a href="community.html">Community &amp; Content</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="atlas-shell">
+    <section class="atlas-hero" aria-labelledby="home-title">
+      <div class="atlas-hero-copy">
+        <p class="atlas-kicker atlas-intro"><span class="atlas-spark" aria-hidden="true">✳</span> Game designer · Researcher · Artist</p>
+        <h1 id="home-title" class="atlas-name">Caiyi<br>Shen<span>.</span></h1>
+        <p class="atlas-thesis">Designing play.<br><em>Studying people.</em></p>
+        <p class="atlas-bio">I work at the intersection of psychology, game design, and interactive systems, exploring how people play, learn, and connect. Currently pursuing an M.S. in Game Science and Design at Northeastern University.</p>
+        <div class="atlas-actions">
+          <a class="atlas-button atlas-button-primary" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="atlas-button" href="cv.html">View CV <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
+      <figure class="atlas-hero-visual" data-atlas-art>
+        <div class="atlas-plate">
+          <svg class="atlas-orbit" viewBox="0 0 520 560" aria-hidden="true" focusable="false">
+            <defs><linearGradient id="atlas-orbit-ink"><stop stop-color="#7b3039" stop-opacity=".85"/><stop offset="1" stop-color="#7b3039" stop-opacity=".16"/></linearGradient></defs>
+            <g fill="none" stroke="url(#atlas-orbit-ink)" stroke-width="1">
+              <circle cx="260" cy="278" r="215" stroke-dasharray="2 7"/>
+              <circle cx="260" cy="278" r="184"/>
+              <ellipse cx="260" cy="278" rx="241" ry="121" transform="rotate(-35 260 278)"/>
+              <ellipse cx="260" cy="278" rx="241" ry="121" transform="rotate(35 260 278)"/>
+              <path d="M260 39V517 M21 278H499" stroke-dasharray="3 8"/>
+              <path d="M31 43h22m-11-11v22m425-11h22m-11-11v22M31 513h22m-11-11v22m425-11h22m-11-11v22"/>
+              <path d="M260 65l7 9-7 9-7-9zM260 472l7 9-7 9-7-9z"/>
+            </g>
+            <g fill="#7b3039"><circle cx="76" cy="278" r="4"/><circle cx="444" cy="278" r="4"/><circle cx="260" cy="94" r="3"/><circle cx="260" cy="462" r="3"/></g>
+          </svg>
+          <span class="atlas-coordinate atlas-coordinate-top">01 / Artefact</span>
+          <span class="atlas-coordinate atlas-coordinate-left">PLAY</span>
+          <span class="atlas-coordinate atlas-coordinate-right">PERCEPTION</span>
+          <span class="atlas-coordinate atlas-coordinate-bottom">SYSTEMS / STORIES</span>
+          <a class="atlas-art-card" href="projects/generate-deeplight-games.html#tarot-card" aria-label="See my tarot card artwork for Deeplight Games">
+            <img src="assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-400.webp" alt="Original tarot card artwork with an ornate golden frame, crescent moons, and compass-star motif." width="400" height="779" decoding="async" fetchpriority="high">
+          </a>
+        </div>
+        <figcaption><span>From my sketchbook / Deeplight Games</span><span>View artwork ↗</span></figcaption>
+      </figure>
+      <div class="atlas-hero-footer">
+        <span>Boston, Massachusetts</span>
+        <span>Selected works &amp; field notes</span>
+        <a href="#selected-work">Scroll to explore ↓</a>
+      </div>
+    </section>
 
-      <nav class="home-nav rise" aria-label="Primary">
-        <ol class="home-nav-list">
-          <li><a class="nav-link" href="index.html" aria-current="page"><span class="nav-label">Home</span></a></li>
-          <li><a class="nav-link" href="research.html"><span class="nav-label">Research</span></a></li>
-          <li><a class="nav-link" href="game-design.html"><span class="nav-label">Game Design</span></a></li>
-          <li><a class="nav-link" href="art.html"><span class="nav-label">2D &amp; 3D Art</span></a></li>
-          <li><a class="nav-link" href="community.html"><span class="nav-label">Community &amp; Content</span></a></li>
-          <li><a class="nav-link" href="cv.html"><span class="nav-label">CV</span></a></li>
-          <li><a class="nav-link" href="contact.html"><span class="nav-label">Contact</span></a></li>
-        </ol>
+    <section class="atlas-selected" id="selected-work" aria-labelledby="selected-title">
+      <div class="atlas-section-heading" data-atlas-reveal>
+        <div><p class="atlas-kicker"><span aria-hidden="true">✳</span> 01 / Selected work</p><h2 id="selected-title">A few worlds<br>I've been <em>building.</em></h2></div>
+        <p>A selection of games, design experiments, and human-centered research. Explore each case study for the process behind the work.</p>
+      </div>
+      <ul class="atlas-card-grid">
+          <li class="atlas-card " data-atlas-reveal>
+            <a href="works/night-adios.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/projects/night-adios/preview.jpg" alt="Pink pixel-art subway carriage from Night, Adios" width="1400" height="788" loading="eager" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">01</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">Gameplay · Systems</p>
+                <h3>Night, Adios</h3>
+                <p class="atlas-card-description">Combat, resource systems, and iteration in a pixel-art action game.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+          <li class="atlas-card " data-atlas-reveal>
+            <a href="games/lunch-hours.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/games/lunch-hours/cover.jpg" alt="Paper-cut school corridor and lunch tray" width="811" height="500" loading="eager" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">02</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">Gameplay · Playtesting</p>
+                <h3>Lunch Hours</h3>
+                <p class="atlas-card-description">Turning dialogue into an obstacle in a paper-cut school world.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+          <li class="atlas-card atlas-card--phone" data-atlas-reveal>
+            <a href="research/beforehello.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/research/mind-match-cloud/app-home.jpg" alt="BeforeHello prototype home screen" width="760" height="1645" loading="eager" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">03</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">HCI · Research</p>
+                <h3>BeforeHello</h3>
+                <p class="atlas-card-description">Exploring accessible ways to prepare for first meetings.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+          <li class="atlas-card " data-atlas-reveal>
+            <a href="works/elixir-nomad.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/projects/elixir-nomad/preview.jpg" alt="Illustrated view from an alchemist's travelling van" width="1400" height="788" loading="lazy" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">04</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">Systems · Prototyping</p>
+                <h3>Elixir Nomad</h3>
+                <p class="atlas-card-description">A material-combination system connecting digital and physical input.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+          <li class="atlas-card " data-atlas-reveal>
+            <a href="works/echoes-of-chinese-characters.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/projects/echoes/preview.jpg" alt="Painted pictogram tiles alongside matching Chinese characters" width="1400" height="787" loading="lazy" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">05</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">Tabletop · Learning</p>
+                <h3>Echoes of Chinese Characters</h3>
+                <p class="atlas-card-description">A tactile learning game built around pictograms and Chinese characters.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+          <li class="atlas-card " data-atlas-reveal>
+            <a href="projects/generate-deeplight-games.html" class="atlas-card-link">
+              <figure class="atlas-card-media">
+                <img src="assets/projects/generate-deeplight-games/character-map-design-01-800.webp" alt="Paper-cutting witch character concept and branching level map" width="800" height="525" loading="lazy" decoding="async">
+                <span class="atlas-card-number" aria-hidden="true">06</span>
+              </figure>
+              <div class="atlas-card-body">
+                <p class="atlas-kicker">Concept Art · Level Design</p>
+                <h3>Deeplight Games</h3>
+                <p class="atlas-card-description">Character, environment and map concepts for a 3D action roguelike.</p>
+                <span class="atlas-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </li>
+      </ul>
+      <a class="atlas-text-link" href="game-design.html">All game design projects <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="atlas-index" aria-labelledby="index-title">
+      <div class="atlas-section-heading" data-atlas-reveal>
+        <div><p class="atlas-kicker"><span aria-hidden="true">✳</span> 02 / The index</p><h2 id="index-title">Follow your<br><em>curiosity.</em></h2></div>
+        <p>One portfolio, different ways in.</p>
+      </div>
+      <nav aria-label="Explore disciplines">
+        <a href="game-design.html" class="atlas-index-link" data-atlas-reveal><span class="atlas-index-no">01</span><span class="atlas-index-title">Game Design</span><span class="atlas-index-desc">Mechanics, worlds, prototypes &amp; play</span><span class="atlas-index-arrow" aria-hidden="true">↗</span></a>
+        <a href="research.html" class="atlas-index-link" data-atlas-reveal><span class="atlas-index-no">02</span><span class="atlas-index-title">Research</span><span class="atlas-index-desc">Psychology, HCI &amp; human experience</span><span class="atlas-index-arrow" aria-hidden="true">↗</span></a>
+        <a href="art.html" class="atlas-index-link" data-atlas-reveal><span class="atlas-index-no">03</span><span class="atlas-index-title">2D &amp; 3D Art</span><span class="atlas-index-desc">Characters, objects &amp; imagined spaces</span><span class="atlas-index-arrow" aria-hidden="true">↗</span></a>
+        <a href="community.html" class="atlas-index-link" data-atlas-reveal><span class="atlas-index-no">04</span><span class="atlas-index-title">Community &amp; Content</span><span class="atlas-index-desc">Players, media &amp; shared knowledge</span><span class="atlas-index-arrow" aria-hidden="true">↗</span></a>
       </nav>
-    </div>
+    </section>
+    <section class="atlas-contact" aria-labelledby="contact-title">
+      <p class="atlas-kicker">03 / Contact</p>
+      <h2 id="contact-title">Let's make something<br><em>worth playing.</em></h2>
+      <a class="atlas-button atlas-button-primary" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
+    </section>
   </main>
-
-  <footer class="home-foot fade">
+  <footer class="atlas-footer">
     <p>© <span data-year>2026</span> Caiyi Shen</p>
+    <a href="cv.html">CV ↗</a>
+    <a href="#main">Back to top ↑</a>
   </footer>
 </body>
 </html>
