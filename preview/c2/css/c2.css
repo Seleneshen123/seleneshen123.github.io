@@ -188,3 +188,15 @@ main#main { padding-top: var(--bar); }
 .c2-pdf-frame { display: block; width: 100%; height: min(86vh, 1100px); }
 .c2-pdf-fallback { padding: 2.4rem 1.4rem; } .c2-pdf-fallback a { color: var(--ink); text-decoration: underline; }
 @media (max-width: 760px) { .c2-pdf-frame { height: 70vh; } }
+
+/* Portrait screens (phones, portrait tablets): the name sits as one centred
+   line beneath the card instead of flanking it. */
+@media (max-aspect-ratio: 1/1), (max-width: 760px) {
+  .cover-name { position: absolute; inset: auto 0 auto 0; top: 55%; display: flex; justify-content: center; gap: .55em; font-size: clamp(2rem, 10vw, 4.6rem); }
+  .cover-name .w, .cover-name .w1, .cover-name .w2 { position: static; translate: none; margin: 0; width: auto; text-align: center; --ls-rest: .22em; }
+  .cover-name .w { letter-spacing: var(--ls, .22em); }
+  .scene-lit .cover-name .w { animation-name: c2-name-p; }
+  .cover-meta { bottom: clamp(5.2rem, 12vh, 8rem); }
+}
+@keyframes c2-name-p { 0% { opacity: 0; --m: -30%; --ls: .5em; } 18% { opacity: 1; } 100% { opacity: 1; --m: 100%; --ls: .22em; } }
+@media (prefers-reduced-motion: reduce) and (max-aspect-ratio: 1/1) { .js-anim .cover-name .w { --ls: .22em; } }

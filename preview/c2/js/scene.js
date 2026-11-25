@@ -69,7 +69,7 @@ const root = import.meta.url.includes('?lab') ? null : document.querySelector('.
 const lit = () => document.documentElement.classList.add('scene-lit');
 if (root) {
   // The name is lit as the spotlight comes up (~0.5 s after the scene is live).
-  mountScene(root, theme).then(r => { if (!r) { lit(); return; } setTimeout(lit, 420); })
+  mountScene(root, theme).then(r => { if (!r) { lit(); return; } setTimeout(lit, 1250); })
     .catch(err => { console.warn('Tarot scene unavailable, showing artwork image.', err); root.classList.add('no-webgl'); lit(); });
   // Depth: the name drifts against the pointer, opposite to the camera parallax.
   const cover = document.querySelector('.cover');

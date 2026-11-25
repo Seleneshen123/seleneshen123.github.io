@@ -7,6 +7,28 @@ Generated from the original HTML of every page on `main` by `prototypes/tools/au
 ## How the revision uses this audit
 The rebuilt Direction C pages are generated **from main's own page markup** (each page's `<main>` is carried over verbatim with only asset paths rebased). Image order, pairings, groupings, captions, lightbox targets, srcset variants, videos, links and warnings therefore come from the approved source rather than from a re-typed copy, and the same inventory run on the rebuilt pages is diffed against this one (see VISUAL_QA.md).
 
+
+## Result for the C revision (automated, see `audit/PARITY_RESULT.md`)
+Running the same inventory over `preview/c2/` and diffing it against main, page by page: **24 of 24 rebuilt pages match; 137 media elements checked; 0 regressions.** Compared per media element in DOM order: source, srcset, sizes, intrinsic width/height, alt text, caption, lightbox / full-size target and grouping context (the chain of layout classes it sits in); per page: heading outline, links, embeds and content warnings.
+
+The specific approved requirements are therefore inherited from main rather than re-implemented:
+- Game Design order: Featured Work 01 Boston Bilingual Pioneer Media → 02 Generate / Deeplight Games → 03 Cocoa Quest (each `.feature--editorial`: text left, two-image media right, consistent, not alternating), then Selected Games, More Featured Work (Schoolive), Case Studies, Other Works.
+- Image pairings: BBPM `course-02.jpg` + `psych-assessment-vn`; Generate `character-map-design-01` + `tarot-card-design-v2-tight`; Cocoa `cover` + `prototype-01-photo`.
+- Art: the approved 2D trio row (asset sheet · tarot · comic) and later rows with native proportions, 3D layout, every lightbox to its full-size file; the tarot uses the same V2 file as the Generate page.
+- BeforeHello naming and page (`research/beforehello.html`; `research/mind-match-cloud.html` kept as its redirect).
+- BBPM's seven modules in order: Middle School Mathematics, XiaoMiao Learning Companion, Wellness & Reflection, Psychological Assessment, Axis AI (Zhongmiao Academy), IELTS Preparation, XiaoMiao Gen Z.
+- Content warnings (COWorker 18+ gate, Pan's Labyrinth mature notice, JourNalism 18+ gate) and every external link.
+- No image is re-cropped: layout geometry is main's own stylesheet, copied verbatim as `preview/c2/css/layout.css`.
+
+## Intentional differences from main (documented)
+| Page | Difference | Justification |
+| --- | --- | --- |
+| `index.html` | Replaced by the cinematic cover (name, identity, one-line introduction, tarot scene, navigation, continue cue). | Requested. main's homepage has no media or project content, so nothing is lost. |
+| `cv.html` | Embedded PDF preview added (`<object>` with fallback links) above the CV text; main's Download and Open-in-browser links are kept unchanged. | Required ("CV page must include an embedded PDF preview"). main's heading order is preserved as a subsequence (checked automatically). |
+| `cv.html` | City/state labels removed from institution and employer lines (Boston, MA · Madison, WI · Houston, TX · Beijing, China). | Approved privacy rule: no personal location labels. The CV PDF itself is unchanged. |
+| all pages | main's masthead replaced by the chapter navigation; colour, typography and chrome re-themed. | The redesign. Links in the masthead are replaced one-for-one by the chapter links. |
+| `community.html` | *Not changed:* "San Francisco, California · February 28 – March 1, 2027" for The Jam @ GDC 2027 is kept. | This is the event's venue and date, not personal location. Flagged here in case you prefer it removed. |
+
 ## Pages and URLs
 | Page | Title | Media | Embeds | External links | Warnings |
 | --- | --- | ---: | ---: | ---: | ---: |

@@ -34,21 +34,28 @@
   }
   const THRESHOLD = 520;           // px of deliberate scroll beyond the end
   let intent = 0, atEndSince = 0, idle = 0, going = false;
+  const ARM_MS = isCover ? 0 : 650;
+  let lastWheel = 0, armed = isCover;
   const atEnd = () => innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
   const setP = p => { const v = Math.max(0, Math.min(1, p)); (hint || link).style.setProperty('--progress', v.toFixed(3)); if (bar) bar.parentElement.style.setProperty('--progress', v.toFixed(3)); if (hint) hint.classList.toggle('is-on', v > 0.02 || (atEnd() && document.documentElement.scrollHeight > innerHeight * 1.2)); };
   const blocked = el => !!(el && el.closest && el.closest('object, iframe, video, audio, embed, input, textarea, select, dialog, [data-lightbox-root]:not([hidden]), .c2-index:not([hidden]), [data-no-chapter]')) || !!document.querySelector('[data-lightbox-root]:not([hidden])') || (panel && !panel.hidden);
   const go = () => { if (going) return; going = true; setP(1); location.href = target; };
   const relax = () => { clearTimeout(idle); idle = setTimeout(() => { intent = 0; setP(0); }, 900); };
-  const onScroll = () => { if (atEnd()) { if (!atEndSince) atEndSince = performance.now(); } else { atEndSince = 0; intent = 0; setP(0); } };
+  const onScroll = () => { if (atEnd()) { if (!atEndSince) atEndSince = performance.now(); } else { atEndSince = 0; intent = 0; setP(0); if (!isCover) armed = false; } };
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
   if (isCover) atEndSince = performance.now() - 200;
 
-  // Wheel / trackpad: only counts after the visitor has rested at the end,
-  // so momentum from reading never carries straight into the next chapter.
+  // Wheel / trackpad. The gesture that carries the visitor to the end of a
+  // chapter can never continue past it: the boundary only "arms" after the
+  // wheel has been completely still for ARM_MS while at the end. Trackpad and
+  // mouse momentum keep emitting events, so a reading fling cannot arm it.
   addEventListener('wheel', e => {
-    if (going || e.deltaY <= 0 || blocked(e.target) || !atEnd()) return;
-    if (performance.now() - atEndSince < (isCover ? 250 : 450)) return;
+    const now = performance.now(), quiet = now - lastWheel; lastWheel = now;
+    if (going || blocked(e.target)) return;
+    if (e.deltaY < 0) { armed = isCover; intent = 0; setP(0); return; }
+    if (!atEnd()) { armed = isCover; return; }
+    if (!armed) { if (quiet >= ARM_MS && atEndSince && now - atEndSince >= ARM_MS) armed = true; else return; }
     const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY;
     intent += Math.min(dy, 120); setP(intent / THRESHOLD); relax();
     if (intent >= THRESHOLD) go();

@@ -36,3 +36,23 @@ Branch `redesign/creative-rebuild`, worktree `portfolio_site-creative-rebuild`, 
 
 ## Card back
 No reverse is shown in any prototype: rotation is clamped to ±0.36–0.46 rad and the back material is never presented. Four **concepts created by Claude** (Meridian, Twin Crescents, Lattice, Orrery) are on the separate review page `preview/card-backs/`. They are labelled as AI-created and not the artist's work, and are not integrated anywhere.
+
+---
+
+# Direction C revision (C2) — 2026-11-25
+
+Feedback: keep C's tarot rendering, lighting, camera and opening; reject C's typography, homepage, page structure, image cropping and identity; restore main's content and approved layouts.
+
+**Safety.** Tag `c-scene-checkpoint` on `c78161c` preserves the reviewed C scene. New branch `redesign/c-revision` in worktree `portfolio_site-c-revision`. `redesign/creative-rebuild` (A, B, C) and the five earlier branches are untouched; the old C preview still runs at http://localhost:4190/preview/c/.
+
+**Approach.** Instead of re-typing content (the cause of the earlier image regressions), `prototypes/build-c2.mjs` builds every page from main's own HTML. Each body is carried verbatim, asset paths are rebased, main's `styles.css` and `script.js` are used unchanged for layout and behaviour (filters, lightbox, video, copy buttons), and a separate identity layer (`c2.css`) changes only tokens, type, colour, light and chrome. Content parity is then *measured* (audit → diff), not assumed.
+
+**Iteration notes (what the renders showed):**
+- **Typography:** five compositions were rendered over the real scene (Bodoni Moda, Syne, Geist hairline caps, Fraunces, Tenor Sans). Chosen: **Tenor Sans**, a humanist, slightly flared capital face, widely tracked; it reads as engraved title lettering and echoes the card's fine linework without being a conventional serif headline. Body text is **Geist**, metadata **Geist Mono**; all OFL, self-hosted. The name flanks the card ("CAIYI · card · SHEN") on landscape screens and sits as one centred line beneath it on portrait screens.
+- **Name animation:** a light-driven mask reveal from the top (in the spotlight's direction) while the tracking settles from 0.62 em to 0.30 em. It starts 1.25 s after the scene is live, so the name settles as the card finishes dissolving in. The first timing (0.42 s) let the name upstage the card. Final state is static; reduced motion shows it immediately; a 6 s failsafe guarantees visibility.
+- **Foil:** physical thin-film iridescence alone produced blotchy oil-film patches (thickness noise too high-frequency) and a full-panel white flash at grazing angles. Fixed with coherent diagonal diffraction bands in card space that travel with the reflection angle, a smoother thickness map, a less mirror-like panel (metalness 0.36, roughness 0.32), and redistribution of the reflected light instead of added light.
+- **Dark theme over main's CSS:** main used `--ink` as a background in five places (health-bar plate, skip link, video box, chip states). Inverting the tokens turned the approved dark health-bar plate light; each was pinned to its intended colour. Group labels (`h2.group-label`) inherited the new heading size and were restored to main's small mono label.
+- **Chapter boundary:** the first version let a long reading fling on Research carry straight into Game Design. The boundary now arms only after 650 ms of wheel stillness at the end.
+- **Mobile cover:** "SHEN" was pushed off-screen by a later desktop rule; the 820 px portrait tablet crowded "CAIYI" against the card. Both fixed with the portrait stacked layout.
+
+**Open questions for the artist:** keep or remove the GDC jam venue line; whether pages that still use main's light-ground artwork plates should keep them (they do now, to avoid altering artwork presentation).
