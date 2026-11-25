@@ -133,7 +133,6 @@ main#main { padding-top: var(--bar); }
 .cover-meta { position: absolute; left: 0; right: 0; bottom: clamp(5.4rem, 13vh, 8.4rem); display: grid; justify-items: center; gap: .9rem; text-align: center; padding: 0 var(--gutter); }
 .cover-role { margin: 0; font: 500 .68rem/1.6 var(--font-mono); letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft); }
 .cover-role i { font-style: normal; color: var(--accent); margin: 0 .7em; }
-.cover-intro { margin: 0; max-width: 34rem; font: 400 .98rem/1.6 var(--font-sans); color: var(--ink-muted); }
 .cover-credit { position: absolute; right: calc(var(--gutter) + 1.4rem); bottom: 2rem; font: 500 .58rem/1.5 var(--font-mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; text-align: right; }
 .cover-credit:hover { color: var(--ink); }
 .cover .c2-next { position: absolute; left: 50%; bottom: 1.6rem; translate: -50% 0; }
@@ -144,7 +143,6 @@ main#main { padding-top: var(--bar); }
   .cover-name .w2 { left: 0; width: 100%; text-align: center; }
   .cover .scene-poster { top: 32%; height: 34%; }
   .cover-credit { display: none; }
-  .cover-intro { font-size: .9rem; }
 }
 
 /* Opening choreography for the name: lit from above as the spotlight comes
@@ -200,3 +198,20 @@ main#main { padding-top: var(--bar); }
 }
 @keyframes c2-name-p { 0% { opacity: 0; --m: -30%; --ls: .5em; } 18% { opacity: 1; } 100% { opacity: 1; --m: 100%; --ls: .22em; } }
 @media (prefers-reduced-motion: reduce) and (max-aspect-ratio: 1/1) { .js-anim .cover-name .w { --ls: .22em; } }
+
+/* Cover, without an introduction: the roles become the name's caption and sit
+   directly beneath the card, so name, card and roles read as one centred
+   title block; the only other element is the chapter cue at the foot. */
+.cover-meta { top: 66.5%; bottom: auto; gap: 0; }
+.cover-role { font-size: .64rem; letter-spacing: .36em; color: var(--ink-muted); }
+.cover-role i { margin: 0 .9em; }
+.cover-meta::before { content: ''; display: block; width: 1px; height: clamp(1.4rem, 3.4vh, 2.4rem); margin: 0 auto 1.1rem; background: linear-gradient(180deg, rgba(205,182,127,0), rgba(205,182,127,.7)); }
+.cover-credit { bottom: 1.9rem; }
+@media (max-aspect-ratio: 1/1), (max-width: 760px) {
+  .cover-meta { top: calc(55% + clamp(3.6rem, 9vw, 6.4rem)); bottom: auto; }
+  .cover-meta::before { height: 1.4rem; margin-bottom: .9rem; }
+  .cover-role { font-size: .6rem; letter-spacing: .3em; line-height: 2; }
+}
+@media (max-width: 520px) {
+  .cover-role { max-width: 22rem; }
+}

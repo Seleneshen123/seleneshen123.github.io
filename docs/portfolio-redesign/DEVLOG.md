@@ -56,3 +56,9 @@ Feedback: keep C's tarot rendering, lighting, camera and opening; reject C's typ
 - **Mobile cover:** "SHEN" was pushed off-screen by a later desktop rule; the 820 px portrait tablet crowded "CAIYI" against the card. Both fixed with the portrait stacked layout.
 
 **Open questions for the artist:** keep or remove the GDC jam venue line; whether pages that still use main's light-ground artwork plates should keep them (they do now, to avoid altering artwork presentation).
+
+## Cover revision — introduction removed
+- Removed the sentence "Game design, player-experience research and original 2D/3D art — shaped by a background in psychology." from the cover entirely, without a replacement.
+- Rebalanced the composition. The roles line now sits directly beneath the card as the name's caption, joined by a short gilt hairline, so name, card and roles read as one centred title block. Below it is deliberate negative space, then the chapter cue alone at the foot.
+- **Portrait screens:** the roles follow the single-line name; they wrap only on phones.
+- **Checks:** parity re-run (137 media, 0 regressions); chapter tests all pass; cover renders clean at 1920, 1440, 820 and 390.

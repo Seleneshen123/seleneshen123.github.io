@@ -16,7 +16,6 @@ ${header}
   <h1 class="cover-name"><span class="w w1">Caiyi</span> <span class="w w2">Shen</span></h1>
   <div class="cover-meta">
     <p class="cover-role">Game Designer<i>·</i>Player Experience Researcher<i>·</i>Artist</p>
-    <p class="cover-intro">Game design, player-experience research and original 2D/3D art — shaped by a background in psychology.</p>
   </div>
   <a class="cover-credit" href="projects/generate-deeplight-games.html#tarot-card">Tarot card<br>original artwork · Deeplight Games</a>
   <a class="c2-next" data-next-chapter href="research.html"><span class="nl">Scroll to continue</span><span class="nt"><b>02</b>Research</span><span class="np"><i></i></span></a>
