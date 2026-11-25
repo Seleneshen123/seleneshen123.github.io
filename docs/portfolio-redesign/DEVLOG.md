@@ -99,3 +99,8 @@ Identical start times did not mean the three appeared together. Frames were rend
 | 2.8 s | 100 % | 100 % | 100 % |
 
 Visually, the tops of the letters, the card's first fragments and a faint beam surface together at about 0.3 s, both in frozen frames and in real-time playback. The spotlight is never visible before the name and card. (The name's measured brightness is lower than its visibility because only the tops of thin letters are lit at first; frames were judged by eye as well as by measurement.)
+
+## Opening sequence — faster
+- The shared reveal (spotlight, name, card dissolve) is now 2.2 s (was 2.8 s). The camera approach and entrance turn take 1.8 s (was 2.4 s).
+- Easing curves, onset offsets, the spotlight curve, the final composition and the idle float/rotation speeds are unchanged.
+- **Synchronization re-measured on frozen frames:** the letter tops, the card's first fragments and the beam surface together at about 0.25 s; the card is in place at 1.8 s; everything rests at 2.2 s.

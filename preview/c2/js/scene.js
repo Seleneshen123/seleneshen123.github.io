@@ -11,8 +11,8 @@ const clamp01 = v => Math.min(1, Math.max(0, v));
  * name and the card all start there and share REVEAL and the same ease, so
  * they read as one shot. The camera push-in (4.6 s) starts at the same T = 0
  * and simply runs a little longer, settling after the reveal. */
-export const REVEAL = 2.8;
-export const APPROACH = 2.4;   // camera push-in + entrance turn (was 4.6 s)
+export const REVEAL = 2.2;
+export const APPROACH = 1.8;   // camera push-in + entrance turn (was 2.4 s, originally 4.6 s)
 const approachEase = t => 1 - Math.pow(1 - t, 2.6);
 const introEase = ease.inOutSine;
 const A = p => new URL(p, import.meta.url).href;
