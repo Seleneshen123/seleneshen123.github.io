@@ -1,136 +1,56 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Caiyi Shen — game designer, researcher and artist. Game design, player experience, psychology and interactive media.">
-<meta name="theme-color" content="#0c0e13">
-<title>Caiyi Shen — Game Designer · Researcher · Artist</title>
-<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-<style>:root{color-scheme:dark;--bg:#0c0e13;--ink:#f4f5f9;--muted:#aeb3c3;--line:#ffffff19;--accent:#c6c9ee;--font:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}::selection{background:#c6c9ee;color:#10121a}.shell{width:min(1320px,calc(100% - 100px));margin-inline:auto}.skip{position:fixed;top:-70px;left:16px;padding:12px 18px;background:white;color:black;z-index:10}.skip:focus{top:16px}
-.site-header{display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:76px;border-bottom:1px solid var(--line)}.brand{font-size:15px;font-weight:650;display:flex;align-items:center;gap:10px;white-space:nowrap}.brand svg{width:21px;height:21px;color:#d9dbfb}.top-nav{display:flex;align-items:center;gap:clamp(16px,2.4vw,35px);flex-wrap:wrap}.top-nav a{font-size:13px;color:var(--muted);transition:color .2s}.top-nav a:hover{color:white}.top-nav .cv-link{color:var(--ink);border:1px solid #ffffff38;border-radius:5px;padding:8px 13px}
-.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:center;gap:clamp(25px,4vw,72px);min-height:590px;padding:55px 0 64px}.hero-copy{position:relative;z-index:2;max-width:690px}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;font-weight:500;margin:0 0 28px}.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#c9cdfb;box-shadow:0 0 16px #b9b7f5a0}.hero h1{font-size:clamp(64px,8.7vw,126px);font-weight:570;line-height:.95;letter-spacing:-.079em;margin:0 0 28px;white-space:nowrap}.role{font-size:clamp(22px,2.45vw,34px);line-height:1.22;font-weight:450;letter-spacing:-.042em;margin:0 0 20px;color:#e7e8f2}.intro{max-width:48ch;color:var(--muted);font-size:16px;line-height:1.75;margin:0 0 32px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:49px;padding:12px 19px;border:1px solid #ffffff30;border-radius:5px;font-size:14px;font-weight:550;transition:background .22s,border-color .22s,color .22s}.button-primary{background:#f4f5f9;color:#11131b;border-color:#f4f5f9}.button-primary:hover{background:#d6d8f0;border-color:#d6d8f0}.button-secondary:hover{border-color:#bfc2df;background:#ffffff08}.arrow{display:inline-block;transition:transform .22s}.button:hover .arrow,.portal:hover .arrow{transform:translate(3px,-2px)}
-.stage{position:relative;isolation:isolate;width:100%;margin:0;min-width:0;align-self:center}.stage-visual{position:relative;isolation:isolate;display:grid;place-items:center;aspect-ratio:1.08/1;min-height:440px;overflow:hidden;border-radius:50%;background:radial-gradient(ellipse at 50% 50%,#34385360 0,#191d2e50 34%,#0c0e1300 69%)}.orbit{position:absolute;width:94%;height:94%;inset:3%;pointer-events:none;animation:orbit-turn 70s linear infinite;opacity:.85}.orbit-line{stroke:#b1b8e0;fill:none;stroke-width:.65}.orbit-star{fill:#dce0ff}.card-space{position:absolute;inset:0;display:grid;place-items:center;perspective:1150px;pointer-events:none}.card-float{width:clamp(125px,31%,184px);aspect-ratio:400/779;animation:float 6.8s ease-in-out infinite;position:relative;filter:drop-shadow(0 16px 28px #0008)}.card-spin{width:100%;height:100%;display:block;position:relative;transform-style:preserve-3d;animation:card-spin 24s linear infinite;pointer-events:auto}.card-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border-radius:5.5% / 3%}.card-front{background:#161820;transform:translateZ(.6px)}.card-front img{width:100%;height:100%;display:block;object-fit:contain}.card-back{transform:rotateY(180deg) translateZ(.6px);display:grid;place-items:center;background:radial-gradient(ellipse at 50% 48%,#303349,#141620 65%);border:1px solid #cdd0eeaa;box-shadow:inset 0 0 22px #a7b0ff20}.card-back::before{content:"";position:absolute;inset:7%;border:1px solid #cdd0ee60;border-radius:4%}.card-back svg{width:86%;height:88%;color:#cdd0ee}.stage[data-motion=paused] .card-float,.stage[data-motion=paused] .card-spin,.stage[data-motion=paused] .orbit{animation-play-state:paused}.card-spin:focus-visible{animation:none;transform:rotateY(0deg) scale(1.04)}@media(hover:hover) and (pointer:fine){.card-float:hover .card-spin{animation:none;transform:rotateY(0deg) scale(1.06)}}.card-link:focus-visible{outline:2px solid var(--accent);outline-offset:8px}.stage-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:1px auto 0;max-width:430px;color:#aeb3c3;font-size:12px}.art-link{color:#dce0f2}.art-link:hover{text-decoration:underline;text-underline-offset:4px}.motion-toggle{border:1px solid #ffffff24;background:transparent;color:var(--muted);border-radius:4px;font-size:11px;padding:6px 9px;cursor:pointer}.motion-toggle:hover{color:white;border-color:#ffffff60}
-.index{border-top:1px solid var(--line);padding:28px 0 65px}.index-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:20px}.index-head h2{font-size:13px;font-weight:550;letter-spacing:.02em;color:#c5c8d7;margin:0}.index-head p{font-size:12px;color:#aeb3c3;margin:0}.portals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:6px;overflow:hidden}.portal{min-height:144px;display:flex;flex-direction:column;position:relative;padding:22px 22px 20px;gap:7px;transition:background .24s}.portal+ .portal{border-left:1px solid var(--line)}.portal:hover,.portal:focus-visible{background:#ffffff0b}.portal:focus-visible{outline-offset:-3px}.portal-num{font-size:11px;color:#aeb3c3;letter-spacing:.04em}.portal h3{font-size:clamp(18px,1.9vw,25px);letter-spacing:-.035em;font-weight:540;line-height:1.15;margin:11px 23px 0 0}.portal p{font-size:12px;color:var(--muted);margin:0;line-height:1.5}.portal .arrow{position:absolute;top:20px;right:20px;color:#d3d6f1;font-size:19px}.footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:20px 0 28px;color:var(--muted);font-size:12px}.footer a:hover{color:white}
-@keyframes card-spin{from{transform:rotateY(0deg) rotateZ(-4deg)}to{transform:rotateY(360deg) rotateZ(-4deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}@keyframes orbit-turn{to{transform:rotate(360deg)}}@keyframes enter{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}.hero-copy>*{animation:enter .65s ease both}.hero h1{animation-delay:.08s}.role{animation-delay:.15s}.intro{animation-delay:.21s}.hero-actions{animation-delay:.27s}.stage{animation:enter .85s .1s ease both}
-@media(max-width:1050px){.shell{width:calc(100% - 64px)}.hero{min-height:0;gap:26px;padding:55px 0}.hero h1{font-size:clamp(57px,8.6vw,100px)}.stage-visual{min-height:350px}.portal{padding:17px;min-height:150px}.portal .arrow{right:16px;top:15px}}
-@media(max-width:840px){.shell{width:calc(100% - 40px)}.site-header{align-items:flex-start;flex-direction:column;gap:15px;padding:19px 0 16px}.top-nav{gap:12px 18px}.top-nav a{font-size:12px}.top-nav .cv-link{padding:0;border:0}.hero{grid-template-columns:1fr;padding:45px 0 32px;gap:15px}.hero h1{font-size:clamp(54px,13vw,92px);white-space:normal}.eyebrow{margin-bottom:20px}.hero h1{margin-bottom:20px}.role{font-size:25px}.intro{font-size:15px;line-height:1.65;margin-bottom:24px}.stage{width:min(100%,430px);margin:0 auto}.stage-visual{min-height:0;aspect-ratio:1/1}.card-float{width:34%}.portals{grid-template-columns:repeat(2,minmax(0,1fr))}.portal{min-height:128px}.portal:nth-child(3){border-left:0}.portal:nth-child(n+3){border-top:1px solid var(--line)}.index{padding-bottom:40px}.index-head p{display:none}}
-@media(max-width:365px){.shell{width:calc(100% - 32px)}.hero h1{font-size:50px}.hero-actions{gap:8px}.button{padding:10px 12px;gap:14px}.portal h3{font-size:16px}.portal p{font-size:11px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-toggle{display:none}.card-spin,.card-spin:focus-visible,.card-float:hover .card-spin{transform:none}}
-
-/* Celestial III: atmosphere, scale and material. */
-:root{--bg:#0a0c12;--ink:#f5f6fb;--muted:#b5bbcd;--line:#ffffff20;--accent:#d1d4ff}
-html{background:#0a0c12}
-body{background:
- radial-gradient(ellipse 58% 42% at 78% 24%,#303759 0%,#171c32 38%,transparent 76%),
- radial-gradient(ellipse 40% 26% at 16% 82%,#23304766,transparent 80%),
- linear-gradient(153deg,#0a0c13 12%,#111423 55%,#0a0d14 100%);min-height:100vh}
-.shell{width:min(1312px,calc(100% - 112px))}
-.site-header{min-height:88px;border-bottom-color:#e0e4ff1c;gap:20px}
-.brand{font-weight:680;letter-spacing:-.025em;font-size:16px}.brand svg{color:#e4e6ff;width:23px;height:23px}
-.top-nav{gap:clamp(18px,2.6vw,40px)}.top-nav a{font-weight:510;font-size:13px}
-.top-nav .cv-link{border-radius:100px;padding:8px 16px;background:#d5ddff0a;border-color:#cbd2ff38}
-.hero{position:relative;min-height:650px;gap:clamp(8px,3vw,44px);padding:clamp(50px,7vw,102px) 0 clamp(48px,6vw,86px)}
-.hero-copy{max-width:660px}
-.eyebrow{font-size:12px;letter-spacing:.075em;margin-bottom:27px;color:#d8dbec;text-transform:uppercase;gap:11px}.eyebrow::before{display:none}
-.eyebrow-line{width:27px;height:1px;background:#c9d0f8;box-shadow:0 0 12px #c9d0f8aa}.eyebrow-sep{color:#7c87aa}
-.hero h1{font-size:clamp(70px,8.55vw,128px);line-height:.87;letter-spacing:-.087em;white-space:normal;font-weight:600;margin:0 0 27px;max-width:6ch}
-.hero h1>span{display:block}.hero h1 .name-dot{display:inline;color:#bfc9ff}
-.role{font-size:clamp(22px,2.3vw,32px);font-weight:450;line-height:1.28;letter-spacing:-.047em;margin:0 0 18px;color:#e5e8f5}.role-break{display:none}.role-divider{color:#828db6;font-weight:300}
-.intro{font-size:clamp(15px,1.22vw,17px);max-width:43ch;line-height:1.7;color:#b9bfd2;margin-bottom:25px}
-.hero-actions{gap:10px}.button{min-height:48px;padding:12px 19px;border-radius:100px;gap:26px;font-size:13px}
-.button-primary{background:linear-gradient(105deg,#f7f7ff,#d8dfff);color:#111526;border:0;box-shadow:0 6px 28px #b9c5ff20}
-.button-primary:hover{background:#fff;box-shadow:0 7px 30px #b9c5ff45}
-.button-secondary{border-color:#b4c0f240;background:#afc0ff08}
-.education-line{margin:24px 0 0;font-size:12px;color:#aeb5ca;line-height:1.5}
-.stage{min-width:0;max-width:660px;width:100%;justify-self:end}
-.stage-visual{min-height:0;aspect-ratio:1/1;border-radius:0;overflow:visible;background:none}
-.stage-glow{position:absolute;inset:1%;border-radius:50%;z-index:-1;background:radial-gradient(ellipse,#7685b454 0%,#495c8d35 25%,#43456a20 44%,transparent 70%);filter:blur(16px);pointer-events:none}
-.stage-grid{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.24;background-image:linear-gradient(#bbc4ff28 1px,transparent 1px),linear-gradient(90deg,#bbc4ff28 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse,black 0%,transparent 66%)}
-.stage-coordinate{position:absolute;right:6%;top:6%;color:#d6dcff;font-size:24px;opacity:.8}
-.orbit{inset:0;width:100%;height:100%;opacity:1;filter:drop-shadow(0 0 8px #c3c8ff20)}
-.orbit-line{stroke:#c8d0fd;stroke-width:.8}
-.card-space{perspective:1350px}.card-float{width:clamp(130px,34%,214px);filter:drop-shadow(0 15px 20px #0009) drop-shadow(0 0 25px #d8dfff25)}
-.card-front{background:#1b1c26}.card-back{background:radial-gradient(ellipse at 50% 48%,#3a4168,#141726 72%);border-color:#cbd3fdcc}
-.stage-meta{max-width:100%;border-top:1px solid #dbe1ff24;padding:12px 2px 0;color:#b7bfd4;margin:8px 0 0}.art-link{font-size:12px;color:#dce0f4}.motion-toggle{border:0;padding:5px 4px;background:transparent;color:#b7bfd4}
-.index{padding:36px 0 66px;border-top-color:#cdd5ff26}
-.index-head{align-items:end;margin-bottom:25px}
-.index-label{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:#aab3d0;margin:0 0 7px!important}
-.index-head h2{font-size:clamp(30px,3.5vw,48px);font-weight:560;line-height:1.05;letter-spacing:-.055em;color:#f3f4fc}
-.index-head h2 span{color:#aab8fc}.index-head>p{font-size:13px}
-.portals{gap:14px;border:0;border-radius:0;overflow:visible}
-.portal,.portal+.portal{border:1px solid #cbd5ff29;border-radius:12px;min-height:194px;padding:19px 20px 21px;gap:9px;overflow:hidden;isolation:isolate;background:linear-gradient(145deg,#b4c4ff12,#b4c4ff04 65%);transition:background .3s,border-color .3s,transform .3s,box-shadow .3s}
-.portal::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 82% 4%,var(--portal-glow,#a6b2ff28),transparent 65%);opacity:.7;transition:opacity .3s}
-.portal--game{--portal-glow:#7c8cfa3d}.portal--research{--portal-glow:#6cb7d637}.portal--art{--portal-glow:#b6a7ee35}.portal--community{--portal-glow:#88b2b733}
-.portal:hover,.portal:focus-visible{border-color:#c7d1ff80;transform:translateY(-4px);box-shadow:0 14px 28px #0003;background:linear-gradient(145deg,#b4c4ff20,#b4c4ff08)}.portal:hover::before{opacity:1}
-.portal-num{font-size:11px;color:#aeb8d4}.portal-symbol{position:absolute;right:19px;top:19px;width:47px;height:47px;display:block;color:#bfcaf6;opacity:.9;transition:transform .3s}.portal-symbol svg{display:block;width:100%;height:100%}
-.portal:hover .portal-symbol{transform:scale(1.08) rotate(-5deg)}
-.portal h3{font-size:clamp(19px,1.75vw,25px);font-weight:570;line-height:1.15;margin:57px 18px 0 0}
-.portal p{font-size:12px;line-height:1.5;color:#b5bfd4}
-.portal .arrow{font-size:18px;right:19px;top:auto;bottom:22px}.footer{border-top-color:#cdd5ff26;color:#aab3ca}
-@media(min-width:1150px){.hero h1{font-size:clamp(100px,10vw,144px)}}
-@media(max-width:1050px){.shell{width:calc(100% - 64px)}.hero{min-height:0}.hero h1{font-size:clamp(72px,10vw,104px)}.portal,.portal+.portal{min-height:182px;padding:17px}.portal h3{font-size:20px}.portal-symbol{width:40px;height:40px}.portal .arrow{right:14px;bottom:18px}}
-@media(max-width:840px){body{background:radial-gradient(ellipse 95% 36% at 70% 38%,#303759,#171c32 42%,transparent 80%),linear-gradient(153deg,#0a0c13,#111423 55%,#0a0d14)}.shell{width:calc(100% - 40px)}.site-header{min-height:auto;gap:13px}.top-nav{gap:11px 17px}.top-nav .cv-link{padding:0;border:0;background:none}.hero{padding:45px 0 37px;gap:26px}.hero h1{max-width:none;line-height:.92;font-size:clamp(58px,13vw,94px)}.hero h1>span{display:inline}.role{font-size:clamp(21px,4.4vw,29px)}.stage{width:min(100%,460px);justify-self:center}.stage-visual{aspect-ratio:1/1}.stage-meta{margin-top:0}.card-float{width:34%}.portals{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portal,.portal+.portal{min-height:168px;padding:14px;border:1px solid #cbd5ff29}.portal h3{font-size:clamp(17px,4vw,22px);margin-top:48px}.portal p{font-size:12px;padding-right:12px}.portal-symbol{width:37px;height:37px;right:13px;top:13px}.portal .arrow{bottom:15px;right:12px}.index{padding:25px 0 40px}.index-head>p{display:none}.footer-note{display:none}}
-@media(max-width:365px){.shell{width:calc(100% - 32px)}.hero h1{font-size:52px}.hero-actions .button{padding:11px 14px;gap:12px}.portal p{font-size:11px}}
-@media(prefers-reduced-motion:reduce){.portal:hover,.portal:focus-visible,.portal:hover .portal-symbol{transform:none}}
-
-.top-nav a[aria-current="page"]{color:#f5f6ff;text-decoration:underline;text-decoration-color:#bac7fb;text-underline-offset:7px}.top-nav .cv-link{background:none;border:0;padding:0}.top-nav{gap:clamp(14px,2vw,30px)}@media(max-width:840px){.top-nav{gap:10px 16px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Caiyi Shen — game designer, researcher and artist.">
+  <meta name="theme-color" content="#080a10">
+  <title>Caiyi Shen — Portfolio</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="celestial.css">
+  <script src="celestial-scene.js" defer></script>
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header shell">
-<a class="brand" href="index.html" aria-label="Caiyi Shen, home"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1.5 14.3 9.7 22.5 12 14.3 14.3 12 22.5 9.7 14.3 1.5 12 9.7 9.7Z" fill="currentColor"/><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width=".55"/></svg>Caiyi Shen</a>
-<nav class="top-nav" aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="research.html">Research</a><a href="game-design.html">Game Design</a><a href="art.html">2D &amp; 3D Art</a><a href="community.html">Community &amp; Content</a><a class="cv-link" href="cv.html">CV</a><a href="contact.html">Contact</a></nav>
-</header>
-<main class="shell" id="main">
-<section class="hero" aria-labelledby="home-title">
-<div class="hero-copy">
-<p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Portfolio <span class="eyebrow-sep" aria-hidden="true">/</span> Boston, MA</p>
-<h1 id="home-title"><span>Caiyi</span> <span>Shen<span class="name-dot">.</span></span></h1>
-<p class="role">Game Designer<span class="role-divider" aria-hidden="true"> / </span><br class="role-break">Researcher &amp; Artist</p>
-<p class="intro">I design interactive experiences through the lens of psychology, exploring how people play, learn and connect.</p>
-<div class="hero-actions"><a class="button button-primary" href="#explore">Explore portfolio <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-secondary" href="cv.html">View CV <span class="arrow" aria-hidden="true">↗</span></a></div>
-<p class="education-line">M.S. Game Science and Design · Northeastern University</p>
-</div>
-<figure class="stage" data-motion="playing">
-<div class="stage-visual"><div class="stage-glow" aria-hidden="true"></div><div class="stage-grid" aria-hidden="true"></div><span class="stage-coordinate" aria-hidden="true">✧</span>
-<svg class="orbit" viewBox="0 0 500 500" aria-hidden="true" focusable="false">
-<g class="orbit-line"><circle cx="250" cy="250" r="211" opacity=".20" stroke-dasharray="1 8"/><circle cx="250" cy="250" r="182" opacity=".38"/><circle cx="250" cy="250" r="161" opacity=".17"/><ellipse cx="250" cy="250" rx="220" ry="115" transform="rotate(35 250 250)" opacity=".43"/><ellipse cx="250" cy="250" rx="220" ry="115" transform="rotate(-35 250 250)" opacity=".43"/><path d="M250 33v22m0 390v22M33 250h22m390 0h22" opacity=".7"/><path d="M250 64 254 73 250 82 246 73ZM250 418l4 9-4 9-4-9Z" opacity=".8"/></g>
-<g class="orbit-star"><circle cx="68" cy="250" r="3" opacity=".8"/><circle cx="432" cy="250" r="2" opacity=".8"/><circle cx="250" cy="68" r="2.5"/><path d="M382 113l2 7 7 2-7 2-2 7-2-7-7-2 7-2ZM114 365l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" opacity=".9"/><circle cx="138" cy="99" r="1.5"/><circle cx="354" cy="409" r="1.5"/><circle cx="420" cy="155" r="1"/></g>
-</svg>
-<div class="card-space"><div class="card-float"><a class="card-spin card-link" href="projects/generate-deeplight-games.html#tarot-card" aria-label="View tarot card design for Deeplight Games">
-<span class="card-face card-front"><img src="assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp" width="758" height="1476" alt="Original tarot card artwork for Deeplight Games" fetchpriority="high" decoding="async"></span>
-<span class="card-face card-back" aria-hidden="true"><svg viewBox="0 0 160 300" fill="none"><g stroke="currentColor" stroke-width=".65"><rect x="17" y="15" width="126" height="270" rx="3"/><path d="M25 25H135V275H25Z M80 37V75 M80 225V263"/><circle cx="80" cy="150" r="46"/><circle cx="80" cy="150" r="38" stroke-dasharray="1 4"/><path d="M80 91 87 143 139 150 87 157 80 209 73 157 21 150 73 143Z M80 111 107 150 80 189 53 150Z"/><circle cx="80" cy="150" r="9"/><path d="M80 27l3 7-3 7-3-7ZM80 259l3 7-3 7-3-7Z"/></g><circle cx="80" cy="150" r="3" fill="currentColor"/></svg></span></a></div></div>
-</div>
-<figcaption class="stage-meta"><a class="art-link" href="projects/generate-deeplight-games.html#tarot-card">Tarot card · Deeplight Games <span aria-hidden="true">↗</span></a><button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause animation</button></figcaption>
-</figure>
-</section>
-<section class="index" id="explore" aria-labelledby="index-title">
-<div class="index-head"><div><p class="index-label">The collection</p><h2 id="index-title">Explore my work<span aria-hidden="true">.</span></h2></div><p>Four ways to explore my practice.</p></div>
-<nav class="portals" aria-label="Portfolio sections">
-<a class="portal portal--game" href="game-design.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m24 5 19 11v16L24 43 5 32V16L24 5Z M5 16l19 11 19-11M24 27v16M24 5v13" stroke="currentColor" stroke-width="1.1"/><path d="m24 15 8 5-8 5-8-5 8-5Z" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="20" r="2" fill="currentColor"/></svg></span><span class="portal-num">01</span><h3>Game Design</h3><p>Games, mechanics &amp; interactive systems</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal portal--research" href="research.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1"/><ellipse cx="24" cy="24" rx="18" ry="7" transform="rotate(45 24 24)" stroke="currentColor" stroke-width="1"/><ellipse cx="24" cy="24" rx="18" ry="7" transform="rotate(-45 24 24)" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="currentColor"/><circle cx="36" cy="12" r="2" fill="currentColor"/></svg></span><span class="portal-num">02</span><h3>Research</h3><p>Psychology, HCI &amp; player experience</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal portal--art" href="art.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M7 32 19 19l8 8 5-6 9 10M29 9v30M7 23h34" stroke="currentColor" stroke-width="1"/><path d="m34 11 1.8 4.2L40 17l-4.2 1.8L34 23l-1.8-4.2L28 17l4.2-1.8L34 11Z" fill="currentColor"/></svg></span><span class="portal-num">03</span><h3>2D &amp; 3D Art</h3><p>Concepts, characters &amp; environments</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal portal--community" href="community.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 24 8 11m16 13 16-13M24 24 8 37m16-13 16 13" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="1.1"/><circle cx="8" cy="11" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="40" cy="11" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="8" cy="37" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="40" cy="37" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="24" r="2" fill="currentColor"/></svg></span><span class="portal-num">04</span><h3>Community</h3><p>Content, localization &amp; player communities</p><span class="arrow" aria-hidden="true">↗</span></a>
-</nav>
-</section>
-</main>
-<footer class="footer shell"><span>© <span id="year">2026</span> Caiyi Shen</span><span class="footer-note">Design · Research · Art</span><a href="contact.html">Contact ↗</a></footer>
-<script>
-document.getElementById('year').textContent = String(new Date().getFullYear());
-const stage = document.querySelector('.stage');
-const motion = document.querySelector('.motion-toggle');
-const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (!preference.matches) motion.hidden = false;
-motion.addEventListener('click', () => {
-  const paused = stage.dataset.motion !== 'paused';
-  stage.dataset.motion = paused ? 'paused' : 'playing';
-  motion.setAttribute('aria-pressed', String(paused));
-  motion.textContent = paused ? 'Resume animation' : 'Pause animation';
-});
-preference.addEventListener?.('change', event => { motion.hidden = event.matches; });
-</script>
+<body class="celestial-home">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <a href="index.html" class="signature" aria-current="page">Caiyi Shen<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="game-design.html">Game Design</a><a href="research.html">Research</a><a href="art.html">Art</a><a href="community.html">Community</a><a href="cv.html">CV</a><a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="opening" aria-labelledby="name">
+      <div class="scene" id="tarot-scene">
+        <div class="scene-atmosphere" aria-hidden="true"></div>
+        <div class="scene-fallback" aria-hidden="true">
+          <div class="fallback-orbit"></div>
+          <img id="tarot-texture" src="assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp" width="758" height="1476" alt="" decoding="async" fetchpriority="high">
+        </div>
+        <canvas id="tarot-canvas" aria-hidden="true"></canvas>
+        <div class="scene-caption">
+          <a href="projects/generate-deeplight-games.html#tarot-card">Tarot card design <span aria-hidden="true">↗</span></a>
+          <button type="button" id="motion-control" hidden aria-pressed="false">Pause motion</button>
+        </div>
+      </div>
+      <div class="opening-copy">
+        <p class="overline"><span></span> PORTFOLIO</p>
+        <h1 id="name"><span>Caiyi</span> <span>Shen<span class="name-accent">.</span></span></h1>
+        <p class="identity">Game Designer<br>Researcher &amp; Artist</p>
+        <p class="statement">I design interactive experiences through the lens of psychology, exploring how people play, learn and connect.</p>
+        <div class="opening-links"><a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a href="cv.html" class="secondary-link">View CV <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="opening-foot"><span>Games / Human experience / Visual art</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="collection" id="work" aria-labelledby="work-heading">
+      <header class="collection-heading"><p>THE PORTFOLIO</p><h2 id="work-heading">Explore my work.</h2></header>
+      <nav class="work-index" aria-label="Portfolio disciplines">
+        <a href="game-design.html"><span class="ordinal">01</span><h3>Game Design</h3><span class="descriptor">Mechanics, systems &amp; interactive worlds</span><span class="direction" aria-hidden="true">↗</span></a>
+        <a href="research.html"><span class="ordinal">02</span><h3>Research</h3><span class="descriptor">Psychology, HCI &amp; player experience</span><span class="direction" aria-hidden="true">↗</span></a>
+        <a href="art.html"><span class="ordinal">03</span><h3>2D &amp; 3D Art</h3><span class="descriptor">Characters, concepts &amp; environments</span><span class="direction" aria-hidden="true">↗</span></a>
+        <a href="community.html"><span class="ordinal">04</span><h3>Community</h3><span class="descriptor">Gaming content &amp; shared knowledge</span><span class="direction" aria-hidden="true">↗</span></a>
+      </nav>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year">2026</span> Caiyi Shen</span><a href="contact.html">Contact ↗</a><a href="#main">Back to top ↑</a></footer>
 </body>
 </html>
