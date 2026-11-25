@@ -267,3 +267,19 @@ document.querySelectorAll('[data-video]').forEach((box) => {
     });
   });
 })();
+
+/* Editorial Atlas: progressive enhancement, never hide content without JS. */
+(() => {
+  const root = document.querySelector('.portfolio-atlas');
+  if (!root || !('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets = [...root.querySelectorAll('[data-atlas-reveal]')];
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      entry.target.classList.add('atlas-visible');
+      observer.unobserve(entry.target);
+    }
+  }, {threshold: .08});
+  root.classList.add('atlas-reveal-ready');
+  targets.forEach(target => observer.observe(target));
+})();
