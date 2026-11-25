@@ -28,7 +28,8 @@ ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
 .scene > canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease; }
 .scene.is-live > canvas { opacity: 1; }
 .scene .scene-poster { transition: opacity .8s ease; }
-.scene.is-live .scene-poster { opacity: 0; pointer-events: none; }
+.scene.is-live .scene-poster, .gl .scene .scene-poster { opacity: 0; pointer-events: none; }
+.gl .scene.no-webgl .scene-poster { opacity: 1; }
 
 /* Lightbox */
 dialog.lightbox { width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--lb-bg, rgba(5,7,9,.96)); color: var(--lb-fg, #eef1f2); }

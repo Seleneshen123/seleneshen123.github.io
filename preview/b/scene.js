@@ -36,7 +36,7 @@ const common = {
   fog: { color: '#080e14', near: 5, far: 16 },
   toneMapping: 'aces', exposure: 0.92,
   environmentIntensity: 0.5, envIntensity: 0.95,
-  edge: '#d8c18f', edgeRoughness: 0.24, clearcoat: 0.45,
+  edge: '#d8c18f', edgeRoughness: 0.4, clearcoat: 0.45,
   glow: '#9fd8ff', glowStrength: 1.8,
   lights: [
     { type: 'dir', color: '#d4e6ff', intensity: 1.55, position: [2.6, 4, 3.2] },
@@ -62,7 +62,7 @@ const homeTheme = {
     },
   },
   layout(st) {
-    if (st.mobile || st.aspect < 0.9) return { x: 0, y: 0.95, scale: 0.6 };
+    if (st.mobile || st.aspect < 0.9) return { x: 0, y: 0.5, scale: 0.5 };
     return { x: visibleWidth(5.4, 32, st.aspect) * 0.235, y: 0.08, scale: 0.7 };
   },
   intro: { duration: 3.8, revealStart: 0.35, revealEnd: 2.4 },

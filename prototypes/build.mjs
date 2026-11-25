@@ -69,7 +69,9 @@ export function ctxFor(dir, file) {
     current: p => toRoot + p,                      // a page of the current live site
     page: p => toDir + p,                          // a page in this direction
     shared: p => toPreview + 'shared/' + p,
-    importMap: () => `<script type="importmap">${JSON.stringify({ imports: { three: toPreview + 'shared/vendor/three/three.module.js', 'three/addons/': toPreview + 'shared/vendor/three/addons/' } })}</script>`,
+    // WebGL capability flag (hides the poster image before first paint when the
+    // 3D card will replace it) + the import map for three.js.
+    importMap: () => `<script>try{var gc=document.createElement('canvas');if(gc.getContext('webgl2')||gc.getContext('webgl'))document.documentElement.classList.add('gl')}catch(e){}</script>\n<script type="importmap">${JSON.stringify({ imports: { three: toPreview + 'shared/vendor/three/three.module.js', 'three/addons/': toPreview + 'shared/vendor/three/addons/' } })}</script>`,
     content, esc, h,
   };
 }

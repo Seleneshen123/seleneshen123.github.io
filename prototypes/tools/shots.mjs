@@ -16,7 +16,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 fs.mkdirSync(OUT, { recursive: true });
 
 const prof = path.resolve(OUT, '.profile-' + Date.now());
-const proc = spawn(EXE, ['--headless=new', '--enable-gpu', '--use-angle=d3d11', '--ignore-gpu-blocklist', '--hide-scrollbars', '--no-first-run', '--no-default-browser-check', `--remote-debugging-port=${PORT}`, `--user-data-dir=${prof}`, 'about:blank'], { stdio: 'ignore' });
+const proc = spawn(EXE, ['--headless=new', '--enable-gpu', '--use-angle=d3d11', '--ignore-gpu-blocklist', '--hide-scrollbars', '--no-first-run', '--no-default-browser-check', `--remote-debugging-port=${PORT}`, `--user-data-dir=${prof}`, ...(process.env.ARGS ? process.env.ARGS.split(' ') : []), 'about:blank'], { stdio: 'ignore' });
 let target; for (let i = 0; i < 200 && !target; i++) { try { target = (await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json()).find(t => t.type === 'page' && t.url === 'about:blank'); } catch {} await sleep(150); }
 const ws = new WebSocket(target.webSocketDebuggerUrl); await new Promise(r => ws.addEventListener('open', r));
 let id = 0; const pend = new Map(); let logs = [], failed = [];

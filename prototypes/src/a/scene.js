@@ -14,7 +14,7 @@ const theme = {
   environmentIntensity: 0.9,
   envIntensity: 1.05,
   edge: '#cdb98a', edgeRoughness: 0.28,
-  glow: '#2b45d8', glowStrength: 1.6,
+  glow: '#2b45d8', glowStrength: 1.2, revealNoise: 0.06,
   clearcoat: 0.4,
   lights: [
     { type: 'dir', color: '#ffffff', intensity: 1.75, position: [-2.5, 3.2, 4.5] },

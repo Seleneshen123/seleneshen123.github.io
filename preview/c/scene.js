@@ -12,7 +12,7 @@ const theme = {
   toneMapping: 'aces', exposure: 1.0,
   environmentIntensity: 0.32, envIntensity: 0.8,
   edge: '#cdb27c', edgeRoughness: 0.44, clearcoat: 0.5,
-  glow: '#e9f1f5', glowStrength: 1.4,
+  glow: '#e9f1f5', glowStrength: 1.4, revealNoise: 0.35,
   lights: [
     { type: 'spot', color: '#eef3f6', intensity: 5.2, position: [0.2, 5.2, 1.6], target: [0, 0, 0], angle: 0.34, penumbra: 0.95 },
     { type: 'dir', color: '#7f9aab', intensity: 1.1, position: [-2.5, 1, -3] },

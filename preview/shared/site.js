@@ -10,7 +10,7 @@ for (const btn of document.querySelectorAll('[data-menu-toggle]')) {
     btn.setAttribute('aria-expanded', String(open));
     document.documentElement.classList.toggle('menu-open', open);
     if (panel) panel.toggleAttribute('data-open', open);
-    if (open) panel?.querySelector('a')?.focus();
+    if (open) requestAnimationFrame(() => setTimeout(() => panel?.querySelector('a')?.focus(), 60));
   };
   btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
   addEventListener('keydown', e => { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); } });

@@ -73,11 +73,11 @@ function patchReveal(material, uniforms) {
   material.onBeforeCompile = shader => {
     Object.assign(shader.uniforms, uniforms);
     shader.vertexShader = 'varying vec3 vCardPos;\n' + shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n vCardPos = position;');
-    shader.fragmentShader = `uniform float uReveal; uniform float uGlow; uniform vec3 uGlowColor; uniform float uSweep; varying vec3 vCardPos;\n${NOISE}\n` + shader.fragmentShader
+    shader.fragmentShader = `uniform float uReveal; uniform float uGlow; uniform vec3 uGlowColor; uniform float uSweep; uniform float uNoiseMix; varying vec3 vCardPos;\n${NOISE}\n` + shader.fragmentShader
       .replace('#include <clipping_planes_fragment>', `#include <clipping_planes_fragment>
-        float revealField = cardFbm(vCardPos.xy * 5.0) * 0.62 + (vCardPos.y / ${CARD_H.toFixed(4)} + 0.5) * 0.38;
+        float revealField = cardFbm(vCardPos.xy * 5.0) * uNoiseMix + (vCardPos.y / ${CARD_H.toFixed(4)} + 0.5) * (1.0 - uNoiseMix);
         if (revealField > uReveal) discard;
-        float revealEdge = smoothstep(uReveal - 0.08, uReveal, revealField);`)
+        float revealEdge = smoothstep(uReveal - mix(0.012, 0.08, uNoiseMix), uReveal, revealField);`)
       .replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
         totalEmissiveRadiance += uGlowColor * revealEdge * uGlow;
         // A slow specular sweep across the surface (light catching the card).
@@ -226,7 +226,7 @@ export function loadImage(src) {
 }
 
 export function createCardMaterials(artImage, renderer, theme) {
-  const uniforms = { uReveal: { value: 1.2 }, uGlow: { value: 0 }, uGlowColor: { value: new THREE.Color(theme.glow || '#cfe8ff') }, uSweep: { value: -2 } };
+  const uniforms = { uReveal: { value: 1.2 }, uGlow: { value: 0 }, uGlowColor: { value: new THREE.Color(theme.glow || '#cfe8ff') }, uSweep: { value: -2 }, uNoiseMix: { value: theme.revealNoise ?? 0.62 } };
   const art = new THREE.Texture(artImage); art.colorSpace = THREE.SRGBColorSpace; art.anisotropy = renderer.capabilities.getMaxAnisotropy(); art.needsUpdate = true;
   const surface = buildSurfaceMap(artImage); surface.anisotropy = art.anisotropy;
   const front = new THREE.MeshPhysicalMaterial({
