@@ -36,7 +36,7 @@ const seg = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
 
 /* ---------- material maps from the artwork ---------- */
 // Packs roughness (G) and metalness (B) into one texture, as three.js expects.
-function buildSurfaceMap(image) {
+export function buildSurfaceMap(image) {
   const c = document.createElement('canvas');
   c.width = image.naturalWidth || image.width; c.height = image.naturalHeight || image.height;
   const x = c.getContext('2d', { willReadFrequently: true });

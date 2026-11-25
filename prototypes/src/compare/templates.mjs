@@ -1,0 +1,84 @@
+// Comparison page: switch between the three directions, their pages and
+// device sizes in one place. Neutral chrome so it doesn't bias the review.
+const DIRS = [
+  { id: 'a', name: 'A — Cinematic Futurism', short: 'Cinematic Futurism', ref: 'Arknights: Endfield', type: 'Archivo (expanded) + IBM Plex Mono',
+    text: 'A cold, light "frontier dossier": expanded technical display type, a strict 12-column grid, hairline frames and spec tables. The card is a specimen suspended in a pale clean-room volume, with fine dark dust in a lateral current and measured orbital rings.' },
+  { id: 'b', name: 'B — Ethereal Fantasy', short: 'Ethereal Fantasy', ref: 'Wuthering Waves · Cardcaptor Sakura', type: 'Cormorant + Jost',
+    text: 'A night-tide world that persists behind every page. The card is summoned — it rises with a slow in-plane turn inside a helix of luminous motes; scrolling carries the camera up through the particles. Light serif display, staggered layouts and echoing hairline frames.' },
+  { id: 'c', name: 'C — Cinematic Minimalism', short: 'Cinematic Minimalism', ref: 'Death Stranding 2 · editorial game sites', type: 'Instrument Serif + Instrument Sans',
+    text: 'Near-black and patient. The card stands alone under a single overhead light with dust only inside the beam; work is presented as 2.39:1 film stills with credit typography, four-corner navigation and fade-to-black cuts between pages.' },
+];
+const PAGES = [['index.html', 'Home'], ['game-design.html', 'Game Design'], ['research.html', 'Research'], ['art.html', 'Art'], ['projects/generate-deeplight-games.html', 'Project: Generate'], ['community.html', 'Community'], ['cv.html', 'CV'], ['contact.html', 'Contact']];
+
+function page(c) {
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio rebuild — compare directions A / B / C</title><meta name="robots" content="noindex"><link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/fonts.css"><link rel="stylesheet" href="shared/base.css">
+<style>
+  :root { color-scheme: dark; }
+  body { background: #0e1012; color: #e6e8e9; font: 400 14px/1.5 'Instrument Sans', system-ui, sans-serif; height: 100vh; display: grid; grid-template-rows: auto 1fr; overflow: hidden; }
+  .bar { display: grid; grid-template-columns: auto 1fr auto; gap: 1.2rem 2rem; align-items: center; padding: .8rem 1.2rem; border-bottom: 1px solid #262b30; background: #121518; }
+  .title { font: 400 1.35rem/1 'Instrument Serif', serif; } .title small { display: block; font: 500 10px/1.4 'IBM Plex Mono', monospace; letter-spacing: .12em; text-transform: uppercase; color: #848c93; margin-top: .3rem; }
+  .groups { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; align-items: center; }
+  .seg { display: inline-flex; border: 1px solid #30363c; }
+  .seg button { padding: .5rem .8rem; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; text-transform: uppercase; color: #aeb5ba; border-right: 1px solid #30363c; }
+  .seg button:last-child { border-right: 0; }
+  .seg button[aria-pressed="true"] { background: #e6e8e9; color: #0e1012; }
+  .seg.dirs button { font-size: 12px; padding: .55rem 1rem; }
+  select { background: #0e1012; color: #e6e8e9; border: 1px solid #30363c; padding: .45rem .6rem; font: 500 11px 'IBM Plex Mono', monospace; text-transform: uppercase; }
+  .links { display: flex; gap: 1rem; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; text-transform: uppercase; }
+  .links a { color: #e6e8e9; border-bottom: 1px solid #4a5157; padding-bottom: 2px; } .links a.warn { color: #e2cf9c; border-color: #8f7a45; }
+  .main { display: grid; grid-template-columns: 1fr 19rem; min-height: 0; }
+  .viewport { position: relative; overflow: auto; background: repeating-linear-gradient(45deg, #0c0e10 0 10px, #0f1113 10px 20px); display: grid; place-items: start center; padding: 1rem; }
+  .device { background: #000; box-shadow: 0 0 0 1px #2a2f34, 0 30px 60px rgba(0,0,0,.5); transform-origin: top center; }
+  iframe { display: block; border: 0; width: 100%; height: 100%; background: #000; }
+  aside { border-left: 1px solid #262b30; padding: 1.2rem; overflow: auto; display: grid; gap: 1rem; align-content: start; background: #121518; }
+  aside h2 { font: 400 1.6rem/1.05 'Instrument Serif', serif; }
+  .meta { display: grid; gap: .35rem; font-size: 12.5px; color: #9aa2a8; } .meta b { color: #e6e8e9; font-weight: 500; }
+  .note { font-size: 12.5px; color: #9aa2a8; border-top: 1px solid #262b30; padding-top: 1rem; }
+  kbd { font: 500 10px 'IBM Plex Mono', monospace; border: 1px solid #3a4046; padding: 1px 5px; }
+  @media (max-width: 1100px) { .main { grid-template-columns: 1fr; } aside { display: none; } .bar { grid-template-columns: 1fr; } }
+</style></head>
+<body>
+<header class="bar">
+  <p class="title">Portfolio rebuild<small>Three directions · local prototypes · not published</small></p>
+  <div class="groups">
+    <div class="seg dirs" role="group" aria-label="Direction">${DIRS.map((d, i) => `<button type="button" data-dir="${d.id}" aria-pressed="${i === 0}">${d.id.toUpperCase()} · ${d.short}</button>`).join('')}</div>
+    <label class="sr-only" for="pg">Page</label><select id="pg">${PAGES.map(([h, l]) => `<option value="${h}">${l}</option>`).join('')}</select>
+    <div class="seg" role="group" aria-label="Viewport"><button type="button" data-w="1440" data-h="900" aria-pressed="true">Desktop 1440</button><button type="button" data-w="1920" data-h="1080" aria-pressed="false">1920</button><button type="button" data-w="820" data-h="1180" aria-pressed="false">Tablet</button><button type="button" data-w="390" data-h="844" aria-pressed="false">Mobile</button></div>
+  </div>
+  <nav class="links" aria-label="Links"><a id="open" href="a/index.html" target="_blank" rel="noopener">Open in new tab ↗</a><a class="warn" href="card-backs/index.html" target="_blank" rel="noopener">Card-back concepts ↗</a></nav>
+</header>
+<div class="main">
+  <div class="viewport" id="vp"><div class="device" id="dev"><iframe id="frame" title="Prototype preview" src="a/index.html"></iframe></div></div>
+  <aside aria-live="polite">${DIRS.map((d, i) => `<section data-info="${d.id}"${i ? ' hidden' : ''}><h2>${d.name}</h2><div class="meta"><span><b>Reference</b> ${d.ref}</span><span><b>Type</b> ${d.type}</span></div><p>${d.text}</p></section>`).join('')}
+    <p class="note">Keys: <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> switch direction · <kbd>←</kbd> <kbd>→</kbd> change page. Pages marked with an alias cursor open the current live-site version (only Generate / Deeplight is rebuilt as a full project page in each prototype).</p>
+    <p class="note">Card backs: none is integrated. The prototypes keep the card front-facing until a reverse is approved.</p>
+  </aside>
+</div>
+<script>
+const st = { dir: 'a', page: 'index.html', w: 1440, h: 900 };
+const frame = document.getElementById('frame'), dev = document.getElementById('dev'), vp = document.getElementById('vp'), sel = document.getElementById('pg'), open = document.getElementById('open');
+const fromHash = () => { const m = location.hash.slice(1).split('/'); if (['a','b','c'].includes(m[0])) st.dir = m[0]; if (m[1]) st.page = decodeURIComponent(m.slice(1).join('/')); };
+function fit() { const avail = vp.clientWidth - 32; const s = Math.min(1, avail / st.w); dev.style.width = st.w + 'px'; dev.style.height = st.h + 'px'; dev.style.transform = 'scale(' + s + ')'; dev.style.marginBottom = (st.h * (s - 1)) + 'px'; }
+function apply(load = true) {
+  const src = st.dir + '/' + st.page;
+  if (load && !frame.src.endsWith(src)) frame.src = src;
+  open.href = src; sel.value = st.page;
+  for (const b of document.querySelectorAll('[data-dir]')) b.setAttribute('aria-pressed', String(b.dataset.dir === st.dir));
+  for (const b of document.querySelectorAll('[data-w]')) b.setAttribute('aria-pressed', String(+b.dataset.w === st.w));
+  for (const s of document.querySelectorAll('[data-info]')) s.hidden = s.dataset.info !== st.dir;
+  history.replaceState(null, '', '#' + st.dir + '/' + st.page); fit();
+}
+document.querySelectorAll('[data-dir]').forEach(b => b.addEventListener('click', () => { st.dir = b.dataset.dir; apply(); }));
+document.querySelectorAll('[data-w]').forEach(b => b.addEventListener('click', () => { st.w = +b.dataset.w; st.h = +b.dataset.h; apply(false); }));
+sel.addEventListener('change', () => { st.page = sel.value; apply(); });
+frame.addEventListener('load', () => { try { const p = frame.contentWindow.location.pathname; const m = p.match(/preview\\/([abc])\\/(.+)$/); if (m) { st.dir = m[1]; st.page = m[2]; apply(false); } } catch {} });
+addEventListener('keydown', e => { if (e.target.tagName === 'SELECT') return; if ('123'.includes(e.key)) { st.dir = 'abc'['123'.indexOf(e.key)]; apply(); }
+  const opts = [...sel.options].map(o => o.value), i = opts.indexOf(st.page); if (e.key === 'ArrowRight') { st.page = opts[(i + 1) % opts.length]; apply(); } if (e.key === 'ArrowLeft') { st.page = opts[(i - 1 + opts.length) % opts.length]; apply(); } });
+addEventListener('resize', fit); fromHash(); apply();
+</script>
+</body></html>`;
+}
+export const pages = { 'index.html': page };

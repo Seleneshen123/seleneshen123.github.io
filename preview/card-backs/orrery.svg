@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 758 1476" width="758" height="1476">
+<!-- CONCEPT — created by Claude (AI) for the artist's review. Not original artwork. -->
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e8b8"/><stop offset=".32" stop-color="#d8b764"/><stop offset=".58" stop-color="#9b7431"/><stop offset=".8" stop-color="#ecd48e"/><stop offset="1" stop-color="#b48d3d"/></linearGradient>
+  <linearGradient id="goldV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efd998"/><stop offset=".5" stop-color="#b38b3b"/><stop offset="1" stop-color="#efd998"/></linearGradient>
+  <radialGradient id="gem" cx=".38" cy=".34" r=".7"><stop offset="0" stop-color="#e9fdff"/><stop offset=".35" stop-color="#6fd6e6"/><stop offset=".8" stop-color="#1e7f97"/><stop offset="1" stop-color="#0f4b5d"/></radialGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c131b"/><stop offset=".5" stop-color="#132029"/><stop offset="1" stop-color="#0c131b"/></linearGradient>
+    <radialGradient id="sun" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#fff2c4"/><stop offset=".5" stop-color="#ddb965"/><stop offset="1" stop-color="#8f6a2a"/></radialGradient>
+  <clipPath id="card"><rect x="4" y="4" width="750" height="1468" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#card)"><rect width="758" height="1476" fill="url(#g)"/>
+  <rect x="14" y="14" width="730" height="1448" rx="18" fill="none" stroke="url(#gold)" stroke-width="11"/>
+  <rect x="34" y="34" width="690" height="1408" rx="10" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  <rect x="44" y="44" width="670" height="1388" rx="6" fill="none" stroke="#d8b764" stroke-opacity=".45" stroke-width="1"/>
+    <ellipse cx="379" cy="738" rx="110" ry="300" transform="rotate(24.07 379 738)" fill="none" stroke="#d8b764" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="379" cy="738" rx="170" ry="430" transform="rotate(-24.07 379 738)" fill="none" stroke="#d8b764" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="379" cy="738" rx="240" ry="560" transform="rotate(0 379 738)" fill="none" stroke="#d8b764" stroke-opacity=".55" stroke-width="1.2"/><circle cx="456" cy="525" r="7" fill="url(#gold)"/><circle cx="302" cy="951" r="7" fill="url(#gold)"/><circle cx="141" cy="768" r="5" fill="url(#gold)"/><circle cx="617" cy="708" r="5" fill="url(#gold)"/><circle cx="449" cy="1158" r="4" fill="url(#gold)"/><circle cx="309" cy="318" r="4" fill="url(#gold)"/>
+    <circle cx="379" cy="738" r="46" fill="url(#sun)"/><circle cx="395" cy="728" r="40" fill="#101b24"/>
+    <circle cx="379" cy="738" r="60" fill="none" stroke="#d8b764" stroke-opacity=".6"/>
+    <path d="M120 136Q122.52 147.48 134 150Q122.52 152.52 120 164Q117.48 152.52 106 150Q117.48 147.48 120 136Z" fill="#efd998"/><path d="M638 1312Q640.52 1323.48 652 1326Q640.52 1328.52 638 1340Q635.48 1328.52 624 1326Q635.48 1323.48 638 1312Z" fill="#efd998"/><path d="M638 136Q640.52 147.48 652 150Q640.52 152.52 638 164Q635.48 152.52 624 150Q635.48 147.48 638 136Z" fill="#efd998"/><path d="M120 1312Q122.52 1323.48 134 1326Q122.52 1328.52 120 1340Q117.48 1328.52 106 1326Q117.48 1323.48 120 1312Z" fill="#efd998"/>
+    <circle cx="379" cy="120" r="19" fill="none" stroke="url(#gold)" stroke-width="3"/><circle cx="379" cy="120" r="12" fill="url(#gem)"/><circle cx="379" cy="1356" r="19" fill="none" stroke="url(#gold)" stroke-width="3"/><circle cx="379" cy="1356" r="12" fill="url(#gem)"/></g>
+</svg>
