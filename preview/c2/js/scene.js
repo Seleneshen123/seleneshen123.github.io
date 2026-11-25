@@ -12,6 +12,8 @@ const clamp01 = v => Math.min(1, Math.max(0, v));
  * they read as one shot. The camera push-in (4.6 s) starts at the same T = 0
  * and simply runs a little longer, settling after the reveal. */
 export const REVEAL = 2.8;
+export const APPROACH = 2.4;   // camera push-in + entrance turn (was 4.6 s)
+const approachEase = t => 1 - Math.pow(1 - t, 2.6);
 const introEase = ease.inOutSine;
 const A = p => new URL(p, import.meta.url).href;
 
@@ -36,7 +38,7 @@ export const theme = {
   camera: {
     fov: 28,
     pose(p, k, st) {
-      const e = ease.inOutSine(k), t = st.t, s = st.scroll;
+      const e = approachEase(clamp01(st.t / APPROACH)), t = st.t, s = st.scroll;
       p.pos.set(Math.sin(t * 0.06) * 0.06, lerp(0.35, 0.12, e) + s * 0.9, lerp(10.5, 6.4, e) + s * 2.6);
       p.look.set(0, lerp(0.2, 0.18, e) + s * 1.3, 0);
       p.fov = lerp(24, 28, e);
@@ -46,10 +48,10 @@ export const theme = {
     if (st.mobile || st.aspect < 0.9) return { x: 0, y: 0.78, scale: 0.6 };
     return { x: 0, y: 0.38, scale: 0.62 };
   },
-  intro: { duration: 4.6, revealStart: 0, revealEnd: REVEAL, revealEase: introEase },
+  intro: { duration: 4.6, revealStart: 0, revealEnd: REVEAL, revealEase: introEase, revealFrom: 0.13 },
   yawLimit: 0.36,
   cardMotion(st, k, T) {
-    return { y: Math.sin(T * 0.45) * 0.03, yaw: Math.sin(T * 0.11) * 0.16 + (1 - ease.outCubic(k)) * 0.2, pitch: 0.02 + Math.sin(T * 0.09) * 0.02, roll: 0 };
+    return { y: Math.sin(T * 0.45) * 0.03, yaw: Math.sin(T * 0.11) * 0.16 + (1 - approachEase(clamp01(T / APPROACH))) * 0.2, pitch: 0.02 + Math.sin(T * 0.09) * 0.02, roll: 0 };
   },
   parallax: 0.06,
   particles: [
@@ -72,22 +74,28 @@ export const theme = {
     // The real lights come up with the beam (from a faint ambient floor, so
     // the frame is never black and nothing flashes).
     const lights = []; scene.traverse(o => { if (o.isLight) lights.push([o, o.intensity]); });
+    const dust = []; scene.traverse(o => { if (o.isPoints && o.material.uniforms?.uOpacity) dust.push([o.material.uniforms.uOpacity, o.material.uniforms.uOpacity.value]); });
+    const SPOT_GAMMA = 0.72;  // tuned against frame measurements (see DEVLOG)
     const cover = document.querySelector('.cover');
     const words = cover ? [...cover.querySelectorAll('.cover-name .w')] : [];
     const meta = cover ? [...cover.querySelectorAll('.cover-meta, .c2-next, .cover-credit')] : [];
     const portrait = matchMedia('(max-aspect-ratio: 1/1), (max-width: 760px)');
     const reducedMQ = matchMedia('(prefers-reduced-motion: reduce)');
     let done = false;
+    const M0 = 4;            // mask edge just above the cap height: letters begin to show at once
     if (cover) document.documentElement.classList.add('tl-driven');
     return { update(st, k, T) {
       const a = reducedMQ.matches ? 1 : introEase(clamp01(T / REVEAL));
-      beam.material.uniforms.uA.value = a * (1 - st.scroll * 0.6);
-      pool.material.uniforms.uA.value = a;
-      for (const [l, base] of lights) l.intensity = base * (0.14 + 0.86 * a);
+      const v = Math.pow(a, SPOT_GAMMA);
+      beam.material.uniforms.uA.value = v * (1 - st.scroll * 0.6);
+      pool.material.uniforms.uA.value = v;
+      for (const [u, base] of dust) u.value = base * v;
+      // The light on the card itself has a higher floor, so the card's first fragments are visible as soon as they form.
+      for (const [l, base] of lights) l.intensity = base * (0.5 + 0.5 * a);
       if (done || !cover) return;
       // Name: lit from above as the light comes up, tracking settling — same clock, same ease.
       const ls0 = portrait.matches ? 0.5 : 0.62, ls1 = portrait.matches ? 0.22 : 0.3;
-      for (const w of words) { w.style.setProperty('--m', (-30 + 130 * a).toFixed(2) + '%'); w.style.setProperty('--ls', (ls0 + (ls1 - ls0) * a).toFixed(4) + 'em'); w.style.opacity = String(clamp01(a / 0.12)); }
+      for (const w of words) { w.style.setProperty('--m', (M0 + (100 - M0) * a).toFixed(2) + '%'); w.style.setProperty('--ls', (ls0 + (ls1 - ls0) * a).toFixed(4) + 'em'); w.style.opacity = String(clamp01(a / 0.12)); }
       meta.forEach((m, i) => { m.style.opacity = String(Math.pow(a, 1.6 + i * 0.8)); });
       if (a >= 1) { done = true; for (const w of words) { w.style.removeProperty('--m'); w.style.removeProperty('--ls'); } document.documentElement.classList.add('scene-lit'); }
     } };

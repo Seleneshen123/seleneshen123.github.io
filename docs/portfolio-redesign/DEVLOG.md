@@ -72,3 +72,30 @@ Feedback: keep C's tarot rendering, lighting, camera and opening; reject C's typ
   All three share REVEAL = 2.8 s and the same in-out sine ease, and all reach their resting state on the same frame. The roles and chapter cue fade in on the same curve, a touch later in the curve. The camera push-in starts at T = 0 and settles at 4.6 s, unchanged from Direction C.
 - **Measured** (`filmstrip2.js`): mask −29 % / 0.618 em at 0.08 s · 10.7 % / 0.520 em at 1.0 s · 46.6 % / 0.432 em at 1.5 s · 100 % / 0.30 em at 2.8 s, with the card dissolve and light level tracking the same curve.
 - **Fallbacks:** without WebGL the original CSS sequence plays over the artwork image. With reduced motion the timeline resolves to its final frame immediately. A 6 s failsafe keeps the name visible.
+
+## Opening sequence — perceptual synchronization
+Identical start times did not mean the three appeared together. Frames were rendered with the opening clock frozen at exact times (QA hook `?freeze=<s>`) and the visible brightness was measured in three regions: name, card footprint, and beam/dust around them, each normalised from black to its final value.
+
+**Before:**
+- At T = 0 the dust column inside the beam was already visible; its particles were never faded, so the light shaped an empty frame.
+- At 0.75 s the beam was at 16 % while the card was at 8 % and the name at 3 %.
+- The name's mask started about 26 % above the letters, so the first ~0.7 s of its reveal was invisible.
+- The card started small and far away (a 4.6 s approach), so it read late.
+
+**Changes (the name effect, the dissolve effect and both 2.8 s durations unchanged):**
+- **Name:** the mask now starts at the top edge of the letters (M0 = 4 % instead of −30 %), removing only the invisible lead-in.
+- **Card:** the dissolve starts at its first readable fragment (reveal threshold 0.13 instead of −0.05).
+- **Entrance:** the camera push-in and the entrance turn settle in 2.4 s (was 4.6 s) on a decelerating ease, so the card reaches its position as the reveal completes. The slow idle rotation afterwards is unchanged, and so is the final composition.
+- **Spotlight:** the beam cone, the light pool and the beam dust now share one visibility curve, tuned against the measurements: (reveal progress)^0.72. The lights on the card start at 50 % so its first fragments are visible as soon as they form.
+
+**After (frozen frames, normalised):**
+
+| T | name | card | beam |
+| --- | --- | --- | --- |
+| 0.25 s | ~0 % (tops visible) | 1.5 % | 1.5 % |
+| 0.35 s | 1.4 % | 7.3 % | 6.2 % |
+| 0.45 s | 4.7 % | 14.8 % | 11.5 % |
+| 1.0 s | 34 % | 53 % | 40 % |
+| 2.8 s | 100 % | 100 % | 100 % |
+
+Visually, the tops of the letters, the card's first fragments and a faint beam surface together at about 0.3 s, both in frozen frames and in real-time playback. The spotlight is never visible before the name and card. (The name's measured brightness is lower than its visibility because only the tops of thin letters are lit at first; frames were judged by eye as well as by measurement.)

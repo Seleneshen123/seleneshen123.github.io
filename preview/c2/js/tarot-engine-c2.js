@@ -356,7 +356,9 @@ export async function mountScene(root, theme) {
   }
 
   // State.
-  const st = { t: 0, intro: reduce.matches ? 1 : 0, scroll: 0, px: 0, py: 0, tx: 0, ty: 0, aspect: 1, mobile: mobile(), running: false, visible: true };
+  // QA only: ?freeze=<seconds> holds the opening clock at an exact time.
+  const FREEZE = parseFloat(new URLSearchParams(location.search).get('freeze'));
+  const st = { t: Number.isFinite(FREEZE) ? FREEZE : 0, intro: reduce.matches ? 1 : 0, scroll: 0, px: 0, py: 0, tx: 0, ty: 0, aspect: 1, mobile: mobile(), running: false, visible: true };
   const pose = { pos: new THREE.Vector3(), look: new THREE.Vector3(), fov: 30 };
 
   function resize() {
@@ -391,7 +393,7 @@ export async function mountScene(root, theme) {
       cardPivot.position.set(c.x || 0, c.y || 0, c.z || 0);
       cardPivot.rotation.set(clamp((c.pitch || 0) - st.py * 0.14, -0.35, 0.35), clamp((c.yaw || 0) + st.px * 0.22, -yawLimit, yawLimit), c.roll || 0);
       cardPivot.scale.setScalar(c.scale ?? 1);
-      cardUniforms.uReveal.value = reduce.matches ? 1.2 : lerp(-0.05, 1.2, (I.revealEase || ease.inOutCubic)(seg(T, I.revealStart ?? 0.2, I.revealEnd ?? 1.8)));
+      cardUniforms.uReveal.value = reduce.matches ? 1.2 : lerp(I.revealFrom ?? -0.05, 1.2, (I.revealEase || ease.inOutCubic)(seg(T, I.revealStart ?? 0.2, I.revealEnd ?? 1.8)));
       cardUniforms.uGlow.value = reduce.matches ? 0 : (1 - seg(T, I.revealEnd ?? 1.8, (I.revealEnd ?? 1.8) + 0.6)) * (theme.glowStrength ?? 2.2);
       cardUniforms.uSweep.value = theme.sweep === false ? -3 : reduce.matches ? -3 : ((T * 0.22) % 4) - 2;
       updateGrating(cardUniforms, card, camera);
@@ -407,7 +409,7 @@ export async function mountScene(root, theme) {
   function loop(now) {
     raf = 0; if (!st.running) return;
     const dt = Math.min((now - last) / 1000, 0.05); last = now;
-    if (!reduce.matches) st.t += dt;
+    if (!reduce.matches && !Number.isFinite(FREEZE)) st.t += dt;
     if (dt > 0.026) { if (++slow > 45 && dpr > 1) { dpr = Math.max(1, dpr - 0.25); renderer.setPixelRatio(dpr); dprRef.value = dpr; resize(); slow = 0; } } else slow = Math.max(0, slow - 1);
     frame(dt);
     if (!reduce.matches) raf = requestAnimationFrame(loop);
