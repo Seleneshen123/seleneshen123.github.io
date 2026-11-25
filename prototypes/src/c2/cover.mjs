@@ -1,8 +1,8 @@
 // The homepage: a cinematic cover, not a summary of the portfolio.
 // Name, identity, one-line introduction, the tarot scene, navigation and the
 // way on to chapter 02.
-export function cover({ header, head }) {
-  const tarot = '../../assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp';
+export function cover({ header, head, assets = '../../assets/' }) {
+  const tarot = assets + 'projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp';
   const extra = `<script>document.documentElement.classList.add('js-anim');try{var gc=document.createElement('canvas');if(gc.getContext('webgl2')||gc.getContext('webgl'))document.documentElement.classList.add('gl')}catch(e){}</script>
 <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
 <script type="module" src="js/scene.js"></script>

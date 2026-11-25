@@ -124,3 +124,29 @@ Visually, the tops of the letters, the card's first fragments and a faint beam s
   - Parity: 0 regressions; Contact recorded as intentional and verified against the CV.
   - Chapter tests pass, including that scrolling past the end of the CV stays on the CV.
   - All 24 pages render clean at 1440 and 390.
+
+---
+
+# Production release — 2026-11-25
+- **Backup of the previous live site:** branch `backup/production-2026-11-25-f76c2fa` (= main f76c2fa).
+- **Build:** `node prototypes/build-c2.mjs --prod <checkout of main>` writes the site to the repository root.
+  - It reads main's pristine pages and uses main's own `styles.css` / `script.js`.
+  - It adds only `css/`, `js/`, `fonts/`, `vendor/three/` and `textures/` (the three textures in use).
+  - Old redirect stubs are published exactly as main had them, and `/contact.html` becomes a redirect to `cv.html#contact`.
+  - It drops `noindex` (except on redirects), the foil lab, the manifest and the QA freeze hook.
+  - Prototypes, comparison pages, docs and dev textures stay on the `redesign/*` branches and are not published.
+- **Merges** (squash, per the main ruleset):
+  - PR #11 → `67c9177` (release).
+  - PR #12 → `9cf1f3c`. The first live run found the three old-URL redirect pages logging a page-transition error while redirecting, and a favicon 404 on the contact redirect. Fixed by publishing main's original stubs.
+- **Pre-merge checks (production tree served at root):**
+  - Parity 137 media, 0 regressions.
+  - 0 broken internal links.
+  - 100 renders clean.
+  - Chapter, lightbox, filter, CV, menu and contrast tests pass.
+  - No dev paths or dev strings in the tree.
+- **Live checks (https://seleneshen123.github.io/):**
+  - All 53 published files byte-identical to main `9cf1f3c`.
+  - 100 live renders clean; chapter and interaction tests pass.
+  - Foil textures served (200).
+  - Opening sequence verified frame by frame.
+  - `/preview/`, `/prototypes/`, `/docs/`, `/lab/` and dev textures return 404.

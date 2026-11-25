@@ -21,7 +21,7 @@ for (const p of main) {
   if (p.page === 'contact.html') {
     // Contact removed (requested); its public details must appear at the foot of the CV.
     // The contact row sits in the CV's footer (outside <main>), so check the built page itself.
-    const cvFile = new URL('../../preview/c2/cv.html', import.meta.url);
+    const cvFile = process.env.CV_FILE || new URL('../../preview/c2/cv.html', import.meta.url);
     const cvHtml = fs.existsSync(cvFile) ? fs.readFileSync(cvFile, 'utf8') : '';
     const ext = p.links.filter(l => l.external).map(l => l.href);
     const ok = ext.every(h => cvHtml.includes(`href="${h}"`)) && cvHtml.includes('data-copy="shen.caiy@northeastern.edu"');

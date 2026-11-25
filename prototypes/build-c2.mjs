@@ -11,7 +11,13 @@ import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
-const OUT = path.join(ROOT, 'preview', 'c2');
+// Production mode: node build-c2.mjs --prod <outDir>
+// Writes the site to the ROOT of <outDir> (a checkout of main). Source pages are
+// always read from this worktree's pristine copies of main's pages.
+const PROD_I = process.argv.indexOf('--prod');
+const PROD = PROD_I > -1;
+const OUT = PROD ? path.resolve(process.argv[PROD_I + 1]) : path.join(ROOT, 'preview', 'c2');
+const BASE = PROD ? '' : 'preview/c2';            // where the built pages sit, relative to the repo root
 const NM = path.join(HERE, 'node_modules');
 const SRC = path.join(HERE, 'src', 'c2');
 const P = path.posix;
@@ -40,7 +46,7 @@ function rebase(url, pageRel) {
   if (!p) return url;
   const target = P.normalize(P.join(P.dirname(pageRel), p));
   if (/\.html$/i.test(p) || p.endsWith('/')) return url;
-  const from = P.join('preview/c2', P.dirname(pageRel));
+  const from = P.join(BASE, P.dirname(pageRel));
   return P.relative(from, target) + tail;
 }
 const rebaseSrcset = (v, pageRel) => v.split(',').map(s => { const [u, ...rest] = s.trim().split(/\s+/); return [rebase(u, pageRel), ...rest].join(' '); }).join(', ');
@@ -75,6 +81,7 @@ function headFor(original, pageRel, extra = '') {
   const desc = (original.match(/<meta name="description"[^>]*>/i) || [''])[0];
   const refresh = (original.match(/<meta http-equiv="refresh"[^>]*>/i) || [''])[0];
   const canonical = (original.match(/<link rel="canonical"[^>]*>/i) || [''])[0];
+  const robots = (original.match(/<meta name="robots"[^>]*>/i) || [''])[0];   // keep main's own (e.g. on redirect pages)
   return `<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,12 +90,12 @@ ${title}
 ${desc}
 ${canonical}
 <meta name="theme-color" content="#0a0b0d">
-<meta name="robots" content="noindex">
-<link rel="icon" href="${P.relative(P.join('preview/c2', P.dirname(pageRel)), 'assets/icons/favicon.svg')}" type="image/svg+xml">
+${PROD ? robots : '<meta name="robots" content="noindex">'}
+<link rel="icon" href="${P.relative(P.join(BASE, P.dirname(pageRel)), 'assets/icons/favicon.svg') || 'assets/icons/favicon.svg'}" type="image/svg+xml">
 <link rel="stylesheet" href="${up}css/fonts.css">
-<link rel="stylesheet" href="${up}css/layout.css">
+<link rel="stylesheet" href="${up}${PROD ? 'styles.css' : 'css/layout.css'}">
 <link rel="stylesheet" href="${up}css/c2.css">
-<script src="${up}js/site.js" defer></script>
+<script src="${up}${PROD ? 'script.js' : 'js/site.js'}" defer></script>
 <script src="${up}js/chapter.js" defer></script>
 ${extra}
 </head>`;
@@ -101,6 +108,10 @@ for (const pageRel of pages) {
   if (pageRel === 'index.html') continue;              // the cover is authored separately
   if (pageRel === 'contact.html') continue;            // Contact is folded into the end of the CV (requested)
   const orig = fs.readFileSync(path.join(ROOT, pageRel), 'utf8');
+  // Redirect stubs (old URLs kept alive by main with a meta refresh) are
+  // published exactly as main has them in production: wrapping them in the
+  // chapter chrome only made them opt into a page transition while redirecting.
+  if (PROD && /<meta http-equiv="refresh"/i.test(orig)) { write(path.join(OUT, pageRel), orig); built++; continue; }
   const bodyMatch = orig.match(/<body([^>]*)>([\s\S]*)<\/body>/i);
   if (!bodyMatch) continue;
   let body = bodyMatch[2];
@@ -159,15 +170,45 @@ ${body.trim()}
 
 /* ---------- cover (home) ---------- */
 const { cover } = await import('./src/c2/cover.mjs');
-write(path.join(OUT, 'index.html'), cover({ header: header('index.html', 0), head: x => headFor('<title>Caiyi Shen — Game Designer · Researcher · Artist</title><meta name="description" content="Caiyi Shen — game design, player-experience research and original 2D/3D art.">', 'index.html', x) }));
+const mainIndex = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');   // main's own title and description
+write(path.join(OUT, 'index.html'), cover({ assets: PROD ? 'assets/' : '../../assets/', header: header('index.html', 0), head: x => headFor(mainIndex, 'index.html', x) }));
 built++;
 
 /* ---------- static runtime ---------- */
-copy(path.join(ROOT, 'styles.css'), path.join(OUT, 'css/layout.css'));           // main's approved layout, unmodified
-copy(path.join(ROOT, 'script.js'), path.join(OUT, 'js/site.js'));                 // main's behaviour: filters, lightbox, video, copy
+if (!PROD) {
+  copy(path.join(ROOT, 'styles.css'), path.join(OUT, 'css/layout.css'));         // main's approved layout, unmodified
+  copy(path.join(ROOT, 'script.js'), path.join(OUT, 'js/site.js'));               // main's behaviour: filters, lightbox, video, copy
+  for (const f of fs.readdirSync(path.join(SRC, 'lab'))) copy(path.join(SRC, 'lab', f), path.join(OUT, 'lab', f));   // dev-only foil lab
+}
 for (const f of ['c2.css']) copy(path.join(SRC, f), path.join(OUT, 'css', f));
-for (const f of ['chapter.js', 'scene.js', 'tarot-engine-c2.js']) copy(path.join(SRC, f), path.join(OUT, 'js', f));
-for (const f of fs.readdirSync(path.join(SRC, 'lab'))) copy(path.join(SRC, 'lab', f), path.join(OUT, 'lab', f));
+for (const f of ['chapter.js', 'scene.js', 'tarot-engine-c2.js']) {
+  let js = fs.readFileSync(path.join(SRC, f), 'utf8');
+  if (PROD && f === 'scene.js') js = js.split("'../../../assets/").join("'../assets/");
+  // Production: the QA freeze hook (?freeze=<s>) is disabled and its comment removed.
+  if (PROD && f === 'tarot-engine-c2.js') js = js.replace("parseFloat(new URLSearchParams(location.search).get('freeze'))", 'NaN').replace(/ *\/\/ QA only: \?freeze=.*\n/, '');
+  write(path.join(OUT, 'js', f), js);
+}
+if (PROD) {
+  // Only the textures the site uses (the PNG base and panel mask are lab material).
+  for (const t of ['tarot-base-neutral.webp', 'tarot-surface.png', 'tarot-foil.png']) copy(path.join(ROOT, 'preview/c2/textures', t), path.join(OUT, 'textures', t));
+  // Keep the old Contact URL working without a Contact page.
+  write(path.join(OUT, 'contact.html'), `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=cv.html#contact">
+<link rel="canonical" href="https://seleneshen123.github.io/cv.html#contact">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<title>Contact — Caiyi Shen</title>
+</head>
+<body>
+<p>Contact details are at the end of the <a href="cv.html#contact">CV</a>.</p>
+</body>
+</html>
+`);
+}
 // three.js (MIT) — shared with the other prototypes
 const threeFiles = ['build/three.module.js', 'build/three.core.js', 'examples/jsm/postprocessing/EffectComposer.js', 'examples/jsm/postprocessing/RenderPass.js', 'examples/jsm/postprocessing/UnrealBloomPass.js', 'examples/jsm/postprocessing/ShaderPass.js', 'examples/jsm/postprocessing/OutputPass.js', 'examples/jsm/postprocessing/MaskPass.js', 'examples/jsm/postprocessing/Pass.js', 'examples/jsm/shaders/CopyShader.js', 'examples/jsm/shaders/LuminosityHighPassShader.js', 'examples/jsm/shaders/OutputShader.js', 'examples/jsm/environments/RoomEnvironment.js'];
 for (const f of threeFiles) copy(path.join(NM, 'three', f), path.join(OUT, 'vendor/three', f.replace(/^build\//, '').replace(/^examples\/jsm\//, 'addons/')));
@@ -177,5 +218,5 @@ const fonts = [['Tenor Sans', '@fontsource/tenor-sans', 'tenor-sans-latin-400-no
 let css = '/* Self-hosted fonts, SIL Open Font License 1.1 (Fontsource) */\n';
 for (const [fam, pkg, file, w] of fonts) { copy(path.join(NM, pkg, 'files', file), path.join(OUT, 'fonts', file)); copy(path.join(NM, pkg, 'LICENSE'), path.join(OUT, 'fonts', pkg.split('/').pop() + '-LICENSE.txt')); css += `@font-face{font-family:'${fam}';font-style:normal;font-display:swap;font-weight:${w};src:url(../fonts/${file}) format('woff2');}\n`; }
 write(path.join(OUT, 'css/fonts.css'), css);
-write(path.join(OUT, 'manifest.json'), JSON.stringify(manifest, null, 1));
-console.log(`C2: built ${built} pages into preview/c2/`);
+if (!PROD) write(path.join(OUT, 'manifest.json'), JSON.stringify(manifest, null, 1));
+console.log(`C2: built ${built} pages into ${PROD ? OUT + ' (production, site root)' : 'preview/c2/'}`);
