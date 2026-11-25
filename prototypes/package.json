@@ -1,0 +1,22 @@
+{
+  "name": "caiyi-shen-portfolio-prototypes",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Three interactive art-direction prototypes for the portfolio rebuild. Output is static HTML in ../preview (GitHub Pages compatible).",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node tools/serve.mjs 4190",
+    "qa": "node tools/qa.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/cormorant": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/jost": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "three": "^0.187.0"
+  }
+}
