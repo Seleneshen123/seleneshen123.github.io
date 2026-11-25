@@ -18,6 +18,63 @@
 @media(max-width:840px){.shell{width:calc(100% - 40px)}.site-header{align-items:flex-start;flex-direction:column;gap:15px;padding:19px 0 16px}.top-nav{gap:12px 18px}.top-nav a{font-size:12px}.top-nav .cv-link{padding:0;border:0}.hero{grid-template-columns:1fr;padding:45px 0 32px;gap:15px}.hero h1{font-size:clamp(54px,13vw,92px);white-space:normal}.eyebrow{margin-bottom:20px}.hero h1{margin-bottom:20px}.role{font-size:25px}.intro{font-size:15px;line-height:1.65;margin-bottom:24px}.stage{width:min(100%,430px);margin:0 auto}.stage-visual{min-height:0;aspect-ratio:1/1}.card-float{width:34%}.portals{grid-template-columns:repeat(2,minmax(0,1fr))}.portal{min-height:128px}.portal:nth-child(3){border-left:0}.portal:nth-child(n+3){border-top:1px solid var(--line)}.index{padding-bottom:40px}.index-head p{display:none}}
 @media(max-width:365px){.shell{width:calc(100% - 32px)}.hero h1{font-size:50px}.hero-actions{gap:8px}.button{padding:10px 12px;gap:14px}.portal h3{font-size:16px}.portal p{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-toggle{display:none}.card-spin,.card-spin:focus-visible,.card-float:hover .card-spin{transform:none}}
+
+/* Celestial III: atmosphere, scale and material. */
+:root{--bg:#0a0c12;--ink:#f5f6fb;--muted:#b5bbcd;--line:#ffffff20;--accent:#d1d4ff}
+html{background:#0a0c12}
+body{background:
+ radial-gradient(ellipse 58% 42% at 78% 24%,#303759 0%,#171c32 38%,transparent 76%),
+ radial-gradient(ellipse 40% 26% at 16% 82%,#23304766,transparent 80%),
+ linear-gradient(153deg,#0a0c13 12%,#111423 55%,#0a0d14 100%);min-height:100vh}
+.shell{width:min(1312px,calc(100% - 112px))}
+.site-header{min-height:88px;border-bottom-color:#e0e4ff1c;gap:20px}
+.brand{font-weight:680;letter-spacing:-.025em;font-size:16px}.brand svg{color:#e4e6ff;width:23px;height:23px}
+.top-nav{gap:clamp(18px,2.6vw,40px)}.top-nav a{font-weight:510;font-size:13px}
+.top-nav .cv-link{border-radius:100px;padding:8px 16px;background:#d5ddff0a;border-color:#cbd2ff38}
+.hero{position:relative;min-height:650px;gap:clamp(8px,3vw,44px);padding:clamp(50px,7vw,102px) 0 clamp(48px,6vw,86px)}
+.hero-copy{max-width:660px}
+.eyebrow{font-size:12px;letter-spacing:.075em;margin-bottom:27px;color:#d8dbec;text-transform:uppercase;gap:11px}.eyebrow::before{display:none}
+.eyebrow-line{width:27px;height:1px;background:#c9d0f8;box-shadow:0 0 12px #c9d0f8aa}.eyebrow-sep{color:#7c87aa}
+.hero h1{font-size:clamp(70px,8.55vw,128px);line-height:.87;letter-spacing:-.087em;white-space:normal;font-weight:600;margin:0 0 27px;max-width:6ch}
+.hero h1>span{display:block}.hero h1 .name-dot{display:inline;color:#bfc9ff}
+.role{font-size:clamp(22px,2.3vw,32px);font-weight:450;line-height:1.28;letter-spacing:-.047em;margin:0 0 18px;color:#e5e8f5}.role-break{display:none}.role-divider{color:#828db6;font-weight:300}
+.intro{font-size:clamp(15px,1.22vw,17px);max-width:43ch;line-height:1.7;color:#b9bfd2;margin-bottom:25px}
+.hero-actions{gap:10px}.button{min-height:48px;padding:12px 19px;border-radius:100px;gap:26px;font-size:13px}
+.button-primary{background:linear-gradient(105deg,#f7f7ff,#d8dfff);color:#111526;border:0;box-shadow:0 6px 28px #b9c5ff20}
+.button-primary:hover{background:#fff;box-shadow:0 7px 30px #b9c5ff45}
+.button-secondary{border-color:#b4c0f240;background:#afc0ff08}
+.education-line{margin:24px 0 0;font-size:12px;color:#aeb5ca;line-height:1.5}
+.stage{min-width:0;max-width:660px;width:100%;justify-self:end}
+.stage-visual{min-height:0;aspect-ratio:1/1;border-radius:0;overflow:visible;background:none}
+.stage-glow{position:absolute;inset:1%;border-radius:50%;z-index:-1;background:radial-gradient(ellipse,#7685b454 0%,#495c8d35 25%,#43456a20 44%,transparent 70%);filter:blur(16px);pointer-events:none}
+.stage-grid{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.24;background-image:linear-gradient(#bbc4ff28 1px,transparent 1px),linear-gradient(90deg,#bbc4ff28 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse,black 0%,transparent 66%)}
+.stage-coordinate{position:absolute;right:6%;top:6%;color:#d6dcff;font-size:24px;opacity:.8}
+.orbit{inset:0;width:100%;height:100%;opacity:1;filter:drop-shadow(0 0 8px #c3c8ff20)}
+.orbit-line{stroke:#c8d0fd;stroke-width:.8}
+.card-space{perspective:1350px}.card-float{width:clamp(130px,34%,214px);filter:drop-shadow(0 15px 20px #0009) drop-shadow(0 0 25px #d8dfff25)}
+.card-front{background:#1b1c26}.card-back{background:radial-gradient(ellipse at 50% 48%,#3a4168,#141726 72%);border-color:#cbd3fdcc}
+.stage-meta{max-width:100%;border-top:1px solid #dbe1ff24;padding:12px 2px 0;color:#b7bfd4;margin:8px 0 0}.art-link{font-size:12px;color:#dce0f4}.motion-toggle{border:0;padding:5px 4px;background:transparent;color:#b7bfd4}
+.index{padding:36px 0 66px;border-top-color:#cdd5ff26}
+.index-head{align-items:end;margin-bottom:25px}
+.index-label{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:#aab3d0;margin:0 0 7px!important}
+.index-head h2{font-size:clamp(30px,3.5vw,48px);font-weight:560;line-height:1.05;letter-spacing:-.055em;color:#f3f4fc}
+.index-head h2 span{color:#aab8fc}.index-head>p{font-size:13px}
+.portals{gap:14px;border:0;border-radius:0;overflow:visible}
+.portal,.portal+.portal{border:1px solid #cbd5ff29;border-radius:12px;min-height:194px;padding:19px 20px 21px;gap:9px;overflow:hidden;isolation:isolate;background:linear-gradient(145deg,#b4c4ff12,#b4c4ff04 65%);transition:background .3s,border-color .3s,transform .3s,box-shadow .3s}
+.portal::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 82% 4%,var(--portal-glow,#a6b2ff28),transparent 65%);opacity:.7;transition:opacity .3s}
+.portal--game{--portal-glow:#7c8cfa3d}.portal--research{--portal-glow:#6cb7d637}.portal--art{--portal-glow:#b6a7ee35}.portal--community{--portal-glow:#88b2b733}
+.portal:hover,.portal:focus-visible{border-color:#c7d1ff80;transform:translateY(-4px);box-shadow:0 14px 28px #0003;background:linear-gradient(145deg,#b4c4ff20,#b4c4ff08)}.portal:hover::before{opacity:1}
+.portal-num{font-size:11px;color:#aeb8d4}.portal-symbol{position:absolute;right:19px;top:19px;width:47px;height:47px;display:block;color:#bfcaf6;opacity:.9;transition:transform .3s}.portal-symbol svg{display:block;width:100%;height:100%}
+.portal:hover .portal-symbol{transform:scale(1.08) rotate(-5deg)}
+.portal h3{font-size:clamp(19px,1.75vw,25px);font-weight:570;line-height:1.15;margin:57px 18px 0 0}
+.portal p{font-size:12px;line-height:1.5;color:#b5bfd4}
+.portal .arrow{font-size:18px;right:19px;top:auto;bottom:22px}.footer{border-top-color:#cdd5ff26;color:#aab3ca}
+@media(min-width:1150px){.hero h1{font-size:clamp(100px,10vw,144px)}}
+@media(max-width:1050px){.shell{width:calc(100% - 64px)}.hero{min-height:0}.hero h1{font-size:clamp(72px,10vw,104px)}.portal,.portal+.portal{min-height:182px;padding:17px}.portal h3{font-size:20px}.portal-symbol{width:40px;height:40px}.portal .arrow{right:14px;bottom:18px}}
+@media(max-width:840px){body{background:radial-gradient(ellipse 95% 36% at 70% 38%,#303759,#171c32 42%,transparent 80%),linear-gradient(153deg,#0a0c13,#111423 55%,#0a0d14)}.shell{width:calc(100% - 40px)}.site-header{min-height:auto;gap:13px}.top-nav{gap:11px 17px}.top-nav .cv-link{padding:0;border:0;background:none}.hero{padding:45px 0 37px;gap:26px}.hero h1{max-width:none;line-height:.92;font-size:clamp(58px,13vw,94px)}.hero h1>span{display:inline}.role{font-size:clamp(21px,4.4vw,29px)}.stage{width:min(100%,460px);justify-self:center}.stage-visual{aspect-ratio:1/1}.stage-meta{margin-top:0}.card-float{width:34%}.portals{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portal,.portal+.portal{min-height:168px;padding:14px;border:1px solid #cbd5ff29}.portal h3{font-size:clamp(17px,4vw,22px);margin-top:48px}.portal p{font-size:12px;padding-right:12px}.portal-symbol{width:37px;height:37px;right:13px;top:13px}.portal .arrow{bottom:15px;right:12px}.index{padding:25px 0 40px}.index-head>p{display:none}.footer-note{display:none}}
+@media(max-width:365px){.shell{width:calc(100% - 32px)}.hero h1{font-size:52px}.hero-actions .button{padding:11px 14px;gap:12px}.portal p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.portal:hover,.portal:focus-visible,.portal:hover .portal-symbol{transform:none}}
+
 </style>
 </head>
 <body>
@@ -29,14 +86,15 @@
 <main class="shell" id="main">
 <section class="hero" aria-labelledby="home-title">
 <div class="hero-copy">
-<p class="eyebrow">Based in Boston, Massachusetts</p>
-<h1 id="home-title">Caiyi Shen<span style="color:#c6c9ee">.</span></h1>
-<p class="role">Game Designer · Researcher · Artist</p>
-<p class="intro">I design games and interactive experiences through the lens of psychology, exploring how people play, learn, and connect. Currently pursuing an M.S. in Game Science and Design at Northeastern University.</p>
+<p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Portfolio <span class="eyebrow-sep" aria-hidden="true">/</span> Boston, MA</p>
+<h1 id="home-title"><span>Caiyi</span> <span>Shen<span class="name-dot">.</span></span></h1>
+<p class="role">Game Designer<span class="role-divider" aria-hidden="true"> / </span><br class="role-break">Researcher &amp; Artist</p>
+<p class="intro">I design interactive experiences through the lens of psychology, exploring how people play, learn and connect.</p>
 <div class="hero-actions"><a class="button button-primary" href="#explore">Explore portfolio <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-secondary" href="cv.html">View CV <span class="arrow" aria-hidden="true">↗</span></a></div>
+<p class="education-line">M.S. Game Science and Design · Northeastern University</p>
 </div>
 <figure class="stage" data-motion="playing">
-<div class="stage-visual">
+<div class="stage-visual"><div class="stage-glow" aria-hidden="true"></div><div class="stage-grid" aria-hidden="true"></div><span class="stage-coordinate" aria-hidden="true">✧</span>
 <svg class="orbit" viewBox="0 0 500 500" aria-hidden="true" focusable="false">
 <g class="orbit-line"><circle cx="250" cy="250" r="211" opacity=".20" stroke-dasharray="1 8"/><circle cx="250" cy="250" r="182" opacity=".38"/><circle cx="250" cy="250" r="161" opacity=".17"/><ellipse cx="250" cy="250" rx="220" ry="115" transform="rotate(35 250 250)" opacity=".43"/><ellipse cx="250" cy="250" rx="220" ry="115" transform="rotate(-35 250 250)" opacity=".43"/><path d="M250 33v22m0 390v22M33 250h22m390 0h22" opacity=".7"/><path d="M250 64 254 73 250 82 246 73ZM250 418l4 9-4 9-4-9Z" opacity=".8"/></g>
 <g class="orbit-star"><circle cx="68" cy="250" r="3" opacity=".8"/><circle cx="432" cy="250" r="2" opacity=".8"/><circle cx="250" cy="68" r="2.5"/><path d="M382 113l2 7 7 2-7 2-2 7-2-7-7-2 7-2ZM114 365l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" opacity=".9"/><circle cx="138" cy="99" r="1.5"/><circle cx="354" cy="409" r="1.5"/><circle cx="420" cy="155" r="1"/></g>
@@ -49,16 +107,16 @@
 </figure>
 </section>
 <section class="index" id="explore" aria-labelledby="index-title">
-<div class="index-head"><h2 id="index-title">Explore by discipline</h2><p>Projects, process and experience</p></div>
+<div class="index-head"><div><p class="index-label">The collection</p><h2 id="index-title">Explore my work<span aria-hidden="true">.</span></h2></div><p>Four ways to explore my practice.</p></div>
 <nav class="portals" aria-label="Portfolio sections">
-<a class="portal" href="game-design.html"><span class="portal-num">01</span><h3>Game Design</h3><p>Games, mechanics &amp; interactive systems</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal" href="research.html"><span class="portal-num">02</span><h3>Research</h3><p>Psychology, HCI &amp; player experience</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal" href="art.html"><span class="portal-num">03</span><h3>2D &amp; 3D Art</h3><p>Concepts, characters &amp; environments</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="portal" href="community.html"><span class="portal-num">04</span><h3>Community</h3><p>Content, localization &amp; player communities</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="portal portal--game" href="game-design.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m24 5 19 11v16L24 43 5 32V16L24 5Z M5 16l19 11 19-11M24 27v16M24 5v13" stroke="currentColor" stroke-width="1.1"/><path d="m24 15 8 5-8 5-8-5 8-5Z" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="20" r="2" fill="currentColor"/></svg></span><span class="portal-num">01</span><h3>Game Design</h3><p>Games, mechanics &amp; interactive systems</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="portal portal--research" href="research.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1"/><ellipse cx="24" cy="24" rx="18" ry="7" transform="rotate(45 24 24)" stroke="currentColor" stroke-width="1"/><ellipse cx="24" cy="24" rx="18" ry="7" transform="rotate(-45 24 24)" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="3" fill="currentColor"/><circle cx="36" cy="12" r="2" fill="currentColor"/></svg></span><span class="portal-num">02</span><h3>Research</h3><p>Psychology, HCI &amp; player experience</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="portal portal--art" href="art.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M7 32 19 19l8 8 5-6 9 10M29 9v30M7 23h34" stroke="currentColor" stroke-width="1"/><path d="m34 11 1.8 4.2L40 17l-4.2 1.8L34 23l-1.8-4.2L28 17l4.2-1.8L34 11Z" fill="currentColor"/></svg></span><span class="portal-num">03</span><h3>2D &amp; 3D Art</h3><p>Concepts, characters &amp; environments</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="portal portal--community" href="community.html"><span class="portal-symbol"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 24 8 11m16 13 16-13M24 24 8 37m16-13 16 13" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="1.1"/><circle cx="8" cy="11" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="40" cy="11" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="8" cy="37" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="40" cy="37" r="4" stroke="currentColor" stroke-width="1.1"/><circle cx="24" cy="24" r="2" fill="currentColor"/></svg></span><span class="portal-num">04</span><h3>Community</h3><p>Content, localization &amp; player communities</p><span class="arrow" aria-hidden="true">↗</span></a>
 </nav>
 </section>
 </main>
-<footer class="footer shell"><span>© <span id="year">2026</span> Caiyi Shen</span><a href="contact.html">Contact ↗</a></footer>
+<footer class="footer shell"><span>© <span id="year">2026</span> Caiyi Shen</span><span class="footer-note">Design · Research · Art</span><a href="contact.html">Contact ↗</a></footer>
 <script>
 document.getElementById('year').textContent = String(new Date().getFullYear());
 const stage = document.querySelector('.stage');
