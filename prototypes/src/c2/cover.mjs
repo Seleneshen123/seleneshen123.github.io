@@ -5,7 +5,13 @@ export function cover({ header, head }) {
   const tarot = '../../assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp';
   const extra = `<script>document.documentElement.classList.add('js-anim');try{var gc=document.createElement('canvas');if(gc.getContext('webgl2')||gc.getContext('webgl'))document.documentElement.classList.add('gl')}catch(e){}</script>
 <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
-<script type="module" src="js/scene.js"></script>`;
+<script type="module" src="js/scene.js"></script>
+<link rel="modulepreload" href="js/tarot-engine-c2.js">
+<link rel="modulepreload" href="vendor/three/three.module.js">
+<link rel="modulepreload" href="vendor/three/three.core.js">
+<link rel="preload" as="image" href="textures/tarot-base-neutral.webp">
+<link rel="preload" as="image" href="textures/tarot-surface.png">
+<link rel="preload" as="image" href="textures/tarot-foil.png">`;
   return `<!doctype html>
 <html lang="en">
 ${head(extra)}

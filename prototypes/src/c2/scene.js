@@ -11,15 +11,19 @@ const clamp01 = v => Math.min(1, Math.max(0, v));
  * name and the card all start there and share REVEAL and the same ease, so
  * they read as one shot. The camera push-in (4.6 s) starts at the same T = 0
  * and simply runs a little longer, settling after the reveal. */
-export const REVEAL = 2.2;
-export const APPROACH = 1.8;   // camera push-in + entrance turn (was 2.4 s, originally 4.6 s)
+export const REVEAL = 1.5;
+export const APPROACH = 1.3;   // camera push-in + entrance turn (was 1.8 s, originally 4.6 s)
 const approachEase = t => 1 - Math.pow(1 - t, 2.6);
-const introEase = ease.inOutSine;
+// Light and card dissolve: a sine ease-out, visible from the first frames
+// (the earlier in-out curve held the opening near black for ~0.25 s).
+const introEase = t => Math.sin(t * Math.PI / 2);
+// Name: front-loaded so most of the letters are lit within ~0.8 s.
+const nameEase = t => 1 - Math.pow(1 - t, 3);
 const A = p => new URL(p, import.meta.url).href;
 
 export const theme = {
   cardSrc: A('../../../assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp'),
-  cardMaps: { base: A('../textures/tarot-base-neutral.png'), surface: A('../textures/tarot-surface.png'), foil: A('../textures/tarot-foil.png') },
+  cardMaps: { base: A('../textures/tarot-base-neutral.webp'), surface: A('../textures/tarot-surface.png'), foil: A('../textures/tarot-foil.png') },
   foil: { strength: 0.85, gain: 1.4, floor: 0.003, saturation: 0.6, bandFreq: 3.0, thickPhase: 0.35, bandsAcross: 2.2, iridescence: 0.4, ior: 1.5, thicknessRange: [240, 520], clearcoatRoughness: 0.16 },
   sweep: false,
   background: '#050607',
@@ -85,7 +89,9 @@ export const theme = {
     const M0 = 4;            // mask edge just above the cap height: letters begin to show at once
     if (cover) document.documentElement.classList.add('tl-driven');
     return { update(st, k, T) {
-      const a = reducedMQ.matches ? 1 : introEase(clamp01(T / REVEAL));
+      const p = clamp01(T / REVEAL);
+      const a = reducedMQ.matches ? 1 : introEase(p);
+      const an = reducedMQ.matches ? 1 : nameEase(p);
       const v = Math.pow(a, SPOT_GAMMA);
       beam.material.uniforms.uA.value = v * (1 - st.scroll * 0.6);
       pool.material.uniforms.uA.value = v;
@@ -95,9 +101,9 @@ export const theme = {
       if (done || !cover) return;
       // Name: lit from above as the light comes up, tracking settling — same clock, same ease.
       const ls0 = portrait.matches ? 0.5 : 0.62, ls1 = portrait.matches ? 0.22 : 0.3;
-      for (const w of words) { w.style.setProperty('--m', (M0 + (100 - M0) * a).toFixed(2) + '%'); w.style.setProperty('--ls', (ls0 + (ls1 - ls0) * a).toFixed(4) + 'em'); w.style.opacity = String(clamp01(a / 0.12)); }
+      for (const w of words) { w.style.setProperty('--m', (M0 + (100 - M0) * an).toFixed(2) + '%'); w.style.setProperty('--ls', (ls0 + (ls1 - ls0) * an).toFixed(4) + 'em'); w.style.opacity = String(clamp01(an / 0.12)); }
       meta.forEach((m, i) => { m.style.opacity = String(Math.pow(a, 1.6 + i * 0.8)); });
-      if (a >= 1) { done = true; for (const w of words) { w.style.removeProperty('--m'); w.style.removeProperty('--ls'); } document.documentElement.classList.add('scene-lit'); }
+      if (p >= 1) { done = true; for (const w of words) { w.style.removeProperty('--m'); w.style.removeProperty('--ls'); } document.documentElement.classList.add('scene-lit'); }
     } };
   },
 };

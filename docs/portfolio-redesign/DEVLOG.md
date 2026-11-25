@@ -104,3 +104,13 @@ Visually, the tops of the letters, the card's first fragments and a faint beam s
 - The shared reveal (spotlight, name, card dissolve) is now 2.2 s (was 2.8 s). The camera approach and entrance turn take 1.8 s (was 2.4 s).
 - Easing curves, onset offsets, the spotlight curve, the final composition and the idle float/rotation speeds are unchanged.
 - **Synchronization re-measured on frozen frames:** the letter tops, the card's first fragments and the beam surface together at about 0.25 s; the card is in place at 1.8 s; everything rests at 2.2 s.
+
+## Opening sequence — immediate
+- **Durations:** the shared reveal is 1.5 s (was 2.2 s); the camera approach and entrance turn take 1.3 s (was 1.8 s). The idle float and rotation are unchanged.
+- **Easing:** the name uses an ease-out cubic, so most letters are lit by about 0.4 s and all by 0.8 s. The spotlight and card dissolve use a sine ease-out. The previous in-out curve held the opening near black for ~0.25 s; the new curves are visible from the first frames. The reveal styles and the final composition are unchanged.
+- **Synchronization (frozen frames, normalised):** at 0.04 s name 5 % / card 5 % / beam 7 %; at 0.2 s 35 % / 36 % / 36 %; the three stay within a few percent of each other. Real time: all three are on screen at 0.06 s.
+- **Start-up before T = 0:**
+  - The card's textures are now preloaded and requested in parallel; previously they were requested only after the renderer and environment set-up (they arrived ~0.9 s late).
+  - The neutral base is served as WebP: 232 KB instead of 1.06 MB.
+  - With a warm GPU process the first frame now arrives ~0.17–0.24 s after first paint. A cold, freshly started headless browser still takes ~1 s, almost all of it WebGL context creation and first-time shader compilation. Parallel shader compilation was tried and gave no measurable gain, so it was not kept.
+  - `performance.mark('c2:*')` timing marks are left in for QA.

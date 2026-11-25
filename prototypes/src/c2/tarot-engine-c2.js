@@ -287,6 +287,10 @@ export function updateGrating(uniforms, card, camera, dir = [0.6, 0.8, 0]) {
 }
 
 export async function mountScene(root, theme) {
+  performance.mark('c2:mount');
+  // Request the artwork and its material maps immediately and in parallel, so
+  // they arrive while the renderer and environment are being prepared.
+  const pending = theme.card === false ? null : Promise.all([theme.cardSrc, ...(theme.cardMaps ? [theme.cardMaps.base, theme.cardMaps.surface, theme.cardMaps.foil] : [])].map(src => loadImage(src).catch(() => null)));
   const canvas = root.querySelector('canvas');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (!canvas || !webglAvailable()) { root.classList.add('no-webgl'); return null; }
@@ -306,8 +310,10 @@ export async function mountScene(root, theme) {
   const scene = new THREE.Scene();
   if (!theme.transparent) scene.background = new THREE.Color(theme.background);
   if (theme.fog) scene.fog = new THREE.Fog(theme.fog.color, theme.fog.near, theme.fog.far);
+  performance.mark('c2:renderer');
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  performance.mark('c2:pmrem');
   scene.environmentIntensity = theme.environmentIntensity ?? 1;
   if (theme.environmentRotation) scene.environmentRotation.set(...theme.environmentRotation);
 
@@ -327,9 +333,11 @@ export async function mountScene(root, theme) {
   const cardPivot = new THREE.Group(); rig.add(cardPivot);
   let card = null, cardUniforms = null;
   if (theme.card !== false) {
-    const img = await loadImage(theme.cardSrc);
+    const [img, base, surface, foil] = await pending;
     let maps = null;
-    if (theme.cardMaps) { try { const [base, surface, foil] = await Promise.all([theme.cardMaps.base, theme.cardMaps.surface, theme.cardMaps.foil].map(loadImage)); maps = { base, surface, foil }; } catch (e) { console.warn('Derived card maps unavailable; using the artwork directly without foil.', e); } }
+    if (theme.cardMaps && base && surface && foil) maps = { base, surface, foil };
+    else if (theme.cardMaps) console.warn('Derived card maps unavailable; using the artwork directly without foil.');
+    performance.mark('c2:images');
     const built = createCardMaterials(img, renderer, theme, maps);
     card = new THREE.Mesh(buildCardGeometry(theme.cardGeometry), built.materials);
     cardUniforms = built.uniforms;
@@ -427,7 +435,9 @@ export async function mountScene(root, theme) {
   if (!reduce.matches) addEventListener('pointermove', e => { if (e.pointerType !== 'mouse') return; st.tx = (e.clientX / innerWidth) * 2 - 1; st.ty = -((e.clientY / innerHeight) * 2 - 1); }, { passive: true });
   reduce.addEventListener?.('change', () => { stop(); updateRun(); frame(0); });
 
+  performance.mark('c2:setup');
   frame(0);
+  performance.mark('c2:firstframe');
   root.classList.add('is-live');
   updateRun();
   if (reduce.matches) frame(0);

@@ -88,10 +88,12 @@ const expr = `(async () => {
     fd[k] = Math.round(foilS * 255); fd[k + 1] = Math.round(Math.min(1, Math.max(0, th)) * 255); fd[k + 2] = 0; fd[k + 3] = 255; }
   const pm = new ImageData(W, H); for (let i = 0; i < W * H; i++) { const k = i * 4; pm.data[k] = pm.data[k + 1] = pm.data[k + 2] = m2[i]; pm.data[k + 3] = 255; }
   const png = im => { const c = cv(W, H); c.getContext('2d').putImageData(im, 0, 0); return c.toDataURL('image/png'); };
+  const webp = im => { const c = cv(W, H); c.getContext('2d').putImageData(im, 0, 0); return c.toDataURL('image/webp', 0.95); };
   return { W, H, creamTop, panelPx, tint, meanBefore: before.map(c => Math.round(c / panelPx)), meanAfter: after.map(c => Math.round(c / panelPx)),
-    base: png(base), surface: png(surf), foil: png(foil), mask: png(pm) };
+    base: png(base), baseWebp: webp(base), surface: png(surf), foil: png(foil), mask: png(pm) };
 })()`;
 const r = (await send('Runtime.evaluate', { expression: expr, awaitPromise: true, returnByValue: true })).result.value;
+fs.writeFileSync(path.join(OUT, 'tarot-base-neutral.webp'), Buffer.from(r.baseWebp.split(',')[1], 'base64'));
 for (const k of ['base', 'surface', 'foil', 'mask']) fs.writeFileSync(path.join(OUT, `tarot-${k === 'base' ? 'base-neutral' : k === 'mask' ? 'panel-mask' : k}.png`), Buffer.from(r[k].split(',')[1], 'base64'));
 const meta = { source: 'assets/projects/generate-deeplight-games/tarot-card-design-v2-tight-758.webp', tintReference: 'assets/projects/generate-deeplight-games/tarot-card-design-tight-755.webp', size: [r.W, r.H], creamTop: r.creamTop, panelPixels: r.panelPx, tint: r.tint.map(v => +v.toFixed(4)), panelMeanRGB: { before: r.meanBefore, after: r.meanAfter }, generated: new Date().toISOString() };
 fs.writeFileSync(path.join(OUT, 'tarot-textures.json'), JSON.stringify(meta, null, 1));
