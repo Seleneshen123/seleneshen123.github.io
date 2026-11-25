@@ -15,6 +15,7 @@
   if (!gl) return;
   const projection = 'vec4 project(vec3 p){float z=uCamera.z-p.z;return vec4((p.x-uCamera.x)*uFocal/uAspect,(p.y-uCamera.y)*uFocal,1.004008*z-0.2004008,z);}';
   const meshVS = [
+    'precision mediump float;',
     'attribute vec3 aPos,aNormal;attribute vec2 aUV;uniform vec3 uCamera,uRotation;uniform float uAspect,uFocal,uLift;',
     'varying vec2 vUV;varying vec3 vNormal,vWorld;',
     projection,
@@ -27,6 +28,7 @@
     'vec4 tex=texture2D(uTexture,vUV);if(uMetal<0.5&&tex.a<0.08)discard;vec3 base=mix(tex.rgb,vec3(0.63,0.50,0.27),uMetal);vec3 color=base*(0.78+0.25*diffuse)+vec3(0.76,0.84,1.0)*(spec*mix(0.19,0.7,uMetal)+fresnel*mix(0.035,0.25,uMetal));gl_FragColor=vec4(color,mix(tex.a,1.0,uMetal));}'
   ].join('\n');
   const particleVS = [
+    'precision mediump float;',
     'attribute vec4 aParticle;attribute vec2 aStyle;uniform vec3 uCamera;uniform float uAspect,uFocal,uTime,uDpr;',
     'varying float vAlpha,vHue,vKind;',
     projection,
