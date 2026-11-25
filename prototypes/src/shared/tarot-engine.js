@@ -248,7 +248,7 @@ export async function mountScene(root, theme) {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: !!theme.transparent, powerPreference: 'high-performance' });
   } catch (e) { root.classList.add('no-webgl'); return null; }
   const mobile = () => innerWidth < 768;
-  const maxDpr = () => Math.min(devicePixelRatio || 1, mobile() ? 1.5 : 1.75);
+  const maxDpr = () => Math.min(devicePixelRatio || 1, theme.maxDpr ?? (mobile() ? 1.5 : 1.75));
   let dpr = maxDpr();
   renderer.setPixelRatio(dpr);
   renderer.toneMapping = theme.toneMapping === 'aces' ? THREE.ACESFilmicToneMapping : THREE.NeutralToneMapping;
