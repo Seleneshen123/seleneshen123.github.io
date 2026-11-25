@@ -20,7 +20,7 @@
   const link = document.querySelector('[data-next-chapter]');
   if (!link) return;
   const isCover = document.body.classList.contains('is-cover');
-  const NEXT = { 'research.html': ['02', 'Research'], 'game-design.html': ['03', 'Game Design'], 'art.html': ['04', '2D & 3D Art'], 'community.html': ['05', 'Community & Content'], 'cv.html': ['06', 'CV'], 'contact.html': ['07', 'Contact'] };
+  const NEXT = { 'research.html': ['02', 'Research'], 'game-design.html': ['03', 'Game Design'], 'art.html': ['04', '2D & 3D Art'], 'community.html': ['05', 'Community & Content'], 'cv.html': ['06', 'CV'] };
   const target = link.getAttribute('href'); const meta = NEXT[target.split('/').pop()];
   if (!meta) return;
 

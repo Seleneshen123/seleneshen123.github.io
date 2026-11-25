@@ -114,3 +114,13 @@ Visually, the tops of the letters, the card's first fragments and a faint beam s
   - The neutral base is served as WebP: 232 KB instead of 1.06 MB.
   - With a warm GPU process the first frame now arrives ~0.17–0.24 s after first paint. A cold, freshly started headless browser still takes ~1 s, almost all of it WebGL context creation and first-time shader compilation. Parallel shader compilation was tried and gave no measurable gain, so it was not kept.
   - `performance.mark('c2:*')` timing marks are left in for QA.
+
+## Contact page removed
+- Six chapters: Home, Research, Game Design, 2D & 3D Art, Community & Content, CV. Contact is removed from the desktop navigation, the mobile index, the chapter rail and the boundary transitions (`chapter.js` has no next chapter after CV).
+- `contact.html` is no longer built.
+- The CV's "Next: Contact" link is replaced by a compact "Contact" row in the CV footer, carrying main's own contact markup (email with the copy button, itch.io). main's copy script works unchanged.
+- **Checks:**
+  - New `tools/linkcheck.mjs`: 957 internal references across all built pages, 0 broken. This also found and fixed a skip-link target missing on the BeforeHello redirect page.
+  - Parity: 0 regressions; Contact recorded as intentional and verified against the CV.
+  - Chapter tests pass, including that scrolling past the end of the CV stays on the CV.
+  - All 24 pages render clean at 1440 and 390.

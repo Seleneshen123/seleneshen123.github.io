@@ -57,7 +57,6 @@ body.c2 { background: var(--paper); }
 .ch-04 { --lx: 50%; --lw: 80vw; --la: .065; --lh: 85vh; }
 .ch-05 { --lx: 74%; --lw: 44vw; --la: .075; }
 .ch-06 { --lx: 50%; --lw: 36vw; --la: .06; }
-.ch-07 { --lx: 50%; --lw: 30vw; --la: .1; --lh: 60vh; }
 
 /* ---------- chrome ---------- */
 .c2-bar { position: fixed; z-index: 60; inset: 0 0 auto; height: var(--bar); display: flex; align-items: center; gap: 2rem; padding: 0 var(--gutter);
@@ -223,3 +222,13 @@ main#main { padding-top: var(--bar); }
 .tl-driven .cover-meta, .tl-driven .cover .c2-next, .tl-driven .cover-credit { transition: none !important; }
 .tl-driven.scene-lit .cover-name .w { opacity: 1; --m: 100%; --ls: .3em; }
 @media (max-aspect-ratio: 1/1), (max-width: 760px) { .tl-driven.scene-lit .cover-name .w { --ls: .22em; } }
+
+/* Contact, at the foot of the final chapter (CV): one understated row. */
+.c2-contact { display: grid; grid-template-columns: 8rem minmax(0, 1fr); align-items: baseline; gap: 1rem 2rem; padding-block: clamp(1.8rem, 4vh, 2.6rem) 1.4rem; }
+.c2-contact-label { margin: 0; font: 500 .62rem/1.4 var(--font-mono) !important; letter-spacing: .2em !important; text-transform: uppercase; color: var(--ink-faint); }
+.c2 .c2-contact-list { grid-column: auto; display: flex; flex-wrap: wrap; gap: .4rem 2.6rem; border: 0; }
+.c2 .c2-contact-list li { border: 0; }
+.c2 .c2-contact-list a, .c2 .c2-contact-list .contact-copy { display: inline-flex; align-items: baseline; gap: .8rem; padding: .2rem 0; grid-template-columns: none; }
+.c2 .c2-contact-list .contact-kind { font-size: .6rem; letter-spacing: .16em; }
+.c2 .c2-contact-list .contact-val { font: 400 .95rem/1.4 var(--font-sans); letter-spacing: .01em; color: var(--ink-soft); }
+@media (max-width: 600px) { .c2-contact { grid-template-columns: 1fr; gap: .6rem; } .c2 .c2-contact-list { flex-direction: column; gap: .5rem; } }

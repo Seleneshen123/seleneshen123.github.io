@@ -6,7 +6,7 @@ Compared per page, in DOM order: media source, srcset, sizes, intrinsic dimensio
 | --- | --- | --- | --- | --- |
 | `art.html` | match | 12/12 | 7/7 |  |
 | `community.html` | match | 0/0 | 2/2 |  |
-| `contact.html` | match | 0/0 | 1/1 |  |
+| `contact.html` | intentional |  |  | Page removed (requested); its public contact details (email with copy button; https://ca1y1.itch.io/) are at the foot of cv.html. |
 | `cv.html` | match + intentional | 0/1 | 11/13 | intentional: media count 0 → 1 · intentional: embeds  → assets/cv/caiyi-shen-cv.pdf · intentional: heading outline differs |
 | `game-design.html` | match | 22/22 | 68/68 |  |
 | `games/cena-floris.html` | match | 7/7 | 11/11 |  |

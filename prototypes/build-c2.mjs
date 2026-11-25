@@ -20,7 +20,7 @@ const copy = (a, b) => { fs.mkdirSync(path.dirname(b), { recursive: true }); fs.
 
 export const CHAPTERS = [
   ['index.html', 'Home', '01'], ['research.html', 'Research', '02'], ['game-design.html', 'Game Design', '03'],
-  ['art.html', '2D & 3D Art', '04'], ['community.html', 'Community & Content', '05'], ['cv.html', 'CV', '06'], ['contact.html', 'Contact', '07'],
+  ['art.html', '2D & 3D Art', '04'], ['community.html', 'Community & Content', '05'], ['cv.html', 'CV', '06'],
 ];
 const chapterOfHref = href => CHAPTERS.findIndex(([h]) => h === href);
 
@@ -99,6 +99,7 @@ let built = 0;
 const manifest = [];
 for (const pageRel of pages) {
   if (pageRel === 'index.html') continue;              // the cover is authored separately
+  if (pageRel === 'contact.html') continue;            // Contact is folded into the end of the CV (requested)
   const orig = fs.readFileSync(path.join(ROOT, pageRel), 'utf8');
   const bodyMatch = orig.match(/<body([^>]*)>([\s\S]*)<\/body>/i);
   if (!bodyMatch) continue;
@@ -110,6 +111,8 @@ for (const pageRel of pages) {
   const isChapter = CHAPTERS.some(([h]) => h === pageRel);
   body = body.replace(/\s*<a class="skip-link"[^>]*>[\s\S]*?<\/a>/i, '').replace(/\s*<header class="masthead">[\s\S]*?<\/header>/i, '');
   body = rebaseHtml(body, pageRel);
+  // The chapter header's skip link targets #main; give a bare <main> (e.g. the BeforeHello redirect page) that id.
+  body = body.replace(/<main>/, '<main id="main">'); // '<main>' without an id
   // --- Documented, intentional departures from main (see CONTENT_PARITY_AUDIT.md) ---
   // 1. Privacy: no personal location labels on institution / employer lines.
   //    (Event venues such as the GDC jam in San Francisco are event facts, not personal
@@ -127,6 +130,15 @@ for (const pageRel of pages) {
       </object>
     </section>
     <div class="cv-body">`);
+  }
+  // 3. CV is the final chapter: main's "Next: Contact" link is replaced by the
+  //    public contact details from main's contact page (same markup, so main's
+  //    copy-to-clipboard script keeps working), in a compact footer row.
+  if (pageRel === 'cv.html') {
+    const orig = fs.readFileSync(path.join(ROOT, 'contact.html'), 'utf8');
+    const list = (orig.match(/<ul class="contact-list[^"]*"[^>]*>[\s\S]*?<\/ul>/) || [''])[0].replace(/ rise"/, '"').replace(/ style="--rise-delay:[^"]*"/, '');
+    body = body.replace(/<nav aria-label="Next section">\s*<a class="onward-link" href="contact\.html">[\s\S]*?<\/a>\s*<\/nav>/,
+      `<section class="c2-contact" id="contact" aria-labelledby="c2-contact-label"><h2 class="c2-contact-label" id="c2-contact-label">Contact</h2>${list.replace('class="contact-list"', 'class="contact-list c2-contact-list"')}</section>`);
   }
   // Mark the chapter's onward link so chapter.js can use it for the boundary transition.
   if (isChapter) body = body.replace(/<a class="onward-link" href="([^"]+)"/, (m, h) => `<a class="onward-link" data-next-chapter href="${h}"`);

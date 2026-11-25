@@ -1,11 +1,11 @@
 # Chapter navigation
 
-Order (from main): **01 Home · 02 Research · 03 Game Design · 04 2D & 3D Art · 05 Community & Content · 06 CV · 07 Contact.**
+Order: **01 Home · 02 Research · 03 Game Design · 04 2D & 3D Art · 05 Community & Content · 06 CV.** CV is the final chapter. The standalone Contact page was removed at the artist's request; its public contact details (email with copy button, itch.io) sit in a compact row at the foot of the CV page (`cv.html#contact`).
 
 ## Model
 Every chapter is its own page with its own URL (main's URLs, mirrored under `preview/c2/`). Moving between chapters is an ordinary navigation, so Back/Forward, bookmarks, deep links (`game-design.html#tag=tabletop`, `projects/...#tarot-card`) and opening in a new tab all behave normally. Project pages are independent and unchanged in URL. Nothing is concatenated into one long page.
 
-Main's own "Next" link at the foot of each chapter is reused as the boundary target (Research → Game Design → Art → Community → CV → Contact); the cover links to Research.
+Main's own "Next" link at the foot of each chapter is reused as the boundary target (Research → Game Design → Art → Community → CV); the cover links to Research. The CV has no next chapter, so scrolling past its end does nothing.
 
 ## Boundary transition (`prototypes/src/c2/chapter.js`)
 - **Cover:** a short deliberate scroll (≈520 px of wheel input), a 180-px touch pull, or PageDown/Space/↓ twice continues to Research. The "Scroll to continue · 02 Research" cue fills as you scroll.

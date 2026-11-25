@@ -444,38 +444,6 @@
   ]
  },
  {
-  "page": "contact.html",
-  "title": "Contact — Caiyi Shen",
-  "headings": [
-   "h1: Contact"
-  ],
-  "media": [],
-  "embeds": [],
-  "links": [
-   {
-    "href": "https://ca1y1.itch.io/",
-    "text": "itch.io ca1y1.itch.io ↗",
-    "external": true,
-    "newTab": true,
-    "rel": "noopener noreferrer"
-   }
-  ],
-  "warnings": [],
-  "classes": [
-   "contact-copied",
-   "contact-copy",
-   "contact-copyicon",
-   "contact-kind",
-   "contact-lede",
-   "contact-list",
-   "contact-main",
-   "contact-shell",
-   "contact-val",
-   "eyebrow",
-   "rise"
-  ]
- },
- {
   "page": "cv.html",
   "title": "CV — Caiyi Shen",
   "headings": [
