@@ -5,6 +5,14 @@
 import { mountScene, ease } from './tarot-engine-c2.js';
 
 const lerp = (a, b, t) => a + (b - a) * t;
+const clamp01 = v => Math.min(1, Math.max(0, v));
+
+/* One opening timeline. T = 0 is the scene's first frame; the spotlight, the
+ * name and the card all start there and share REVEAL and the same ease, so
+ * they read as one shot. The camera push-in (4.6 s) starts at the same T = 0
+ * and simply runs a little longer, settling after the reveal. */
+export const REVEAL = 2.8;
+const introEase = ease.inOutSine;
 const A = p => new URL(p, import.meta.url).href;
 
 export const theme = {
@@ -38,7 +46,7 @@ export const theme = {
     if (st.mobile || st.aspect < 0.9) return { x: 0, y: 0.78, scale: 0.6 };
     return { x: 0, y: 0.38, scale: 0.62 };
   },
-  intro: { duration: 4.6, revealStart: 0.9, revealEnd: 3.0 },
+  intro: { duration: 4.6, revealStart: 0, revealEnd: REVEAL, revealEase: introEase },
   yawLimit: 0.36,
   cardMotion(st, k, T) {
     return { y: Math.sin(T * 0.45) * 0.03, yaw: Math.sin(T * 0.11) * 0.16 + (1 - ease.outCubic(k)) * 0.2, pitch: 0.02 + Math.sin(T * 0.09) * 0.02, roll: 0 };
@@ -61,7 +69,28 @@ export const theme = {
       fragmentShader: 'uniform float uA; varying vec2 vUv; void main(){ float d = length((vUv - 0.5) * vec2(1.0, 1.6)) * 2.0; gl_FragColor = vec4(vec3(0.8, 0.86, 0.9), pow(max(0.0, 1.0 - d), 2.2) * 0.22 * uA); }',
     }));
     pool.rotation.x = -Math.PI / 2; pool.position.y = -1.45; scene.add(pool);
-    return { update(st, k, T) { const a = ease.inOutSine(Math.min(1, T / 1.6)); beam.material.uniforms.uA.value = a * (1 - st.scroll * 0.6); pool.material.uniforms.uA.value = a; } };
+    // The real lights come up with the beam (from a faint ambient floor, so
+    // the frame is never black and nothing flashes).
+    const lights = []; scene.traverse(o => { if (o.isLight) lights.push([o, o.intensity]); });
+    const cover = document.querySelector('.cover');
+    const words = cover ? [...cover.querySelectorAll('.cover-name .w')] : [];
+    const meta = cover ? [...cover.querySelectorAll('.cover-meta, .c2-next, .cover-credit')] : [];
+    const portrait = matchMedia('(max-aspect-ratio: 1/1), (max-width: 760px)');
+    const reducedMQ = matchMedia('(prefers-reduced-motion: reduce)');
+    let done = false;
+    if (cover) document.documentElement.classList.add('tl-driven');
+    return { update(st, k, T) {
+      const a = reducedMQ.matches ? 1 : introEase(clamp01(T / REVEAL));
+      beam.material.uniforms.uA.value = a * (1 - st.scroll * 0.6);
+      pool.material.uniforms.uA.value = a;
+      for (const [l, base] of lights) l.intensity = base * (0.14 + 0.86 * a);
+      if (done || !cover) return;
+      // Name: lit from above as the light comes up, tracking settling — same clock, same ease.
+      const ls0 = portrait.matches ? 0.5 : 0.62, ls1 = portrait.matches ? 0.22 : 0.3;
+      for (const w of words) { w.style.setProperty('--m', (-30 + 130 * a).toFixed(2) + '%'); w.style.setProperty('--ls', (ls0 + (ls1 - ls0) * a).toFixed(4) + 'em'); w.style.opacity = String(clamp01(a / 0.12)); }
+      meta.forEach((m, i) => { m.style.opacity = String(Math.pow(a, 1.6 + i * 0.8)); });
+      if (a >= 1) { done = true; for (const w of words) { w.style.removeProperty('--m'); w.style.removeProperty('--ls'); } document.documentElement.classList.add('scene-lit'); }
+    } };
   },
 };
 
@@ -69,8 +98,8 @@ const root = import.meta.url.includes('?lab') ? null : document.querySelector('.
 const lit = () => document.documentElement.classList.add('scene-lit');
 if (root) {
   // The name is lit as the spotlight comes up (~0.5 s after the scene is live).
-  mountScene(root, theme).then(r => { if (!r) { lit(); return; } setTimeout(lit, 1250); })
-    .catch(err => { console.warn('Tarot scene unavailable, showing artwork image.', err); root.classList.add('no-webgl'); lit(); });
+  mountScene(root, theme).then(r => { if (!r) { document.documentElement.classList.remove('tl-driven'); lit(); } })
+    .catch(err => { console.warn('Tarot scene unavailable, showing artwork image.', err); root.classList.add('no-webgl'); document.documentElement.classList.remove('tl-driven'); lit(); });
   // Depth: the name drifts against the pointer, opposite to the camera parallax.
   const cover = document.querySelector('.cover');
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) addEventListener('pointermove', e => {

@@ -62,3 +62,13 @@ Feedback: keep C's tarot rendering, lighting, camera and opening; reject C's typ
 - Rebalanced the composition. The roles line now sits directly beneath the card as the name's caption, joined by a short gilt hairline, so name, card and roles read as one centred title block. Below it is deliberate negative space, then the chapter cue alone at the foot.
 - **Portrait screens:** the roles follow the single-line name; they wrap only on phones.
 - **Checks:** parity re-run (137 media, 0 regressions); chapter tests all pass; cover renders clean at 1920, 1440, 820 and 390.
+
+## Opening sequence — one timeline
+- Previously the scene, the name and the card ran on separate clocks. The name started on a CSS timer 1.25 s after the scene, the card dissolve began at 0.9 s, and only the visible beam faded in while the actual lights were at full strength from the first frame.
+- Now one clock (the scene's own frame time; T = 0 is its first rendered frame) drives everything:
+  - **Spotlight:** the beam, the light pool and every real light (spot, rim, hemisphere) rise from a 14 % floor to full, so the frame is never black and nothing flashes.
+  - **Name:** a top-down mask reveal while the tracking settles from 0.62 em to 0.30 em (0.50 em to 0.22 em on portrait), set per frame from the same value.
+  - **Card:** the dissolve reveal (start 0) and its entrance rotation.
+  All three share REVEAL = 2.8 s and the same in-out sine ease, and all reach their resting state on the same frame. The roles and chapter cue fade in on the same curve, a touch later in the curve. The camera push-in starts at T = 0 and settles at 4.6 s, unchanged from Direction C.
+- **Measured** (`filmstrip2.js`): mask −29 % / 0.618 em at 0.08 s · 10.7 % / 0.520 em at 1.0 s · 46.6 % / 0.432 em at 1.5 s · 100 % / 0.30 em at 2.8 s, with the card dissolve and light level tracking the same curve.
+- **Fallbacks:** without WebGL the original CSS sequence plays over the artwork image. With reduced motion the timeline resolves to its final frame immediately. A 6 s failsafe keeps the name visible.

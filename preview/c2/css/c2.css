@@ -215,3 +215,11 @@ main#main { padding-top: var(--bar); }
 @media (max-width: 520px) {
   .cover-role { max-width: 22rem; }
 }
+
+/* Unified opening timeline (scene.js drives --m, --ls and opacity per frame).
+   CSS animations and delayed transitions stand down so nothing runs on a
+   separate clock; after T = REVEAL the resting state is the CSS default. */
+.tl-driven .cover-name .w { animation: none !important; transition: none !important; }
+.tl-driven .cover-meta, .tl-driven .cover .c2-next, .tl-driven .cover-credit { transition: none !important; }
+.tl-driven.scene-lit .cover-name .w { opacity: 1; --m: 100%; --ls: .3em; }
+@media (max-aspect-ratio: 1/1), (max-width: 760px) { .tl-driven.scene-lit .cover-name .w { --ls: .22em; } }
