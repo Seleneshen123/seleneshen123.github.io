@@ -1,32 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CV for Caiyi Shen — education, research, projects, experience and skills.">
-  <meta name="theme-color" content="#f3f0ea">
-  <title>CV — Caiyi Shen</title>
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CV — Caiyi Shen</title>
+<meta name="description" content="CV for Caiyi Shen — education, research, projects, experience and skills.">
+
+<meta name="theme-color" content="#0a0b0d">
+
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/c2.css">
+<script src="script.js" defer></script>
+<script src="js/chapter.js" defer></script>
+
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="masthead">
-    <a class="masthead-mark" href="index.html">Caiyi Shen</a>
-    <nav class="masthead-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="game-design.html">Game Design</a>
-      <a href="art.html">2D &amp; 3D Art</a>
-      <a href="community.html">Community &amp; Content</a>
-      <a href="cv.html" aria-current="page">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main id="main">
+<body class="c2 is-chapter ch-06 pg-cv" data-chapter-index="5" data-chapter-name="CV">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="c2-bar">
+  <a class="c2-mark" href="index.html"><span class="c2-mark-n">Caiyi Shen</span></a>
+  <nav class="c2-nav" aria-label="Chapters"><a href="index.html" data-chapter="01"><span class="cn">01</span><span class="cl">Home</span></a><a href="research.html" data-chapter="02"><span class="cn">02</span><span class="cl">Research</span></a><a href="game-design.html" data-chapter="03"><span class="cn">03</span><span class="cl">Game Design</span></a><a href="art.html" data-chapter="04"><span class="cn">04</span><span class="cl">2D & 3D Art</span></a><a href="community.html" data-chapter="05"><span class="cn">05</span><span class="cl">Community & Content</span></a><a href="cv.html" data-chapter="06" aria-current="page"><span class="cn">06</span><span class="cl">CV</span></a></nav>
+  <button class="c2-menu" type="button" data-c2-menu aria-expanded="false" aria-controls="c2-index"><span>Index</span></button>
+</header>
+<div class="c2-index" id="c2-index" hidden>
+  <nav aria-label="Chapters (menu)"><a href="index.html"><span class="cn">01</span><span class="cl">Home</span></a><a href="research.html"><span class="cn">02</span><span class="cl">Research</span></a><a href="game-design.html"><span class="cn">03</span><span class="cl">Game Design</span></a><a href="art.html"><span class="cn">04</span><span class="cl">2D & 3D Art</span></a><a href="community.html"><span class="cn">05</span><span class="cl">Community & Content</span></a><a href="cv.html" aria-current="page"><span class="cn">06</span><span class="cl">CV</span></a></nav>
+</div>
+<div class="c2-rail" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i class="is-on"></i></div>
+<div class="c2-atmos" aria-hidden="true"></div>
+<main id="main">
 
     <header class="page-head rise">
       <p class="eyebrow">Tab 06</p>
@@ -36,19 +39,24 @@
         <a class="worklink" href="assets/cv/caiyi-shen-cv.pdf" target="_blank" rel="noopener">Open in browser <span aria-hidden="true">&#8599;</span></a>
       </p>
     </header>
-
+    <section class="c2-pdf" aria-labelledby="cv-preview-title">
+      <div class="c2-pdf-bar"><h2 id="cv-preview-title">Preview</h2><span>caiyi-shen-cv.pdf</span></div>
+      <object class="c2-pdf-frame" data="assets/cv/caiyi-shen-cv.pdf#view=FitH" type="application/pdf" aria-label="CV PDF preview" data-no-chapter>
+        <div class="c2-pdf-fallback"><p>The PDF preview is not available in this browser.</p><p><a href="assets/cv/caiyi-shen-cv.pdf" target="_blank" rel="noopener">Open the PDF</a> or <a href="assets/cv/caiyi-shen-cv.pdf" download>download it</a>.</p></div>
+      </object>
+    </section>
     <div class="cv-body">
 
       <section class="cv-section" aria-labelledby="cv-education">
         <h2 id="cv-education">Education</h2>
         <div class="cv-entry">
           <p class="cv-role">M.S. in Game Science and Design</p>
-          <p class="cv-org">Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Northeastern University</p>
           <p class="cv-when">09/2025 &ndash; 05/2027 (expected)</p>
         </div>
         <div class="cv-entry">
           <p class="cv-role">B.A. in Psychology; Certificate in Game Design</p>
-          <p class="cv-org">University of Wisconsin&ndash;Madison <span class="dot">·</span> Madison, WI</p>
+          <p class="cv-org">University of Wisconsin&ndash;Madison</p>
           <p class="cv-when">09/2021 &ndash; 08/2024</p>
         </div>
       </section>
@@ -58,7 +66,7 @@
         <h2 id="cv-research">Research</h2>
         <div class="cv-entry">
           <p class="cv-role">Research Assistant / Programmer</p>
-          <p class="cv-org">Language Acquisition and Brain Laboratory (QLAB), Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Language Acquisition and Brain Laboratory (QLAB), Northeastern University</p>
           <p class="cv-when">07/2026 &ndash; Present</p>
           <ul class="cv-notes">
             <li><strong><a href="research/beforehello.html">BeforeHello</a> &mdash; communication support.</strong> Collaborate with Dr. Katherine Trice on a tool helping autistic adults prepare personalized video introductions; synthesize think-aloud feedback on usability and accessibility needs.</li>
@@ -69,7 +77,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role"><a href="research/astronomy-learning.html">Research Assistant</a></p>
-          <p class="cv-org">Learning, Representations, &amp; Technology Lab, University of Wisconsin&ndash;Madison <span class="dot">·</span> Madison, WI</p>
+          <p class="cv-org">Learning, Representations, &amp; Technology Lab, University of Wisconsin&ndash;Madison</p>
           <p class="cv-when">07/2022 &ndash; 09/2022</p>
           <ul class="cv-notes">
             <li>Conducted think-aloud playtesting of a 3D astronomy game, documenting learners' navigation, verbal reasoning, and interpretation of scientific representations.</li>
@@ -78,7 +86,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role">Clinical Assistant</p>
-          <p class="cv-org">Psychology Clinic, Peking University Sixth Hospital <span class="dot">·</span> Beijing, China</p>
+          <p class="cv-org">Psychology Clinic, Peking University Sixth Hospital</p>
           <p class="cv-when">06/2023 &ndash; 08/2023</p>
           <ul class="cv-notes">
             <li>Observed and practised TMS, rTMS, theta-burst stimulation, and tDCS procedures under supervision; assisted EEG-based visual-stimulus experiments examining fear responses.</li>
@@ -87,7 +95,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role">Field Observer</p>
-          <p class="cv-org">UW Child Development Lab, University of Wisconsin&ndash;Madison <span class="dot">·</span> Madison, WI</p>
+          <p class="cv-org">UW Child Development Lab, University of Wisconsin&ndash;Madison</p>
           <p class="cv-when">09/2022 &ndash; 02/2023</p>
           <ul class="cv-notes">
             <li>Conducted structured preschool observations of peer interaction, social communication, joint attention, turn-taking, and cooperative play.</li>
@@ -101,7 +109,7 @@
         <h2 id="cv-projects">Projects</h2>
         <div class="cv-entry">
           <p class="cv-role"><a href="projects/boston-bilingual-pioneer-media.html">Boston Bilingual Pioneer Media</a> <span class="cv-org">Project Lead / Game Designer / 3D Artist</span></p>
-          <p class="cv-org">Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Northeastern University</p>
           <p class="cv-when">03/2026 &ndash; Present</p>
           <ul class="cv-notes">
             <li><strong>AI Learning Companion &amp; Robotics &mdash; Chief Product Officer.</strong> Lead product planning, software/hardware integration, and social-media promotion and outreach across China and the United States.</li>
@@ -111,7 +119,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role"><a href="projects/cocoa-quest.html">Cocoa Quest</a> <span class="cv-org">Educational Game &amp; Biomaterials Design</span></p>
-          <p class="cv-org">Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Northeastern University</p>
           <p class="cv-when">09/2026 &ndash; Present</p>
           <ul class="cv-notes">
             <li>Lead an educational tabletop-game project about chocolate production, child labor, and environmental sustainability with a multidisciplinary team.</li>
@@ -125,7 +133,7 @@
         <h2 id="cv-experience">Experience</h2>
         <div class="cv-entry">
           <p class="cv-role"><a href="projects/generate-deeplight-games.html">Concept Artist &amp; 2D Designer</a></p>
-          <p class="cv-org">Deeplight Games, Generate @ Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Deeplight Games, Generate @ Northeastern University</p>
           <p class="cv-when">09/2026 &ndash; Present</p>
           <ul class="cv-notes">
             <li>Develop concept art and 2D designs for a client-commissioned 3D action roguelike, integrating client requirements and creative direction.</li>
@@ -135,7 +143,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role">Teacher</p>
-          <p class="cv-org">If Montessori School, Bilingual Montessori Classroom <span class="dot">·</span> Houston, TX</p>
+          <p class="cv-org">If Montessori School, Bilingual Montessori Classroom</p>
           <p class="cv-when">08/2024 &ndash; 08/2025</p>
           <ul class="cv-notes">
             <li>Supported preschool learning, self-directed exploration, autonomy, and language development through Montessori-informed strategies.</li>
@@ -144,7 +152,7 @@
         </div>
         <div class="cv-entry">
           <p class="cv-role">Graduate Teaching Assistant &mdash; Game Design and Analysis</p>
-          <p class="cv-org">Northeastern University <span class="dot">·</span> Boston, MA</p>
+          <p class="cv-org">Northeastern University</p>
           <p class="cv-when">09/2026 &ndash; 11/2026</p>
           <ul class="cv-notes">
             <li>Evaluate coursework and provide rubric-based feedback on game mechanics, Mechanics&ndash;Dynamics&ndash;Aesthetics (MDA), motivation, balance, and prototyping.</li>
@@ -194,12 +202,29 @@
   </main>
 
   <footer class="page-foot">
-    <nav aria-label="Next section">
-      <a class="onward-link" href="contact.html">
-        <span class="onward-label">Next</span>
-        <span class="onward-title">Contact <span class="arrow" aria-hidden="true">&rarr;</span></span>
-      </a>
-    </nav>
+    <section class="c2-contact" id="contact" aria-labelledby="c2-contact-label"><h2 class="c2-contact-label" id="c2-contact-label">Contact</h2><ul class="contact-list c2-contact-list">
+        <li>
+          <button class="contact-copy" type="button" data-copy="shen.caiy@northeastern.edu" aria-label="Copy email address shen.caiy@northeastern.edu">
+            <span class="contact-kind">Email</span>
+            <span class="contact-val">
+              <span data-copy-text>shen.caiy@northeastern.edu</span>
+              <span class="contact-copyicon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <rect x="7.2" y="7.2" width="9.3" height="9.3" rx="1.7"></rect>
+                  <path d="M12.8 4.4H5.2A1.6 1.6 0 0 0 3.6 6v7.6"></path>
+                </svg>
+              </span>
+              <span class="contact-copied" data-copy-flag role="status"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <a href="https://ca1y1.itch.io/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-kind">itch.io</span>
+            <span class="contact-val">ca1y1.itch.io <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </li>
+      </ul></section>
     <p class="colophon">&copy; <span data-year>2026</span> Caiyi Shen</p>
   </footer>
 </body>
