@@ -2897,3 +2897,17 @@ figure { margin: 0; }
   .onward-link:hover .arrow,
   .onward-link:focus-visible .arrow { transform: none; }
 }
+
+/* Editorial Atlas — restrained shared polish. Existing project layouts retained. */
+.masthead-mark { transition: color .25s ease; }
+.masthead-mark::before { content: "✳"; display:inline-block; color:var(--accent); margin-right:.55rem; font-family:var(--font-sans); font-size:.95em; vertical-align:baseline; }
+.atlas-mark::before { content:none; }
+.page-head .eyebrow { color:var(--accent); }
+.page-head h1 { text-wrap:balance; }
+.feature-title a,.case h3 a,.game h3 a,.rentry h3 a { transition:color .25s ease; }
+.feature:hover .feature-title a,.case:hover h3 a,.game:hover h3 a,.rentry:hover h3 a {color:var(--accent);}
+.chip {transition:color .2s ease,background-color .2s ease,border-color .2s ease;}
+@media (prefers-reduced-motion:no-preference) {
+  .masthead-mark:hover::before { animation:atlas-mark-turn .55s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes atlas-mark-turn { from {transform:rotate(0)} to {transform:rotate(90deg)} }
+}
