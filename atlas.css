@@ -23,7 +23,7 @@
 .atlas-hero-visual {margin:0;min-width:0;animation:atlas-arrive 1s .18s both}
 .atlas-plate {position:relative;isolation:isolate;aspect-ratio:520/560;display:grid;place-items:center;border:1px solid var(--atlas-line);overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#fdf9f1 0%,#e9dfd1 85%)}
 .atlas-plate::before {content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(#7b30390a 1px,transparent 1px),linear-gradient(90deg,#7b30390a 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse,black,transparent 90%)}
-.atlas-orbit {position:absolute;inset:0;width:100%;height:100%;max-width:none;animation:atlas-orbit 65s linear infinite;pointer-events:none}
+.atlas-orbit {position:absolute;inset:0;width:100%;height:100%;max-width:none;animation:atlas-orbit 4.5s cubic-bezier(.2,.65,.3,1) both;pointer-events:none}
 .atlas-art-card {position:relative;width:36%;display:block;z-index:1;transform:rotate(-8deg);transition:transform .65s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(12px 24px 18px #37221840)}
 .atlas-art-card img {width:100%;height:auto}
 .atlas-art-card:hover,.atlas-art-card:focus-visible {transform:rotate(0) scale(1.07)}
@@ -76,7 +76,7 @@
 .atlas-footer {border-top:1px solid var(--atlas-line);padding:1.4rem 0}
 .atlas-footer p {margin:0}
 @keyframes atlas-arrive {from {opacity:0;transform:translateY(16px)}to {opacity:1;transform:none}}
-@keyframes atlas-orbit {from {transform:rotate(0deg)}to {transform:rotate(360deg)}}
+@keyframes atlas-orbit {from {transform:rotate(-24deg)}to {transform:rotate(0deg)}}
 .atlas-reveal-ready [data-atlas-reveal] {opacity:0;transform:translateY(14px);transition:opacity .65s,transform .65s}
 .atlas-reveal-ready [data-atlas-reveal].atlas-visible,.atlas-reveal-ready [data-atlas-reveal]:focus-within {opacity:1;transform:none}
 @media(max-width:900px){.atlas-hero{grid-template-columns:1fr 1fr;gap:1.6rem}.atlas-name{font-size:clamp(4.5rem,11vw,8rem)}.atlas-section-heading{grid-template-columns:1fr 1fr}}
