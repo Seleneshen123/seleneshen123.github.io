@@ -195,10 +195,11 @@ main { padding-top: var(--bar); }
 .back a:hover { color: var(--ink); }
 .phead { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gut); row-gap: 1.6rem; padding: clamp(3rem, 9vh, 6.5rem) var(--m) clamp(2.5rem, 7vh, 4.5rem); border-bottom: 1px solid var(--line); }
 .phead .eyebrow { grid-column: 1 / -1; }
-.phead h1 { grid-column: 1 / 8; font-size: clamp(3.4rem, 8.6vw, 9.6rem); font-weight: 400; }
-.phead-side { grid-column: 9 / 13; align-self: end; display: grid; gap: 1.4rem; }
+.phead h1 { grid-column: 1 / -1; font-size: clamp(3.2rem, 8.2vw, 9.4rem); font-weight: 400; }
+.phead-side { grid-column: 7 / 13; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.4rem var(--gut); align-items: start; margin-top: 1rem; }
+.phead-side > :only-child { grid-column: 1 / -1; max-width: 34rem; }
 .lede { font-size: 1.05rem; line-height: 1.55; color: var(--ink-2); }
-@media (max-width: 899px) { .phead h1, .phead-side { grid-column: 1 / -1; } }
+@media (max-width: 899px) { .phead h1, .phead-side { grid-column: 1 / -1; } .phead-side { grid-template-columns: 1fr; } }
 
 /* filters */
 .filters { position: sticky; top: var(--bar); z-index: 20; display: flex; align-items: center; gap: 1.2rem; padding: .8rem var(--m); background: color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
@@ -358,3 +359,4 @@ main { padding-top: var(--bar); }
 .js [data-reveal] { --reveal-y: 18px; }
 
 .phead h1 .slash { font-weight: 200; color: var(--ink-3); margin-left: .12em; }
+@media (max-width: 599px) { .phead h1 { font-size: 10.6vw; } .hero-name { font-size: 17vw; } }
