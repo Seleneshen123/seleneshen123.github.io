@@ -75,6 +75,11 @@
   "isChapter": false
  },
  {
+  "page": "projects/threshold.html",
+  "chapter": "Game Design",
+  "isChapter": false
+ },
+ {
   "page": "research/astronomy-learning.html",
   "chapter": "Research",
   "isChapter": false

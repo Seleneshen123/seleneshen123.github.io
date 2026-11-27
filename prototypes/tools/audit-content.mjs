@@ -52,7 +52,7 @@ function inventory(pageRel) {
           w: +a.width || null, h: +a.height || null, alt: a.alt ?? null, loading: a.loading || '', poster: a.poster ? toRepo(resolve(a.poster)) : '',
           link: anchor ? toRepo(resolve(anchor.a.href || anchor.a['data-lightbox'])) : '', linkKind: anchor ? (anchor.a['data-lightbox'] !== undefined ? 'lightbox' : anchor.a.target === '_blank' ? 'new-tab' : 'link') : '',
           context: ctx(), section, heading, figure: fig || null, title: a.title || '' };
-        if (!/^https?:/.test(rec.src) && rec.src) { const d = dims(path.join(ROOT, rec.src)); rec.file = d ? `${d[0]}x${d[1]}` : 'MISSING'; rec.ratio = d ? +(d[0] / d[1]).toFixed(3) : null; }
+        if (!/^https?:/.test(rec.src) && rec.src) { const d = dims(path.join(ROOT, rec.src)); rec.file = d ? `${d[0]}x${d[1]}` : fs.existsSync(path.join(ROOT, rec.src)) ? 'present' : 'MISSING'; /* present = exists, no readable image dimensions (e.g. MP4) */ rec.ratio = d ? +(d[0] / d[1]).toFixed(3) : null; }
         if (tag === 'iframe' || tag === 'object') embeds.push({ type: tag, src: rec.src, title: a.title || a['aria-label'] || '' });
         if (tag !== 'source' || !stack.some(e => e.tag === 'picture')) media.push(rec);
         if (fig) fig.media.push(rec);

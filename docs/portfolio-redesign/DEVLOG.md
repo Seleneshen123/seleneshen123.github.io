@@ -150,3 +150,29 @@ Visually, the tops of the letters, the card's first fragments and a faint beam s
   - Foil textures served (200).
   - Opening sequence verified frame by frame.
   - `/preview/`, `/prototypes/`, `/docs/`, `/lab/` and dev textures return 404.
+
+---
+
+# Threshold — graduate capstone page, public-safe version (2026-11-26)
+- **Placement:** new page `projects/threshold.html` (Game Design chapter). Card 05 at the top of Game Design → Case Studies; the existing case studies renumber 06–08. Entry 05 in Research links to the same page (no duplicate page).
+- **Public-safe scope:** permission to publish the playtest results has not been confirmed, so this version publishes the project overview, demo video, screenshots, mechanics, narrative, contributions, research questions and methodology only. Participant-derived findings, numerical results, questionnaire scores, response distributions, participant counts and demographics, and quotations are not published. The design directions are presented as recommended design changes, not as study findings. The full research version is kept outside the public repository until permission is confirmed.
+- **Sources:** the final Milestone C player experience analysis report and the project brief. The report, questionnaires and response data stay private and are not in the repository.
+- **Video:** `assets/projects/threshold/milestone-c-gameplay-demo.mp4`, 35.6 MB, from the 199 MB original (left untouched).
+  - Two-pass libx264 (High, level 4.0, yuv420p), 1280×720 at 30 fps, 1.3 Mb/s average (peak cap 2.8 Mb/s), `-preset slower`, keyframe every 2 s for seeking, `aq-mode=3` to protect dark scenes, deblock −1:−1.
+  - AAC-LC stereo at 48 kHz, 128 kb/s target. The soundtrack is quiet, so the actual average is about 45 kb/s; levels match the source.
+  - `+faststart` (the `moov` atom is at byte 32); metadata stripped. Against the source: SSIM 0.998, PSNR 54.6 dB.
+  - Native `<video controls preload="metadata" playsinline>`, no autoplay, poster from the footage. About 3.8 MB of the file is fetched on page load in Chromium.
+- **Screenshots:** 8 frames picked from 1-fps contact sheets of the full demo, plus an enlarged crop of the SIGNAL meter at three moments.
+  - Frames were taken at 1280×720 with a uniform gamma 1.1 lift; nothing else was edited.
+  - Exported as WebP at 1280 and 800 px.
+  - Times: 0:22.0, 0:44.5, 1:22.5, 2:04.2 (cover and poster), 2:16.8, 2:22.2, 2:36.8, 3:11.0. Meter crop: 0:03, 0:22, 0:23.
+- **Styles:** `.tx-*` components appended to `c2.css`. No other page uses them; the only shared-selector addition is `.c2 .case-text h3 .sub`, which only the Threshold card uses.
+- **Tooling:** `audit-content.mjs` now records an existing file without readable image dimensions (MP4) as `present` instead of `MISSING`.
+- **Checks (production build served at root, with HTTP range support):**
+  - Parity, sources vs build: 151 media, 0 regressions. Against the previously published baseline, only Game Design and Research change (the new card and entry); no other page changes.
+  - Link check: 965 internal references, 0 broken.
+  - Renders: 104 clean (26 pages × 1920, 1440, 820 and 390 px), no horizontal overflow.
+  - Chapter test passes with no errors.
+  - Video: plays, seeks (to 2:30); `preload="metadata"`, no autoplay.
+  - Lightbox: 6/6 images open at 1280×720; Escape closes and focus returns to the thumbnail.
+  - Tag filter: Narrative Design shows 4 projects, including Threshold.
